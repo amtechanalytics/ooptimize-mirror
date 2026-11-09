@@ -1,0 +1,698 @@
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C install -pl eclipse-collections-code-generator,eclipse-collections-code-generator-maven-plugin,eclipse-collections-api,eclipse-collections,eclipse-collections-testutils,unit-tests -am
+[exit 0 in 87s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -Pall package -pl jmh-tests -am
+[exit 0 in 54s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+warning: 4 deprecations (since 2.12.0)
+warning: 1 deprecation (since 2.12.5)
+warning: 2 deprecations (since 2.12.9)
+warning: 2 deprecations (since 2.13)
+warning: 8 deprecations (since 2.13.0)
+warning: 1 deprecation (since 2.13.12)
+warning: 1 deprecation (since 2.13.4)
+warning: 19 deprecations in total; re-run with -deprecation for details
+warning: 2 feature warnings; re-run with -feature for details
+9 warnings
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections/target/oopt-test-cp.txt -pl eclipse-collections
+[exit 1 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+04:20:59:449 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath (default-cli) on project eclipse-collections: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+04:20:59:449 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+04:20:59:449 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+04:20:59:449 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+04:20:59:449 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+04:20:59:449 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+04:20:59:449 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+04:20:59:449 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+04:20:59:450 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+04:20:59:450 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+04:20:59:450 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+04:20:59:450 [ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath (default-cli) on project eclipse-collections: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:100)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.PluginResolutionException: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+
+    at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolveInternal (DefaultPluginDependenciesResolver.java:234)
+    at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve (DefaultPluginDependenciesResolver.java:169)
+    at org.apache.maven.plugin.internal.DefaultMavenPluginManager.createPluginRealm (DefaultMavenPluginManager.java:377)
+    at org.apache.maven.plugin.internal.DefaultMavenPluginManager.lambda$setupPluginRealm$1 (DefaultMavenPluginManager.java:340)
+    at org.apache.maven.plugin.DefaultPluginRealmCache.lambda$get$0 (DefaultPluginRealmCache.java:156)
+    at java.util.concurrent.ConcurrentHashMap.computeIfAbsent (ConcurrentHashMap.java:1708)
+    at org.apache.maven.plugin.DefaultPluginRealmCache.get (DefaultPluginRealmCache.java:154)
+    at org.apache.maven.plugin.internal.DefaultMavenPluginManager.setupPluginRealm (DefaultMavenPluginManager.java:339)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.getPluginRealm (DefaultBuildPluginManager.java:205)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:98)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+04:20:59:464 [ERROR] 
+04:20:59:465 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+04:20:59:465 [ERROR] 
+04:20:59:465 [ERROR] For more information about the errors and possible solutions, please read the following articles:
+04:20:59:465 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections/target/oopt-test-cp.txt -pl eclipse-collections
+[exit 0 in 4s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections-api/target/oopt-test-cp.txt -pl eclipse-collections-api
+[exit 0 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/unit-tests/target/oopt-test-cp.txt -pl unit-tests
+[exit 0 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C install -pl eclipse-collections-code-generator,eclipse-collections-code-generator-maven-plugin,eclipse-collections-api,eclipse-collections,eclipse-collections-testutils,unit-tests -am
+[exit 0 in 91s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -Pall package -pl jmh-tests -am
+[exit 0 in 56s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+warning: 4 deprecations (since 2.12.0)
+warning: 1 deprecation (since 2.12.5)
+warning: 2 deprecations (since 2.12.9)
+warning: 2 deprecations (since 2.13)
+warning: 8 deprecations (since 2.13.0)
+warning: 1 deprecation (since 2.13.12)
+warning: 1 deprecation (since 2.13.4)
+warning: 19 deprecations in total; re-run with -deprecation for details
+warning: 2 feature warnings; re-run with -feature for details
+9 warnings
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections/target/oopt-test-cp.txt -pl eclipse-collections
+[exit 1 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+05:30:08:430 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath (default-cli) on project eclipse-collections: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+05:30:08:431 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+05:30:08:431 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+05:30:08:431 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+05:30:08:431 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+05:30:08:431 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+05:30:08:431 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+05:30:08:431 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+05:30:08:432 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+05:30:08:432 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+05:30:08:432 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+05:30:08:432 [ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath (default-cli) on project eclipse-collections: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:100)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.PluginResolutionException: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+
+    at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolveInternal (DefaultPluginDependenciesResolver.java:234)
+    at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve (DefaultPluginDependenciesResolver.java:169)
+    at org.apache.maven.plugin.internal.DefaultMavenPluginManager.createPluginRealm (DefaultMavenPluginManager.java:377)
+    at org.apache.maven.plugin.internal.DefaultMavenPluginManager.lambda$setupPluginRealm$1 (DefaultMavenPluginManager.java:340)
+    at org.apache.maven.plugin.DefaultPluginRealmCache.lambda$get$0 (DefaultPluginRealmCache.java:156)
+    at java.util.concurrent.ConcurrentHashMap.computeIfAbsent (ConcurrentHashMap.java:1708)
+    at org.apache.maven.plugin.DefaultPluginRealmCache.get (DefaultPluginRealmCache.java:154)
+    at org.apache.maven.plugin.internal.DefaultMavenPluginManager.setupPluginRealm (DefaultMavenPluginManager.java:339)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.getPluginRealm (DefaultBuildPluginManager.java:205)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:98)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+05:30:08:441 [ERROR] 
+05:30:08:442 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+05:30:08:442 [ERROR] 
+05:30:08:442 [ERROR] For more information about the errors and possible solutions, please read the following articles:
+05:30:08:442 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections/target/oopt-test-cp.txt -pl eclipse-collections
+[exit 0 in 4s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections-api/target/oopt-test-cp.txt -pl eclipse-collections-api
+[exit 0 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/unit-tests/target/oopt-test-cp.txt -pl unit-tests
+[exit 0 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C install -pl eclipse-collections-code-generator,eclipse-collections-code-generator-maven-plugin,eclipse-collections-api,eclipse-collections,eclipse-collections-testutils,unit-tests -am
+[exit 0 in 91s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -Pall package -pl jmh-tests -am
+[exit 0 in 57s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+warning: 4 deprecations (since 2.12.0)
+warning: 1 deprecation (since 2.12.5)
+warning: 2 deprecations (since 2.12.9)
+warning: 2 deprecations (since 2.13)
+warning: 8 deprecations (since 2.13.0)
+warning: 1 deprecation (since 2.13.12)
+warning: 1 deprecation (since 2.13.4)
+warning: 19 deprecations in total; re-run with -deprecation for details
+warning: 2 feature warnings; re-run with -feature for details
+9 warnings
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections/target/oopt-test-cp.txt -pl eclipse-collections
+[exit 1 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+15:06:46:763 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath (default-cli) on project eclipse-collections: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+15:06:46:763 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+15:06:46:763 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+15:06:46:763 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+15:06:46:763 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+15:06:46:763 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+15:06:46:763 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+15:06:46:763 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+15:06:46:764 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+15:06:46:764 [ERROR] 	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+15:06:46:764 [ERROR] 	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+15:06:46:764 [ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath (default-cli) on project eclipse-collections: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.8.1:build-classpath failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:100)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.PluginResolutionException: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.8.1 or one of its dependencies could not be resolved:
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.doxia:doxia-sink-api:jar:2.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.codehaus.plexus:plexus-io:jar:3.5.1 has not been downloaded from it before.
+	Cannot access central (https://repo1.maven.org/maven2) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+	Cannot access repo.eclipse.org (https://repo.eclipse.org/content/repositories/cbi-releases/) in offline mode and the artifact org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.0 has not been downloaded from it before.
+
+    at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolveInternal (DefaultPluginDependenciesResolver.java:234)
+    at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve (DefaultPluginDependenciesResolver.java:169)
+    at org.apache.maven.plugin.internal.DefaultMavenPluginManager.createPluginRealm (DefaultMavenPluginManager.java:377)
+    at org.apache.maven.plugin.internal.DefaultMavenPluginManager.lambda$setupPluginRealm$1 (DefaultMavenPluginManager.java:340)
+    at org.apache.maven.plugin.DefaultPluginRealmCache.lambda$get$0 (DefaultPluginRealmCache.java:156)
+    at java.util.concurrent.ConcurrentHashMap.computeIfAbsent (ConcurrentHashMap.java:1708)
+    at org.apache.maven.plugin.DefaultPluginRealmCache.get (DefaultPluginRealmCache.java:154)
+    at org.apache.maven.plugin.internal.DefaultMavenPluginManager.setupPluginRealm (DefaultMavenPluginManager.java:339)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.getPluginRealm (DefaultBuildPluginManager.java:205)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:98)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+15:06:46:774 [ERROR] 
+15:06:46:776 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+15:06:46:776 [ERROR] 
+15:06:46:776 [ERROR] For more information about the errors and possible solutions, please read the following articles:
+15:06:46:776 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections/target/oopt-test-cp.txt -pl eclipse-collections
+[exit 0 in 4s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections-api/target/oopt-test-cp.txt -pl eclipse-collections-api
+[exit 0 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/unit-tests/target/oopt-test-cp.txt -pl unit-tests
+[exit 0 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q dependency:get -Dartifact=org.junit.jupiter:junit-jupiter-engine:6.1.3
+[exit 0 in 4s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q dependency:get -Dartifact=org.junit.platform:junit-platform-launcher:6.1.3
+[exit 0 in 4s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q dependency:get -Dartifact=org.junit.vintage:junit-vintage-engine:6.1.3
+[exit 0 in 4s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C install -pl eclipse-collections-code-generator,eclipse-collections-code-generator-maven-plugin,eclipse-collections-api,eclipse-collections,eclipse-collections-testutils,unit-tests -am
+[exit 0 in 66s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -Pall package -pl jmh-tests -am
+[exit 0 in 43s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections/target/oopt-test-cp.txt -pl eclipse-collections
+[exit 0 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/eclipse-collections-api/target/oopt-test-cp.txt -pl eclipse-collections-api
+[exit 0 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/eclipse-collections/unit-tests/target/oopt-test-cp.txt -pl unit-tests
+[exit 0 in 2s]
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/rh/ooptimize/data/maven/apache-maven-3.9.11
+Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.0.0-1014-aws", arch: "amd64", family: "unix"
+
+

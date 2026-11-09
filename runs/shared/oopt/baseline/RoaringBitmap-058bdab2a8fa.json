@@ -1,0 +1,112 @@
+{
+ "compile_ok": true,
+ "errors": [],
+ "ev": {
+  "org.roaringbitmap.art.Node16": "NA"
+ },
+ "file": "roaringbitmap/src/main/java/org/roaringbitmap/art/Node16.java",
+ "key": "RoaringBitmap-058bdab2a8fa",
+ "lib": "RoaringBitmap",
+ "methods": [
+  "RoaringBitmap:org.roaringbitmap.art.Node16#insert(Node,byte)"
+ ],
+ "ok": true,
+ "overlay_base": "/opt/data/oopt/shared/base/RoaringBitmap-058bdab2a8fa/overlay_base",
+ "randoop": {
+  "org.roaringbitmap.art.Node16": {
+   "classes": [],
+   "compiled": false,
+   "generated_files": 0,
+   "keep": []
+  }
+ },
+ "release": 8,
+ "spot": [
+  {
+   "category": "CORRECTNESS",
+   "method": "deserializeNodeBody",
+   "priority": "3",
+   "type": "IAOM_DO_NOT_INCREASE_METHOD_ACCESSIBILITY"
+  },
+  {
+   "category": "CORRECTNESS",
+   "method": "deserializeNodeBody",
+   "priority": "3",
+   "type": "IAOM_DO_NOT_INCREASE_METHOD_ACCESSIBILITY"
+  },
+  {
+   "category": "CORRECTNESS",
+   "method": "replaceChildren",
+   "priority": "3",
+   "type": "IAOM_DO_NOT_INCREASE_METHOD_ACCESSIBILITY"
+  },
+  {
+   "category": "CORRECTNESS",
+   "method": "serializeNodeBody",
+   "priority": "3",
+   "type": "IAOM_DO_NOT_INCREASE_METHOD_ACCESSIBILITY"
+  },
+  {
+   "category": "CORRECTNESS",
+   "method": "serializeNodeBody",
+   "priority": "3",
+   "type": "IAOM_DO_NOT_INCREASE_METHOD_ACCESSIBILITY"
+  }
+ ],
+ "test_cp": [
+  "/opt/data/oopt/shared/src/RoaringBitmap/roaringbitmap/build/classes/java/test",
+  "/opt/data/oopt/shared/src/RoaringBitmap/roaringbitmap/build/resources/test",
+  "/opt/data/oopt/shared/src/RoaringBitmap/roaringbitmap/build/classes/java/main",
+  "/opt/data/oopt/shared/src/RoaringBitmap/roaringbitmap/build/resources/main",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.12.2/79d49ad13017c67a8bf76e10ba5ac8937d811772/junit-platform-launcher-1.12.2.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.12.2/b8df7575b8cd3a94dbe27b481d1cd52c57864559/junit-jupiter-engine-5.12.2.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.12.2/8519ece93f91b8115705d36be2c36d49808935cd/junit-platform-engine-1.12.2.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.12.2/b89e88a89ee009937374a4c96912e007b34c8e35/junit-platform-commons-1.12.2.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.12.2/ff1434a66d1fb84c2c709cde2e2d56d5c8f4fad3/junit-jupiter-params-5.12.2.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.12.2/6de3a3256c5d90f4a439edcb6c2e8dc5180907b0/junit-jupiter-api-5.12.2.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/com.google.guava/guava/20.0/89507701249388e1ed5ddcf8c41f4ce1be7831ef/guava-20.0.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.4/5fe28b9518e58819180a43a850fbc0dd24b7c050/commons-lang3-3.4.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/com.esotericsoftware/kryo/5.0.0-RC6/f560b1671372271e7dec448b61d616fa0dcbe3a5/kryo-5.0.0-RC6.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.10.3/aae92628b5447fa25af79871ca98668da6edd439/jackson-databind-2.10.3.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.23.1/d2bb60570f5b3d7ffa8f8000118c9c07b86eca93/assertj-core-3.23.1.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.openjdk.jol/jol-core/0.16/553a2ba27f58b71e7efb545d7d3c657761f5b596/jol-core-0.16.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/com.esotericsoftware/reflectasm/1.11.8/a130ad2975f31d3c3c4da57d8973261ec0b1e2d/reflectasm-1.11.8.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.0.1/11cfac598df9dc48bb9ed9357ed04212694b7808/objenesis-3.0.1.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/com.esotericsoftware/minlog/1.3.1/a406e29d3a44d5f020d7b3218aee6d0952db4f73/minlog-1.3.1.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.10.3/f63b3b1da563767d04d2e4d3fc1ae0cdeffebe7/jackson-annotations-2.10.3.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.10.3/f7ee7b55c7d292ac72fbaa7648c089f069c938d2/jackson-core-2.10.3.jar",
+  "/opt/data/oopt/gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.12.10/f34127d93639fad8c6fb84b3ca30292697d6c55d/byte-buddy-1.12.10.jar"
+ ],
+ "tests": {
+  "classes": [
+   "org.roaringbitmap.art.Node16Test",
+   "org.roaringbitmap.art.Node48Test"
+  ],
+  "engine": "platform",
+  "error": null,
+  "failed_run1": 0,
+  "flaky": 0,
+  "keep": [
+   "org.roaringbitmap.art.Node16Test#test()|9afe4a17",
+   "org.roaringbitmap.art.Node16Test#testDenseNonZeroBasedKeysSearch()|ea85a288",
+   "org.roaringbitmap.art.Node16Test#testGrowToNode48()|55ddfd63",
+   "org.roaringbitmap.art.Node16Test#testSparseNonZeroBasedKeysSearch()|5b6799fd",
+   "org.roaringbitmap.art.Node16Test#testVisit()|112be4b6",
+   "org.roaringbitmap.art.Node16Test#testWithOffsetAndGapsBytes()|db14d027",
+   "org.roaringbitmap.art.Node16Test#testWithOffsetBeforeBytes()|14e5618e",
+   "org.roaringbitmap.art.Node48Test#test()|869e8b18",
+   "org.roaringbitmap.art.Node48Test#testDenseNonZeroBasedKeysSearch()|be95c8e7",
+   "org.roaringbitmap.art.Node48Test#testGetNextPosShouldNotThrowOnLegalInputs()|18a167ce",
+   "org.roaringbitmap.art.Node48Test#testGetNextSmallerPosEdgeCase()|ab17780a",
+   "org.roaringbitmap.art.Node48Test#testGrowToNode256()|8cc3335d",
+   "org.roaringbitmap.art.Node48Test#testNegative()|4ba262a3",
+   "org.roaringbitmap.art.Node48Test#testSetOneByte()|461d9aac",
+   "org.roaringbitmap.art.Node48Test#testShrinkToNode16()|46c6b6ed",
+   "org.roaringbitmap.art.Node48Test#testSparseNonZeroBasedKeysSearch()|95c3f7e",
+   "org.roaringbitmap.art.Node48Test#testWithOffsetAndGapsBytes()|30cfea68",
+   "org.roaringbitmap.art.Node48Test#testWithOffsetBeforeBytes()|282d7b2d"
+  ],
+  "seen": 18
+ }
+}

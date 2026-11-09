@@ -1,0 +1,297 @@
+# OOPT benchmark org.eclipse.collections.impl.jmh.AnagramSetTest.parallel_eager_forkjoin_ec
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.AnagramSetTest.parallel_eager_forkjoin_ec
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 6.717 ops/s
+Iteration   1: 11.323 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.AnagramSetTest.parallel_eager_forkjoin_ec":
+  11.323 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.AnagramSetTest.parallel_eager_forkjoin_ec:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 63.5%         RUNNABLE
+ 34.7%         WAITING
+  1.7%         TIMED_WAITING
+  0.1%         BLOCKED
+
+....[Thread state: RUNNABLE]........................................................................
+ 26.6%  41.9% org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+              org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureTask.exec
+              java.util.concurrent.ForkJoinTask.doExec
+
+ 15.9%  25.1% java.util.DualPivotQuicksort.insertionSort
+              java.util.DualPivotQuicksort.sort
+              java.util.DualPivotQuicksort.sort
+              java.util.Arrays.sort
+
+  6.6%  10.4% org.eclipse.collections.impl.list.mutable.FastList.ensureCapacityForAdd
+              org.eclipse.collections.impl.list.mutable.FastList.add
+              org.eclipse.collections.impl.multimap.AbstractSynchronizedPutMultimap.put
+              org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+
+  6.0%   9.4% org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+              org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureTask.exec
+              java.util.concurrent.ForkJoinTask.doExec
+              java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec
+
+  4.4%   7.0% org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.getIfAbsentPutWith
+              org.eclipse.collections.impl.multimap.AbstractSynchronizedPutMultimap.getIfAbsentPutCollection
+              org.eclipse.collections.impl.multimap.AbstractSynchronizedPutMultimap.put
+              org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+
+  1.5%   2.3% <stack is empty, everything is filtered?>
+  0.4%   0.7% org.eclipse.collections.impl.multimap.AbstractSynchronizedPutMultimap.put
+              org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+              org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureTask.exec
+
+  0.4%   0.6% java.lang.String.valueOf
+              org.eclipse.collections.impl.utility.internal.IterableIterate.stringValueOfItem
+              org.eclipse.collections.impl.utility.internal.InternalArrayIterate.appendString
+              org.eclipse.collections.impl.list.mutable.FastList.appendString
+
+  0.2%   0.3% org.eclipse.collections.impl.multimap.AbstractSynchronizedPutMultimap.put
+              org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.chainedForEach
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+
+  0.2%   0.3% org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.reverseTransfer
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.helpWithResize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+
+  0.2%   0.2% java.lang.AbstractStringBuilder.inflateIfNeededFor
+              java.lang.AbstractStringBuilder.putStringAt
+              java.lang.AbstractStringBuilder.append
+              java.lang.StringBuilder.append
+
+  0.1%   0.2% org.eclipse.collections.impl.utility.internal.InternalArrayIterate.forEachWithoutChecks
+              org.eclipse.collections.impl.utility.ArrayIterate.forEach
+              org.eclipse.collections.impl.parallel.ArrayProcedureFJTask.run
+              java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec
+
+  0.1%   0.1% org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.chainedForEach
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+              org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureTask.exec
+
+  0.1%   0.1% org.eclipse.collections.impl.set.mutable.UnifiedSet.chainedForEach
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+              org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureTask.exec
+              java.util.concurrent.ForkJoinTask.doExec
+
+  0.1%   0.1% java.lang.Iterable.forEach
+              org.eclipse.collections.impl.utility.Iterate.forEach
+              org.eclipse.collections.impl.lazy.CollectIterable.each
+              org.eclipse.collections.impl.AbstractRichIterable.forEach
+
+  0.1%   0.1% java.util.TimSort.binarySort
+              java.util.TimSort.sort
+              java.util.Arrays.sort
+              org.eclipse.collections.impl.list.mutable.FastList.sort
+
+  0.0%   0.1% org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureRunner.join
+              org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureRunner.executeAndCombine
+              org.eclipse.collections.impl.forkjoin.FJIterate.forEachInBatchWithExecutor
+              org.eclipse.collections.impl.forkjoin.FJIterate.forEach
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool.scan
+
+  0.0%   0.1% java.lang.AbstractStringBuilder.newCapacity
+              java.lang.AbstractStringBuilder.ensureCapacityInternal
+              java.lang.AbstractStringBuilder.append
+              java.lang.StringBuilder.append
+
+  0.0%   0.1% org.eclipse.collections.impl.map.mutable.ConcurrentHashMap$HashIterator.nextEntry
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap$ValueIterator.next
+              java.lang.Iterable.forEach
+              org.eclipse.collections.impl.utility.Iterate.forEach
+
+  0.0%   0.1% org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.transfer
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.incrementSizeAndPossiblyResize
+
+  0.0%   0.1% java.lang.StringLatin1.toChars
+              java.lang.String.toCharArray
+              org.eclipse.collections.impl.jmh.AnagramSetTest$Alphagram.<init>
+              org.eclipse.collections.impl.jmh.AnagramSetTest$$Lambda/0x00007cf184086ca0.valueOf
+
+  0.0%   0.1% org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.incrementPartitionedSize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.addToSize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.incrementSizeAndPossiblyResize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.getIfAbsentPutWith
+
+  0.0%   0.0% org.eclipse.collections.impl.jmh.AnagramSetTest$$Lambda/0x00007cf184086ca0.valueOf
+              org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.chainedForEach
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+
+  0.0%   0.0% org.eclipse.collections.impl.jmh.AnagramSetTest$$Lambda/0x00007cf184086ca0.valueOf
+              org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+              org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureTask.exec
+
+  0.0%   0.0% org.eclipse.collections.impl.utility.internal.InternalArrayIterate.forEachWithoutChecks
+              org.eclipse.collections.impl.list.mutable.FastList.forEach
+              org.eclipse.collections.impl.forkjoin.FJListProcedureTask.exec
+              java.util.concurrent.ForkJoinTask.doExec
+
+  0.0%   0.0% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+
+  0.0%   0.0% org.eclipse.collections.impl.list.mutable.FastList.copyItemsWithNewCapacity
+              org.eclipse.collections.impl.list.mutable.FastList.transferItemsToNewArrayWithCapacity
+              org.eclipse.collections.impl.list.mutable.FastList.ensureCapacityForAdd
+              org.eclipse.collections.impl.list.mutable.FastList.add
+
+  0.0%   0.0% java.util.DualPivotQuicksort.sort
+              java.util.Arrays.sort
+              org.eclipse.collections.impl.jmh.AnagramSetTest$Alphagram.<init>
+              org.eclipse.collections.impl.jmh.AnagramSetTest$$Lambda/0x00007cf184086ca0.valueOf
+
+  0.0%   0.0% java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec
+              java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.0% org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureTask.exec
+              java.util.concurrent.ForkJoinTask.doExec
+              java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec
+              java.util.concurrent.ForkJoinPool.scan
+
+  0.0%   0.0% org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.incrementSizeAndPossiblyResize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.getIfAbsentPutWith
+
+  0.0%   0.0% org.eclipse.collections.impl.list.mutable.FastList.forEach
+              org.eclipse.collections.api.ordered.ReversibleIterable.reverseForEach
+              org.eclipse.collections.impl.lazy.ReverseIterable.each
+              org.eclipse.collections.impl.AbstractRichIterable.forEach
+
+  0.0%   0.0% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.0% jdk.internal.reflect.Reflection.getCallerClass
+              java.lang.reflect.Method.invoke
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+
+  0.0%   0.0% java.util.concurrent.atomic.AtomicReferenceArray.<init>
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.incrementSizeAndPossiblyResize
+
+  0.0%   0.0% org.eclipse.collections.impl.list.mutable.FastList.ensureCapacityForAdd
+              org.eclipse.collections.impl.list.mutable.FastList.add
+              org.eclipse.collections.api.LazyIterable$$Lambda/0x00007cf1841057a8.value
+              org.eclipse.collections.impl.block.factory.Functions$BindProcedure.value
+
+  0.0%   0.0% org.eclipse.collections.impl.list.mutable.FastList.newList
+              org.eclipse.collections.impl.list.mutable.MutableListFactoryImpl.withInitialCapacity
+              org.eclipse.collections.impl.multimap.list.SynchronizedPutFastListMultimap.createCollection
+              org.eclipse.collections.impl.multimap.list.SynchronizedPutFastListMultimap.createCollection
+
+  0.0%   0.0% java.util.concurrent.ForkJoinPool.unmanagedBlock
+              java.util.concurrent.ForkJoinPool.managedBlock
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.util.concurrent.ArrayBlockingQueue.take
+
+  0.0%   0.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.1%   0.2% <other>
+
+....[Thread state: WAITING].........................................................................
+ 33.5%  96.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  1.0%   2.8% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.2%   0.5% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  1.5%  85.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  0.3%  15.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+....[Thread state: BLOCKED].........................................................................
+  0.1%  76.9% org.eclipse.collections.impl.multimap.AbstractSynchronizedPutMultimap.put
+              org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+              org.eclipse.collections.impl.forkjoin.FJBatchIterableProcedureTask.exec
+
+  0.0%  15.4% org.eclipse.collections.impl.multimap.AbstractSynchronizedPutMultimap.put
+              org.eclipse.collections.impl.block.procedure.MultimapPutProcedure.value
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.chainedForEach
+              org.eclipse.collections.impl.set.mutable.UnifiedSet.batchForEach
+
+  0.0%   7.7% org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.resize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.incrementSizeAndPossiblyResize
+              org.eclipse.collections.impl.map.mutable.ConcurrentHashMap.getIfAbsentPutWith
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                         Mode  Cnt   Score   Error  Units
+AnagramSetTest.parallel_eager_forkjoin_ec        thrpt       11.323          ops/s
+AnagramSetTest.parallel_eager_forkjoin_ec:stack  thrpt          NaN            ---

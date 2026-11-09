@@ -1,0 +1,32 @@
+......................                                                   [100%]
+=============================== warnings summary ===============================
+pilot/test_A08_cache.py::test_cache
+  /opt/rh/ooptimize/pilot/test_A08_cache.py:23: UserWarning: generate/openai/gpt-oss-120b: no cache reads in the pilot (best-effort cache; spend may exceed the prep projection, the canary re-projects from real token counts)
+    warnings.warn(f"{name}/{mid}: no cache reads in the pilot (best-effort cache; spend may exceed the "
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED pilot/test_A01_auth.py::test_keys
+PASSED pilot/test_A02_model_ids.py::test_ids
+PASSED pilot/test_A03_schema.py::test_every_group_parsed
+PASSED pilot/test_A07_ratelimit.py::test_headroom
+PASSED pilot/test_A08_cache.py::test_cache
+PASSED pilot/test_D02_download.py::test_datacheck_all_ok
+PASSED pilot/test_D03_shape.py::test_shape
+PASSED pilot/test_E01_toolchain.py::test_toolchain
+PASSED pilot/test_E02_build.py::test_build
+PASSED pilot/test_E03_selector.py::test_selection
+PASSED pilot/test_E04_baseline.py::test_baseline_reproduces
+PASSED pilot/test_E05_controls.py::test_controls
+PASSED pilot/test_E06_alloc.py::test_alloc
+PASSED pilot/test_E07_prompt_budget.py::test_prompt_budget
+PASSED pilot/test_E08_equalsverifier.py::test_ev
+PASSED pilot/test_E09_toy_pipeline.py::test_toy_pipeline
+PASSED pilot/test_I05_executor.py::test_executor_token
+PASSED pilot/test_I06_instance_role.py::test_role
+PASSED pilot/test_I09_selfcheck.py::test_selfcheck_passes_on_instance
+PASSED pilot/test_S05_killpoll.py::test_killpoll
+PASSED pilot/test_S06_backup.py::test_backup
+PASSED pilot/test_S07_mail.py::test_mail
+22 passed, 1 warning in 225.06s (0:03:45)

@@ -1,0 +1,1921 @@
+# OOPT benchmark com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = LinkedHashMap_Lru, size = 1)
+
+# Run progress: 0.00% complete, ETA 00:01:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 19337149.115 ops/s
+Iteration   1: 17563433.083 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  17563433.083 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 25.0%  37.5% java.util.HashMap.hash
+              java.util.LinkedHashMap.afterNodeInsertion
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+
+  8.3%  12.5% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ba158032400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = LinkedHashMap_Lru, size = 100)
+
+# Run progress: 5.00% complete, ETA 00:01:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 19515334.201 ops/s
+Iteration   1: 18028519.843 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  18028519.843 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 26.1%  39.2% java.util.HashMap.hash
+              java.util.LinkedHashMap.afterNodeInsertion
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+
+  7.2%  10.8% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007b3598032400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = LinkedHashMap_Lru, size = 10000)
+
+# Run progress: 10.00% complete, ETA 00:01:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 18586461.574 ops/s
+Iteration   1: 17511567.605 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  17511567.605 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 24.6%  36.9% java.util.HashMap.hash
+              java.util.LinkedHashMap.afterNodeInsertion
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+
+  8.7%  13.1% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000744e98032c00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = LinkedHashMap_Lru, size = 1000000)
+
+# Run progress: 15.00% complete, ETA 00:00:57
+# Fork: 1 of 1
+# Warmup Iteration   1: 22037135.116 ops/s
+Iteration   1: 19509823.149 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  19509823.149 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 27.5%  41.2% java.util.HashMap.hash
+              java.util.LinkedHashMap.afterNodeInsertion
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+
+  5.7%   8.5% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007fceb8032400.invoke
+
+  0.2%   0.3% java.lang.Integer.valueOf
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = LinkedHashMap_Lru, size = 10000000)
+
+# Run progress: 20.00% complete, ETA 00:00:54
+# Fork: 1 of 1
+# Warmup Iteration   1: 19784699.375 ops/s
+Iteration   1: 22353273.831 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  22353273.831 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 25.6%  38.4% java.util.HashMap.hash
+              java.util.LinkedHashMap.afterNodeInsertion
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+
+  7.6%  11.3% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007cb4b8032000.invoke
+
+  0.2%   0.3% java.util.LinkedHashMap.newNode
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.impl.LinkedHashMapCache.put
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Coherence_Hybrid, size = 1)
+
+# Run progress: 25.00% complete, ETA 00:00:52
+# Fork: 1 of 1
+# Warmup Iteration   1: 2550825.287 ops/s
+Iteration   1: 2432632.283 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  2432632.283 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.3%  19.9% com.tangosol.net.cache.LocalCache$Entry.onAdd
+              com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+ 10.5%  15.7% com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+
+  5.3%   8.0% com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  2.1%   3.2% com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+
+  1.1%   1.6% com.tangosol.net.cache.LocalCache.evict
+              com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  1.1%   1.6% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007748c0032c00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Coherence_Hybrid, size = 100)
+
+# Run progress: 30.00% complete, ETA 00:00:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 2943824.960 ops/s
+Iteration   1: 2847627.377 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  2847627.377 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 14.7%  22.1% com.tangosol.net.cache.LocalCache$Entry.onAdd
+              com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+ 13.1%  19.7% com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+
+  3.9%   5.9% com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  0.5%   0.8% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000074f5e4033800.invoke
+
+  0.4%   0.5% com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+
+  0.2%   0.3% java.util.Arrays.copyOf
+              java.util.ArrayList.grow
+              java.util.ArrayList.grow
+              java.util.ArrayList.add
+
+  0.2%   0.3% com.tangosol.util.SafeHashMap.getEntryInternal
+              com.tangosol.net.cache.LocalCache.getEntryInternal
+              com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+
+  0.2%   0.3% com.oracle.coherence.common.util.SafeClock.getSafeTimeMillis
+              com.oracle.coherence.common.base.TimeHelper.getSafeTimeMillis
+              com.tangosol.util.Base.getSafeTimeMillis
+              com.tangosol.net.cache.LocalCache.getCurrentTimeMillis
+
+  0.2%   0.3% java.lang.Integer.highestOneBit
+              com.tangosol.util.BitHelper.indexOfMSB
+              com.tangosol.net.cache.LocalCache$Entry.getPriority
+              com.tangosol.net.cache.LocalCache.prune
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Coherence_Hybrid, size = 10000)
+
+# Run progress: 35.00% complete, ETA 00:00:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 3391042.084 ops/s
+Iteration   1: 3239022.915 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  3239022.915 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.5%  23.3% com.tangosol.net.cache.LocalCache$Entry.onAdd
+              com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  8.6%  13.0% com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+
+  4.8%   7.1% com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  1.9%   2.9% java.util.ArrayList.add
+              java.util.ArrayList.add
+              com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+
+  0.9%   1.3% com.tangosol.util.SafeHashMap.getEntryInternal
+              com.tangosol.net.cache.LocalCache.getEntryInternal
+              com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+
+  0.5%   0.8% com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+
+  0.4%   0.5% com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.4%   0.5% com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+
+  0.2%   0.3% com.tangosol.net.cache.LocalCache.instantiateEntry
+              com.tangosol.util.SafeHashMap.instantiateEntry
+              com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+
+  0.2%   0.3% com.tangosol.util.SafeHashMap.removeEntryInternal
+              com.tangosol.net.cache.LocalCache.removeEvicted
+              com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Coherence_Hybrid, size = 1000000)
+
+# Run progress: 40.00% complete, ETA 00:00:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 2196230.464 ops/s
+Iteration   1: 2879956.477 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  2879956.477 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 12.3%  18.5% com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+
+ 10.8%  16.1% com.tangosol.net.cache.LocalCache$Entry.onAdd
+              com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  4.1%   6.1% com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  1.4%   2.1% java.util.Arrays.copyOf
+              java.util.Arrays.copyOf
+              java.util.ArrayList.grow
+              java.util.ArrayList.grow
+
+  1.2%   1.9% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000717124032000.invoke
+
+  0.9%   1.3% com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+
+  0.7%   1.1% java.util.Arrays.copyOf
+              java.util.ArrayList.grow
+              java.util.ArrayList.grow
+              java.util.ArrayList.add
+
+  0.7%   1.1% com.tangosol.util.SafeHashMap.getEntryInternal
+              com.tangosol.net.cache.LocalCache.getEntryInternal
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  0.5%   0.8% com.tangosol.util.SafeHashMap.getEntryInternal
+              com.tangosol.net.cache.LocalCache.getEntryInternal
+              com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+
+  0.4%   0.5% com.tangosol.util.SafeHashMap.removeEntryInternal
+              com.tangosol.net.cache.LocalCache.removeEvicted
+              com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.2%   0.3% java.util.ArrayList.<init>
+              com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Coherence_Hybrid, size = 10000000)
+
+# Run progress: 45.00% complete, ETA 00:00:37
+# Fork: 1 of 1
+# Warmup Iteration   1: 927224.738 ops/s
+Iteration   1: 2130076.868 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  2130076.868 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.9%  26.8% com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+              com.github.benmanes.caffeine.cache.impl.CoherenceCache.put
+
+  9.1%  13.6% com.tangosol.net.cache.LocalCache$Entry.onAdd
+              com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  3.0%   4.5% com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+  1.5%   2.3% java.util.Arrays.copyOf
+              java.util.Arrays.copyOf
+              java.util.ArrayList.grow
+              java.util.ArrayList.grow
+
+  0.6%   0.9% com.tangosol.util.SafeHashMap.getEntryInternal
+              com.tangosol.net.cache.LocalCache.getEntryInternal
+              com.tangosol.net.cache.LocalCache.pruneIncremental
+              com.tangosol.net.cache.LocalCache.prune
+
+  0.6%   0.9% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007db098033c00.invoke
+
+  0.3%   0.5% com.tangosol.net.cache.LocalCache.instantiateEntry
+              com.tangosol.util.SafeHashMap.instantiateEntry
+              com.tangosol.util.SafeHashMap.put
+              com.tangosol.net.cache.LocalCache.put
+
+  0.2%   0.2% java.util.Arrays.copyOf
+              java.util.ArrayList.grow
+              java.util.ArrayList.grow
+              java.util.ArrayList.add
+
+  0.2%   0.2% java.util.ArrayList.<init>
+              com.tangosol.net.cache.LocalCache.prune
+              com.tangosol.net.cache.LocalCache.put
+              com.tangosol.net.cache.LocalCache.put
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Caffeine, size = 1)
+
+# Run progress: 50.00% complete, ETA 00:00:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 6368998.511 ops/s
+Iteration   1: 6920737.169 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  6920737.169 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 43.2%         WAITING
+ 35.2%         RUNNABLE
+ 21.6%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 43.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 14.3%  40.6% <stack is empty, everything is filtered?>
+  7.5%  21.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+
+  3.1%   8.9% java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  2.2%   6.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.put
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+
+  2.0%   5.7% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  1.4%   4.0% java.util.concurrent.ConcurrentHashMap.putVal
+              java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  1.4%   4.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  1.1%   3.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  0.8%   2.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+
+  0.7%   1.9% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  0.3%   0.9% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromWindow
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.1%   0.2% java.lang.invoke.DirectMethodHandle.allocateInstance
+              java.lang.invoke.LambdaForm$DMH/0x0000727e08098400.newInvokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000727e08098c00.linkToTargetMethod
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromWindow
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+
+  0.1%   0.2% java.util.concurrent.locks.ReentrantLock.hasQueuedThreads
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.isEvictionLockAwaited
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+              java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue.offerSlowPath
+              com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue.offer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 14.3%  66.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  5.8%  26.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  1.6%   7.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireNanos
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Caffeine, size = 100)
+
+# Run progress: 55.00% complete, ETA 00:00:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 5007745.654 ops/s
+Iteration   1: 5364001.523 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  5364001.523 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 41.3%         WAITING
+ 39.3%         RUNNABLE
+ 19.4%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 41.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 14.7%  37.3% <stack is empty, everything is filtered?>
+  5.0%  12.8% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+
+  4.6%  11.6% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  4.6%  11.6% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  2.7%   7.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  2.0%   5.2% java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  1.8%   4.6% java.util.concurrent.ConcurrentHashMap.putVal
+              java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  1.6%   4.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.put
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+
+  0.9%   2.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  0.4%   1.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+
+  0.3%   0.8% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromWindow
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.2%   0.4% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.2%   0.4% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.2% java.lang.invoke.DirectMethodHandle.allocateInstance
+              java.lang.invoke.LambdaForm$DMH/0x000074177c098400.newInvokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000074177c098c00.linkToTargetMethod
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromWindow
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool$WorkQueue.push
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache$BoundedLocalManualCache.cache
+              com.github.benmanes.caffeine.cache.LocalManualCache.cleanUp
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.cleanUp
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.tearDown
+
+  0.1%   0.2% java.util.concurrent.locks.ReentrantLock$Sync.tryLock
+              java.util.concurrent.locks.ReentrantLock.tryLock
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.scheduleDrainBuffers
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.rescheduleCleanUpIfIncomplete
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.WindowClimber.determineAdjustment
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.climb
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 14.7%  75.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  3.6%  18.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  1.1%   5.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireNanos
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Caffeine, size = 10000)
+
+# Run progress: 60.00% complete, ETA 00:00:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 5739113.230 ops/s
+Iteration   1: 6324341.256 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  6324341.256 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 48.8%         WAITING
+ 31.3%         RUNNABLE
+ 19.9%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 48.8%  99.9% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.1%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 12.9%  41.2% <stack is empty, everything is filtered?>
+  7.2%  22.9% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+
+  2.4%   7.7% java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  1.7%   5.5% com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.put
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+
+  1.6%   5.1% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  1.4%   4.6% java.util.concurrent.ConcurrentHashMap.putVal
+              java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  1.4%   4.6% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+
+  0.9%   2.9% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  0.8%   2.4% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  0.2%   0.7% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.4% java.util.concurrent.ConcurrentHashMap.sumCount
+              java.util.concurrent.ConcurrentHashMap.addCount
+              java.util.concurrent.ConcurrentHashMap.computeIfPresent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+
+  0.1%   0.4% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.2% java.util.concurrent.ConcurrentHashMap.computeIfPresent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromWindow
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.unlink
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool$WorkQueue.push
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromWindow
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.1%   0.2% java.util.concurrent.locks.LockSupport.setCurrentBlocker
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 12.9%  64.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  5.4%  27.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  1.6%   8.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireNanos
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Caffeine, size = 1000000)
+
+# Run progress: 65.00% complete, ETA 00:00:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 3979636.637 ops/s
+Iteration   1: 4734946.739 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  4734946.739 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 56.1%         WAITING
+ 26.2%         RUNNABLE
+ 17.8%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 56.0%  99.8% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.1%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.1%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 11.1%  42.5% <stack is empty, everything is filtered?>
+  3.9%  14.8% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+
+  2.6%  10.1% java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  1.9%   7.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  1.1%   4.3% java.util.concurrent.ConcurrentHashMap.computeIfPresent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+
+  1.1%   4.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  1.1%   4.0% java.util.concurrent.ConcurrentHashMap.sumCount
+              java.util.concurrent.ConcurrentHashMap.addCount
+              java.util.concurrent.ConcurrentHashMap.computeIfPresent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+
+  0.9%   3.4% java.util.concurrent.ConcurrentHashMap.putVal
+              java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  0.8%   2.9% com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.put
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+
+  0.5%   2.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+
+  0.4%   1.6% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  0.4%   1.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.1%   0.4% java.lang.invoke.DirectMethodHandle.allocateInstance
+              java.lang.invoke.LambdaForm$DMH/0x00007f7cfc098400.newInvokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007f7cfc098c00.linkToTargetMethod
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+
+  0.1%   0.4% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromWindow
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.compareAndExchangeLong
+              java.util.concurrent.ForkJoinPool.compareAndExchangeCtl
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool$WorkQueue.push
+
+  0.1%   0.2% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.FrequencySketch.reset
+              com.github.benmanes.caffeine.cache.FrequencySketch.increment
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$AddTask.run
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 11.1%  62.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  4.6%  25.8% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  2.1%  11.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireNanos
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Caffeine, size = 10000000)
+
+# Run progress: 70.00% complete, ETA 00:00:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 2067092.897 ops/s
+Iteration   1: 2139558.724 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  2139558.724 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 69.4%         WAITING
+ 15.8%         RUNNABLE
+ 14.8%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 69.3%  99.9% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: RUNNABLE]........................................................................
+  7.7%  48.5% <stack is empty, everything is filtered?>
+  3.6%  22.7% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+
+  2.2%  14.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  0.6%   4.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.6%   4.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  0.4%   2.4% java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  0.2%   1.1% com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.put
+              com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+
+  0.1%   0.8% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+
+  0.0%   0.3% com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue.offer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  0.0%   0.3% java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireNanos
+              java.util.concurrent.locks.ReentrantLock$Sync.tryLockNanos
+              java.util.concurrent.locks.ReentrantLock.tryLock
+
+  0.0%   0.3% java.util.concurrent.locks.ReentrantLock.hasQueuedThreads
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.isEvictionLockAwaited
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+              java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec
+
+  0.0%   0.3% java.util.concurrent.ConcurrentHashMap.putVal
+              java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  0.0%   0.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.unlink
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictAndAdvance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain
+
+  0.0%   0.3% java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.3% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.3% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  0.0%   0.3% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.3% java.lang.invoke.DirectMethodHandle.allocateInstance
+              java.lang.invoke.LambdaForm$DMH/0x00007987b8098400.newInvokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007987b8098c00.linkToTargetMethod
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  7.7%  52.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  5.5%  37.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireNanos
+
+  1.6%  11.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Ehcache3, size = 1)
+
+# Run progress: 75.00% complete, ETA 00:00:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 4031265.377 ops/s
+Iteration   1: 4229763.124 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  4229763.124 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 23.4%  35.1% org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+              org.ehcache.core.Ehcache.doPut
+              org.ehcache.core.EhcacheBase.put
+
+  6.4%   9.6% org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+
+  1.8%   2.7% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000079dbdc032000.invoke
+
+  1.6%   2.4% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+
+  0.2%   0.3% org.ehcache.impl.internal.concurrent.ConcurrentHashMap$Traverser.advance
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Ehcache3, size = 100)
+
+# Run progress: 80.00% complete, ETA 00:00:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 2825794.928 ops/s
+Iteration   1: 2726077.425 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  2726077.425 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.3%  23.0% org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+              org.ehcache.core.Ehcache.doPut
+              org.ehcache.core.EhcacheBase.put
+
+  7.1%  10.6% org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+
+  4.9%   7.4% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+
+  1.6%   2.4% java.util.concurrent.ConcurrentLinkedDeque.unlinkFirst
+              java.util.concurrent.ConcurrentLinkedDeque.unlink
+              java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+              java.util.concurrent.ConcurrentLinkedDeque.poll
+
+  1.4%   2.1% java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+              java.util.concurrent.ConcurrentLinkedDeque.poll
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+
+  1.1%   1.6% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.computeIfPresent
+              org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+
+  0.7%   1.1% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073cd68032c00.invoke
+
+  0.7%   1.1% java.util.concurrent.ConcurrentLinkedDeque.skipDeletedPredecessors
+              java.util.concurrent.ConcurrentLinkedDeque.unlinkFirst
+              java.util.concurrent.ConcurrentLinkedDeque.unlink
+              java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+
+  0.4%   0.5% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.compute
+              org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+              org.ehcache.core.Ehcache.doPut
+
+  0.2%   0.3% org.ehcache.impl.internal.concurrent.ConcurrentHashMap$Traverser.advance
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Ehcache3, size = 10000)
+
+# Run progress: 85.00% complete, ETA 00:00:11
+# Fork: 1 of 1
+# Warmup Iteration   1: 2308439.427 ops/s
+Iteration   1: 2033090.995 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  2033090.995 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 11.5%  17.3% org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+              org.ehcache.core.Ehcache.doPut
+              org.ehcache.core.EhcacheBase.put
+
+  9.4%  14.1% org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+
+  8.7%  13.0% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+
+  1.4%   2.1% java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+              java.util.concurrent.ConcurrentLinkedDeque.poll
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+
+  1.4%   2.1% java.util.concurrent.ConcurrentLinkedDeque.unlinkFirst
+              java.util.concurrent.ConcurrentLinkedDeque.unlink
+              java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+              java.util.concurrent.ConcurrentLinkedDeque.poll
+
+  0.7%   1.1% com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% java.util.concurrent.ConcurrentLinkedDeque.skipDeletedPredecessors
+              java.util.concurrent.ConcurrentLinkedDeque.unlinkFirst
+              java.util.concurrent.ConcurrentLinkedDeque.unlink
+              java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Ehcache3, size = 1000000)
+
+# Run progress: 90.00% complete, ETA 00:00:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 1869053.648 ops/s
+Iteration   1: 1836308.848 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  1836308.848 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 12.3%  18.5% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+
+  9.8%  14.7% org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+              org.ehcache.core.Ehcache.doPut
+              org.ehcache.core.EhcacheBase.put
+
+  3.4%   5.2% org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+
+  3.3%   4.9% org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+
+  1.8%   2.7% java.util.concurrent.ConcurrentLinkedDeque.unlinkFirst
+              java.util.concurrent.ConcurrentLinkedDeque.unlink
+              java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+              java.util.concurrent.ConcurrentLinkedDeque.poll
+
+  1.3%   1.9% java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+              java.util.concurrent.ConcurrentLinkedDeque.poll
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+
+  0.9%   1.4% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007b5924033000.invoke
+
+  0.5%   0.8% java.util.concurrent.ConcurrentLinkedDeque.skipDeletedPredecessors
+              java.util.concurrent.ConcurrentLinkedDeque.unlinkFirst
+              java.util.concurrent.ConcurrentLinkedDeque.unlink
+              java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.EvictionBenchmark.evict
+# Parameters: (cacheType = Ehcache3, size = 10000000)
+
+# Run progress: 95.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 2113484.844 ops/s
+Iteration   1: 2441743.539 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict":
+  2441743.539 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.EvictionBenchmark.evict:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.5%         RUNNABLE
+ 33.3%         TIMED_WAITING
+  0.2%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.1% <stack is empty, everything is filtered?>
+ 11.3%  17.1% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+
+ 10.6%  16.0% org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+              org.ehcache.core.Ehcache.doPut
+              org.ehcache.core.EhcacheBase.put
+
+  3.0%   4.5% org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+
+  2.4%   3.7% org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.OnHeapStore.evict
+              org.ehcache.impl.internal.store.heap.OnHeapStore.enforceCapacity
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+
+  2.4%   3.7% java.util.concurrent.ConcurrentLinkedDeque.unlinkFirst
+              java.util.concurrent.ConcurrentLinkedDeque.unlink
+              java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+              java.util.concurrent.ConcurrentLinkedDeque.poll
+
+  1.6%   2.4% java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+              java.util.concurrent.ConcurrentLinkedDeque.poll
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.getEvictionCandidate
+              org.ehcache.impl.internal.store.heap.SimpleBackend.getEvictionCandidate
+
+  0.9%   1.3% java.util.concurrent.ConcurrentLinkedDeque.skipDeletedPredecessors
+              java.util.concurrent.ConcurrentLinkedDeque.unlinkFirst
+              java.util.concurrent.ConcurrentLinkedDeque.unlink
+              java.util.concurrent.ConcurrentLinkedDeque.pollFirst
+
+  0.9%   1.3% com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.EvictionBenchmark_evict_jmhTest.evict_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007bf908032800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# Run complete. Total time: 00:01:15
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                            (cacheType)    (size)   Mode  Cnt         Score   Error  Units
+EvictionBenchmark.evict        LinkedHashMap_Lru         1  thrpt       17563433.083          ops/s
+EvictionBenchmark.evict:stack  LinkedHashMap_Lru         1  thrpt                NaN            ---
+EvictionBenchmark.evict        LinkedHashMap_Lru       100  thrpt       18028519.843          ops/s
+EvictionBenchmark.evict:stack  LinkedHashMap_Lru       100  thrpt                NaN            ---
+EvictionBenchmark.evict        LinkedHashMap_Lru     10000  thrpt       17511567.605          ops/s
+EvictionBenchmark.evict:stack  LinkedHashMap_Lru     10000  thrpt                NaN            ---
+EvictionBenchmark.evict        LinkedHashMap_Lru   1000000  thrpt       19509823.149          ops/s
+EvictionBenchmark.evict:stack  LinkedHashMap_Lru   1000000  thrpt                NaN            ---
+EvictionBenchmark.evict        LinkedHashMap_Lru  10000000  thrpt       22353273.831          ops/s
+EvictionBenchmark.evict:stack  LinkedHashMap_Lru  10000000  thrpt                NaN            ---
+EvictionBenchmark.evict         Coherence_Hybrid         1  thrpt        2432632.283          ops/s
+EvictionBenchmark.evict:stack   Coherence_Hybrid         1  thrpt                NaN            ---
+EvictionBenchmark.evict         Coherence_Hybrid       100  thrpt        2847627.377          ops/s
+EvictionBenchmark.evict:stack   Coherence_Hybrid       100  thrpt                NaN            ---
+EvictionBenchmark.evict         Coherence_Hybrid     10000  thrpt        3239022.915          ops/s
+EvictionBenchmark.evict:stack   Coherence_Hybrid     10000  thrpt                NaN            ---
+EvictionBenchmark.evict         Coherence_Hybrid   1000000  thrpt        2879956.477          ops/s
+EvictionBenchmark.evict:stack   Coherence_Hybrid   1000000  thrpt                NaN            ---
+EvictionBenchmark.evict         Coherence_Hybrid  10000000  thrpt        2130076.868          ops/s
+EvictionBenchmark.evict:stack   Coherence_Hybrid  10000000  thrpt                NaN            ---
+EvictionBenchmark.evict                 Caffeine         1  thrpt        6920737.169          ops/s
+EvictionBenchmark.evict:stack           Caffeine         1  thrpt                NaN            ---
+EvictionBenchmark.evict                 Caffeine       100  thrpt        5364001.523          ops/s
+EvictionBenchmark.evict:stack           Caffeine       100  thrpt                NaN            ---
+EvictionBenchmark.evict                 Caffeine     10000  thrpt        6324341.256          ops/s
+EvictionBenchmark.evict:stack           Caffeine     10000  thrpt                NaN            ---
+EvictionBenchmark.evict                 Caffeine   1000000  thrpt        4734946.739          ops/s
+EvictionBenchmark.evict:stack           Caffeine   1000000  thrpt                NaN            ---
+EvictionBenchmark.evict                 Caffeine  10000000  thrpt        2139558.724          ops/s
+EvictionBenchmark.evict:stack           Caffeine  10000000  thrpt                NaN            ---
+EvictionBenchmark.evict                 Ehcache3         1  thrpt        4229763.124          ops/s
+EvictionBenchmark.evict:stack           Ehcache3         1  thrpt                NaN            ---
+EvictionBenchmark.evict                 Ehcache3       100  thrpt        2726077.425          ops/s
+EvictionBenchmark.evict:stack           Ehcache3       100  thrpt                NaN            ---
+EvictionBenchmark.evict                 Ehcache3     10000  thrpt        2033090.995          ops/s
+EvictionBenchmark.evict:stack           Ehcache3     10000  thrpt                NaN            ---
+EvictionBenchmark.evict                 Ehcache3   1000000  thrpt        1836308.848          ops/s
+EvictionBenchmark.evict:stack           Ehcache3   1000000  thrpt                NaN            ---
+EvictionBenchmark.evict                 Ehcache3  10000000  thrpt        2441743.539          ops/s
+EvictionBenchmark.evict:stack           Ehcache3  10000000  thrpt                NaN            ---

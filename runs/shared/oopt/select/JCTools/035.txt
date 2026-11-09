@@ -1,0 +1,228 @@
+# OOPT benchmark org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 11 threads (1 group; 10x "twoMixedLengthPrimitiveArgsCaller", 1x "twoMixedLengthPrimitiveArgsProcessor" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs
+# Parameters: (limit = 1)
+
+# Run progress: 0.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 136748928.621 ops/s
+Iteration   1: 129563681.886 ops/s
+                 callsFailed:                          ≈ 0 ops/s
+                 processFailed:                        120524780.417 ops/s
+                 processed:                            4519947.421 ops/s
+                 stack:                                <delayed till summary>
+                 twoMixedLengthPrimitiveArgsCaller:    4519096.554 ops/s
+                 twoMixedLengthPrimitiveArgsProcessor: 125044585.332 ops/s
+
+
+
+Result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs":
+  129563681.886 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:callsFailed":
+  ≈ 0 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:processFailed":
+  120524780.417 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:processed":
+  4519947.421 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 91.4%         RUNNABLE
+  7.7%         TIMED_WAITING
+  0.9%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 73.3%  80.2% org.jctools.channels.mpsc.MpscOffHeapFixedSizeRingBuffer.writeAcquire
+              org.jctools.channels.proxy.ProxyChannelFactory.writeAcquireWithWaitStrategy
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.twoMixedLengthPrimitiveArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgsCaller
+
+  7.7%   8.4% <stack is empty, everything is filtered?>
+  4.7%   5.1% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgsProcessor
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgsProcessor_thrpt_jmhStub
+
+  2.8%   3.0% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgsCaller_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000071209402f800.invoke
+
+  2.3%   2.5% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchImpl.twoMixedLengthPrimitiveArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.doProcess
+
+  0.6%   0.6% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgsProcessor_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000071209402f800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  7.7% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.8%  90.9% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.1%   9.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:twoMixedLengthPrimitiveArgsCaller":
+  4519096.554 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:twoMixedLengthPrimitiveArgsProcessor":
+  125044585.332 ops/s
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 11 threads (1 group; 10x "twoMixedLengthPrimitiveArgsCaller", 1x "twoMixedLengthPrimitiveArgsProcessor" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs
+# Parameters: (limit = 10000)
+
+# Run progress: 50.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 117691133.987 ops/s
+Iteration   1: 112357812.972 ops/s
+                 callsFailed:                          ≈ 0 ops/s
+                 processFailed:                        104842484.688 ops/s
+                 processed:                            4643472.332 ops/s
+                 stack:                                <delayed till summary>
+                 twoMixedLengthPrimitiveArgsCaller:    4643772.517 ops/s
+                 twoMixedLengthPrimitiveArgsProcessor: 107714040.455 ops/s
+
+
+
+Result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs":
+  112357812.972 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:callsFailed":
+  ≈ 0 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:processFailed":
+  104842484.688 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:processed":
+  4643472.332 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 91.9%         RUNNABLE
+  7.7%         TIMED_WAITING
+  0.5%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 76.3%  83.1% org.jctools.channels.mpsc.MpscOffHeapFixedSizeRingBuffer.writeAcquire
+              org.jctools.channels.proxy.ProxyChannelFactory.writeAcquireWithWaitStrategy
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.twoMixedLengthPrimitiveArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgsCaller
+
+  7.7%   8.4% <stack is empty, everything is filtered?>
+  4.2%   4.6% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgsProcessor
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgsProcessor_thrpt_jmhStub
+
+  2.7%   2.9% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchImpl.twoMixedLengthPrimitiveArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.doProcess
+
+  0.7%   0.8% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgsProcessor_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000772bf802f000.invoke
+
+  0.2%   0.2% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgsCaller_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_twoMixedLengthPrimitiveArgs_jmhTest.twoMixedLengthPrimitiveArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000772bf802f000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  7.7% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.5% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:twoMixedLengthPrimitiveArgsCaller":
+  4643772.517 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:twoMixedLengthPrimitiveArgsProcessor":
+  107714040.455 ops/s
+
+
+# Run complete. Total time: 00:00:06
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                                                   (limit)   Mode  Cnt          Score   Error  Units
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs                                             1  thrpt       129563681.886          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:callsFailed                                 1  thrpt                 ≈ 0          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:processFailed                               1  thrpt       120524780.417          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:processed                                   1  thrpt         4519947.421          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:stack                                       1  thrpt                 NaN            ---
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:twoMixedLengthPrimitiveArgsCaller           1  thrpt         4519096.554          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:twoMixedLengthPrimitiveArgsProcessor        1  thrpt       125044585.332          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs                                         10000  thrpt       112357812.972          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:callsFailed                             10000  thrpt                 ≈ 0          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:processFailed                           10000  thrpt       104842484.688          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:processed                               10000  thrpt         4643472.332          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:stack                                   10000  thrpt                 NaN            ---
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:twoMixedLengthPrimitiveArgsCaller       10000  thrpt         4643772.517          ops/s
+MpscProxyChannelBenchmark.twoMixedLengthPrimitiveArgs:twoMixedLengthPrimitiveArgsProcessor    10000  thrpt       107714040.455          ops/s

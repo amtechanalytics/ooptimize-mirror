@@ -1,0 +1,1200 @@
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true install -pl jctools-core,jctools-experimental -am
+[exit 0 in 15s]
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddUnpaddedArrayQueue.java
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true package -pl jctools-benchmarks -am
+[exit 0 in 18s]
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddVarHandleChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddVarHandleChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddVarHandleChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedVarHandleQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedVarHandleQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedVarHandleQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddVarHandleUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddVarHandleUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddVarHandleUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedVarHandleUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedVarHandleUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedVarHandleUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableVarHandleUnpaddedArrayQueue.java
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/JCTools/jctools-core/target/oopt-test-cp.txt -pl jctools-core
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/JCTools/jctools-experimental/target/oopt-test-cp.txt -pl jctools-experimental
+[exit 0 in 2s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true install -pl jctools-core,jctools-experimental -am
+[exit 0 in 27s]
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddUnpaddedArrayQueue.java
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true package -pl jctools-benchmarks -am
+[exit 0 in 20s]
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddVarHandleChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddVarHandleChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddVarHandleChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedVarHandleQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedVarHandleQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedVarHandleQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddVarHandleUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddVarHandleUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddVarHandleUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedVarHandleUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedVarHandleUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedVarHandleUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableVarHandleUnpaddedArrayQueue.java
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/JCTools/jctools-core/target/oopt-test-cp.txt -pl jctools-core
+[exit 1 in 2s]
+[ERROR] No plugin found for prefix 'dependency' in the current project and in the plugin groups [org.apache.maven.plugins, org.codehaus.mojo] available from the repositories [local (/opt/data/oopt/m2), central (https://repo.maven.apache.org/maven2)] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/JCTools/jctools-core/target/oopt-test-cp.txt -pl jctools-core
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/JCTools/jctools-experimental/target/oopt-test-cp.txt -pl jctools-experimental
+[exit 0 in 2s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true install -pl jctools-core,jctools-experimental -am
+[exit 0 in 29s]
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddUnpaddedArrayQueue.java
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true package -pl jctools-benchmarks -am
+[exit 0 in 20s]
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedAtomicUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableAtomicUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddVarHandleChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddVarHandleChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddVarHandleChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedVarHandleQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedVarHandleQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedVarHandleQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableVarHandleArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java
+Saved to ConcurrentCircularVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/ConcurrentSequencedCircularArrayQueue.java
+Saved to ConcurrentSequencedCircularVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscArrayQueue.java
+Saved to SpscVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpmcArrayQueue.java
+Saved to SpmcVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscArrayQueue.java
+Saved to MpscVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscBlockingConsumerArrayQueue.java
+Saved to MpscBlockingConsumerVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcArrayQueue.java
+Saved to MpmcVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddChunk.java
+Saved to MpUnboundedXaddVarHandleUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpUnboundedXaddArrayQueue.java
+Saved to MpUnboundedXaddVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddChunk.java
+Saved to MpscUnboundedXaddVarHandleUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedXaddArrayQueue.java
+Saved to MpscUnboundedXaddVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddChunk.java
+Saved to MpmcUnboundedXaddVarHandleUnpaddedChunk.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpmcUnboundedXaddArrayQueue.java
+Saved to MpmcUnboundedXaddVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseLinkedQueue.java
+Saved to BaseLinkedVarHandleUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscLinkedQueue.java
+Saved to SpscLinkedVarHandleUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscLinkedQueue.java
+Saved to MpscLinkedVarHandleUnpaddedQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseSpscLinkedArrayQueue.java
+Saved to BaseSpscLinkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscChunkedArrayQueue.java
+Saved to SpscChunkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscUnboundedArrayQueue.java
+Saved to SpscUnboundedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/SpscGrowableArrayQueue.java
+Saved to SpscGrowableVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/BaseMpscLinkedArrayQueue.java
+Saved to BaseMpscLinkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscChunkedArrayQueue.java
+Saved to MpscChunkedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscUnboundedArrayQueue.java
+Saved to MpscUnboundedVarHandleUnpaddedArrayQueue.java
+Processing /opt/data/oopt/shared/src/JCTools/jctools-core-jdk11/../jctools-core/src/main/java/org/jctools/queues/MpscGrowableArrayQueue.java
+Saved to MpscGrowableVarHandleUnpaddedArrayQueue.java
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/JCTools/jctools-core/target/oopt-test-cp.txt -pl jctools-core
+[exit 1 in 2s]
+[ERROR] No plugin found for prefix 'dependency' in the current project and in the plugin groups [org.apache.maven.plugins, org.codehaus.mojo] available from the repositories [local (/opt/data/oopt/m2), central (https://repo.maven.apache.org/maven2)] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/JCTools/jctools-core/target/oopt-test-cp.txt -pl jctools-core
+[exit 0 in 4s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/JCTools/jctools-experimental/target/oopt-test-cp.txt -pl jctools-experimental
+[exit 0 in 2s]
+
+

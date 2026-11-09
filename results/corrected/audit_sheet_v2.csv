@@ -1,0 +1,1581 @@
+group,n,cell_id,model,rung,library,method,rows_fired,question,evidence,diff,your_verdict,note
+A,1,"score|gen|R1|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",claude-sonnet-5-5,R1,RoaringBitmap,"org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6 | randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6,"--- original
++++ patched
+@@ -1,15 +1,18 @@
+ protected static byte[] sortSmallByteArray(
+       byte[] key, Node[] children, int left, int right) { // x
+-    for (int i = left, j = i; i < right; j = ++i) {
++    for (int i = left; i < right; i++) {
+       byte ai = key[i + 1];
++      int u = ai & 0xFF;
++      if (u >= (key[i] & 0xFF)) {
++        // already in place, no shifting or rewrite needed
++        continue;
++      }
+       Node child = children[i + 1];
+-      int unsignedByteAi = Byte.toUnsignedInt(ai);
+-      while (unsignedByteAi < Byte.toUnsignedInt(key[j])) {
++      int j = i;
++      do {
+         key[j + 1] = key[j];
+         children[j + 1] = children[j];
+-        if (j-- == left) {
+-          break;
+-        }
+-      }
++        j--;
++      } while (j >= left && u < (key[j] & 0xFF));
+       key[j + 1] = ai;
+       children[j + 1] = child;",,
+A,2,"score|gen|R1|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)|s1",gpt-6.1-sol,R1,RoaringBitmap,"org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)",R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 26 out of bounds for length 26,"--- original
++++ patched
+@@ -1,3 +1,7 @@
+ int cardinalityInRange(int start, int end) {
++    if ((cardinality == 0 || cardinality == MAX_CAPACITY)
++        && start >= 0 && start <= end && end <= MAX_CAPACITY) {
++      return cardinality == 0 ? 0 : end - start;
++    }
+     if (cardinality != -1 && end - start > MAX_CAPACITY / 2) {
+       int before = Util.cardinalityInBitmapRange(bitmap, 0, start);",,
+A,3,"score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)|s1",openai/gpt-oss-120b,R1,RoaringBitmap,"org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)",R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.IllegalArgumentException: fromIndex(100) > toIndex(97) | randoop: java.lang.IllegalArgumentException: fromIndex(26) > toIndex(-1) | randoop: java.lang.IllegalArgumentException: fromIndex(45) > toIndex(9),"--- original
++++ patched
+@@ -1,35 +1,3 @@
+-protected static int hybridUnsignedBinarySearch(
+-      final char[] array, final int begin, final int end, final char k) {
+-    // next line accelerates the possibly common case where the value would
+-    // be inserted at the end
+-    if ((end > 0) && ((array[end - 1]) < (int) k)) {
+-      return -end - 1;
+-    }
+-    int low = begin;
+-    int high = end - 1;
+-    // 32 in the next line matches the size of a cache line
+-    while (low + 32 <= high) {
+-      final int middleIndex = (low + high) >>> 1;
+-      final int middleValue = (array[middleIndex]);
+-
+-      if (middleValue < (int) k) {
+-        low = middleIndex + 1;
+-      } else if (middleValue > (int) k) {
+-        high = middleIndex - 1;
+-      } else {
+-        return middleIndex;
+-      }
+-    }
+-    // we finish the job with a sequential search
+-    int x = low;
+-    for (; x <= high; ++x) {
+-      final int val = (array[x]);
+-      if (val >= (int) k) {
+-        if (val == (int) k) {
+-          return x;
+-        }
+-        break;
+-      }
+-    }
+-    return -(x + 1);
+-  }
++protected static int hybridUnsignedBinarySearch(final char[] array, final int begin, final int end, final char k) {
++    return java.util.Arrays.binarySearch(array, begin, end, k);
++}",,
+A,4,score|gen|R1|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1,openai/gpt-oss-120b,R1,eclipse-collections,org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>),R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure","randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null","--- original
++++ patched
+@@ -1,5 +1,6 @@
+ @Override
+-    public void each(Procedure<? super T> procedure)
+-    {
+-        Iterate.forEach(this.adapted, procedure);
++public void each(Procedure<? super T> procedure) {
++    for (T element : this.adapted) {
++        procedure.value(element);
+     }
++}",,
+A,5,score|gen|R1|openai/gpt-oss-120b|netty:io.netty.buffer.CompositeByteBuf#findIt(int)|s1,openai/gpt-oss-120b,R1,netty,io.netty.buffer.CompositeByteBuf#findIt(int),R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure","randoop: java.lang.IllegalStateException: No component found for offset. Composite buffer layout might be outdated, e.g. from a discardReadBytes call. | randoop: java.lang.IllegalStateException: No component found for offset. Composite buffer layout might be outdated, e.g. from a discardReadBytes call. | randoop: java.lang.IllegalStateException: No component found for offset. Composite buffer layout might be outdated, e.g. from a discardReadBytes call.","--- original
++++ patched
+@@ -1,10 +1,11 @@
+ private Component findIt(int offset) {
+-        for (int low = 0, high = componentCount; low <= high;) {
+-            int mid = low + high >>> 1;
++        if (componentCount == 0) {
++            throw new IllegalStateException(""No component found for offset. Composite buffer layout might be outdated, e.g. from a discardReadBytes call."");
++        }
++        int low = 0;
++        int high = componentCount - 1;
++        while (low <= high) {
++            int mid = (low + high) >>> 1;
+             Component c = components[mid];
+-            if (c == null) {
+-                throw new IllegalStateException(""No component found for offset. "" +
+-                        ""Composite buffer layout might be outdated, e.g. from a discardReadBytes call."");
+-            }
+             if (offset >= c.endOffset) {
+                 low = mid + 1;
+@@ -16,5 +17,4 @@
+             }
+         }
+-
+         throw new Error(""should not reach here"");
+     }",,
+A,6,score|gen|R1|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s1,openai/gpt-oss-120b,R1,netty,io.netty.util.concurrent.DefaultPromise#setValue0(Object),R5_SYNC_REMOVED,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure","synchronisation removed: {""juc"": 1, ""synchronized"": 0, ""volatile"": 0}","--- original
++++ patched
+@@ -1,5 +1,9 @@
+ private boolean setValue0(Object objResult) {
+-        if (RESULT_UPDATER.compareAndSet(this, null, objResult) ||
+-            RESULT_UPDATER.compareAndSet(this, UNCANCELLABLE, objResult)) {
++    for (;;) {
++        Object current = RESULT_UPDATER.get(this);
++        if (current != null && current != UNCANCELLABLE) {
++            return false;
++        }
++        if (RESULT_UPDATER.compareAndSet(this, current, objResult)) {
+             if (checkNotifyWaiters()) {
+                 notifyListeners();
+@@ -7,4 +11,5 @@
+             return true;
+         }
+-        return false;
++        // CAS failed due to contention, retry.
+     }
++}",,
+A,7,"score|gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",claude-sonnet-5-5,R2,RoaringBitmap,"org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6 | randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6,"--- original
++++ patched
+@@ -1,12 +1,22 @@
+ protected static byte[] sortSmallByteArray(
+       byte[] key, Node[] children, int left, int right) { // x
+-    for (int i = left, j = i; i < right; j = ++i) {
+-      byte ai = key[i + 1];
+-      Node child = children[i + 1];
+-      int unsignedByteAi = Byte.toUnsignedInt(ai);
+-      while (unsignedByteAi < Byte.toUnsignedInt(key[j])) {
+-        key[j + 1] = key[j];
++    for (int i = left; i < right; i++) {
++      final byte ai = key[i + 1];
++      final int unsignedAi = ai & 0xFF;
++      int j = i;
++      byte kj = key[j];
++      if (unsignedAi >= (kj & 0xFF)) {
++        continue;
++      }
++      final Node child = children[i + 1];
++      while (true) {
++        key[j + 1] = kj;
+         children[j + 1] = children[j];
+-        if (j-- == left) {
++        j--;
++        if (j < left) {
++          break;
++        }
++        kj = key[j];
++        if (unsignedAi >= (kj & 0xFF)) {
+           break;
+         }",,
+A,8,"score|gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)|s1",openai/gpt-oss-120b,R2,RoaringBitmap,"org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)",R3a_VALUE;R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4 | randoop: java.lang.NegativeArraySizeException: -57 | randoop: java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4,"--- original
++++ patched
+@@ -1,8 +1,61 @@
+ int cardinalityInRange(int start, int end) {
++    // fast path: if range is large, compute complement using fewer operations
+     if (cardinality != -1 && end - start > MAX_CAPACITY / 2) {
+-      int before = Util.cardinalityInBitmapRange(bitmap, 0, start);
+-      int after = Util.cardinalityInBitmapRange(bitmap, end, MAX_CAPACITY);
+-      return cardinality - before - after;
++        int outside = 0;
++        int startWord = start >>> 6;
++        int endWord = (end - 1) >>> 6;
++        int startBit = start & 0x3F;
++        int endBit = end & 0x3F;
++        // bits before start
++        for (int i = 0; i < startWord; i++) {
++            outside += Long.bitCount(bitmap[i]);
++        }
++        if (startBit != 0) {
++            long mask = (1L << startBit) - 1L;
++            outside += Long.bitCount(bitmap[startWord] & mask);
++        }
++        // bits after end
++        for (int i = endWord + 1; i < bitmap.length; i++) {
++            outside += Long.bitCount(bitmap[i]);
++        }
++        if (endBit != 0 && endWord < bitmap.length) {
++            long mask = ~((1L << endBit) - 1L);
++            outside += Long.bitCount(bitmap[endWord] & mask);
++        }
++        return cardinality - outside;
+     }
+-    return Util.cardinalityInBitmapRange(bitmap, start, end);
+-  }
++    // direct computation of the range
++    int count = 0;
++    int startWord = start >>> 6;
++    int endWord = (end - 1) >>> 6;
++    int startBit = start & 0x3F;
++    int endBit = end & 0x3F;
++    if (startWord == endWord) {
++        long mask;
++        if (endBit == 0) {
++            mask = -1L << startBit;
++        } else {
++            mask = ((1L << endBit) - 1L) ^ ((1L << startBit) - 1L);
++        }
++        return Long.bitCount(bitmap[startWord] & mask);
++    }
++    // first word
++    if (startBit != 0) {
++        long mask = -1L << startBit;
++        count += Long.bitCount(bitmap[startWord] & mask);
++    } else {
++        count += Long.bitCount(bitmap[startWord]);
++    }
++    // middle full words
++    for (int i = startWord + 1; i < endWord; i++) {
++        count += Long.bitCount(bitmap[i]);
++    }
++    // last word
++    if (endBit != 0) {
++        long mask = (1L << endBit) - 1L;
++        count += Long.bitCount(bitmap[endWord] & mask);
++    } else {
++        count += Long.bitCount(bitmap[endWord]);
++    }
++    return count;
++}",,
+A,9,"score|gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)|s1",openai/gpt-oss-120b,R2,RoaringBitmap,"org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)",R3a_VALUE,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.AssertionError: '0' != '-27' | randoop: java.lang.AssertionError: '0' != '-27',"--- original
++++ patched
+@@ -1,35 +1,29 @@
+-protected static int hybridUnsignedBinarySearch(
+-      final char[] array, final int begin, final int end, final char k) {
+-    // next line accelerates the possibly common case where the value would
+-    // be inserted at the end
+-    if ((end > 0) && ((array[end - 1]) < (int) k)) {
+-      return -end - 1;
++protected static int hybridUnsignedBinarySearch(final char[] array, final int begin, final int end, final char k) {
++    // fast path: value would be inserted at the end
++    if (end > 0 && array[end - 1] < k) {
++        return -end - 1;
+     }
+     int low = begin;
+     int high = end - 1;
+-    // 32 in the next line matches the size of a cache line
++    // binary search while the range is larger than a cache line (32 entries)
+     while (low + 32 <= high) {
+-      final int middleIndex = (low + high) >>> 1;
+-      final int middleValue = (array[middleIndex]);
+-
+-      if (middleValue < (int) k) {
+-        low = middleIndex + 1;
+-      } else if (middleValue > (int) k) {
+-        high = middleIndex - 1;
+-      } else {
+-        return middleIndex;
+-      }
++        int middle = (low + high) >>> 1;
++        char midVal = array[middle];
++        if (midVal < k) {
++            low = middle + 1;
++        } else if (midVal > k) {
++            high = middle - 1;
++        } else {
++            return middle;
++        }
+     }
+-    // we finish the job with a sequential search
+-    int x = low;
+-    for (; x <= high; ++x) {
+-      final int val = (array[x]);
+-      if (val >= (int) k) {
+-        if (val == (int) k) {
+-          return x;
++    // finish with a sequential scan
++    for (int i = low; i <= high; i++) {
++        char v = array[i];
++        if (v >= k) {
++            return (v == k) ? i : -(i + 1);
+         }
+-        break;
+-      }
+     }
+-    return -(x + 1);
+-  }
++    // insertion point is after high
++    return -(high + 2);
++}",,
+A,10,"score|gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",openai/gpt-oss-120b,R2,RoaringBitmap,"org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0 | randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0,"--- original
++++ patched
+@@ -1,45 +1,22 @@
+-protected static int unsignedOneSidedGallopingIntersect2by2(
+-      final char[] smallSet,
+-      final int smallLength,
+-      final char[] largeSet,
+-      final int largeLength,
+-      final char[] buffer) {
+-    if (0 == smallLength) {
+-      return 0;
++protected static int unsignedOneSidedGallopingIntersect2by2(final char[] smallSet, final int smallLength, final char[] largeSet, final int largeLength, final char[] buffer) {
++    if (smallLength == 0) {
++        return 0;
+     }
+-    int k1 = 0;
+-    int k2 = 0;
+     int pos = 0;
+-    char s1 = largeSet[k1];
+-    char s2 = smallSet[k2];
+-    while (true) {
+-      if (s1 < s2) {
+-        k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
+-          break;
++    int i = 0; // index in largeSet
++    int j = 0; // index in smallSet
++    while (i < largeLength && j < smallLength) {
++        char a = largeSet[i];
++        char b = smallSet[j];
++        if (a == b) {
++            buffer[pos++] = a;
++            i++;
++            j++;
++        } else if (a < b) {
++            i = advanceUntil(largeSet, i, largeLength, b);
++        } else { // a > b
++            j++;
+         }
+-        s1 = largeSet[k1];
+-      }
+-      if (s2 < s1) {
+-        ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-      } else {
+-        // (set2[k2] == set1[k1])
+-        buffer[pos++] = s2;
+-        ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-        k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
+-          break;
+-        }
+-        s1 = largeSet[k1];
+-      }
+     }
+     return pos;
+-  }
++}",,
+A,11,score|gen|R2|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1,openai/gpt-oss-120b,R2,eclipse-collections,org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>),R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure","randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null","--- original
++++ patched
+@@ -1,5 +1,6 @@
+ @Override
+-    public void each(Procedure<? super T> procedure)
+-    {
+-        Iterate.forEach(this.adapted, procedure);
++public void each(Procedure<? super T> procedure) {
++    for (T item : this.adapted) {
++        procedure.value(item);
+     }
++}",,
+A,12,score|gen|R2|openai/gpt-oss-120b|netty:io.netty.buffer.CompositeByteBuf#findIt(int)|s1,openai/gpt-oss-120b,R2,netty,io.netty.buffer.CompositeByteBuf#findIt(int),R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.Error: should not reach here | randoop: java.lang.Error: should not reach here | randoop: java.lang.Error: should not reach here,"--- original
++++ patched
+@@ -1,20 +1,18 @@
+ private Component findIt(int offset) {
+-        for (int low = 0, high = componentCount; low <= high;) {
+-            int mid = low + high >>> 1;
+-            Component c = components[mid];
+-            if (c == null) {
+-                throw new IllegalStateException(""No component found for offset. "" +
+-                        ""Composite buffer layout might be outdated, e.g. from a discardReadBytes call."");
+-            }
+-            if (offset >= c.endOffset) {
+-                low = mid + 1;
+-            } else if (offset < c.offset) {
+-                high = mid - 1;
+-            } else {
+-                lastAccessed = c;
+-                return c;
+-            }
++    int low = 0;
++    int high = componentCount - 1; // use inclusive upper bound
++    while (low <= high) {
++        int mid = (low + high) >>> 1;
++        Component c = components[mid];
++        // c should never be null for a valid offset
++        if (offset >= c.endOffset) {
++            low = mid + 1;
++        } else if (offset < c.offset) {
++            high = mid - 1;
++        } else {
++            lastAccessed = c;
++            return c;
+         }
+-
+-        throw new Error(""should not reach here"");
+     }
++    throw new Error(""should not reach here"");
++}",,
+A,13,score|gen|R2|openai/gpt-oss-120b|netty:io.netty.channel.embedded.EmbeddedChannel#writeInbound(Object[])|s1,openai/gpt-oss-120b,R2,netty,io.netty.channel.embedded.EmbeddedChannel#writeInbound(Object[]),R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.AssertionError: Expected exception of type java.lang.NullPointerException; message: null,"--- original
++++ patched
+@@ -1,20 +1,22 @@
+ public boolean writeInbound(Object... msgs) {
+-        ensureOpen();
+-        if (msgs.length == 0) {
+-            return isNotEmpty(inboundMessages);
+-        }
+-
+-        executingStackCnt++;
+-        try {
+-            ChannelPipeline p = pipeline();
+-            for (Object m : msgs) {
+-                p.fireChannelRead(m);
+-            }
+-
+-            flushInbound(false, voidPromise());
+-        } finally {
+-            executingStackCnt--;
+-            maybeRunPendingTasks();
+-        }
++    ensureOpen();
++    if (msgs.length == 0) {
+         return isNotEmpty(inboundMessages);
+     }
++
++    executingStackCnt++;
++    try {
++        ChannelPipeline p = pipeline();
++        for (int i = 0; i < msgs.length; i++) {
++            p.fireChannelRead(msgs[i]);
++        }
++        // Directly fire read completion and run pending tasks without the extra
++        // executingStackCnt bookkeeping performed by flushInbound(...).
++        p.fireChannelReadComplete();
++        runPendingTasks();
++    } finally {
++        executingStackCnt--;
++        maybeRunPendingTasks();
++    }
++    return isNotEmpty(inboundMessages);
++}",,
+A,14,score|gen|R2|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s1,openai/gpt-oss-120b,R2,netty,io.netty.util.concurrent.DefaultPromise#setValue0(Object),R5_SYNC_REMOVED,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure","synchronisation removed: {""juc"": 1, ""synchronized"": 0, ""volatile"": 0}","--- original
++++ patched
+@@ -1,5 +1,9 @@
+ private boolean setValue0(Object objResult) {
+-        if (RESULT_UPDATER.compareAndSet(this, null, objResult) ||
+-            RESULT_UPDATER.compareAndSet(this, UNCANCELLABLE, objResult)) {
++    for (;;) {
++        Object current = this.result;
++        if (current != null && current != UNCANCELLABLE) {
++            return false;
++        }
++        if (RESULT_UPDATER.compareAndSet(this, current, objResult)) {
+             if (checkNotifyWaiters()) {
+                 notifyListeners();
+@@ -7,4 +11,5 @@
+             return true;
+         }
+-        return false;
++        // CAS failed due to race, retry
+     }
++}",,
+A,15,"score|gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",claude-sonnet-5-5,R3,RoaringBitmap,"org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6 | randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6,"--- original
++++ patched
+@@ -1,15 +1,18 @@
+ protected static byte[] sortSmallByteArray(
+       byte[] key, Node[] children, int left, int right) { // x
+-    for (int i = left, j = i; i < right; j = ++i) {
+-      byte ai = key[i + 1];
+-      Node child = children[i + 1];
+-      int unsignedByteAi = Byte.toUnsignedInt(ai);
+-      while (unsignedByteAi < Byte.toUnsignedInt(key[j])) {
++    for (int i = left; i < right; i++) {
++      final byte ai = key[i + 1];
++      final int unsignedAi = ai & 0xFF;
++      int j = i;
++      if (unsignedAi >= (key[j] & 0xFF)) {
++        // already in place, no writes needed
++        continue;
++      }
++      final Node child = children[i + 1];
++      do {
+         key[j + 1] = key[j];
+         children[j + 1] = children[j];
+-        if (j-- == left) {
+-          break;
+-        }
+-      }
++        j--;
++      } while (j >= left && unsignedAi < (key[j] & 0xFF));
+       key[j + 1] = ai;
+       children[j + 1] = child;",,
+A,16,"score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",gpt-6.1-sol,R3,RoaringBitmap,"org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0 | randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0,"--- original
++++ patched
+@@ -9,9 +9,8 @@
+     }
+     int k1 = 0;
+-    int k2 = 0;
+     int pos = 0;
+     char s1 = largeSet[k1];
+-    char s2 = smallSet[k2];
+-    while (true) {
++    for (int k2 = 0; k2 < smallLength; ++k2) {
++      char s2 = smallSet[k2];
+       if (s1 < s2) {
+         k1 = advanceUntil(largeSet, k1, largeLength, s2);
+@@ -21,20 +20,7 @@
+         s1 = largeSet[k1];
+       }
+-      if (s2 < s1) {
+-        ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-      } else {
+-        // (set2[k2] == set1[k1])
++      if (s1 == s2) {
+         buffer[pos++] = s2;
+-        ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-        k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
++        if (k2 + 1 == smallLength || ++k1 == largeLength) {
+           break;
+         }",,
+A,17,"score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#advanceUntil(char[],int,int,char)|s1",openai/gpt-oss-120b,R3,RoaringBitmap,"org.roaringbitmap.Util#advanceUntil(char[],int,int,char)",R3a_VALUE;R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.AssertionError: '-1' != '101' | randoop: java.lang.AssertionError: '52' != '101' | randoop: java.lang.AssertionError: '-1' != '101',"--- original
++++ patched
+@@ -1,47 +1,11 @@
+ public static int advanceUntil(char[] array, int pos, int length, char min) {
+-    int lower = pos + 1;
+-
+-    // special handling for a possibly common sequential case
+-    if (lower >= length || (array[lower]) >= (int) (min)) {
+-      return lower;
+-    }
+-
+-    int spansize = 1; // could set larger
+-    // bootstrap an upper limit
+-
+-    while (lower + spansize < length && (array[lower + spansize]) < (int) (min)) {
+-      spansize *= 2; // hoping for compiler will reduce to
+-    }
+-    // shift
+-    int upper = (lower + spansize < length) ? lower + spansize : length - 1;
+-
+-    // maybe we are lucky (could be common case when the seek ahead
+-    // expected
+-    // to be small and sequential will otherwise make us look bad)
+-    if (array[upper] == min) {
+-      return upper;
+-    }
+-
+-    if ((array[upper]) < (int) (min)) {
+-      // means array has no item >= min pos = array.length;
++    int start = pos + 1;
++    if (start >= length) {
+       return length;
+     }
+-
+-    // we know that the next-smallest span was too small
+-    lower += (spansize >>> 1);
+-
+-    // else begin binary search
+-    // invariant: array[lower]<min && array[upper]>min
+-    while (lower + 1 != upper) {
+-      int mid = (lower + upper) >>> 1;
+-      char arraymid = array[mid];
+-      if (arraymid == min) {
+-        return mid;
+-      } else if ((arraymid) < (int) (min)) {
+-        lower = mid;
+-      } else {
+-        upper = mid;
+-      }
++    int idx = java.util.Arrays.binarySearch(array, start, length, min);
++    if (idx >= 0) {
++      return idx;
+     }
+-    return upper;
++    return -idx - 1;
+   }",,
+A,18,"score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",openai/gpt-oss-120b,R3,RoaringBitmap,"org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure",randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0 | randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0,"--- original
++++ patched
+@@ -5,39 +5,22 @@
+       final int largeLength,
+       final char[] buffer) {
+-    if (0 == smallLength) {
++    if (smallLength == 0) {
+       return 0;
+     }
+-    int k1 = 0;
+-    int k2 = 0;
++    int k1 = 0; // index in largeSet
++    int k2 = 0; // index in smallSet
+     int pos = 0;
+-    char s1 = largeSet[k1];
+-    char s2 = smallSet[k2];
+-    while (true) {
++    while (k1 < largeLength && k2 < smallLength) {
++      char s1 = largeSet[k1];
++      char s2 = smallSet[k2];
+       if (s1 < s2) {
+         k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
+-          break;
+-        }
+-        s1 = largeSet[k1];
+-      }
+-      if (s2 < s1) {
++        // if advanceUntil reaches the end, the loop condition will terminate
++      } else if (s2 < s1) {
+         ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-      } else {
+-        // (set2[k2] == set1[k1])
+-        buffer[pos++] = s2;
++      } else { // equal
++        buffer[pos++] = s1;
++        ++k1;
+         ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-        k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
+-          break;
+-        }
+-        s1 = largeSet[k1];
+       }
+     }",,
+A,19,score|gen|R3|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1,openai/gpt-oss-120b,R3,eclipse-collections,org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>),R3b_EXCEPTION,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure","randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null","--- original
++++ patched
+@@ -1,5 +1,15 @@
+ @Override
+-    public void each(Procedure<? super T> procedure)
++public void each(Procedure<? super T> procedure)
++{
++    if (this.adapted instanceof RichIterable)
+     {
+-        Iterate.forEach(this.adapted, procedure);
++        ((RichIterable<T>) this.adapted).each(procedure);
+     }
++    else
++    {
++        for (T item : this.adapted)
++        {
++            procedure.value(item);
++        }
++    }
++}",,
+A,20,score|gen|R3|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s1,openai/gpt-oss-120b,R3,netty,io.netty.util.concurrent.DefaultPromise#setValue0(Object),R5_SYNC_REMOVED,"Does the patch change observable behaviour (value, exception, or synchronisation) relative to the original? real_break | oracle_artifact | unsure","synchronisation removed: {""juc"": 1, ""synchronized"": 0, ""volatile"": 0}","--- original
++++ patched
+@@ -1,5 +1,6 @@
+ private boolean setValue0(Object objResult) {
+-        if (RESULT_UPDATER.compareAndSet(this, null, objResult) ||
+-            RESULT_UPDATER.compareAndSet(this, UNCANCELLABLE, objResult)) {
++    Object cur = this.result;
++    if (cur == null || cur == UNCANCELLABLE) {
++        if (RESULT_UPDATER.compareAndSet(this, cur, objResult)) {
+             if (checkNotifyWaiters()) {
+                 notifyListeners();
+@@ -7,4 +8,5 @@
+             return true;
+         }
+-        return false;
+     }
++    return false;
++}",,
+B,21,score|gen|R2|openai/gpt-oss-120b|netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String)|s1,openai/gpt-oss-120b,R2,netty,io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,29 +1,52 @@
+ private static String[] splitMultipartHeaderValues(String svalue) {
+-        List<String> values = InternalThreadLocalMap.get().arrayList(1);
+-        boolean inQuote = false;
+-        boolean escapeNext = false;
+-        int start = 0;
+-        for (int i = 0; i < svalue.length(); i++) {
+-            char c = svalue.charAt(i);
+-            if (inQuote) {
+-                if (escapeNext) {
+-                    escapeNext = false;
+-                } else {
+-                    if (c == '\\') {
+-                        escapeNext = true;
+-                    } else if (c == '""') {
+-                        inQuote = false;
+-                    }
+-                }
+-            } else {
+-                if (c == '""') {
+-                    inQuote = true;
+-                } else if (c == ';') {
+-                    values.add(svalue.substring(start, i));
+-                    start = i + 1;
+-                }
++    int len = svalue.length();
++    // First pass: count separators that are not inside quotes
++    int separatorCount = 0;
++    boolean inQuote = false;
++    boolean escapeNext = false;
++    for (int i = 0; i < len; i++) {
++        char c = svalue.charAt(i);
++        if (inQuote) {
++            if (escapeNext) {
++                escapeNext = false;
++            } else if (c == '\\') {
++                escapeNext = true;
++            } else if (c == '""') {
++                inQuote = false;
++            }
++        } else {
++            if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                separatorCount++;
+             }
+         }
+-        values.add(svalue.substring(start));
+-        return values.toArray(EmptyArrays.EMPTY_STRINGS);
+     }
++    // Allocate result array directly, avoiding a temporary List
++    String[] result = new String[separatorCount + 1];
++    int partIdx = 0;
++    int start = 0;
++    inQuote = false;
++    escapeNext = false;
++    for (int i = 0; i < len; i++) {
++        char c = svalue.charAt(i);
++        if (inQuote) {
++            if (escapeNext) {
++                escapeNext = false;
++            } else if (c == '\\') {
++                escapeNext = true;
++            } else if (c == '""') {
++                inQuote = false;
++            }
++        } else {
++            if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                result[partIdx++] = svalue.substring(start, i);
++                start = i + 1;
++            }
++        }
++    }
++    result[partIdx] = svalue.substring(start);
++    return result;
++}",,
+B,22,score|gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[])|s1,claude-sonnet-5-5,R2,RoaringBitmap,org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[]),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,17 +1,40 @@
+ public static SortedMap<Character, List<Container>> groupByKey(RoaringBitmap... bitmaps) {
+-    Map<Character, List<Container>> grouped = new HashMap<>();
++    int max = -1;
+     for (RoaringBitmap bitmap : bitmaps) {
+       RoaringArray ra = bitmap.highLowContainer;
+-      for (int i = 0; i < ra.size; ++i) {
+-        Container container = ra.values[i];
+-        Character key = ra.keys[i];
+-        List<Container> slice = grouped.get(key);
++      if (ra.size > 0) {
++        int last = ra.keys[ra.size - 1];
++        if (last > max) {
++          max = last;
++        }
++      }
++    }
++    TreeMap<Character, List<Container>> result = new TreeMap<>();
++    if (max < 0) {
++      return result;
++    }
++    @SuppressWarnings(""unchecked"")
++    List<Container>[] slices = (List<Container>[]) new List[max + 1];
++    for (RoaringBitmap bitmap : bitmaps) {
++      RoaringArray ra = bitmap.highLowContainer;
++      int size = ra.size;
++      char[] keys = ra.keys;
++      Container[] values = ra.values;
++      for (int i = 0; i < size; ++i) {
++        int key = keys[i];
++        List<Container> slice = slices[key];
+         if (null == slice) {
+           slice = new ArrayList<>();
+-          grouped.put(key, slice);
++          slices[key] = slice;
+         }
+-        slice.add(container);
++        slice.add(values[i]);
+       }
+     }
+-    return new TreeMap<>(grouped);
++    for (int k = 0; k <= max; ++k) {
++      List<Container> slice = slices[k];
++      if (slice != null) {
++        result.put((char) k, slice);
++      }
++    }
++    return result;
+   }",,
+B,23,score|gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[])|s1,claude-sonnet-5-5,R3,RoaringBitmap,org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[]),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,17 +1,21 @@
+ public static SortedMap<Character, List<Container>> groupByKey(RoaringBitmap... bitmaps) {
+     Map<Character, List<Container>> grouped = new HashMap<>();
++    SortedMap<Character, List<Container>> result = new TreeMap<>();
+     for (RoaringBitmap bitmap : bitmaps) {
+       RoaringArray ra = bitmap.highLowContainer;
+-      for (int i = 0; i < ra.size; ++i) {
+-        Container container = ra.values[i];
+-        Character key = ra.keys[i];
++      final int size = ra.size;
++      final char[] keys = ra.keys;
++      final Container[] values = ra.values;
++      for (int i = 0; i < size; ++i) {
++        Character key = keys[i];
+         List<Container> slice = grouped.get(key);
+         if (null == slice) {
+           slice = new ArrayList<>();
+           grouped.put(key, slice);
++          result.put(key, slice);
+         }
+-        slice.add(container);
++        slice.add(values[i]);
+       }
+     }
+-    return new TreeMap<>(grouped);
++    return result;
+   }",,
+B,24,score|gen|R1|openai/gpt-oss-120b|netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String)|s1,openai/gpt-oss-120b,R1,netty,io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,8 +1,9 @@
+ private static String[] splitMultipartHeaderValues(String svalue) {
+-        List<String> values = InternalThreadLocalMap.get().arrayList(1);
++        int len = svalue.length();
++        // First pass: count the number of parts (separated by ';' outside quotes)
++        int count = 1;
+         boolean inQuote = false;
+         boolean escapeNext = false;
+-        int start = 0;
+-        for (int i = 0; i < svalue.length(); i++) {
++        for (int i = 0; i < len; i++) {
+             char c = svalue.charAt(i);
+             if (inQuote) {
+@@ -20,10 +21,36 @@
+                     inQuote = true;
+                 } else if (c == ';') {
+-                    values.add(svalue.substring(start, i));
++                    count++;
++                }
++            }
++        }
++        // Second pass: extract the substrings directly into the result array
++        String[] result = new String[count];
++        int idx = 0;
++        int start = 0;
++        inQuote = false;
++        escapeNext = false;
++        for (int i = 0; i < len; i++) {
++            char c = svalue.charAt(i);
++            if (inQuote) {
++                if (escapeNext) {
++                    escapeNext = false;
++                } else {
++                    if (c == '\\') {
++                        escapeNext = true;
++                    } else if (c == '""') {
++                        inQuote = false;
++                    }
++                }
++            } else {
++                if (c == '""') {
++                    inQuote = true;
++                } else if (c == ';') {
++                    result[idx++] = svalue.substring(start, i);
+                     start = i + 1;
+                 }
+             }
+         }
+-        values.add(svalue.substring(start));
+-        return values.toArray(EmptyArrays.EMPTY_STRINGS);
++        result[idx] = svalue.substring(start);
++        return result;
+     }",,
+B,25,score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[])|s1,openai/gpt-oss-120b,R1,RoaringBitmap,org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[]),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,17 +1,12 @@
+ public static SortedMap<Character, List<Container>> groupByKey(RoaringBitmap... bitmaps) {
+-    Map<Character, List<Container>> grouped = new HashMap<>();
++    java.util.SortedMap<Character, List<Container>> grouped = new java.util.TreeMap<>();
+     for (RoaringBitmap bitmap : bitmaps) {
+-      RoaringArray ra = bitmap.highLowContainer;
+-      for (int i = 0; i < ra.size; ++i) {
+-        Container container = ra.values[i];
+-        Character key = ra.keys[i];
+-        List<Container> slice = grouped.get(key);
+-        if (null == slice) {
+-          slice = new ArrayList<>();
+-          grouped.put(key, slice);
++        RoaringArray ra = bitmap.highLowContainer;
++        for (int i = 0, size = ra.size; i < size; ++i) {
++            char key = ra.keys[i];
++            Container container = ra.values[i];
++            grouped.computeIfAbsent(key, k -> new java.util.ArrayList<>()).add(container);
+         }
+-        slice.add(container);
+-      }
+     }
+-    return new TreeMap<>(grouped);
+-  }
++    return grouped;
++}",,
+B,26,score|gen|R1|claude-sonnet-5-5|netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String)|s1,claude-sonnet-5-5,R1,netty,io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,29 +1,49 @@
+ private static String[] splitMultipartHeaderValues(String svalue) {
+-        List<String> values = InternalThreadLocalMap.get().arrayList(1);
++        if (svalue.indexOf(';') < 0) {
++            return new String[] { svalue };
++        }
++        final int len = svalue.length();
+         boolean inQuote = false;
+         boolean escapeNext = false;
+-        int start = 0;
+-        for (int i = 0; i < svalue.length(); i++) {
++        int count = 1;
++        for (int i = 0; i < len; i++) {
+             char c = svalue.charAt(i);
+             if (inQuote) {
+                 if (escapeNext) {
+                     escapeNext = false;
+-                } else {
+-                    if (c == '\\') {
+-                        escapeNext = true;
+-                    } else if (c == '""') {
+-                        inQuote = false;
+-                    }
++                } else if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
+                 }
+-            } else {
+-                if (c == '""') {
+-                    inQuote = true;
+-                } else if (c == ';') {
+-                    values.add(svalue.substring(start, i));
+-                    start = i + 1;
+-                }
++            } else if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                count++;
+             }
+         }
+-        values.add(svalue.substring(start));
+-        return values.toArray(EmptyArrays.EMPTY_STRINGS);
++        String[] result = new String[count];
++        int idx = 0;
++        inQuote = false;
++        escapeNext = false;
++        int start = 0;
++        for (int i = 0; i < len; i++) {
++            char c = svalue.charAt(i);
++            if (inQuote) {
++                if (escapeNext) {
++                    escapeNext = false;
++                } else if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
++                }
++            } else if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                result[idx++] = svalue.substring(start, i);
++                start = i + 1;
++            }
++        }
++        result[idx] = svalue.substring(start);
++        return result;
+     }",,
+B,27,score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[])|s1,openai/gpt-oss-120b,R3,RoaringBitmap,org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[]),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,17 +1,12 @@
+ public static SortedMap<Character, List<Container>> groupByKey(RoaringBitmap... bitmaps) {
+-    Map<Character, List<Container>> grouped = new HashMap<>();
++    TreeMap<Character, List<Container>> grouped = new TreeMap<>();
+     for (RoaringBitmap bitmap : bitmaps) {
+       RoaringArray ra = bitmap.highLowContainer;
+-      for (int i = 0; i < ra.size; ++i) {
+-        Container container = ra.values[i];
+-        Character key = ra.keys[i];
+-        List<Container> slice = grouped.get(key);
+-        if (null == slice) {
+-          slice = new ArrayList<>();
+-          grouped.put(key, slice);
+-        }
+-        slice.add(container);
++      for (int i = 0, size = ra.size; i < size; ++i) {
++        char key = ra.keys[i];
++        List<Container> slice = grouped.computeIfAbsent(key, k -> new ArrayList<>());
++        slice.add(ra.values[i]);
+       }
+     }
+-    return new TreeMap<>(grouped);
++    return grouped;
+   }",,
+B,28,score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[])|s1,gpt-6.1-sol,R3,RoaringBitmap,org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[]),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,17 +1,26 @@
+ public static SortedMap<Character, List<Container>> groupByKey(RoaringBitmap... bitmaps) {
+-    Map<Character, List<Container>> grouped = new HashMap<>();
++    int maxKey = -1;
++    for (RoaringBitmap bitmap : bitmaps) {
++      RoaringArray ra = bitmap.highLowContainer;
++      if (ra.size > 0) {
++        maxKey = Math.max(maxKey, ra.keys[ra.size - 1]);
++      }
++    }
++    Object[] slices = new Object[maxKey + 1];
++    SortedMap<Character, List<Container>> grouped = new TreeMap<>();
+     for (RoaringBitmap bitmap : bitmaps) {
+       RoaringArray ra = bitmap.highLowContainer;
+       for (int i = 0; i < ra.size; ++i) {
+-        Container container = ra.values[i];
+-        Character key = ra.keys[i];
+-        List<Container> slice = grouped.get(key);
+-        if (null == slice) {
++        char key = ra.keys[i];
++        @SuppressWarnings(""unchecked"")
++        List<Container> slice = (List<Container>) slices[key];
++        if (slice == null) {
+           slice = new ArrayList<>();
++          slices[key] = slice;
+           grouped.put(key, slice);
+         }
+-        slice.add(container);
++        slice.add(ra.values[i]);
+       }
+     }
+-    return new TreeMap<>(grouped);
++    return grouped;
+   }",,
+B,29,score|gen|R3|claude-sonnet-5-5|netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String)|s1,claude-sonnet-5-5,R3,netty,io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,29 +1,50 @@
+ private static String[] splitMultipartHeaderValues(String svalue) {
+-        List<String> values = InternalThreadLocalMap.get().arrayList(1);
++        final int len = svalue.length();
+         boolean inQuote = false;
+         boolean escapeNext = false;
+-        int start = 0;
+-        for (int i = 0; i < svalue.length(); i++) {
++        int count = 1;
++        for (int i = 0; i < len; i++) {
+             char c = svalue.charAt(i);
+             if (inQuote) {
+                 if (escapeNext) {
+                     escapeNext = false;
+-                } else {
+-                    if (c == '\\') {
+-                        escapeNext = true;
+-                    } else if (c == '""') {
+-                        inQuote = false;
+-                    }
++                } else if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
+                 }
+-            } else {
+-                if (c == '""') {
+-                    inQuote = true;
+-                } else if (c == ';') {
+-                    values.add(svalue.substring(start, i));
+-                    start = i + 1;
+-                }
++            } else if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                count++;
+             }
+         }
+-        values.add(svalue.substring(start));
+-        return values.toArray(EmptyArrays.EMPTY_STRINGS);
++        String[] result = new String[count];
++        if (count == 1) {
++            result[0] = svalue;
++            return result;
++        }
++        inQuote = false;
++        escapeNext = false;
++        int start = 0;
++        int idx = 0;
++        for (int i = 0; i < len; i++) {
++            char c = svalue.charAt(i);
++            if (inQuote) {
++                if (escapeNext) {
++                    escapeNext = false;
++                } else if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
++                }
++            } else if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                result[idx++] = svalue.substring(start, i);
++                start = i + 1;
++            }
++        }
++        result[idx] = svalue.substring(start);
++        return result;
+     }",,
+B,30,score|gen|R3|openai/gpt-oss-120b|netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String)|s1,openai/gpt-oss-120b,R3,netty,io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,29 +1,56 @@
+ private static String[] splitMultipartHeaderValues(String svalue) {
+-        List<String> values = InternalThreadLocalMap.get().arrayList(1);
+-        boolean inQuote = false;
+-        boolean escapeNext = false;
+-        int start = 0;
+-        for (int i = 0; i < svalue.length(); i++) {
+-            char c = svalue.charAt(i);
+-            if (inQuote) {
+-                if (escapeNext) {
+-                    escapeNext = false;
+-                } else {
+-                    if (c == '\\') {
+-                        escapeNext = true;
+-                    } else if (c == '""') {
+-                        inQuote = false;
+-                    }
+-                }
++    int len = svalue.length();
++    // First pass: count how many parts there will be (delimiters not inside quotes)
++    int count = 1;
++    boolean inQuote = false;
++    boolean escapeNext = false;
++    for (int i = 0; i < len; i++) {
++        char c = svalue.charAt(i);
++        if (inQuote) {
++            if (escapeNext) {
++                escapeNext = false;
+             } else {
+-                if (c == '""') {
+-                    inQuote = true;
+-                } else if (c == ';') {
+-                    values.add(svalue.substring(start, i));
+-                    start = i + 1;
++                if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
+                 }
+             }
++        } else {
++            if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                count++;
++            }
+         }
+-        values.add(svalue.substring(start));
+-        return values.toArray(EmptyArrays.EMPTY_STRINGS);
+     }
++    String[] values = new String[count];
++    // Second pass: fill the array
++    int idx = 0;
++    int start = 0;
++    inQuote = false;
++    escapeNext = false;
++    for (int i = 0; i < len; i++) {
++        char c = svalue.charAt(i);
++        if (inQuote) {
++            if (escapeNext) {
++                escapeNext = false;
++            } else {
++                if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
++                }
++            }
++        } else {
++            if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                values[idx++] = svalue.substring(start, i);
++                start = i + 1;
++            }
++        }
++    }
++    values[idx] = svalue.substring(start);
++    return values;
++}",,
+B,31,score|gen|R2|claude-sonnet-5-5|eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>)|s1,claude-sonnet-5-5,R2,eclipse-collections,org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,6 +1,13 @@
+ private void addAllRandomAccessList(List<T> source)
+     {
+-        int newSize = this.ensureCapacityForAddAll(source);
+-        RandomAccessListIterate.toArray(source, this.items, this.size, source.size());
++        int sourceSize = source.size();
++        int oldSize = this.size;
++        int newSize = oldSize + sourceSize;
++        this.ensureCapacity(newSize);
++        T[] target = this.items;
++        for (int i = 0; i < sourceSize; i++)
++        {
++            target[oldSize + i] = source.get(i);
++        }
+         this.size = newSize;
+     }",,
+B,32,score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,gpt-6.1-sol,R3,RoaringBitmap,org.roaringbitmap.buffer.MutableRoaringArray#clone(),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 4 in original -> 3 in patch,"--- original
++++ patched
+@@ -1,18 +1,14 @@
+ @Override
+   public MutableRoaringArray clone() {
+-    MutableRoaringArray sa;
+     try {
+-      sa = (MutableRoaringArray) super.clone();
+-
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
+-        sa.values[k] = sa.values[k].clone();
++      MutableRoaringArray sa = (MutableRoaringArray) super.clone();
++      final int size = this.size;
++      sa.keys = Arrays.copyOf(this.keys, size);
++      sa.values = new MappeableContainer[size];
++      for (int k = 0; k < size; ++k) {
++        sa.values[k] = this.values[k].clone();
+       }
+-      sa.size = this.size;
++      sa.size = size;
+       return sa;
+-
+     } catch (CloneNotSupportedException e) {
+       return null;",,
+B,33,score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap)|s1,gpt-6.1-sol,R3,RoaringBitmap,org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -32,14 +32,8 @@
+           }
+           s1 = highLowContainer.getKeyAtIndex(pos1);
+-        } else { // s1 > s2
++        } else {
+           getMappeableRoaringArray()
+-              .insertNewKeyValueAt(pos1, s2, x2.highLowContainer.getContainerAtIndex(pos2).clone());
+-          pos1++;
+-          length1++;
+-          pos2++;
+-          if (pos2 == length2) {
+-            break main;
+-          }
+-          s2 = x2.highLowContainer.getKeyAtIndex(pos2);
++              .mergeBulk(x2.highLowContainer, pos1, pos1, pos2, MutableRoaringArray.MERGE_LAZY_OR);
++          return;
+         }
+       }",,
+B,34,score|gen|R2|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>)|s1,openai/gpt-oss-120b,R2,eclipse-collections,org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,6 +1,9 @@
+-private void addAllRandomAccessList(List<T> source)
+-    {
+-        int newSize = this.ensureCapacityForAddAll(source);
+-        RandomAccessListIterate.toArray(source, this.items, this.size, source.size());
+-        this.size = newSize;
++private void addAllRandomAccessList(List<T> source) {
++    int sourceSize = source.size();
++    int newSize = this.ensureCapacityForAddAll(source);
++    int destPos = this.size;
++    for (int i = 0; i < sourceSize; i++) {
++        this.items[destPos + i] = source.get(i);
+     }
++    this.size = newSize;
++}",,
+B,35,score|gen|R3|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>)|s1,openai/gpt-oss-120b,R3,eclipse-collections,org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 1 in original -> 0 in patch,"--- original
++++ patched
+@@ -1,6 +1,10 @@
+-private void addAllRandomAccessList(List<T> source)
+-    {
+-        int newSize = this.ensureCapacityForAddAll(source);
+-        RandomAccessListIterate.toArray(source, this.items, this.size, source.size());
+-        this.size = newSize;
++private void addAllRandomAccessList(List<T> source) {
++    int sourceSize = source.size();
++    int newSize = this.size + sourceSize;
++    this.ensureCapacity(newSize);
++    // Direct copy using RandomAccess get for speed
++    for (int i = 0; i < sourceSize; i++) {
++        this.items[this.size + i] = source.get(i);
+     }
++    this.size = newSize;
++}",,
+B,36,"score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedUnion2by2(char[],int,int,char[],int,int,char[])|s1",openai/gpt-oss-120b,R1,RoaringBitmap,"org.roaringbitmap.Util#unsignedUnion2by2(char[],int,int,char[],int,int,char[])",copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 6 in original -> 4 in patch,"--- original
++++ patched
+@@ -7,51 +7,44 @@
+       final int length2,
+       final char[] buffer) {
+-    if (0 == length2) {
++    // fast-path for empty inputs (preserve original behaviour)
++    if (length2 == 0) {
+       System.arraycopy(set1, offset1, buffer, 0, length1);
+       return length1;
+     }
+-    if (0 == length1) {
++    if (length1 == 0) {
+       System.arraycopy(set2, offset2, buffer, 0, length2);
+       return length2;
+     }
++    final int end1 = offset1 + length1;
++    final int end2 = offset2 + length2;
+     int pos = 0;
+-    int k1 = offset1, k2 = offset2;
+-    char s1 = set1[k1];
+-    char s2 = set2[k2];
+-    while (true) {
+-      int v1 = s1;
+-      int v2 = s2;
+-      if (v1 < v2) {
++    int k1 = offset1;
++    int k2 = offset2;
++    while (k1 < end1 && k2 < end2) {
++      char s1 = set1[k1];
++      char s2 = set2[k2];
++      if (s1 < s2) {
+         buffer[pos++] = s1;
+-        ++k1;
+-        if (k1 >= length1 + offset1) {
+-          System.arraycopy(set2, k2, buffer, pos, length2 - k2 + offset2);
+-          return pos + length2 - k2 + offset2;
+-        }
+-        s1 = set1[k1];
+-      } else if (v1 == v2) {
++        k1++;
++      } else if (s1 == s2) {
+         buffer[pos++] = s1;
+-        ++k1;
+-        ++k2;
+-        if (k1 >= length1 + offset1) {
+-          System.arraycopy(set2, k2, buffer, pos, length2 - k2 + offset2);
+-          return pos + length2 - k2 + offset2;
+-        }
+-        if (k2 >= length2 + offset2) {
+-          System.arraycopy(set1, k1, buffer, pos, length1 - k1 + offset1);
+-          return pos + length1 - k1 + offset1;
+-        }
+-        s1 = set1[k1];
+-        s2 = set2[k2];
+-      } else { // if (set1[k1]>set2[k2])
++        k1++;
++        k2++;
++      } else { // s1 > s2
+         buffer[pos++] = s2;
+-        ++k2;
+-        if (k2 >= length2 + offset2) {
+-          System.arraycopy(set1, k1, buffer, pos, length1 - k1 + offset1);
+-          return pos + length1 - k1 + offset1;
+-        }
+-        s2 = set2[k2];
++        k2++;
+       }
+     }
+-    // return pos;
++    // copy any remaining elements from the non‑exhausted array
++    if (k1 < end1) {
++      int remaining = end1 - k1;
++      System.arraycopy(set1, k1, buffer, pos, remaining);
++      pos += remaining;
++    }
++    if (k2 < end2) {
++      int remaining = end2 - k2;
++      System.arraycopy(set2, k2, buffer, pos, remaining);
++      pos += remaining;
++    }
++    return pos;
+   }",,
+B,37,"score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedUnion2by2(char[],int,int,char[],int,int,char[])|s1",openai/gpt-oss-120b,R3,RoaringBitmap,"org.roaringbitmap.Util#unsignedUnion2by2(char[],int,int,char[],int,int,char[])",copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 6 in original -> 4 in patch,"--- original
++++ patched
+@@ -7,51 +7,41 @@
+       final int length2,
+       final char[] buffer) {
+-    if (0 == length2) {
++    if (length2 == 0) {
+       System.arraycopy(set1, offset1, buffer, 0, length1);
+       return length1;
+     }
+-    if (0 == length1) {
++    if (length1 == 0) {
+       System.arraycopy(set2, offset2, buffer, 0, length2);
+       return length2;
+     }
+     int pos = 0;
+-    int k1 = offset1, k2 = offset2;
+-    char s1 = set1[k1];
+-    char s2 = set2[k2];
+-    while (true) {
+-      int v1 = s1;
+-      int v2 = s2;
+-      if (v1 < v2) {
++    int k1 = offset1;
++    int k2 = offset2;
++    int end1 = offset1 + length1;
++    int end2 = offset2 + length2;
++    while (k1 < end1 && k2 < end2) {
++      char s1 = set1[k1];
++      char s2 = set2[k2];
++      if (s1 < s2) {
+         buffer[pos++] = s1;
+-        ++k1;
+-        if (k1 >= length1 + offset1) {
+-          System.arraycopy(set2, k2, buffer, pos, length2 - k2 + offset2);
+-          return pos + length2 - k2 + offset2;
+-        }
+-        s1 = set1[k1];
+-      } else if (v1 == v2) {
++        k1++;
++      } else if (s1 == s2) {
+         buffer[pos++] = s1;
+-        ++k1;
+-        ++k2;
+-        if (k1 >= length1 + offset1) {
+-          System.arraycopy(set2, k2, buffer, pos, length2 - k2 + offset2);
+-          return pos + length2 - k2 + offset2;
+-        }
+-        if (k2 >= length2 + offset2) {
+-          System.arraycopy(set1, k1, buffer, pos, length1 - k1 + offset1);
+-          return pos + length1 - k1 + offset1;
+-        }
+-        s1 = set1[k1];
+-        s2 = set2[k2];
+-      } else { // if (set1[k1]>set2[k2])
++        k1++;
++        k2++;
++      } else {
+         buffer[pos++] = s2;
+-        ++k2;
+-        if (k2 >= length2 + offset2) {
+-          System.arraycopy(set1, k1, buffer, pos, length1 - k1 + offset1);
+-          return pos + length1 - k1 + offset1;
+-        }
+-        s2 = set2[k2];
++        k2++;
+       }
+     }
+-    // return pos;
++    if (k1 < end1) {
++      int remaining = end1 - k1;
++      System.arraycopy(set1, k1, buffer, pos, remaining);
++      pos += remaining;
++    } else if (k2 < end2) {
++      int remaining = end2 - k2;
++      System.arraycopy(set2, k2, buffer, pos, remaining);
++      pos += remaining;
++    }
++    return pos;
+   }",,
+B,38,score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,openai/gpt-oss-120b,R3,RoaringBitmap,org.roaringbitmap.buffer.MutableRoaringArray#clone(),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 4 in original -> 3 in patch,"--- original
++++ patched
+@@ -1,20 +1,14 @@
+ @Override
+-  public MutableRoaringArray clone() {
+-    MutableRoaringArray sa;
+-    try {
+-      sa = (MutableRoaringArray) super.clone();
+-
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
+-        sa.values[k] = sa.values[k].clone();
+-      }
+-      sa.size = this.size;
+-      return sa;
+-
+-    } catch (CloneNotSupportedException e) {
+-      return null;
++public MutableRoaringArray clone() {
++    // allocate new array with exact needed capacity
++    MutableRoaringArray sa = new MutableRoaringArray(this.size);
++    sa.size = this.size;
++    // copy primitive keys
++    System.arraycopy(this.keys, 0, sa.keys, 0, this.size);
++    // copy references of containers, then deep‑clone each container
++    System.arraycopy(this.values, 0, sa.values, 0, this.size);
++    for (int k = 0; k < this.size; ++k) {
++        sa.values[k] = this.values[k].clone();
+     }
+-  }
++    return sa;
++}",,
+B,39,score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.art.Containers#clone()|s1,openai/gpt-oss-120b,R1,RoaringBitmap,org.roaringbitmap.art.Containers#clone(),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 2 in original -> 1 in patch,"--- original
++++ patched
+@@ -1,18 +1,18 @@
+ @Override
+-  public Containers clone() {
++public Containers clone() {
+     Containers containers = new Containers();
+-    containers.containerArrays = new ArrayList<>(this.containerArrays.size());
+-    for (Container[] array : this.containerArrays) {
+-      Container[] values = Arrays.copyOf(array, array.length);
+-      containers.containerArrays.add(values);
+-      for (int i = 0; i < values.length; i++) {
+-        if (values[i] != null) {
+-          values[i] = values[i].clone();
++    java.util.ArrayList<Container[]> newList = new java.util.ArrayList<>(this.containerArrays.size());
++    for (Container[] srcArray : this.containerArrays) {
++        Container[] copy = new Container[srcArray.length];
++        for (int i = 0; i < srcArray.length; i++) {
++            Container c = srcArray[i];
++            copy[i] = (c == null) ? null : c.clone();
+         }
+-      }
++        newList.add(copy);
+     }
++    containers.containerArrays = newList;
+     containers.containerSize = this.containerSize;
+     containers.firstLevelIdx = this.firstLevelIdx;
+     containers.secondLevelIdx = this.secondLevelIdx;
+     return containers;
+-  }
++}",,
+B,40,score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,openai/gpt-oss-120b,R1,RoaringBitmap,org.roaringbitmap.buffer.MutableRoaringArray#clone(),copy_idiom_reduced,Does the patch expose internal state (returns or stores a mutable field/array that the original copied)? real_exposure | still_copies | unsure,copy idioms: 4 in original -> 3 in patch,"--- original
++++ patched
+@@ -1,20 +1,11 @@
+ @Override
+-  public MutableRoaringArray clone() {
+-    MutableRoaringArray sa;
+-    try {
+-      sa = (MutableRoaringArray) super.clone();
+-
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
++public MutableRoaringArray clone() {
++    MutableRoaringArray sa = new MutableRoaringArray();
++    sa.keys = java.util.Arrays.copyOf(this.keys, this.size);
++    sa.values = java.util.Arrays.copyOf(this.values, this.size);
++    for (int k = 0; k < this.size; ++k) {
+         sa.values[k] = sa.values[k].clone();
+-      }
+-      sa.size = this.size;
+-      return sa;
+-
+-    } catch (CloneNotSupportedException e) {
+-      return null;
+     }
+-  }
++    sa.size = this.size;
++    return sa;
++}",,

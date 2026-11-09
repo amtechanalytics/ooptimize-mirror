@@ -1,0 +1,4 @@
+model,cells,ok,parse_fail,vendor_error,wrong_method,input_tok,cache_read_tok,cache_write_tok,output_tok,spend_full_usd
+claude-sonnet-5-5,1224,1210,14,0,0,7437982,2344491,1917,742539,11.27
+gpt-6.1-sol,1224,1224,0,0,0,2179660,3770806,0,502240,4.88
+openai/gpt-oss-120b,1224,1186,38,0,0,3998978,2039040,0,1301350,1.53

@@ -1,0 +1,9 @@
+{
+  "equalsverifier": "83a84f4add3ca380dfaebacc8f69e410ea5ac206a733a004a6b227f7a9c59775",
+  "lib_caffeine": "10646b00c14a7837fe16a16a2a7b1f82e5fa3155",
+  "lib_eclipse_collections": "6b5f8e542d5296ffe173b1c4c31df3b2a3ca60da",
+  "lib_jctools": "6d497fc79fcf44dc3c301ac813f3615fabb3a444",
+  "lib_netty": "e0d7510483bb9d1b153093f9007f0e2239522016",
+  "lib_roaringbitmap": "5f1d0764ffaedababbe59729ba71c276c7d6177e",
+  "maven": "4b7195b6a4f5c81af4c0212677a32ee8143643401bc6e1e8412e6b06ea82beac"
+}

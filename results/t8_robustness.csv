@@ -1,0 +1,7 @@
+model,subset,n,silent_break,rate,wilson_lo,wilson_hi
+claude-sonnet-5-5,all_oracles_available,21,0,0.0000,0.0000,0.1546
+claude-sonnet-5-5,tests_pass_including_no_tests_ran,596,15,0.0252,0.0153,0.0411
+gpt-6.1-sol,all_oracles_available,21,1,0.0476,0.0085,0.2267
+gpt-6.1-sol,tests_pass_including_no_tests_ran,608,12,0.0197,0.0113,0.0342
+openai/gpt-oss-120b,all_oracles_available,18,1,0.0556,0.0099,0.2576
+openai/gpt-oss-120b,tests_pass_including_no_tests_ran,553,32,0.0579,0.0413,0.0805

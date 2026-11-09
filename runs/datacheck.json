@@ -1,0 +1,219 @@
+{
+  "pins": [
+    {
+      "checks": {
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true
+      },
+      "columns": [
+        "pom.xml",
+        "jmh-tests/pom.xml",
+        "unit-tests/pom.xml"
+      ],
+      "format": "git",
+      "name": "lib_eclipse_collections",
+      "ok": true,
+      "path": "data/lib_eclipse_collections",
+      "record": "6b5f8e542d5296ffe173b1c4c31df3b2a3ca60da",
+      "reused_cache": false,
+      "rows": 918,
+      "sha256": "6b5f8e542d5296ffe173b1c4c31df3b2a3ca60da"
+    },
+    {
+      "checks": {
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true
+      },
+      "columns": [
+        "gradlew",
+        "jmh/build.gradle.kts",
+        "roaringbitmap/build.gradle.kts",
+        "bsi/build.gradle.kts"
+      ],
+      "format": "git",
+      "name": "lib_roaringbitmap",
+      "ok": true,
+      "path": "data/lib_roaringbitmap",
+      "record": "5f1d0764ffaedababbe59729ba71c276c7d6177e",
+      "reused_cache": false,
+      "rows": 115,
+      "sha256": "5f1d0764ffaedababbe59729ba71c276c7d6177e"
+    },
+    {
+      "checks": {
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true
+      },
+      "columns": [
+        "pom.xml",
+        "microbench/pom.xml"
+      ],
+      "format": "git",
+      "name": "lib_netty",
+      "ok": true,
+      "path": "data/lib_netty",
+      "record": "e0d7510483bb9d1b153093f9007f0e2239522016",
+      "reused_cache": false,
+      "rows": 1022,
+      "sha256": "e0d7510483bb9d1b153093f9007f0e2239522016"
+    },
+    {
+      "checks": {
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true
+      },
+      "columns": [
+        "pom.xml",
+        "jctools-benchmarks/pom.xml"
+      ],
+      "format": "git",
+      "name": "lib_jctools",
+      "ok": true,
+      "path": "data/lib_jctools",
+      "record": "6d497fc79fcf44dc3c301ac813f3615fabb3a444",
+      "reused_cache": false,
+      "rows": 172,
+      "sha256": "6d497fc79fcf44dc3c301ac813f3615fabb3a444"
+    },
+    {
+      "checks": {
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true
+      },
+      "columns": [
+        "gradlew",
+        "caffeine/build.gradle.kts"
+      ],
+      "format": "git",
+      "name": "lib_caffeine",
+      "ok": true,
+      "path": "data/lib_caffeine",
+      "record": "10646b00c14a7837fe16a16a2a7b1f82e5fa3155",
+      "reused_cache": false,
+      "rows": 51,
+      "sha256": "10646b00c14a7837fe16a16a2a7b1f82e5fa3155"
+    },
+    {
+      "checks": {
+        "checksum_url": true,
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true,
+        "unpacked": true
+      },
+      "columns": [],
+      "format": "binary",
+      "name": "temurin_jdk21",
+      "ok": true,
+      "path": "data/temurin_jdk21",
+      "record": "temurin 21.0.13+9 linux x64 jdk",
+      "rows": 1,
+      "sha256": "d7f5d5cf865a2902b70ff549b97586a7d3f234e016f041ab447ea740c7d66d1c",
+      "size": 207858352
+    },
+    {
+      "checks": {
+        "checksum_url": true,
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true,
+        "unpacked": true
+      },
+      "columns": [],
+      "format": "binary",
+      "name": "maven",
+      "ok": true,
+      "path": "data/maven",
+      "record": "apache-maven 3.9.11 bin",
+      "rows": 1,
+      "sha256": "4b7195b6a4f5c81af4c0212677a32ee8143643401bc6e1e8412e6b06ea82beac",
+      "size": 9160848
+    },
+    {
+      "checks": {
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true
+      },
+      "columns": [],
+      "format": "binary",
+      "name": "randoop",
+      "ok": true,
+      "path": "data/randoop.jar",
+      "record": "randoop 4.3.4",
+      "rows": 1,
+      "sha256": "bc134dca4a0df20a4787148923a2f6f4d0ecf8d40d7bba16b906e8cf0bdf8baf",
+      "size": 7577815
+    },
+    {
+      "checks": {
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true,
+        "unpacked": true
+      },
+      "columns": [],
+      "format": "binary",
+      "name": "spotbugs",
+      "ok": true,
+      "path": "data/spotbugs",
+      "record": "spotbugs 4.10.5",
+      "rows": 1,
+      "sha256": "cce3244900cc215ccd9f5a8db29ed9468fc47824faf662f4fad005343d96007e",
+      "size": 15948373
+    },
+    {
+      "checks": {
+        "checksum_url": true,
+        "columns": true,
+        "downloaded": true,
+        "duplicates": true,
+        "rows": true,
+        "sha256": true,
+        "size": true
+      },
+      "columns": [],
+      "format": "binary",
+      "name": "equalsverifier",
+      "ok": true,
+      "path": "data/equalsverifier.jar",
+      "record": "nl.jqno.equalsverifier:equalsverifier-nodep:4.5.2",
+      "rows": 1,
+      "sha256": "83a84f4add3ca380dfaebacc8f69e410ea5ac206a733a004a6b227f7a9c59775",
+      "size": 4345725
+    }
+  ],
+  "ts": "2026-11-07T15:04:11Z"
+}

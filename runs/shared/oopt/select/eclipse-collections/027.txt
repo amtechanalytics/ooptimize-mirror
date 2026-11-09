@@ -1,0 +1,184 @@
+# OOPT benchmark org.eclipse.collections.impl.jmh.CollectTest.parallel_eager_ec
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.CollectTest.parallel_eager_ec
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 315.721 ops/s
+Iteration   1: 815.845 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.CollectTest.parallel_eager_ec":
+  815.845 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.CollectTest.parallel_eager_ec:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 76.5%         WAITING
+ 22.0%         RUNNABLE
+  1.5%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 75.8%  99.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.LinkedTransferQueue$DualNode.await
+              java.util.concurrent.SynchronousQueue$Transferer.xferLifo
+
+  0.8%   1.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 19.2%  87.6% java.lang.Integer.getChars
+              java.lang.Integer.toString
+              java.lang.Integer.toString
+              org.eclipse.collections.impl.jmh.CollectTest$$Lambda/0x00007a3a6808c208.valueOf
+
+  1.5%   6.7% <stack is empty, everything is filtered?>
+  0.4%   2.0% java.lang.Integer.toString
+              java.lang.Integer.toString
+              org.eclipse.collections.impl.jmh.CollectTest$$Lambda/0x00007a3a6808c208.valueOf
+              org.eclipse.collections.impl.block.procedure.FastListCollectProcedure.value
+
+  0.2%   1.0% java.util.concurrent.ThreadPoolExecutor.runWorker
+              java.util.concurrent.ThreadPoolExecutor$Worker.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  0.2%   0.8% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.SynchronousQueue$Transferer.xferLifo
+              java.util.concurrent.SynchronousQueue.xfer
+
+  0.1%   0.4% org.eclipse.collections.impl.list.mutable.FastList.<init>
+              org.eclipse.collections.impl.list.mutable.FastList.newList
+              org.eclipse.collections.impl.parallel.FastListCollectProcedureFactory.create
+              org.eclipse.collections.impl.parallel.FastListCollectProcedureFactory.create
+
+  0.1%   0.4% java.util.concurrent.LinkedTransferQueue$DualNode.await
+              java.util.concurrent.SynchronousQueue$Transferer.xferLifo
+              java.util.concurrent.SynchronousQueue.xfer
+              java.util.concurrent.SynchronousQueue.take
+
+  0.1%   0.2% java.util.concurrent.SynchronousQueue$Transferer.xferLifo
+              java.util.concurrent.SynchronousQueue.xfer
+              java.util.concurrent.SynchronousQueue.take
+              java.util.concurrent.ThreadPoolExecutor.getTask
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.LinkedTransferQueue$DualNode.await
+              java.util.concurrent.SynchronousQueue$Transferer.xferLifo
+
+  0.0%   0.1% org.eclipse.collections.impl.parallel.FastListCollectProcedureFactory.create
+              org.eclipse.collections.impl.parallel.FastListCollectProcedureFactory.create
+              org.eclipse.collections.impl.parallel.BatchIterableProcedureFJTask.run
+              java.util.concurrent.ThreadPoolExecutor.runWorker
+
+  0.0%   0.1% java.lang.StringConcatHelper.simpleConcat
+              java.lang.invoke.DirectMethodHandle$Holder.invokeStatic
+              java.lang.invoke.LambdaForm$MH/0x00007a3a68088400.invoke
+              java.lang.invoke.Invokers$Holder.linkToTargetMethod
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.releaseShared
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.allocateInstance
+              java.lang.invoke.DirectMethodHandle.allocateInstance
+              java.lang.invoke.DirectMethodHandle$Holder.newInvokeSpecial
+              java.lang.invoke.Invokers$Holder.linkToTargetMethod
+
+  0.0%   0.1% java.util.concurrent.SynchronousQueue.take
+              java.util.concurrent.ThreadPoolExecutor.getTask
+              java.util.concurrent.ThreadPoolExecutor.runWorker
+              java.util.concurrent.ThreadPoolExecutor$Worker.run
+
+  0.0%   0.0% org.eclipse.collections.impl.utility.internal.InternalArrayIterate.batchForEach
+              org.eclipse.collections.impl.list.mutable.FastList.batchForEach
+              org.eclipse.collections.impl.parallel.BatchIterableProcedureFJTask.run
+              java.util.concurrent.ThreadPoolExecutor.runWorker
+
+  0.0%   0.0% java.lang.StringConcatHelper.stringOf
+              java.lang.StringConcatHelper.simpleConcat
+              java.lang.invoke.DirectMethodHandle$Holder.invokeStatic
+              java.lang.invoke.LambdaForm$MH/0x00007a3a68088400.invoke
+
+  0.0%   0.0% org.eclipse.collections.impl.list.mutable.FastList.each
+              org.eclipse.collections.impl.AbstractRichIterable.forEach
+              org.eclipse.collections.impl.utility.Iterate.forEach
+              org.eclipse.collections.impl.parallel.Combiner.combineAll
+
+  0.0%   0.0% org.eclipse.collections.impl.utility.Iterate.sizeOf
+              org.eclipse.collections.impl.test.Verify.assertSize
+              org.eclipse.collections.impl.test.Verify.assertSize
+              org.eclipse.collections.impl.jmh.CollectTest.parallel_eager_ec
+
+  0.0%   0.0% org.eclipse.collections.impl.utility.Iterate.sizeOf
+              org.eclipse.collections.impl.parallel.ParallelIterate.collect
+              org.eclipse.collections.impl.parallel.ParallelIterate.collect
+              org.eclipse.collections.impl.parallel.ParallelIterate.collect
+
+  0.0%   0.0% org.eclipse.collections.impl.list.mutable.FastList.add
+              org.eclipse.collections.impl.list.mutable.CompositeFastList.addComposited
+              org.eclipse.collections.impl.list.mutable.CompositeFastList.addAll
+              org.eclipse.collections.impl.parallel.FastListCollectProcedureCombiner.combineOne
+
+  0.0%   0.0% java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+              java.util.concurrent.ThreadPoolExecutor$Worker.unlock
+              java.util.concurrent.ThreadPoolExecutor.runWorker
+              java.util.concurrent.ThreadPoolExecutor$Worker.run
+
+  0.0%   0.0% java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+              java.util.concurrent.CountDownLatch.await
+              org.eclipse.collections.impl.parallel.BatchIterableProcedureFJTaskRunner.join
+
+  0.0%   0.0% jdk.internal.misc.Unsafe.allocateUninitializedArray
+              java.lang.StringConcatHelper.newArray
+              java.lang.StringConcatHelper.simpleConcat
+              java.lang.invoke.DirectMethodHandle$Holder.invokeStatic
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  1.5% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                             Mode  Cnt    Score   Error  Units
+CollectTest.parallel_eager_ec        thrpt       815.845          ops/s
+CollectTest.parallel_eager_ec:stack  thrpt           NaN            ---

@@ -1,0 +1,170 @@
+# OOPT benchmark org.eclipse.collections.impl.jmh.SumOfIntTest.parallel_lazy_mapToLongSum_streams_ec
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.SumOfIntTest.parallel_lazy_mapToLongSum_streams_ec
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 876.389 ops/s
+Iteration   1: 1339.674 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.SumOfIntTest.parallel_lazy_mapToLongSum_streams_ec":
+  1339.674 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.SumOfIntTest.parallel_lazy_mapToLongSum_streams_ec:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 51.2%         RUNNABLE
+ 47.3%         WAITING
+  1.5%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 26.0%  50.8% java.util.stream.ReduceOps$ReduceTask.doLeaf
+              java.util.stream.ReduceOps$ReduceTask.doLeaf
+              java.util.stream.AbstractTask.compute
+              java.util.concurrent.CountedCompleter.exec
+
+ 12.9%  25.2% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  6.5%  12.6% java.util.concurrent.CountedCompleter.tryComplete
+              java.util.stream.AbstractTask.compute
+              java.util.concurrent.CountedCompleter.exec
+              java.util.concurrent.ForkJoinTask.doExec
+
+  2.9%   5.7% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  1.5%   3.0% <stack is empty, everything is filtered?>
+  0.5%   1.0% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool.scan
+
+  0.4%   0.8% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool$WorkQueue.push
+
+  0.1%   0.2% java.util.stream.AbstractTask.compute
+              java.util.concurrent.CountedCompleter.exec
+              java.util.concurrent.ForkJoinTask.doExec
+              java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.1%   0.2% java.util.stream.AbstractPipeline.wrapSink
+              java.util.stream.AbstractPipeline.wrapAndCopyInto
+              java.util.stream.ReduceOps$ReduceTask.doLeaf
+              java.util.stream.ReduceOps$ReduceTask.doLeaf
+
+  0.1%   0.1% java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.0% org.eclipse.collections.impl.jmh.jmh_generated.SumOfIntTest_parallel_lazy_mapToLongSum_streams_ec_jmhTest.parallel_lazy_mapToLongSum_streams_ec_thrpt_jmhStub
+              org.eclipse.collections.impl.jmh.jmh_generated.SumOfIntTest_parallel_lazy_mapToLongSum_streams_ec_jmhTest.parallel_lazy_mapToLongSum_streams_ec_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000075698c02e800.invoke
+
+  0.0%   0.0% java.util.stream.AbstractPipeline.<init>
+              java.util.stream.LongPipeline.<init>
+              java.util.stream.LongPipeline$StatelessOp.<init>
+              java.util.stream.ReferencePipeline$5.<init>
+
+  0.0%   0.0% java.util.stream.ReferencePipeline$5.opWrapSink
+              java.util.stream.AbstractPipeline.wrapSink
+              java.util.stream.AbstractPipeline.wrapAndCopyInto
+              java.util.stream.ReduceOps$ReduceTask.doLeaf
+
+  0.0%   0.0% java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.0% java.util.Spliterators.spliterator
+              org.eclipse.collections.impl.list.mutable.FastList.spliterator
+              java.util.Collection.parallelStream
+              org.eclipse.collections.impl.jmh.SumOfIntTest.parallel_lazy_mapToLongSum_streams_ec
+
+  0.0%   0.0% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinTask.signalWaiters
+              java.util.concurrent.ForkJoinTask.setDone
+
+  0.0%   0.0% java.util.concurrent.ForkJoinTask.fork
+              java.util.stream.AbstractTask.compute
+              java.util.concurrent.CountedCompleter.exec
+              java.util.concurrent.ForkJoinTask.doExec
+
+  0.0%   0.0% java.util.concurrent.ForkJoinTask.awaitDone
+              java.util.concurrent.ForkJoinTask.invoke
+              java.util.stream.ReduceOps$ReduceOp.evaluateParallel
+              java.util.stream.AbstractPipeline.evaluate
+
+  0.0%   0.0% java.util.concurrent.ForkJoinPool.helpComplete
+              java.util.concurrent.ForkJoinTask.awaitDone
+              java.util.concurrent.ForkJoinTask.invoke
+              java.util.stream.ReduceOps$ReduceOp.evaluateParallel
+
+
+....[Thread state: WAITING].........................................................................
+ 46.8%  99.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.4%   0.9% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinTask.awaitDone
+              java.util.concurrent.ForkJoinTask.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  1.5%  98.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  0.0%   1.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                  Mode  Cnt     Score   Error  Units
+SumOfIntTest.parallel_lazy_mapToLongSum_streams_ec        thrpt       1339.674          ops/s
+SumOfIntTest.parallel_lazy_mapToLongSum_streams_ec:stack  thrpt            NaN            ---

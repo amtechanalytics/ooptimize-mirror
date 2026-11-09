@@ -1,0 +1,317 @@
+# OOPT benchmark com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+# Parameters: (type = Unbound_Caffeine)
+
+# Run progress: 0.00% complete, ETA 00:00:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 18586921.740 ops/s
+Iteration   1: 39425766.616 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build":
+  39425766.616 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007d34e0033800.invoke
+
+  0.4%   0.5% com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+              com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+# Parameters: (type = Bounded_Caffeine)
+
+# Run progress: 20.00% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 1650178.709 ops/s
+Iteration   1: 4798702.285 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build":
+  4798702.285 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 21.0%  31.6% com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueConsumerFields.<init>
+              com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad3.<init>
+              com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueColdProducerFields.<init>
+              com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue.<init>
+
+  8.4%  12.6% com.github.benmanes.caffeine.cache.BoundedLocalCache$BoundedLocalManualCache.<init>
+              com.github.benmanes.caffeine.cache.Caffeine.build
+              com.github.benmanes.caffeine.cache.BuilderBenchmark$BuilderType$$Lambda/0x000077dcd8035a20.get
+              com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+
+  2.3%   3.5% java.lang.StringBuilder.<init>
+              com.github.benmanes.caffeine.cache.LocalCacheFactory.getClassName
+              com.github.benmanes.caffeine.cache.LocalCacheFactory.newBoundedLocalCache
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$BoundedLocalManualCache.<init>
+
+  1.4%   2.1% java.lang.StringBuilder.append
+              com.github.benmanes.caffeine.cache.LocalCacheFactory.getClassName
+              com.github.benmanes.caffeine.cache.LocalCacheFactory.newBoundedLocalCache
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$BoundedLocalManualCache.<init>
+
+  0.2%   0.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.<init>
+              com.github.benmanes.caffeine.cache.SS.<init>
+              com.github.benmanes.caffeine.cache.SSEvictionPolicy.<init>
+              com.github.benmanes.caffeine.cache.SSPadBeforeMaximum.<init>
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+# Parameters: (type = Unbound_Guava)
+
+# Run progress: 40.00% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 2890075.458 ops/s
+Iteration   1: 6160306.671 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build":
+  6160306.671 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% com.google.common.cache.LocalCache.<init>
+              com.google.common.cache.LocalCache$LocalManualCache.<init>
+              com.google.common.cache.CacheBuilder.build
+              com.github.benmanes.caffeine.cache.BuilderBenchmark$BuilderType$$Lambda/0x000078378c037748.get
+
+  0.2%   0.3% com.google.common.cache.LocalCache.createSegment
+              com.google.common.cache.LocalCache.<init>
+              com.google.common.cache.LocalCache$LocalManualCache.<init>
+              com.google.common.cache.CacheBuilder.build
+
+  0.2%   0.3% com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000078378c032800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+# Parameters: (type = Bounded_Guava)
+
+# Run progress: 60.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 1912280.796 ops/s
+Iteration   1: 3865989.445 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build":
+  3865989.445 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% com.google.common.cache.LocalCache.<init>
+              com.google.common.cache.LocalCache$LocalManualCache.<init>
+              com.google.common.cache.CacheBuilder.build
+              com.github.benmanes.caffeine.cache.BuilderBenchmark$BuilderType$$Lambda/0x00007864c0037748.get
+
+  0.2%   0.3% com.google.common.cache.LocalCache$LocalManualCache.<init>
+              com.google.common.cache.CacheBuilder.build
+              com.github.benmanes.caffeine.cache.BuilderBenchmark$BuilderType$$Lambda/0x00007864c0037748.get
+              com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+
+  0.2%   0.3% com.google.common.cache.LocalCache.createSegment
+              com.google.common.cache.LocalCache.<init>
+              com.google.common.cache.LocalCache$LocalManualCache.<init>
+              com.google.common.cache.CacheBuilder.build
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+# Parameters: (type = ConcurrentHashMap)
+
+# Run progress: 80.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 46376726.932 ops/s
+Iteration   1: 145049357.781 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build":
+  145049357.781 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.BuilderBenchmark.build:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c8254032800.invoke
+
+  0.2%   0.3% com.github.benmanes.caffeine.cache.BuilderBenchmark.build
+              com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.BuilderBenchmark_build_jmhTest.build_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:17
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                (type)   Mode  Cnt          Score   Error  Units
+BuilderBenchmark.build         Unbound_Caffeine  thrpt        39425766.616          ops/s
+BuilderBenchmark.build:stack   Unbound_Caffeine  thrpt                 NaN            ---
+BuilderBenchmark.build         Bounded_Caffeine  thrpt         4798702.285          ops/s
+BuilderBenchmark.build:stack   Bounded_Caffeine  thrpt                 NaN            ---
+BuilderBenchmark.build            Unbound_Guava  thrpt         6160306.671          ops/s
+BuilderBenchmark.build:stack      Unbound_Guava  thrpt                 NaN            ---
+BuilderBenchmark.build            Bounded_Guava  thrpt         3865989.445          ops/s
+BuilderBenchmark.build:stack      Bounded_Guava  thrpt                 NaN            ---
+BuilderBenchmark.build        ConcurrentHashMap  thrpt       145049357.781          ops/s
+BuilderBenchmark.build:stack  ConcurrentHashMap  thrpt                 NaN            ---

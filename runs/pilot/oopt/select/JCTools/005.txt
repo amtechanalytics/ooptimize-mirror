@@ -1,0 +1,232 @@
+# OOPT benchmark org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 11 threads (1 group; 10x "unalignedPrimitiveArgsCaller", 1x "unalignedPrimitiveArgsProcessor" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs
+# Parameters: (limit = 1)
+
+# Run progress: 0.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 132163889.582 ops/s
+Iteration   1: 122206219.756 ops/s
+                 callsFailed:                     ≈ 0 ops/s
+                 processFailed:                   115370292.861 ops/s
+                 processed:                       3418353.529 ops/s
+                 stack:                           <delayed till summary>
+                 unalignedPrimitiveArgsCaller:    3418066.307 ops/s
+                 unalignedPrimitiveArgsProcessor: 118788153.449 ops/s
+
+
+
+Result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs":
+  122206219.756 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:callsFailed":
+  ≈ 0 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:processFailed":
+  115370292.861 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:processed":
+  3418353.529 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 91.9%         RUNNABLE
+  7.7%         TIMED_WAITING
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 74.1%  80.7% org.jctools.channels.mpsc.MpscOffHeapFixedSizeRingBuffer.writeAcquire
+              org.jctools.channels.proxy.ProxyChannelFactory.writeAcquireWithWaitStrategy
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.unalignedPrimitiveArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgsCaller
+
+  7.7%   8.4% <stack is empty, everything is filtered?>
+  4.2%   4.5% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchImpl.unalignedPrimitiveArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.doProcess
+
+  3.0%   3.3% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgsProcessor
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgsProcessor_thrpt_jmhStub
+
+  2.4%   2.6% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgsCaller_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007be62802e400.invoke
+
+  0.5%   0.5% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgsProcessor_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007be62802e400.invoke
+
+  0.0%   0.0% java.util.concurrent.locks.ReentrantLock$NonfairSync.tryAcquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.reacquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  7.7% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:unalignedPrimitiveArgsCaller":
+  3418066.307 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:unalignedPrimitiveArgsProcessor":
+  118788153.449 ops/s
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 11 threads (1 group; 10x "unalignedPrimitiveArgsCaller", 1x "unalignedPrimitiveArgsProcessor" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs
+# Parameters: (limit = 10000)
+
+# Run progress: 50.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 144576959.126 ops/s
+Iteration   1: 139241871.104 ops/s
+                 callsFailed:                     ≈ 0 ops/s
+                 processFailed:                   134155130.702 ops/s
+                 processed:                       2835067.429 ops/s
+                 stack:                           <delayed till summary>
+                 unalignedPrimitiveArgsCaller:    2834892.483 ops/s
+                 unalignedPrimitiveArgsProcessor: 136406978.621 ops/s
+
+
+
+Result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs":
+  139241871.104 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:callsFailed":
+  ≈ 0 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:processFailed":
+  134155130.702 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:processed":
+  2835067.429 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 91.9%         RUNNABLE
+  7.7%         TIMED_WAITING
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 75.3%  82.0% org.jctools.channels.mpsc.MpscOffHeapFixedSizeRingBuffer.writeAcquire
+              org.jctools.channels.proxy.ProxyChannelFactory.writeAcquireWithWaitStrategy
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.unalignedPrimitiveArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgsCaller
+
+  7.7%   8.4% <stack is empty, everything is filtered?>
+  4.0%   4.4% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgsProcessor
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgsProcessor_thrpt_jmhStub
+
+  3.1%   3.3% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchImpl.unalignedPrimitiveArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$MpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.doProcess
+
+  1.2%   1.3% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgsCaller_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007b4258030800.invoke
+
+  0.5%   0.6% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgsProcessor_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_unalignedPrimitiveArgs_jmhTest.unalignedPrimitiveArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007b4258030800.invoke
+
+  0.0%   0.0% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  7.7% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:unalignedPrimitiveArgsCaller":
+  2834892.483 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.unalignedPrimitiveArgs:unalignedPrimitiveArgsProcessor":
+  136406978.621 ops/s
+
+
+# Run complete. Total time: 00:00:06
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                                         (limit)   Mode  Cnt          Score   Error  Units
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs                                        1  thrpt       122206219.756          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:callsFailed                            1  thrpt                 ≈ 0          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:processFailed                          1  thrpt       115370292.861          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:processed                              1  thrpt         3418353.529          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:stack                                  1  thrpt                 NaN            ---
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:unalignedPrimitiveArgsCaller           1  thrpt         3418066.307          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:unalignedPrimitiveArgsProcessor        1  thrpt       118788153.449          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs                                    10000  thrpt       139241871.104          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:callsFailed                        10000  thrpt                 ≈ 0          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:processFailed                      10000  thrpt       134155130.702          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:processed                          10000  thrpt         2835067.429          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:stack                              10000  thrpt                 NaN            ---
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:unalignedPrimitiveArgsCaller       10000  thrpt         2834892.483          ops/s
+MpscProxyChannelBenchmark.unalignedPrimitiveArgs:unalignedPrimitiveArgsProcessor    10000  thrpt       136406978.621          ops/s

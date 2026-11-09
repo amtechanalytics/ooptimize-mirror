@@ -1,0 +1,1297 @@
+cell_id,model,rung,method,rows_fired,evidence,diff,auditor_verdict (real_break|oracle_artifact|unsure),note
+score|gen|R2|gpt-6.1-sol|eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>)|s1,gpt-6.1-sol,R2,eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -2,4 +2,11 @@
+     {
+-        int newSize = this.ensureCapacityForAddAll(source);
+-        RandomAccessListIterate.toArray(source, this.items, this.size, source.size());
++        int sourceSize = source.size();
++        int newSize = this.size + sourceSize;
++        this.ensureCapacity(newSize);
++        T[] target = this.items;
++        int offset = this.size;
++        for (int i = 0; i < sourceSize; i++)
++        {
++            target[offset + i] = source.get(i);
++        }
+         this.size = newSize;",,
+score|gen|R2|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1,openai/gpt-oss-120b,R2,eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>),R3b_EXCEPTION,"randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null","--- original
++++ patched
+@@ -1,5 +1,6 @@
+ @Override
+-    public void each(Procedure<? super T> procedure)
+-    {
+-        Iterate.forEach(this.adapted, procedure);
++public void each(Procedure<? super T> procedure) {
++    for (T item : this.adapted) {
++        procedure.value(item);
+     }
++}",,
+"score|gen|R1|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",claude-sonnet-5-5,R1,"RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",R3b_EXCEPTION,randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6 | randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6,"--- original
++++ patched
+@@ -2,13 +2,16 @@
+       byte[] key, Node[] children, int left, int right) { // x
+-    for (int i = left, j = i; i < right; j = ++i) {
++    for (int i = left; i < right; i++) {
+       byte ai = key[i + 1];
++      int u = ai & 0xFF;
++      if (u >= (key[i] & 0xFF)) {
++        // already in place, no shifting or rewrite needed
++        continue;
++      }
+       Node child = children[i + 1];
+-      int unsignedByteAi = Byte.toUnsignedInt(ai);
+-      while (unsignedByteAi < Byte.toUnsignedInt(key[j])) {
++      int j = i;
++      do {
+         key[j + 1] = key[j];
+         children[j + 1] = children[j];
+-        if (j-- == left) {
+-          break;
+-        }
+-      }
++        j--;
++      } while (j >= left && u < (key[j] & 0xFF));
+       key[j + 1] = ai;",,
+score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[])|s1,gpt-6.1-sol,R3,RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[]),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,3 +1,11 @@
+ public static SortedMap<Character, List<Container>> groupByKey(RoaringBitmap... bitmaps) {
+-    Map<Character, List<Container>> grouped = new HashMap<>();
++    int maxKey = -1;
++    for (RoaringBitmap bitmap : bitmaps) {
++      RoaringArray ra = bitmap.highLowContainer;
++      if (ra.size > 0) {
++        maxKey = Math.max(maxKey, ra.keys[ra.size - 1]);
++      }
++    }
++    Object[] slices = new Object[maxKey + 1];
++    SortedMap<Character, List<Container>> grouped = new TreeMap<>();
+     for (RoaringBitmap bitmap : bitmaps) {
+@@ -5,13 +13,14 @@
+       for (int i = 0; i < ra.size; ++i) {
+-        Container container = ra.values[i];
+-        Character key = ra.keys[i];
+-        List<Container> slice = grouped.get(key);
+-        if (null == slice) {
++        char key = ra.keys[i];
++        @SuppressWarnings(""unchecked"")
++        List<Container> slice = (List<Container>) slices[key];
++        if (slice == null) {
+           slice = new ArrayList<>();
++          slices[key] = slice;
+           grouped.put(key, slice);
+         }
+-        slice.add(container);
++        slice.add(ra.values[i]);
+       }
+     }
+-    return new TreeMap<>(grouped);
++    return grouped;
+   }",,
+"score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)|s1",openai/gpt-oss-120b,R1,"RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)",R3b_EXCEPTION,randoop: java.lang.IllegalArgumentException: fromIndex(100) > toIndex(97) | randoop: java.lang.IllegalArgumentException: fromIndex(26) > toIndex(-1) | randoop: java.lang.IllegalArgumentException: fromIndex(45) > toIndex(9),"--- original
++++ patched
+@@ -1,35 +1,3 @@
+-protected static int hybridUnsignedBinarySearch(
+-      final char[] array, final int begin, final int end, final char k) {
+-    // next line accelerates the possibly common case where the value would
+-    // be inserted at the end
+-    if ((end > 0) && ((array[end - 1]) < (int) k)) {
+-      return -end - 1;
+-    }
+-    int low = begin;
+-    int high = end - 1;
+-    // 32 in the next line matches the size of a cache line
+-    while (low + 32 <= high) {
+-      final int middleIndex = (low + high) >>> 1;
+-      final int middleValue = (array[middleIndex]);
+-
+-      if (middleValue < (int) k) {
+-        low = middleIndex + 1;
+-      } else if (middleValue > (int) k) {
+-        high = middleIndex - 1;
+-      } else {
+-        return middleIndex;
+-      }
+-    }
+-    // we finish the job with a sequential search
+-    int x = low;
+-    for (; x <= high; ++x) {
+-      final int val = (array[x]);
+-      if (val >= (int) k) {
+-        if (val == (int) k) {
+-          return x;
+-        }
+-        break;
+-      }
+-    }
+-    return -(x + 1);
+-  }
++protected static int hybridUnsignedBinarySearch(final char[] array, final int begin, final int end, final char k) {
++    return java.util.Arrays.binarySearch(array, begin, end, k);
++}",,
+score|gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,claude-sonnet-5-5,R3,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -6,10 +6,11 @@
+ 
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
+-        sa.values[k] = sa.values[k].clone();
++      final int n = this.size;
++      final MappeableContainer[] src = this.values;
++      final MappeableContainer[] dst = new MappeableContainer[n];
++      for (int k = 0; k < n; ++k) {
++        dst[k] = src[k].clone();
+       }
+-      sa.size = this.size;
++      sa.keys = Arrays.copyOf(this.keys, n);
++      sa.values = dst;
++      sa.size = n;
+       return sa;",,
+"score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",gpt-6.1-sol,R3,"RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",R3b_EXCEPTION,randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0 | randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0,"--- original
++++ patched
+@@ -10,7 +10,6 @@
+     int k1 = 0;
+-    int k2 = 0;
+     int pos = 0;
+     char s1 = largeSet[k1];
+-    char s2 = smallSet[k2];
+-    while (true) {
++    for (int k2 = 0; k2 < smallLength; ++k2) {
++      char s2 = smallSet[k2];
+       if (s1 < s2) {
+@@ -22,18 +21,5 @@
+       }
+-      if (s2 < s1) {
+-        ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-      } else {
+-        // (set2[k2] == set1[k1])
++      if (s1 == s2) {
+         buffer[pos++] = s2;
+-        ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-        k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
++        if (k2 + 1 == smallLength || ++k1 == largeLength) {
+           break;",,
+score|gen|R1|openai/gpt-oss-120b|netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String)|s1,openai/gpt-oss-120b,R1,netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,7 +1,8 @@
+ private static String[] splitMultipartHeaderValues(String svalue) {
+-        List<String> values = InternalThreadLocalMap.get().arrayList(1);
++        int len = svalue.length();
++        // First pass: count the number of parts (separated by ';' outside quotes)
++        int count = 1;
+         boolean inQuote = false;
+         boolean escapeNext = false;
+-        int start = 0;
+-        for (int i = 0; i < svalue.length(); i++) {
++        for (int i = 0; i < len; i++) {
+             char c = svalue.charAt(i);
+@@ -21,3 +22,29 @@
+                 } else if (c == ';') {
+-                    values.add(svalue.substring(start, i));
++                    count++;
++                }
++            }
++        }
++        // Second pass: extract the substrings directly into the result array
++        String[] result = new String[count];
++        int idx = 0;
++        int start = 0;
++        inQuote = false;
++        escapeNext = false;
++        for (int i = 0; i < len; i++) {
++            char c = svalue.charAt(i);
++            if (inQuote) {
++                if (escapeNext) {
++                    escapeNext = false;
++                } else {
++                    if (c == '\\') {
++                        escapeNext = true;
++                    } else if (c == '""') {
++                        inQuote = false;
++                    }
++                }
++            } else {
++                if (c == '""') {
++                    inQuote = true;
++                } else if (c == ';') {
++                    result[idx++] = svalue.substring(start, i);
+                     start = i + 1;
+@@ -26,4 +53,4 @@
+         }
+-        values.add(svalue.substring(start));
+-        return values.toArray(EmptyArrays.EMPTY_STRINGS);
++        result[idx] = svalue.substring(start);
++        return result;
+     }",,
+"score|gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.Util#unsignedUnion2by2(char[],int,int,char[],int,int,char[])|s1",claude-sonnet-5-5,R3,"RoaringBitmap:org.roaringbitmap.Util#unsignedUnion2by2(char[],int,int,char[],int,int,char[])",R6_EXPOSURE,copy removed: 2,"--- original
++++ patched
+@@ -16,42 +16,27 @@
+     }
++    final int end1 = length1 + offset1;
++    final int end2 = length2 + offset2;
+     int pos = 0;
+     int k1 = offset1, k2 = offset2;
+-    char s1 = set1[k1];
+-    char s2 = set2[k2];
+-    while (true) {
+-      int v1 = s1;
+-      int v2 = s2;
+-      if (v1 < v2) {
+-        buffer[pos++] = s1;
++    while (k1 < end1 && k2 < end2) {
++      final char s1 = set1[k1];
++      final char s2 = set2[k2];
++      buffer[pos++] = s1 < s2 ? s1 : s2;
++      if (s1 <= s2) {
+         ++k1;
+-        if (k1 >= length1 + offset1) {
+-          System.arraycopy(set2, k2, buffer, pos, length2 - k2 + offset2);
+-          return pos + length2 - k2 + offset2;
+-        }
+-        s1 = set1[k1];
+-      } else if (v1 == v2) {
+-        buffer[pos++] = s1;
+-        ++k1;
++      }
++      if (s1 >= s2) {
+         ++k2;
+-        if (k1 >= length1 + offset1) {
+-          System.arraycopy(set2, k2, buffer, pos, length2 - k2 + offset2);
+-          return pos + length2 - k2 + offset2;
+-        }
+-        if (k2 >= length2 + offset2) {
+-          System.arraycopy(set1, k1, buffer, pos, length1 - k1 + offset1);
+-          return pos + length1 - k1 + offset1;
+-        }
+-        s1 = set1[k1];
+-        s2 = set2[k2];
+-      } else { // if (set1[k1]>set2[k2])
+-        buffer[pos++] = s2;
+-        ++k2;
+-        if (k2 >= length2 + offset2) {
+-          System.arraycopy(set1, k1, buffer, pos, length1 - k1 + offset1);
+-          return pos + length1 - k1 + offset1;
+-        }
+-        s2 = set2[k2];
+       }
+     }
+-    // return pos;
++    if (k1 < end1) {
++      final int rem = end1 - k1;
++      System.arraycopy(set1, k1, buffer, pos, rem);
++      return pos + rem;
++    } else if (k2 < end2) {
++      final int rem = end2 - k2;
++      System.arraycopy(set2, k2, buffer, pos, rem);
++      return pos + rem;
++    }
++    return pos;
+   }",,
+score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap)|s1,gpt-6.1-sol,R3,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -33,12 +33,6 @@
+           s1 = highLowContainer.getKeyAtIndex(pos1);
+-        } else { // s1 > s2
++        } else {
+           getMappeableRoaringArray()
+-              .insertNewKeyValueAt(pos1, s2, x2.highLowContainer.getContainerAtIndex(pos2).clone());
+-          pos1++;
+-          length1++;
+-          pos2++;
+-          if (pos2 == length2) {
+-            break main;
+-          }
+-          s2 = x2.highLowContainer.getKeyAtIndex(pos2);
++              .mergeBulk(x2.highLowContainer, pos1, pos1, pos2, MutableRoaringArray.MERGE_LAZY_OR);
++          return;
+         }",,
+score|gen|R3|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1,openai/gpt-oss-120b,R3,eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>),R3b_EXCEPTION,"randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null","--- original
++++ patched
+@@ -1,5 +1,15 @@
+ @Override
+-    public void each(Procedure<? super T> procedure)
++public void each(Procedure<? super T> procedure)
++{
++    if (this.adapted instanceof RichIterable)
+     {
+-        Iterate.forEach(this.adapted, procedure);
++        ((RichIterable<T>) this.adapted).each(procedure);
+     }
++    else
++    {
++        for (T item : this.adapted)
++        {
++            procedure.value(item);
++        }
++    }
++}",,
+score|gen|R3|claude-sonnet-5-5|netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String)|s1,claude-sonnet-5-5,R3,netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,7 +1,7 @@
+ private static String[] splitMultipartHeaderValues(String svalue) {
+-        List<String> values = InternalThreadLocalMap.get().arrayList(1);
++        final int len = svalue.length();
+         boolean inQuote = false;
+         boolean escapeNext = false;
+-        int start = 0;
+-        for (int i = 0; i < svalue.length(); i++) {
++        int count = 1;
++        for (int i = 0; i < len; i++) {
+             char c = svalue.charAt(i);
+@@ -10,20 +10,41 @@
+                     escapeNext = false;
+-                } else {
+-                    if (c == '\\') {
+-                        escapeNext = true;
+-                    } else if (c == '""') {
+-                        inQuote = false;
+-                    }
++                } else if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
+                 }
+-            } else {
+-                if (c == '""') {
+-                    inQuote = true;
+-                } else if (c == ';') {
+-                    values.add(svalue.substring(start, i));
+-                    start = i + 1;
+-                }
++            } else if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                count++;
+             }
+         }
+-        values.add(svalue.substring(start));
+-        return values.toArray(EmptyArrays.EMPTY_STRINGS);
++        String[] result = new String[count];
++        if (count == 1) {
++            result[0] = svalue;
++            return result;
++        }
++        inQuote = false;
++        escapeNext = false;
++        int start = 0;
++        int idx = 0;
++        for (int i = 0; i < len; i++) {
++            char c = svalue.charAt(i);
++            if (inQuote) {
++                if (escapeNext) {
++                    escapeNext = false;
++                } else if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
++                }
++            } else if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                result[idx++] = svalue.substring(start, i);
++                start = i + 1;
++            }
++        }
++        result[idx] = svalue.substring(start);
++        return result;
+     }",,
+score|gen|R2|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,gpt-6.1-sol,R2,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -5,13 +5,10 @@
+       sa = (MutableRoaringArray) super.clone();
+-
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
+-        sa.values[k] = sa.values[k].clone();
++      final int size = this.size;
++      sa.keys = Arrays.copyOf(this.keys, size);
++      sa.values = new MappeableContainer[size];
++      for (int k = 0; k < size; ++k) {
++        sa.values[k] = this.values[k].clone();
+       }
+-      sa.size = this.size;
++      sa.size = size;
+       return sa;
+-
+     } catch (CloneNotSupportedException e) {",,
+"score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedUnion2by2(char[],int,int,char[],int,int,char[])|s1",openai/gpt-oss-120b,R1,"RoaringBitmap:org.roaringbitmap.Util#unsignedUnion2by2(char[],int,int,char[],int,int,char[])",R6_EXPOSURE,copy removed: 2,"--- original
++++ patched
+@@ -8,3 +8,4 @@
+       final char[] buffer) {
+-    if (0 == length2) {
++    // fast-path for empty inputs (preserve original behaviour)
++    if (length2 == 0) {
+       System.arraycopy(set1, offset1, buffer, 0, length1);
+@@ -12,3 +13,3 @@
+     }
+-    if (0 == length1) {
++    if (length1 == 0) {
+       System.arraycopy(set2, offset2, buffer, 0, length2);
+@@ -16,42 +17,34 @@
+     }
++    final int end1 = offset1 + length1;
++    final int end2 = offset2 + length2;
+     int pos = 0;
+-    int k1 = offset1, k2 = offset2;
+-    char s1 = set1[k1];
+-    char s2 = set2[k2];
+-    while (true) {
+-      int v1 = s1;
+-      int v2 = s2;
+-      if (v1 < v2) {
++    int k1 = offset1;
++    int k2 = offset2;
++    while (k1 < end1 && k2 < end2) {
++      char s1 = set1[k1];
++      char s2 = set2[k2];
++      if (s1 < s2) {
+         buffer[pos++] = s1;
+-        ++k1;
+-        if (k1 >= length1 + offset1) {
+-          System.arraycopy(set2, k2, buffer, pos, length2 - k2 + offset2);
+-          return pos + length2 - k2 + offset2;
+-        }
+-        s1 = set1[k1];
+-      } else if (v1 == v2) {
++        k1++;
++      } else if (s1 == s2) {
+         buffer[pos++] = s1;
+-        ++k1;
+-        ++k2;
+-        if (k1 >= length1 + offset1) {
+-          System.arraycopy(set2, k2, buffer, pos, length2 - k2 + offset2);
+-          return pos + length2 - k2 + offset2;
+-        }
+-        if (k2 >= length2 + offset2) {
+-          System.arraycopy(set1, k1, buffer, pos, length1 - k1 + offset1);
+-          return pos + length1 - k1 + offset1;
+-        }
+-        s1 = set1[k1];
+-        s2 = set2[k2];
+-      } else { // if (set1[k1]>set2[k2])
++        k1++;
++        k2++;
++      } else { // s1 > s2
+         buffer[pos++] = s2;
+-        ++k2;
+-        if (k2 >= length2 + offset2) {
+-          System.arraycopy(set1, k1, buffer, pos, length1 - k1 + offset1);
+-          return pos + length1 - k1 + offset1;
+-        }
+-        s2 = set2[k2];
++        k2++;
+       }
+     }
+-    // return pos;
++    // copy any remaining elements from the non‑exhausted array
++    if (k1 < end1) {
++      int remaining = end1 - k1;
++      System.arraycopy(set1, k1, buffer, pos, remaining);
++      pos += remaining;
++    }
++    if (k2 < end2) {
++      int remaining = end2 - k2;
++      System.arraycopy(set2, k2, buffer, pos, remaining);
++      pos += remaining;
++    }
++    return pos;
+   }",,
+score|gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,claude-sonnet-5-5,R2,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -6,10 +6,11 @@
+ 
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
+-        sa.values[k] = sa.values[k].clone();
++      final int n = this.size;
++      final MappeableContainer[] src = this.values;
++      sa.keys = Arrays.copyOf(this.keys, n);
++      final MappeableContainer[] dst = new MappeableContainer[n];
++      for (int k = 0; k < n; ++k) {
++        dst[k] = src[k].clone();
+       }
+-      sa.size = this.size;
++      sa.values = dst;
++      sa.size = n;
+       return sa;",,
+score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,gpt-6.1-sol,R3,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -2,16 +2,12 @@
+   public MutableRoaringArray clone() {
+-    MutableRoaringArray sa;
+     try {
+-      sa = (MutableRoaringArray) super.clone();
+-
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
+-        sa.values[k] = sa.values[k].clone();
++      MutableRoaringArray sa = (MutableRoaringArray) super.clone();
++      final int size = this.size;
++      sa.keys = Arrays.copyOf(this.keys, size);
++      sa.values = new MappeableContainer[size];
++      for (int k = 0; k < size; ++k) {
++        sa.values[k] = this.values[k].clone();
+       }
+-      sa.size = this.size;
++      sa.size = size;
+       return sa;
+-
+     } catch (CloneNotSupportedException e) {",,
+score|gen|R3|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>)|s1,openai/gpt-oss-120b,R3,eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,6 +1,10 @@
+-private void addAllRandomAccessList(List<T> source)
+-    {
+-        int newSize = this.ensureCapacityForAddAll(source);
+-        RandomAccessListIterate.toArray(source, this.items, this.size, source.size());
+-        this.size = newSize;
++private void addAllRandomAccessList(List<T> source) {
++    int sourceSize = source.size();
++    int newSize = this.size + sourceSize;
++    this.ensureCapacity(newSize);
++    // Direct copy using RandomAccess get for speed
++    for (int i = 0; i < sourceSize; i++) {
++        this.items[this.size + i] = source.get(i);
+     }
++    this.size = newSize;
++}",,
+"score|gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",claude-sonnet-5-5,R3,"RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",R3b_EXCEPTION,randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6 | randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6,"--- original
++++ patched
+@@ -2,13 +2,16 @@
+       byte[] key, Node[] children, int left, int right) { // x
+-    for (int i = left, j = i; i < right; j = ++i) {
+-      byte ai = key[i + 1];
+-      Node child = children[i + 1];
+-      int unsignedByteAi = Byte.toUnsignedInt(ai);
+-      while (unsignedByteAi < Byte.toUnsignedInt(key[j])) {
++    for (int i = left; i < right; i++) {
++      final byte ai = key[i + 1];
++      final int unsignedAi = ai & 0xFF;
++      int j = i;
++      if (unsignedAi >= (key[j] & 0xFF)) {
++        // already in place, no writes needed
++        continue;
++      }
++      final Node child = children[i + 1];
++      do {
+         key[j + 1] = key[j];
+         children[j + 1] = children[j];
+-        if (j-- == left) {
+-          break;
+-        }
+-      }
++        j--;
++      } while (j >= left && unsignedAi < (key[j] & 0xFF));
+       key[j + 1] = ai;",,
+score|gen|R1|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.art.Containers#clone()|s1,gpt-6.1-sol,R1,RoaringBitmap:org.roaringbitmap.art.Containers#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -5,7 +5,8 @@
+     for (Container[] array : this.containerArrays) {
+-      Container[] values = Arrays.copyOf(array, array.length);
++      Container[] values = new Container[array.length];
+       containers.containerArrays.add(values);
+-      for (int i = 0; i < values.length; i++) {
+-        if (values[i] != null) {
+-          values[i] = values[i].clone();
++      for (int i = 0; i < array.length; i++) {
++        Container value = array[i];
++        if (value != null) {
++          values[i] = value.clone();
+         }",,
+score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,openai/gpt-oss-120b,R1,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,20 +1,11 @@
+ @Override
+-  public MutableRoaringArray clone() {
+-    MutableRoaringArray sa;
+-    try {
+-      sa = (MutableRoaringArray) super.clone();
+-
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
++public MutableRoaringArray clone() {
++    MutableRoaringArray sa = new MutableRoaringArray();
++    sa.keys = java.util.Arrays.copyOf(this.keys, this.size);
++    sa.values = java.util.Arrays.copyOf(this.values, this.size);
++    for (int k = 0; k < this.size; ++k) {
+         sa.values[k] = sa.values[k].clone();
+-      }
+-      sa.size = this.size;
+-      return sa;
+-
+-    } catch (CloneNotSupportedException e) {
+-      return null;
+     }
+-  }
++    sa.size = this.size;
++    return sa;
++}",,
+score|gen|R2|claude-sonnet-5-5|eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>)|s1,claude-sonnet-5-5,R2,eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -2,4 +2,11 @@
+     {
+-        int newSize = this.ensureCapacityForAddAll(source);
+-        RandomAccessListIterate.toArray(source, this.items, this.size, source.size());
++        int sourceSize = source.size();
++        int oldSize = this.size;
++        int newSize = oldSize + sourceSize;
++        this.ensureCapacity(newSize);
++        T[] target = this.items;
++        for (int i = 0; i < sourceSize; i++)
++        {
++            target[oldSize + i] = source.get(i);
++        }
+         this.size = newSize;",,
+score|gen|R1|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,gpt-6.1-sol,R1,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -2,16 +2,12 @@
+   public MutableRoaringArray clone() {
+-    MutableRoaringArray sa;
+     try {
+-      sa = (MutableRoaringArray) super.clone();
+-
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
+-        sa.values[k] = sa.values[k].clone();
++      MutableRoaringArray sa = (MutableRoaringArray) super.clone();
++      final int size = this.size;
++      sa.keys = Arrays.copyOf(this.keys, size);
++      sa.values = new MappeableContainer[size];
++      for (int k = 0; k < size; ++k) {
++        sa.values[k] = this.values[k].clone();
+       }
+-      sa.size = this.size;
++      sa.size = size;
+       return sa;
+-
+     } catch (CloneNotSupportedException e) {",,
+score|gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.art.Containers#clone()|s1,openai/gpt-oss-120b,R2,RoaringBitmap:org.roaringbitmap.art.Containers#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,13 +1,16 @@
+ @Override
+-  public Containers clone() {
++public Containers clone() {
+     Containers containers = new Containers();
++    // pre‑allocate the list to avoid reallocation
+     containers.containerArrays = new ArrayList<>(this.containerArrays.size());
+-    for (Container[] array : this.containerArrays) {
+-      Container[] values = Arrays.copyOf(array, array.length);
+-      containers.containerArrays.add(values);
+-      for (int i = 0; i < values.length; i++) {
+-        if (values[i] != null) {
+-          values[i] = values[i].clone();
++    int outerSize = this.containerArrays.size();
++    for (int i = 0; i < outerSize; i++) {
++        Container[] srcArray = this.containerArrays.get(i);
++        int len = srcArray.length;
++        Container[] cloneArray = new Container[len];
++        for (int j = 0; j < len; j++) {
++            Container c = srcArray[j];
++            cloneArray[j] = (c == null) ? null : c.clone();
+         }
+-      }
++        containers.containerArrays.add(cloneArray);
+     }
+@@ -17,2 +20,2 @@
+     return containers;
+-  }
++}",,
+score|gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[])|s1,claude-sonnet-5-5,R3,RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[]),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -2,7 +2,10 @@
+     Map<Character, List<Container>> grouped = new HashMap<>();
++    SortedMap<Character, List<Container>> result = new TreeMap<>();
+     for (RoaringBitmap bitmap : bitmaps) {
+       RoaringArray ra = bitmap.highLowContainer;
+-      for (int i = 0; i < ra.size; ++i) {
+-        Container container = ra.values[i];
+-        Character key = ra.keys[i];
++      final int size = ra.size;
++      final char[] keys = ra.keys;
++      final Container[] values = ra.values;
++      for (int i = 0; i < size; ++i) {
++        Character key = keys[i];
+         List<Container> slice = grouped.get(key);
+@@ -11,7 +14,8 @@
+           grouped.put(key, slice);
++          result.put(key, slice);
+         }
+-        slice.add(container);
++        slice.add(values[i]);
+       }
+     }
+-    return new TreeMap<>(grouped);
++    return result;
+   }",,
+score|gen|R2|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap)|s1,gpt-6.1-sol,R2,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -33,12 +33,7 @@
+           s1 = highLowContainer.getKeyAtIndex(pos1);
+-        } else { // s1 > s2
++        } else {
++          // Merge the remaining suffix instead of shifting it for every inserted key.
+           getMappeableRoaringArray()
+-              .insertNewKeyValueAt(pos1, s2, x2.highLowContainer.getContainerAtIndex(pos2).clone());
+-          pos1++;
+-          length1++;
+-          pos2++;
+-          if (pos2 == length2) {
+-            break main;
+-          }
+-          s2 = x2.highLowContainer.getKeyAtIndex(pos2);
++              .mergeBulk(x2.highLowContainer, pos1, pos1, pos2, MutableRoaringArray.MERGE_LAZY_OR);
++          return;
+         }",,
+"score|gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",openai/gpt-oss-120b,R2,"RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",R3b_EXCEPTION,randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0 | randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0,"--- original
++++ patched
+@@ -1,45 +1,22 @@
+-protected static int unsignedOneSidedGallopingIntersect2by2(
+-      final char[] smallSet,
+-      final int smallLength,
+-      final char[] largeSet,
+-      final int largeLength,
+-      final char[] buffer) {
+-    if (0 == smallLength) {
+-      return 0;
++protected static int unsignedOneSidedGallopingIntersect2by2(final char[] smallSet, final int smallLength, final char[] largeSet, final int largeLength, final char[] buffer) {
++    if (smallLength == 0) {
++        return 0;
+     }
+-    int k1 = 0;
+-    int k2 = 0;
+     int pos = 0;
+-    char s1 = largeSet[k1];
+-    char s2 = smallSet[k2];
+-    while (true) {
+-      if (s1 < s2) {
+-        k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
+-          break;
++    int i = 0; // index in largeSet
++    int j = 0; // index in smallSet
++    while (i < largeLength && j < smallLength) {
++        char a = largeSet[i];
++        char b = smallSet[j];
++        if (a == b) {
++            buffer[pos++] = a;
++            i++;
++            j++;
++        } else if (a < b) {
++            i = advanceUntil(largeSet, i, largeLength, b);
++        } else { // a > b
++            j++;
+         }
+-        s1 = largeSet[k1];
+-      }
+-      if (s2 < s1) {
+-        ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-      } else {
+-        // (set2[k2] == set1[k1])
+-        buffer[pos++] = s2;
+-        ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-        k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
+-          break;
+-        }
+-        s1 = largeSet[k1];
+-      }
+     }
+     return pos;
+-  }
++}",,
+score|gen|R1|claude-sonnet-5-5|netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String)|s1,claude-sonnet-5-5,R1,netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,7 +1,10 @@
+ private static String[] splitMultipartHeaderValues(String svalue) {
+-        List<String> values = InternalThreadLocalMap.get().arrayList(1);
++        if (svalue.indexOf(';') < 0) {
++            return new String[] { svalue };
++        }
++        final int len = svalue.length();
+         boolean inQuote = false;
+         boolean escapeNext = false;
+-        int start = 0;
+-        for (int i = 0; i < svalue.length(); i++) {
++        int count = 1;
++        for (int i = 0; i < len; i++) {
+             char c = svalue.charAt(i);
+@@ -10,20 +13,37 @@
+                     escapeNext = false;
+-                } else {
+-                    if (c == '\\') {
+-                        escapeNext = true;
+-                    } else if (c == '""') {
+-                        inQuote = false;
+-                    }
++                } else if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
+                 }
+-            } else {
+-                if (c == '""') {
+-                    inQuote = true;
+-                } else if (c == ';') {
+-                    values.add(svalue.substring(start, i));
+-                    start = i + 1;
+-                }
++            } else if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                count++;
+             }
+         }
+-        values.add(svalue.substring(start));
+-        return values.toArray(EmptyArrays.EMPTY_STRINGS);
++        String[] result = new String[count];
++        int idx = 0;
++        inQuote = false;
++        escapeNext = false;
++        int start = 0;
++        for (int i = 0; i < len; i++) {
++            char c = svalue.charAt(i);
++            if (inQuote) {
++                if (escapeNext) {
++                    escapeNext = false;
++                } else if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
++                }
++            } else if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                result[idx++] = svalue.substring(start, i);
++                start = i + 1;
++            }
++        }
++        result[idx] = svalue.substring(start);
++        return result;
+     }",,
+"score|gen|R1|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)|s1",gpt-6.1-sol,R1,"RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)",R3b_EXCEPTION,randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 26 out of bounds for length 26,"--- original
++++ patched
+@@ -1,2 +1,6 @@
+ int cardinalityInRange(int start, int end) {
++    if ((cardinality == 0 || cardinality == MAX_CAPACITY)
++        && start >= 0 && start <= end && end <= MAX_CAPACITY) {
++      return cardinality == 0 ? 0 : end - start;
++    }
+     if (cardinality != -1 && end - start > MAX_CAPACITY / 2) {",,
+score|gen|R3|openai/gpt-oss-120b|netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String)|s1,openai/gpt-oss-120b,R3,netty:io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder#splitMultipartHeaderValues(String),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,29 +1,56 @@
+ private static String[] splitMultipartHeaderValues(String svalue) {
+-        List<String> values = InternalThreadLocalMap.get().arrayList(1);
+-        boolean inQuote = false;
+-        boolean escapeNext = false;
+-        int start = 0;
+-        for (int i = 0; i < svalue.length(); i++) {
+-            char c = svalue.charAt(i);
+-            if (inQuote) {
+-                if (escapeNext) {
+-                    escapeNext = false;
+-                } else {
+-                    if (c == '\\') {
+-                        escapeNext = true;
+-                    } else if (c == '""') {
+-                        inQuote = false;
+-                    }
+-                }
++    int len = svalue.length();
++    // First pass: count how many parts there will be (delimiters not inside quotes)
++    int count = 1;
++    boolean inQuote = false;
++    boolean escapeNext = false;
++    for (int i = 0; i < len; i++) {
++        char c = svalue.charAt(i);
++        if (inQuote) {
++            if (escapeNext) {
++                escapeNext = false;
+             } else {
+-                if (c == '""') {
+-                    inQuote = true;
+-                } else if (c == ';') {
+-                    values.add(svalue.substring(start, i));
+-                    start = i + 1;
++                if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
+                 }
+             }
++        } else {
++            if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                count++;
++            }
+         }
+-        values.add(svalue.substring(start));
+-        return values.toArray(EmptyArrays.EMPTY_STRINGS);
+     }
++    String[] values = new String[count];
++    // Second pass: fill the array
++    int idx = 0;
++    int start = 0;
++    inQuote = false;
++    escapeNext = false;
++    for (int i = 0; i < len; i++) {
++        char c = svalue.charAt(i);
++        if (inQuote) {
++            if (escapeNext) {
++                escapeNext = false;
++            } else {
++                if (c == '\\') {
++                    escapeNext = true;
++                } else if (c == '""') {
++                    inQuote = false;
++                }
++            }
++        } else {
++            if (c == '""') {
++                inQuote = true;
++            } else if (c == ';') {
++                values[idx++] = svalue.substring(start, i);
++                start = i + 1;
++            }
++        }
++    }
++    values[idx] = svalue.substring(start);
++    return values;
++}",,
+score|gen|R1|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,claude-sonnet-5-5,R1,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -5,11 +5,11 @@
+       sa = (MutableRoaringArray) super.clone();
+-
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
+-        sa.values[k] = sa.values[k].clone();
++      final int n = this.size;
++      final MappeableContainer[] src = this.values;
++      final MappeableContainer[] dst = new MappeableContainer[n];
++      for (int k = 0; k < n; ++k) {
++        dst[k] = src[k].clone();
+       }
+-      sa.size = this.size;
++      sa.keys = Arrays.copyOf(this.keys, n);
++      sa.values = dst;
++      sa.size = n;
+       return sa;",,
+score|gen|R1|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1,openai/gpt-oss-120b,R1,eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>),R3b_EXCEPTION,"randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null | randoop: java.lang.NullPointerException: Cannot invoke ""java.lang.Iterable.iterator()"" because ""this.adapted"" is null","--- original
++++ patched
+@@ -1,5 +1,6 @@
+ @Override
+-    public void each(Procedure<? super T> procedure)
+-    {
+-        Iterate.forEach(this.adapted, procedure);
++public void each(Procedure<? super T> procedure) {
++    for (T element : this.adapted) {
++        procedure.value(element);
+     }
++}",,
+score|gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap)|s1,claude-sonnet-5-5,R2,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -34,11 +34,6 @@
+         } else { // s1 > s2
++          // source-only insert: bulk-merge the rest (insert per key would be quadratic)
+           getMappeableRoaringArray()
+-              .insertNewKeyValueAt(pos1, s2, x2.highLowContainer.getContainerAtIndex(pos2).clone());
+-          pos1++;
+-          length1++;
+-          pos2++;
+-          if (pos2 == length2) {
+-            break main;
+-          }
+-          s2 = x2.highLowContainer.getKeyAtIndex(pos2);
++              .mergeBulk(x2.highLowContainer, pos1, pos1, pos2, MutableRoaringArray.MERGE_LAZY_OR);
++          return;
+         }",,
+score|gen|R1|openai/gpt-oss-120b|netty:io.netty.buffer.CompositeByteBuf#findIt(int)|s1,openai/gpt-oss-120b,R1,netty:io.netty.buffer.CompositeByteBuf#findIt(int),R3b_EXCEPTION,"randoop: java.lang.IllegalStateException: No component found for offset. Composite buffer layout might be outdated, e.g. from a discardReadBytes call. | randoop: java.lang.IllegalStateException: No component found for offset. Composite buffer layout might be outdated, e.g. from a discardReadBytes call. | randoop: java.lang.IllegalStateException: No component found for offset. Composite buffer layout might be outdated, e.g. from a discardReadBytes call.","--- original
++++ patched
+@@ -1,9 +1,10 @@
+ private Component findIt(int offset) {
+-        for (int low = 0, high = componentCount; low <= high;) {
+-            int mid = low + high >>> 1;
++        if (componentCount == 0) {
++            throw new IllegalStateException(""No component found for offset. Composite buffer layout might be outdated, e.g. from a discardReadBytes call."");
++        }
++        int low = 0;
++        int high = componentCount - 1;
++        while (low <= high) {
++            int mid = (low + high) >>> 1;
+             Component c = components[mid];
+-            if (c == null) {
+-                throw new IllegalStateException(""No component found for offset. "" +
+-                        ""Composite buffer layout might be outdated, e.g. from a discardReadBytes call."");
+-            }
+             if (offset >= c.endOffset) {
+@@ -17,3 +18,2 @@
+         }
+-
+         throw new Error(""should not reach here"");",,
+score|gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[])|s1,claude-sonnet-5-5,R2,RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[]),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,17 +1,40 @@
+ public static SortedMap<Character, List<Container>> groupByKey(RoaringBitmap... bitmaps) {
+-    Map<Character, List<Container>> grouped = new HashMap<>();
++    int max = -1;
+     for (RoaringBitmap bitmap : bitmaps) {
+       RoaringArray ra = bitmap.highLowContainer;
+-      for (int i = 0; i < ra.size; ++i) {
+-        Container container = ra.values[i];
+-        Character key = ra.keys[i];
+-        List<Container> slice = grouped.get(key);
++      if (ra.size > 0) {
++        int last = ra.keys[ra.size - 1];
++        if (last > max) {
++          max = last;
++        }
++      }
++    }
++    TreeMap<Character, List<Container>> result = new TreeMap<>();
++    if (max < 0) {
++      return result;
++    }
++    @SuppressWarnings(""unchecked"")
++    List<Container>[] slices = (List<Container>[]) new List[max + 1];
++    for (RoaringBitmap bitmap : bitmaps) {
++      RoaringArray ra = bitmap.highLowContainer;
++      int size = ra.size;
++      char[] keys = ra.keys;
++      Container[] values = ra.values;
++      for (int i = 0; i < size; ++i) {
++        int key = keys[i];
++        List<Container> slice = slices[key];
+         if (null == slice) {
+           slice = new ArrayList<>();
+-          grouped.put(key, slice);
++          slices[key] = slice;
+         }
+-        slice.add(container);
++        slice.add(values[i]);
+       }
+     }
+-    return new TreeMap<>(grouped);
++    for (int k = 0; k <= max; ++k) {
++      List<Container> slice = slices[k];
++      if (slice != null) {
++        result.put((char) k, slice);
++      }
++    }
++    return result;
+   }",,
+"score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",openai/gpt-oss-120b,R3,"RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",R3b_EXCEPTION,randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0 | randoop: java.lang.AssertionError: Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Index 0 out of bounds for length 0,"--- original
++++ patched
+@@ -6,37 +6,20 @@
+       final char[] buffer) {
+-    if (0 == smallLength) {
++    if (smallLength == 0) {
+       return 0;
+     }
+-    int k1 = 0;
+-    int k2 = 0;
++    int k1 = 0; // index in largeSet
++    int k2 = 0; // index in smallSet
+     int pos = 0;
+-    char s1 = largeSet[k1];
+-    char s2 = smallSet[k2];
+-    while (true) {
++    while (k1 < largeLength && k2 < smallLength) {
++      char s1 = largeSet[k1];
++      char s2 = smallSet[k2];
+       if (s1 < s2) {
+         k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
+-          break;
+-        }
+-        s1 = largeSet[k1];
+-      }
+-      if (s2 < s1) {
++        // if advanceUntil reaches the end, the loop condition will terminate
++      } else if (s2 < s1) {
+         ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-      } else {
+-        // (set2[k2] == set1[k1])
+-        buffer[pos++] = s2;
++      } else { // equal
++        buffer[pos++] = s1;
++        ++k1;
+         ++k2;
+-        if (k2 == smallLength) {
+-          break;
+-        }
+-        s2 = smallSet[k2];
+-        k1 = advanceUntil(largeSet, k1, largeLength, s2);
+-        if (k1 == largeLength) {
+-          break;
+-        }
+-        s1 = largeSet[k1];
+       }",,
+"score|gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",claude-sonnet-5-5,R2,"RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",R3b_EXCEPTION,randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6 | randoop: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 6,"--- original
++++ patched
+@@ -2,10 +2,20 @@
+       byte[] key, Node[] children, int left, int right) { // x
+-    for (int i = left, j = i; i < right; j = ++i) {
+-      byte ai = key[i + 1];
+-      Node child = children[i + 1];
+-      int unsignedByteAi = Byte.toUnsignedInt(ai);
+-      while (unsignedByteAi < Byte.toUnsignedInt(key[j])) {
+-        key[j + 1] = key[j];
++    for (int i = left; i < right; i++) {
++      final byte ai = key[i + 1];
++      final int unsignedAi = ai & 0xFF;
++      int j = i;
++      byte kj = key[j];
++      if (unsignedAi >= (kj & 0xFF)) {
++        continue;
++      }
++      final Node child = children[i + 1];
++      while (true) {
++        key[j + 1] = kj;
+         children[j + 1] = children[j];
+-        if (j-- == left) {
++        j--;
++        if (j < left) {
++          break;
++        }
++        kj = key[j];
++        if (unsignedAi >= (kj & 0xFF)) {
+           break;",,
+score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[])|s1,openai/gpt-oss-120b,R3,RoaringBitmap:org.roaringbitmap.ParallelAggregation#groupByKey(RoaringBitmap[]),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,17 +1,12 @@
+ public static SortedMap<Character, List<Container>> groupByKey(RoaringBitmap... bitmaps) {
+-    Map<Character, List<Container>> grouped = new HashMap<>();
++    TreeMap<Character, List<Container>> grouped = new TreeMap<>();
+     for (RoaringBitmap bitmap : bitmaps) {
+       RoaringArray ra = bitmap.highLowContainer;
+-      for (int i = 0; i < ra.size; ++i) {
+-        Container container = ra.values[i];
+-        Character key = ra.keys[i];
+-        List<Container> slice = grouped.get(key);
+-        if (null == slice) {
+-          slice = new ArrayList<>();
+-          grouped.put(key, slice);
+-        }
+-        slice.add(container);
++      for (int i = 0, size = ra.size; i < size; ++i) {
++        char key = ra.keys[i];
++        List<Container> slice = grouped.computeIfAbsent(key, k -> new ArrayList<>());
++        slice.add(ra.values[i]);
+       }
+     }
+-    return new TreeMap<>(grouped);
++    return grouped;
+   }",,
+score|gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap)|s1,claude-sonnet-5-5,R3,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringBitmap#lazyor(ImmutableRoaringBitmap),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -34,11 +34,6 @@
+         } else { // s1 > s2
++          // source-only insert: bulk-merge the rest (insert per key would be quadratic)
+           getMappeableRoaringArray()
+-              .insertNewKeyValueAt(pos1, s2, x2.highLowContainer.getContainerAtIndex(pos2).clone());
+-          pos1++;
+-          length1++;
+-          pos2++;
+-          if (pos2 == length2) {
+-            break main;
+-          }
+-          s2 = x2.highLowContainer.getKeyAtIndex(pos2);
++              .mergeBulk(x2.highLowContainer, pos1, pos1, pos2, MutableRoaringArray.MERGE_LAZY_OR);
++          return;
+         }",,
+score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone()|s1,openai/gpt-oss-120b,R3,RoaringBitmap:org.roaringbitmap.buffer.MutableRoaringArray#clone(),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -1,20 +1,14 @@
+ @Override
+-  public MutableRoaringArray clone() {
+-    MutableRoaringArray sa;
+-    try {
+-      sa = (MutableRoaringArray) super.clone();
+-
+-      // OFK: do we need runcontainer bitmap? Guess not, this is just a directory
+-      // and each container knows what kind it is.
+-      sa.keys = Arrays.copyOf(this.keys, this.size);
+-      sa.values = Arrays.copyOf(this.values, this.size);
+-      for (int k = 0; k < this.size; ++k) {
+-        sa.values[k] = sa.values[k].clone();
+-      }
+-      sa.size = this.size;
+-      return sa;
+-
+-    } catch (CloneNotSupportedException e) {
+-      return null;
++public MutableRoaringArray clone() {
++    // allocate new array with exact needed capacity
++    MutableRoaringArray sa = new MutableRoaringArray(this.size);
++    sa.size = this.size;
++    // copy primitive keys
++    System.arraycopy(this.keys, 0, sa.keys, 0, this.size);
++    // copy references of containers, then deep‑clone each container
++    System.arraycopy(this.values, 0, sa.values, 0, this.size);
++    for (int k = 0; k < this.size; ++k) {
++        sa.values[k] = this.values[k].clone();
+     }
+-  }
++    return sa;
++}",,
+score|gen|R3|claude-sonnet-5-5|eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>)|s1,claude-sonnet-5-5,R3,eclipse-collections:org.eclipse.collections.impl.list.mutable.FastList#addAllRandomAccessList(List<T>),R6_EXPOSURE,copy removed: 1,"--- original
++++ patched
+@@ -2,4 +2,11 @@
+     {
+-        int newSize = this.ensureCapacityForAddAll(source);
+-        RandomAccessListIterate.toArray(source, this.items, this.size, source.size());
++        int sourceSize = source.size();
++        int oldSize = this.size;
++        int newSize = oldSize + sourceSize;
++        this.ensureCapacity(newSize);
++        T[] target = this.items;
++        for (int i = 0; i < sourceSize; i++)
++        {
++            target[oldSize + i] = source.get(i);
++        }
+         this.size = newSize;",,

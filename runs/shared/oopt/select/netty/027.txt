@@ -1,0 +1,667 @@
+# OOPT benchmark io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = SMALL_CHUNKS, size = 64)
+
+# Run progress: 0.00% complete, ETA 00:00:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 4832098.063 ops/s
+Iteration   1: 4822508.435 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  4822508.435 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 24.3%  36.4% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  6.4%   9.6% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+  1.1%   1.6% io.netty.buffer.AbstractByteBuf.ensureAccessible
+              io.netty.buffer.AbstractByteBuf.checkIndex
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+
+  0.9%   1.3% io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  0.5%   0.8% io.netty.buffer.AbstractByteBuf.checkIndex0
+              io.netty.buffer.AbstractByteBuf.checkIndex
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+
+  0.2%   0.3% io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000072eaa802e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = SMALL_CHUNKS, size = 1024)
+
+# Run progress: 10.00% complete, ETA 00:00:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 718156.955 ops/s
+Iteration   1: 738521.865 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  738521.865 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 31.0%  46.5% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  1.8%   2.7% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+  0.2%   0.3% io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+
+  0.2%   0.3% java.util.concurrent.LinkedBlockingQueue.take
+              java.util.concurrent.ThreadPoolExecutor.getTask
+              java.util.concurrent.ThreadPoolExecutor.runWorker
+              java.util.concurrent.ThreadPoolExecutor$Worker.run
+
+  0.2%   0.3% io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = SMALL_CHUNKS, size = 10240)
+
+# Run progress: 20.00% complete, ETA 00:00:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 75612.319 ops/s
+Iteration   1: 77376.703 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  77376.703 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 28.0%  42.0% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  5.0%   7.4% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+  0.2%   0.3% io.netty.buffer.WrappedByteBuf.order
+              io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+
+  0.2%   0.3% io.netty.buffer.WrappedByteBuf.nioBufferCount
+              io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = SMALL_CHUNKS, size = 102400)
+
+# Run progress: 30.00% complete, ETA 00:00:22
+# Fork: 1 of 1
+# Warmup Iteration   1: 6514.266 ops/s
+Iteration   1: 6660.464 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  6660.464 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 27.1%  40.7% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  6.0%   9.0% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+  0.2%   0.3% io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000072c3c802e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = SMALL_CHUNKS, size = 1024000)
+
+# Run progress: 40.00% complete, ETA 00:00:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 546.556 ops/s
+Iteration   1: 563.169 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  563.169 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 22.2%  33.2% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+ 11.2%  16.8% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = LARGE_CHUNKS, size = 64)
+
+# Run progress: 50.00% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 13399862.283 ops/s
+Iteration   1: 17385719.218 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  17385719.218 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 21.2%  31.8% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  7.7%  11.5% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+  4.3%   6.4% io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007a1ce802e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = LARGE_CHUNKS, size = 1024)
+
+# Run progress: 60.00% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 13607530.900 ops/s
+Iteration   1: 17973949.607 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  17973949.607 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 22.2%  33.2% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  6.7%  10.1% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+  4.3%   6.4% io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% java.lang.StringBuilder.<init>
+              java.util.jar.JarFile.getVersionedEntry
+              java.util.jar.JarFile.getEntry
+              java.util.jar.JarFile.getJarEntry
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = LARGE_CHUNKS, size = 10240)
+
+# Run progress: 70.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 4782700.480 ops/s
+Iteration   1: 4858107.608 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  4858107.608 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 26.2%  39.4% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  6.0%   9.0% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+  1.1%   1.6% io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = LARGE_CHUNKS, size = 102400)
+
+# Run progress: 80.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 349937.626 ops/s
+Iteration   1: 365654.960 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  365654.960 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 30.5%  45.7% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  2.0%   2.9% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+  0.7%   1.1% io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  0.2%   0.3% io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e0b7002dc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+# Parameters: (bufferType = LARGE_CHUNKS, size = 1024000)
+
+# Run progress: 90.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 20514.806 ops/s
+Iteration   1: 21158.136 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB":
+  21158.136 ops/s
+
+Secondary result "io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 31.9%  47.9% io.netty.buffer.FixedCompositeByteBuf.getBytes
+              io.netty.buffer.UnsafeByteBufUtil.setBytes
+              io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+
+  0.9%   1.3% io.netty.buffer.FixedCompositeByteBuf.<init>
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+
+  0.2%   0.3% io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000072733002d800.invoke
+
+  0.2%   0.3% java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.canReacquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.util.concurrent.LinkedBlockingQueue.take
+              java.util.concurrent.ThreadPoolExecutor.getTask
+
+  0.2%   0.3% io.netty.buffer.Unpooled.wrappedUnmodifiableBuffer
+              io.netty.buffer.CompositeByteBufWriteOutBenchmark.writeFCBB
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_thrpt_jmhStub
+              io.netty.buffer.jmh_generated.CompositeByteBufWriteOutBenchmark_writeFCBB_jmhTest.writeFCBB_Throughput
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:32
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                           (bufferType)   (size)   Mode  Cnt         Score   Error  Units
+CompositeByteBufWriteOutBenchmark.writeFCBB         SMALL_CHUNKS       64  thrpt        4822508.435          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  SMALL_CHUNKS       64  thrpt                NaN            ---
+CompositeByteBufWriteOutBenchmark.writeFCBB         SMALL_CHUNKS     1024  thrpt         738521.865          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  SMALL_CHUNKS     1024  thrpt                NaN            ---
+CompositeByteBufWriteOutBenchmark.writeFCBB         SMALL_CHUNKS    10240  thrpt          77376.703          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  SMALL_CHUNKS    10240  thrpt                NaN            ---
+CompositeByteBufWriteOutBenchmark.writeFCBB         SMALL_CHUNKS   102400  thrpt           6660.464          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  SMALL_CHUNKS   102400  thrpt                NaN            ---
+CompositeByteBufWriteOutBenchmark.writeFCBB         SMALL_CHUNKS  1024000  thrpt            563.169          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  SMALL_CHUNKS  1024000  thrpt                NaN            ---
+CompositeByteBufWriteOutBenchmark.writeFCBB         LARGE_CHUNKS       64  thrpt       17385719.218          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  LARGE_CHUNKS       64  thrpt                NaN            ---
+CompositeByteBufWriteOutBenchmark.writeFCBB         LARGE_CHUNKS     1024  thrpt       17973949.607          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  LARGE_CHUNKS     1024  thrpt                NaN            ---
+CompositeByteBufWriteOutBenchmark.writeFCBB         LARGE_CHUNKS    10240  thrpt        4858107.608          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  LARGE_CHUNKS    10240  thrpt                NaN            ---
+CompositeByteBufWriteOutBenchmark.writeFCBB         LARGE_CHUNKS   102400  thrpt         365654.960          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  LARGE_CHUNKS   102400  thrpt                NaN            ---
+CompositeByteBufWriteOutBenchmark.writeFCBB         LARGE_CHUNKS  1024000  thrpt          21158.136          ops/s
+CompositeByteBufWriteOutBenchmark.writeFCBB:·stack  LARGE_CHUNKS  1024000  thrpt                NaN            ---

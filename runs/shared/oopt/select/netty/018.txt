@@ -1,0 +1,425 @@
+# OOPT benchmark io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+# Parameters: (eventLoops = 8)
+
+# Run progress: 0.00% complete, ETA 00:00:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 1.111 ns/op
+Iteration   1: 1.107 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread":
+  1.107 ns/op
+
+Secondary result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 72.7%         WAITING
+ 18.2%         RUNNABLE
+  9.1%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 72.7% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+....[Thread state: RUNNABLE]........................................................................
+  9.1%  50.0% <stack is empty, everything is filtered?>
+  9.0%  49.7% io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007f447002e800.invoke
+
+  0.0%   0.3% java.util.concurrent.ConcurrentHashMap.get
+              org.openjdk.jmh.runner.BenchmarkHandler.newWorkerData
+              org.openjdk.jmh.runner.BenchmarkHandler.access$200
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  9.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+# Parameters: (eventLoops = 16)
+
+# Run progress: 16.67% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 1.113 ns/op
+Iteration   1: 1.112 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread":
+  1.112 ns/op
+
+Secondary result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 84.2%         WAITING
+ 10.5%         RUNNABLE
+  5.3%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 84.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+....[Thread state: RUNNABLE]........................................................................
+  5.3%  50.0% <stack is empty, everything is filtered?>
+  5.2%  49.7% io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e7a9002ec00.invoke
+
+  0.0%   0.3% io.netty.util.concurrent.FastThreadLocalThread.isFastThreadLocalVirtualThread
+              io.netty.util.concurrent.FastThreadLocalThread.currentThreadHasFastThreadLocal
+              io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  5.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+# Parameters: (eventLoops = 32)
+
+# Run progress: 33.33% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 1.117 ns/op
+Iteration   1: 1.123 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread":
+  1.123 ns/op
+
+Secondary result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 91.4%         WAITING
+  5.7%         RUNNABLE
+  2.9%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 91.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+....[Thread state: RUNNABLE]........................................................................
+  2.9%  50.0% <stack is empty, everything is filtered?>
+  2.8%  49.7% io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e5b9802e000.invoke
+
+  0.0%   0.3% io.netty.util.concurrent.FastThreadLocalThread.isFastThreadLocalVirtualThread
+              io.netty.util.concurrent.FastThreadLocalThread.currentThreadHasFastThreadLocal
+              io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  2.9% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+# Parameters: (eventLoops = 64)
+
+# Run progress: 50.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 1.140 ns/op
+Iteration   1: 1.145 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread":
+  1.145 ns/op
+
+Secondary result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 95.5%         WAITING
+  3.0%         RUNNABLE
+  1.5%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 95.5% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+  0.0%   0.0% java.lang.Object.wait0
+              java.lang.Object.wait
+              java.lang.Thread.join
+              java.lang.Thread.join
+
+
+....[Thread state: RUNNABLE]........................................................................
+  1.5%  50.3% <stack is empty, everything is filtered?>
+  1.5%  49.2% io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073b9e002e400.invoke
+
+  0.0%   0.3% io.netty.util.concurrent.FastThreadLocalThread.isFastThreadLocalVirtualThread
+              io.netty.util.concurrent.FastThreadLocalThread.currentThreadHasFastThreadLocal
+              io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+
+  0.0%   0.3% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNextIfShared
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  1.5% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+# Parameters: (eventLoops = 128)
+
+# Run progress: 66.67% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 2.028 ns/op
+Iteration   1: 1.816 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread":
+  1.816 ns/op
+
+Secondary result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 97.7%         WAITING
+  1.5%         RUNNABLE
+  0.8%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 97.7% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+  0.0%   0.0% java.lang.Object.wait0
+              java.lang.Object.wait
+              java.lang.Thread.join
+              java.lang.Thread.join
+
+
+....[Thread state: RUNNABLE]........................................................................
+  0.8%  50.0% <stack is empty, everything is filtered?>
+  0.8%  49.4% io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007a7d3002f000.invoke
+
+  0.0%   0.3% jdk.internal.misc.Unsafe.getIntVolatile
+              jdk.internal.misc.Unsafe.getAndBitwiseAndInt
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$Node.getAndUnsetStatus
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNextIfShared
+
+  0.0%   0.3% jdk.internal.misc.Unsafe.putReferenceVolatile
+              jdk.internal.misc.Unsafe.putReferenceOpaque
+              java.util.concurrent.locks.LockSupport.setCurrentBlocker
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  0.8% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+# Parameters: (eventLoops = 256)
+
+# Run progress: 83.33% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 1.891 ns/op
+Iteration   1: 1.976 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread":
+  1.976 ns/op
+
+Secondary result "io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 98.8%         WAITING
+  0.8%         RUNNABLE
+  0.4%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 98.8% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+  0.0%   0.0% java.lang.Object.wait0
+              java.lang.Object.wait
+              java.lang.Thread.join
+              java.lang.Thread.join
+
+
+....[Thread state: RUNNABLE]........................................................................
+  0.4%  50.0% <stack is empty, everything is filtered?>
+  0.4%  49.4% io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007bfc7c02ec00.invoke
+
+  0.0%   0.3% io.netty.util.concurrent.FastThreadLocalThread.isFastThreadLocalVirtualThread
+              io.netty.util.concurrent.FastThreadLocalThread.currentThreadHasFastThreadLocal
+              io.netty.microbench.concurrent.FastThreadLocalCheckBenchmark.isFastThreadLocalThread
+              io.netty.microbench.concurrent.jmh_generated.FastThreadLocalCheckBenchmark_isFastThreadLocalThread_jmhTest.isFastThreadLocalThread_avgt_jmhStub
+
+  0.0%   0.3% jdk.internal.misc.Unsafe.putIntVolatile
+              jdk.internal.misc.Unsafe.putIntOpaque
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$Node.clearStatus
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:19
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                     (eventLoops)  Mode  Cnt  Score   Error  Units
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread                    8  avgt       1.107          ns/op
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack             8  avgt         NaN            ---
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread                   16  avgt       1.112          ns/op
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack            16  avgt         NaN            ---
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread                   32  avgt       1.123          ns/op
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack            32  avgt         NaN            ---
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread                   64  avgt       1.145          ns/op
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack            64  avgt         NaN            ---
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread                  128  avgt       1.816          ns/op
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack           128  avgt         NaN            ---
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread                  256  avgt       1.976          ns/op
+FastThreadLocalCheckBenchmark.isFastThreadLocalThread:·stack           256  avgt         NaN            ---

@@ -1,0 +1,243 @@
+# OOPT benchmark org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "tenMixedArgsCaller", 1x "tenMixedArgsProcessor" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs
+# Parameters: (limit = 1)
+
+# Run progress: 0.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 90704898.727 ops/s
+Iteration   1: 84795580.992 ops/s
+                 callsFailed:           ≈ 0 ops/s
+                 processFailed:         71563224.841 ops/s
+                 processed:             6616286.530 ops/s
+                 stack:                 <delayed till summary>
+                 tenMixedArgsCaller:    6616317.075 ops/s
+                 tenMixedArgsProcessor: 78179263.917 ops/s
+
+
+
+Result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs":
+  84795580.992 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:callsFailed":
+  ≈ 0 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:processFailed":
+  71563224.841 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:processed":
+  6616286.530 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.9%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.1%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.4% <stack is empty, everything is filtered?>
+ 24.7%  33.0% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgsCaller_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073b51c030000.invoke
+
+ 15.8%  21.1% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchImpl.tenMixedArgs
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+
+  7.8%  10.5% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgsProcessor
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgsProcessor_thrpt_jmhStub
+
+  0.9%   1.2% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgsProcessor_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073b51c030000.invoke
+
+  0.3%   0.4% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgsProcessor
+
+  0.1%   0.2% org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgsCaller
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgsCaller_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.1%   0.2% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073b51c030000.invoke
+              java.lang.invoke.LambdaForm$MH/0x000073b51c02f800.invokeExact_MT
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:tenMixedArgsCaller":
+  6616317.075 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:tenMixedArgsProcessor":
+  78179263.917 ops/s
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "tenMixedArgsCaller", 1x "tenMixedArgsProcessor" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs
+# Parameters: (limit = 128000)
+
+# Run progress: 50.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 77676529.590 ops/s
+Iteration   1: 77746290.659 ops/s
+                 callsFailed:           ≈ 0 ops/s
+                 processFailed:         69258475.940 ops/s
+                 processed:             6229852.888 ops/s
+                 stack:                 <delayed till summary>
+                 tenMixedArgsCaller:    6229560.611 ops/s
+                 tenMixedArgsProcessor: 71516730.048 ops/s
+
+
+
+Result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs":
+  77746290.659 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:callsFailed":
+  ≈ 0 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:processFailed":
+  69258475.940 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:processed":
+  6229852.888 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.9%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.1%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.4% <stack is empty, everything is filtered?>
+ 24.5%  32.7% org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgsCaller
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgsCaller_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 15.6%  20.8% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchImpl.tenMixedArgs
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+
+  7.8%  10.5% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgsProcessor
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgsProcessor_thrpt_jmhStub
+
+  1.3%   1.8% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgsProcessor_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000074bb9c02f800.invoke
+
+  0.4%   0.5% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgsCaller_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000074bb9c02f800.invoke
+
+  0.1%   0.2% java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.isReleasable
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+              java.util.concurrent.ForkJoinPool.managedBlock
+
+  0.1%   0.2% org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgsProcessor
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgsProcessor_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_tenMixedArgs_jmhTest.tenMixedArgs_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:tenMixedArgsCaller":
+  6229560.611 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.tenMixedArgs:tenMixedArgsProcessor":
+  71516730.048 ops/s
+
+
+# Run complete. Total time: 00:00:06
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                     (limit)   Mode  Cnt         Score   Error  Units
+SpscProxyChannelBenchmark.tenMixedArgs                              1  thrpt       84795580.992          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:callsFailed                  1  thrpt                ≈ 0          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:processFailed                1  thrpt       71563224.841          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:processed                    1  thrpt        6616286.530          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:stack                        1  thrpt                NaN            ---
+SpscProxyChannelBenchmark.tenMixedArgs:tenMixedArgsCaller           1  thrpt        6616317.075          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:tenMixedArgsProcessor        1  thrpt       78179263.917          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs                         128000  thrpt       77746290.659          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:callsFailed             128000  thrpt                ≈ 0          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:processFailed           128000  thrpt       69258475.940          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:processed               128000  thrpt        6229852.888          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:stack                   128000  thrpt                NaN            ---
+SpscProxyChannelBenchmark.tenMixedArgs:tenMixedArgsCaller      128000  thrpt        6229560.611          ops/s
+SpscProxyChannelBenchmark.tenMixedArgs:tenMixedArgsProcessor   128000  thrpt       71516730.048          ops/s

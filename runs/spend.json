@@ -1,0 +1,22 @@
+{
+  "by_kind": {
+    "executor": 0.0,
+    "experiment": 18.17754475
+  },
+  "by_model": {
+    "claude-sonnet-5-5": 11.5500095,
+    "executor": 0.0,
+    "gpt-6.1-sol": 5.05777055,
+    "openai/gpt-oss-120b": 1.5697647
+  },
+  "by_provider": {
+    "anthropic": 11.5500095,
+    "groq": 1.5697647,
+    "openai": 5.05777055,
+    "subscription": 0.0
+  },
+  "calls": 3746,
+  "mode": "full",
+  "total": 18.17754475,
+  "updated": "2026-11-07T16:59:10Z"
+}

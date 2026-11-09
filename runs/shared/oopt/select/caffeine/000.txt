@@ -1,0 +1,856 @@
+# OOPT benchmark com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads (1 group; 4x "put", 4x "remove" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group
+# Parameters: (cacheType = Caffeine)
+
+# Run progress: 0.00% complete, ETA 00:00:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 30317862.170 ops/s
+Iteration   1: 32991184.022 ops/s
+                 put:    19085925.440 ops/s
+                 remove: 13905258.582 ops/s
+                 stack:  <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group":
+  32991184.022 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:put":
+  19085925.440 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:remove":
+  13905258.582 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 49.9%         WAITING
+ 42.7%         RUNNABLE
+  4.7%         TIMED_WAITING
+  2.8%         BLOCKED
+
+....[Thread state: WAITING].........................................................................
+ 49.7%  99.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.0%   0.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: RUNNABLE]........................................................................
+  9.3%  21.8% com.github.benmanes.caffeine.cache.BoundedLocalCache.remove
+              com.github.benmanes.caffeine.cache.LocalManualCache.invalidate
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.remove
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.remove
+
+  9.3%  21.8% com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.put
+
+  5.0%  11.7% java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remove
+              com.github.benmanes.caffeine.cache.LocalManualCache.invalidate
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.remove
+
+  4.5%  10.6% <stack is empty, everything is filtered?>
+  3.8%   8.8% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  2.6%   6.1% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  2.0%   4.7% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.remove_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076b14c035400.invoke
+
+  1.8%   4.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.put
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.put
+
+  1.6%   3.8% java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  1.0%   2.3% java.util.concurrent.ConcurrentHashMap.putVal
+              java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  0.4%   0.9% com.github.benmanes.caffeine.cache.BoundedLocalCache.afterRead
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+
+  0.3%   0.8% com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue.offer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+
+  0.2%   0.6% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.2%   0.5% com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromWindow
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.1%   0.3% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.transfer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.reorderProbation
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.onAccess
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$new$0
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$remove$0
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$$Lambda/0x000076b14c0974c8.apply
+              java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remove
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.put_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076b14c035400.invoke
+
+  0.0%   0.1% java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.1% com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue.offer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remove
+              com.github.benmanes.caffeine.cache.LocalManualCache.invalidate
+
+  0.0%   0.1% java.util.concurrent.locks.AbstractQueuedSynchronizer.enqueue
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.doSignal
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.signal
+              java.util.concurrent.LinkedBlockingQueue.take
+
+  0.0%   0.1% com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue.relaxedPoll
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.0%   0.1% java.util.concurrent.ForkJoinPool.execute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.scheduleDrainBuffers
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.rescheduleCleanUpIfIncomplete
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.0%   0.1% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remove
+
+  0.0%   0.1% com.github.benmanes.caffeine.cache.BoundedBuffer$RingBuffer.drainTo
+              com.github.benmanes.caffeine.cache.StripedBuffer.drainTo
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.drainReadBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  4.5%  97.4% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  0.1%   1.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireNanos
+
+  0.0%   1.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+....[Thread state: BLOCKED].........................................................................
+  1.5%  53.6% java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remove
+              com.github.benmanes.caffeine.cache.LocalManualCache.invalidate
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.remove
+
+  0.9%  33.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.CaffeineCache.put
+
+  0.2%   8.9% com.github.benmanes.caffeine.cache.BoundedLocalCache$AddTask.run
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.1%   3.6% com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$remove$0
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$$Lambda/0x000076b14c0974c8.apply
+              java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remove
+
+  0.0%   0.9% com.github.benmanes.caffeine.cache.BoundedLocalCache.makeDead
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$RemovalTask.run
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads (1 group; 4x "put", 4x "remove" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group
+# Parameters: (cacheType = LinkedHashMap_Lru)
+
+# Run progress: 16.67% complete, ETA 00:00:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 4227832.022 ops/s
+Iteration   1: 5029904.988 ops/s
+                 put:    3131936.606 ops/s
+                 remove: 1897968.382 ops/s
+                 stack:  <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group":
+  5029904.988 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:put":
+  3131936.606 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:remove":
+  1897968.382 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 61.6%         BLOCKED
+ 28.0%         RUNNABLE
+ 10.0%         TIMED_WAITING
+  0.4%         WAITING
+
+....[Thread state: BLOCKED].........................................................................
+ 32.2%  52.3% com.github.benmanes.caffeine.cache.impl.LinkedHashMapCache.remove
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.remove
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.remove_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+
+ 29.4%  47.7% com.github.benmanes.caffeine.cache.impl.LinkedHashMapCache.put
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.put
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.put_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 10.0%  35.7% <stack is empty, everything is filtered?>
+  4.7%  16.9% com.github.benmanes.caffeine.cache.impl.LinkedHashMapCache.put
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.put
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.put_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+
+  4.3%  15.4% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.put_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000761b20034400.invoke
+
+  3.9%  13.8% com.github.benmanes.caffeine.cache.impl.LinkedHashMapCache.remove
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.remove
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.remove_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+
+  3.7%  13.2% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.remove_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000761b20034400.invoke
+
+  1.3%   4.8% java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.impl.LinkedHashMapCache.put
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.put
+
+  0.1%   0.2% java.util.concurrent.locks.ReentrantLock$Sync.isHeldExclusively
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.signal
+              java.util.concurrent.LinkedBlockingQueue.take
+              java.util.concurrent.ThreadPoolExecutor.getTask
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 10.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads (1 group; 4x "put", 4x "remove" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group
+# Parameters: (cacheType = ConcurrentHashMap)
+
+# Run progress: 33.33% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 69730726.964 ops/s
+Iteration   1: 74002082.886 ops/s
+                 put:    37260553.165 ops/s
+                 remove: 36741529.721 ops/s
+                 stack:  <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group":
+  74002082.886 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:put":
+  37260553.165 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:remove":
+  36741529.721 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 82.5%         RUNNABLE
+ 10.0%         TIMED_WAITING
+  7.1%         BLOCKED
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 28.5%  34.6% java.util.concurrent.ConcurrentHashMap.put
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.put
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.put
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.put_thrpt_jmhStub
+
+ 17.6%  21.3% java.util.concurrent.ConcurrentHashMap.remove
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.remove
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.remove
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.remove_thrpt_jmhStub
+
+ 17.4%  21.1% java.util.concurrent.ConcurrentHashMap.replaceNode
+              java.util.concurrent.ConcurrentHashMap.remove
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.remove
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.remove
+
+ 10.0%  12.1% <stack is empty, everything is filtered?>
+  8.9%  10.8% java.util.concurrent.ConcurrentHashMap.putVal
+              java.util.concurrent.ConcurrentHashMap.put
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.put
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.put
+
+  0.1%   0.1% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.put_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007f9db4033400.invoke
+
+  0.1%   0.1% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.remove_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007f9db4033400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 10.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: BLOCKED].........................................................................
+  4.8%  67.2% java.util.concurrent.ConcurrentHashMap.replaceNode
+              java.util.concurrent.ConcurrentHashMap.remove
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.remove
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.remove
+
+  2.3%  32.8% java.util.concurrent.ConcurrentHashMap.putVal
+              java.util.concurrent.ConcurrentHashMap.put
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.put
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.put
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads (1 group; 4x "put", 4x "remove" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group
+# Parameters: (cacheType = ConcurrentLinkedHashMap)
+
+# Run progress: 50.00% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 12808850.477 ops/s
+Iteration   1: 14123438.289 ops/s
+                 put:    1985045.338 ops/s
+                 remove: 12138392.950 ops/s
+                 stack:  <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group":
+  14123438.289 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:put":
+  1985045.338 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:remove":
+  12138392.950 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 88.3%         RUNNABLE
+ 10.0%         TIMED_WAITING
+  0.9%         BLOCKED
+  0.8%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 14.1%  16.0% java.util.concurrent.ConcurrentLinkedQueue.offer
+              java.util.concurrent.ConcurrentLinkedQueue.add
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.afterWrite
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.remove
+
+ 14.0%  15.9% java.util.concurrent.ConcurrentLinkedQueue.offer
+              java.util.concurrent.ConcurrentLinkedQueue.add
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.afterWrite
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put
+
+ 10.8%  12.2% com.googlecode.concurrentlinkedhashmap.ConcurrentHashMapV8.remove
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.remove
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.remove
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.remove
+
+ 10.0%  11.3% <stack is empty, everything is filtered?>
+  8.4%   9.5% com.googlecode.concurrentlinkedhashmap.ConcurrentHashMapV8.putIfAbsent
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.put
+
+  6.2%   7.0% com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.afterWrite
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.remove
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.remove
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.remove
+
+  5.4%   6.1% com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainOnReadIfNeeded
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.afterRead
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put
+
+  4.7%   5.3% com.googlecode.concurrentlinkedhashmap.ConcurrentHashMapV8.replaceNode
+              com.googlecode.concurrentlinkedhashmap.ConcurrentHashMapV8.remove
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.remove
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.remove
+
+  4.3%   4.9% com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.afterWrite
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.put
+
+  3.0%   3.4% com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainWriteBuffer
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.tryToDrainBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.afterWrite
+
+  2.1%   2.4% com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainWriteBuffer
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.tryToDrainBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainOnReadIfNeeded
+
+  1.9%   2.2% com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainReadBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.tryToDrainBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.afterWrite
+
+  1.5%   1.7% com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainReadBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.tryToDrainBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainOnReadIfNeeded
+
+  1.4%   1.6% java.util.concurrent.ConcurrentLinkedQueue.poll
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainWriteBuffer
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.drainBuffers
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.tryToDrainBuffers
+
+  0.3%   0.3% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.remove_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007f26f4033400.invoke
+
+  0.1%   0.1% com.googlecode.concurrentlinkedhashmap.ConcurrentHashMapV8.putVal
+              com.googlecode.concurrentlinkedhashmap.ConcurrentHashMapV8.putIfAbsent
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.put
+
+  0.1%   0.1% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.put_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007f26f4033400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 10.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: BLOCKED].........................................................................
+  0.9% 100.0% com.googlecode.concurrentlinkedhashmap.ConcurrentHashMapV8.replaceNode
+              com.googlecode.concurrentlinkedhashmap.ConcurrentHashMapV8.remove
+              com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap.remove
+              com.github.benmanes.caffeine.cache.impl.ConcurrentMapCache.remove
+
+
+....[Thread state: WAITING].........................................................................
+  0.8% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads (1 group; 4x "put", 4x "remove" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group
+# Parameters: (cacheType = Guava)
+
+# Run progress: 66.67% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 7864966.423 ops/s
+Iteration   1: 8394788.465 ops/s
+                 put:    3902602.277 ops/s
+                 remove: 4492186.188 ops/s
+                 stack:  <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group":
+  8394788.465 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:put":
+  3902602.277 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:remove":
+  4492186.188 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 67.2%         WAITING
+ 22.8%         RUNNABLE
+ 10.0%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 66.8%  99.4% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+  0.4%   0.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 10.0%  43.9% <stack is empty, everything is filtered?>
+  5.5%  24.1% com.google.common.cache.LocalCache.connectAccessOrder
+              com.google.common.cache.LocalCache$AccessQueue.offer
+              com.google.common.cache.LocalCache$AccessQueue.offer
+              java.util.AbstractQueue.add
+
+  2.6%  11.3% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.remove_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000771210032000.invoke
+
+  2.2%   9.7% com.google.common.cache.LocalCache.connectAccessOrder
+              com.google.common.cache.LocalCache$AccessQueue.remove
+              com.google.common.cache.LocalCache$Segment.removeValueFromChain
+              com.google.common.cache.LocalCache$Segment.remove
+
+  1.0%   4.5% com.google.common.cache.LocalCache.put
+              com.google.common.cache.LocalCache$LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.GuavaCache.put
+              com.github.benmanes.caffeine.cache.PutRemoveBenchmark.put
+
+  0.9%   4.0% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+
+  0.2%   0.9% java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.ReentrantLock$Sync.lock
+              java.util.concurrent.locks.ReentrantLock.lock
+
+  0.2%   0.9% com.google.common.cache.LocalCache$Segment.remove
+              com.google.common.cache.LocalCache.remove
+              com.google.common.cache.LocalCache$LocalManualCache.invalidate
+              com.github.benmanes.caffeine.cache.impl.GuavaCache.remove
+
+  0.1%   0.2% com.google.common.cache.LocalCache$Segment.put
+              com.google.common.cache.LocalCache.put
+              com.google.common.cache.LocalCache$LocalManualCache.put
+              com.github.benmanes.caffeine.cache.impl.GuavaCache.put
+
+  0.1%   0.2% java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.ReentrantLock$Sync.lock
+              java.util.concurrent.locks.ReentrantLock.lock
+              com.google.common.cache.LocalCache$Segment.put
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 10.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads (1 group; 4x "put", 4x "remove" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group
+# Parameters: (cacheType = Ehcache3)
+
+# Run progress: 83.33% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 19249172.227 ops/s
+Iteration   1: 23603755.191 ops/s
+                 put:    8419946.327 ops/s
+                 remove: 15183808.863 ops/s
+                 stack:  <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group":
+  23603755.191 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:put":
+  8419946.327 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:remove":
+  15183808.863 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.PutRemoveBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 83.0%         RUNNABLE
+ 10.0%         TIMED_WAITING
+  6.5%         BLOCKED
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 22.5%  27.1% org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+              org.ehcache.impl.internal.store.heap.OnHeapStore.remove
+              org.ehcache.core.Ehcache.doRemoveInternal
+              org.ehcache.core.EhcacheBase.removeInternal
+
+ 14.4%  17.3% org.ehcache.impl.internal.store.heap.OnHeapStore.lambda$put$6
+              org.ehcache.impl.internal.store.heap.OnHeapStore$$Lambda/0x0000752b8c109b00.apply
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.compute
+              org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+
+ 10.4%  12.6% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.computeIfPresent
+              org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+              org.ehcache.impl.internal.store.heap.OnHeapStore.remove
+              org.ehcache.core.Ehcache.doRemoveInternal
+
+ 10.0%  12.0% <stack is empty, everything is filtered?>
+  9.1%  11.0% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.compute
+              org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+              org.ehcache.core.Ehcache.doPut
+
+  8.3%  10.0% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.sumCount
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.mappingCount
+              org.ehcache.impl.internal.store.heap.SimpleBackend.mappingCount
+              org.ehcache.impl.internal.store.heap.SimpleBackend.naturalSize
+
+  6.2%   7.5% org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+              org.ehcache.core.Ehcache.doPut
+              org.ehcache.core.EhcacheBase.put
+
+  1.0%   1.2% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.remove_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000752b8c032800.invoke
+
+  0.7%   0.8% com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.put_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.PutRemoveBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000752b8c032800.invoke
+
+  0.3%   0.4% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.sumCount
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.addCount
+              org.ehcache.impl.internal.concurrent.ConcurrentHashMap.computeIfPresent
+              org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 10.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: BLOCKED].........................................................................
+  5.5%  84.3% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.computeIfPresent
+              org.ehcache.impl.internal.store.heap.SimpleBackend.computeIfPresent
+              org.ehcache.impl.internal.store.heap.OnHeapStore.remove
+              org.ehcache.core.Ehcache.doRemoveInternal
+
+  1.0%  15.7% org.ehcache.impl.internal.concurrent.ConcurrentHashMap.compute
+              org.ehcache.impl.internal.store.heap.SimpleBackend.compute
+              org.ehcache.impl.internal.store.heap.OnHeapStore.put
+              org.ehcache.core.Ehcache.doPut
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# Run complete. Total time: 00:00:20
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                    (cacheType)   Mode  Cnt         Score   Error  Units
+PutRemoveBenchmark.group                        Caffeine  thrpt       32991184.022          ops/s
+PutRemoveBenchmark.group:put                    Caffeine  thrpt       19085925.440          ops/s
+PutRemoveBenchmark.group:remove                 Caffeine  thrpt       13905258.582          ops/s
+PutRemoveBenchmark.group:stack                  Caffeine  thrpt                NaN            ---
+PutRemoveBenchmark.group               LinkedHashMap_Lru  thrpt        5029904.988          ops/s
+PutRemoveBenchmark.group:put           LinkedHashMap_Lru  thrpt        3131936.606          ops/s
+PutRemoveBenchmark.group:remove        LinkedHashMap_Lru  thrpt        1897968.382          ops/s
+PutRemoveBenchmark.group:stack         LinkedHashMap_Lru  thrpt                NaN            ---
+PutRemoveBenchmark.group               ConcurrentHashMap  thrpt       74002082.886          ops/s
+PutRemoveBenchmark.group:put           ConcurrentHashMap  thrpt       37260553.165          ops/s
+PutRemoveBenchmark.group:remove        ConcurrentHashMap  thrpt       36741529.721          ops/s
+PutRemoveBenchmark.group:stack         ConcurrentHashMap  thrpt                NaN            ---
+PutRemoveBenchmark.group         ConcurrentLinkedHashMap  thrpt       14123438.289          ops/s
+PutRemoveBenchmark.group:put     ConcurrentLinkedHashMap  thrpt        1985045.338          ops/s
+PutRemoveBenchmark.group:remove  ConcurrentLinkedHashMap  thrpt       12138392.950          ops/s
+PutRemoveBenchmark.group:stack   ConcurrentLinkedHashMap  thrpt                NaN            ---
+PutRemoveBenchmark.group                           Guava  thrpt        8394788.465          ops/s
+PutRemoveBenchmark.group:put                       Guava  thrpt        3902602.277          ops/s
+PutRemoveBenchmark.group:remove                    Guava  thrpt        4492186.188          ops/s
+PutRemoveBenchmark.group:stack                     Guava  thrpt                NaN            ---
+PutRemoveBenchmark.group                        Ehcache3  thrpt       23603755.191          ops/s
+PutRemoveBenchmark.group:put                    Ehcache3  thrpt        8419946.327          ops/s
+PutRemoveBenchmark.group:remove                 Ehcache3  thrpt       15183808.863          ops/s
+PutRemoveBenchmark.group:stack                  Ehcache3  thrpt                NaN            ---

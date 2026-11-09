@@ -1,0 +1,692 @@
+# OOPT benchmark io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+# Parameters: (requestTargetType = ORIGIN)
+
+# Run progress: 0.00% complete, ETA 00:00:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 125.422 ns/op
+Iteration   1: 88.348 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion":
+  88.348 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  9.8%  14.7% io.netty.util.AsciiString.<init>
+              io.netty.util.AsciiString.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  9.4%  14.2% io.netty.handler.codec.http2.DefaultHttp2Headers.scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+
+  3.9%   5.9% io.netty.util.AsciiStringUtil.containsUpperCase
+              io.netty.util.AsciiStringUtil.toLowerCase
+              io.netty.util.AsciiString.toLowerCase
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  3.4%   5.1% io.netty.handler.codec.http2.DefaultHttp2Headers.path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  3.0%   4.5% io.netty.handler.codec.http2.DefaultHttp2Headers.method
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  2.3%   3.5% io.netty.handler.codec.DefaultHeaders.get
+              io.netty.handler.codec.HeadersUtils.getAsString
+              io.netty.handler.codec.http.DefaultHttpHeaders.get
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+
+  1.1%   1.6% io.netty.handler.codec.DefaultHeaders.get
+              io.netty.handler.codec.DefaultHeaders.contains
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.2%   0.3% io.netty.handler.codec.http2.DefaultHttp2Headers.newHeaderEntry
+              io.netty.handler.codec.http2.DefaultHttp2Headers.newHeaderEntry
+              io.netty.handler.codec.DefaultHeaders.add0
+              io.netty.handler.codec.DefaultHeaders.set
+
+  0.2%   0.3% io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+# Parameters: (requestTargetType = ABSOLUTE)
+
+# Run progress: 20.00% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 1157.952 ns/op
+Iteration   1: 686.355 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion":
+  686.355 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  5.4%   8.1% java.lang.StringBuilder.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  3.1%   4.7% java.net.URI$Parser.scan
+              java.net.URI$Parser.parseServer
+              java.net.URI$Parser.parseAuthority
+              java.net.URI$Parser.parseHierarchical
+
+  3.1%   4.7% java.net.URI$Parser.scan
+              java.net.URI$Parser.parseAuthority
+              java.net.URI$Parser.parseHierarchical
+              java.net.URI$Parser.parse
+
+  2.8%   4.2% java.net.URI$Parser.scan
+              java.net.URI$Parser.checkChars
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+
+  2.4%   3.6% io.netty.handler.codec.http2.HttpConversionUtil.isValidScheme
+              io.netty.handler.codec.http2.HttpConversionUtil.parsePath
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  2.0%   3.1% java.net.URI$Parser.scan
+              java.net.URI$Parser.parseHierarchical
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+
+  1.5%   2.2% io.netty.util.AsciiString.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Authority
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  1.5%   2.2% io.netty.util.AsciiString.<init>
+              io.netty.util.AsciiString.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  1.3%   1.9% java.net.URI$Parser.parseHostname
+              java.net.URI$Parser.parseServer
+              java.net.URI$Parser.parseAuthority
+              java.net.URI$Parser.parseHierarchical
+
+  1.1%   1.7% io.netty.handler.codec.http2.DefaultHttp2Headers.method
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  1.1%   1.7% java.net.URI.decode
+              java.net.URI.getAuthority
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.9%   1.4% io.netty.handler.codec.http2.DefaultHttp2Headers.scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.7%   1.1% io.netty.handler.codec.http2.DefaultHttp2Headers.path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  0.7%   1.1% io.netty.util.AsciiStringUtil.containsUpperCase
+              io.netty.util.AsciiStringUtil.toLowerCase
+              io.netty.util.AsciiString.toLowerCase
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.7%   1.1% java.net.URI$Parser.parseAuthority
+              java.net.URI$Parser.parseHierarchical
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+
+  0.7%   1.1% io.netty.handler.codec.DefaultHeaders.iterator
+              io.netty.handler.codec.http.DefaultHttpHeaders.iteratorCharSequence
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.6%   0.8% java.net.URI$Parser.parseHierarchical
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+              java.net.URI.create
+
+  0.6%   0.8% java.net.URI$Parser.scan
+              java.net.URI$Parser.parseHostname
+              java.net.URI$Parser.parseServer
+              java.net.URI$Parser.parseAuthority
+
+  0.6%   0.8% java.net.URI$Parser.parse
+              java.net.URI.<init>
+              java.net.URI.create
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.6%   0.8% io.netty.handler.codec.http2.DefaultHttp2Headers.authority
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Authority
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.4%   0.6% java.lang.StringBuilder.append
+              io.netty.handler.codec.http2.HttpConversionUtil.appendQuery
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.4%   0.6% io.netty.handler.codec.DefaultHeaders.remove0
+              io.netty.handler.codec.DefaultHeaders.set
+              io.netty.handler.codec.http2.DefaultHttp2Headers.method
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.4%   0.6% io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_AverageTime
+
+  0.4%   0.6% io.netty.handler.codec.DefaultHeaders.get
+              io.netty.handler.codec.DefaultHeaders.contains
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.2%   0.3% java.lang.StringBuilder.append
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.2%   0.3% io.netty.handler.codec.http2.DefaultHttp2Headers.newHeaderEntry
+              io.netty.handler.codec.http2.DefaultHttp2Headers.newHeaderEntry
+              io.netty.handler.codec.DefaultHeaders.add0
+              io.netty.handler.codec.DefaultHeaders.set
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+# Parameters: (requestTargetType = ABSOLUTE_NO_PATH)
+
+# Run progress: 40.00% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 812.867 ns/op
+Iteration   1: 485.069 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion":
+  485.069 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  4.5%   6.7% java.net.URI$Parser.scan
+              java.net.URI$Parser.parseServer
+              java.net.URI$Parser.parseAuthority
+              java.net.URI$Parser.parseHierarchical
+
+  3.4%   5.1% java.net.URI$Parser.scan
+              java.net.URI$Parser.parseHierarchical
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+
+  3.2%   4.8% java.net.URI$Parser.scan
+              java.net.URI$Parser.parseAuthority
+              java.net.URI$Parser.parseHierarchical
+              java.net.URI$Parser.parse
+
+  2.9%   4.3% java.net.URI$Parser.scan
+              java.net.URI$Parser.checkChars
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+
+  2.7%   4.0% io.netty.handler.codec.http2.HttpConversionUtil.isValidScheme
+              io.netty.handler.codec.http2.HttpConversionUtil.parsePath
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  2.3%   3.5% io.netty.handler.codec.http2.DefaultHttp2Headers.scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  2.2%   3.2% java.lang.StringBuilder.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  2.0%   3.0% io.netty.util.AsciiString.<init>
+              io.netty.util.AsciiString.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  1.6%   2.4% io.netty.util.AsciiStringUtil.containsUpperCase
+              io.netty.util.AsciiStringUtil.toLowerCase
+              io.netty.util.AsciiString.toLowerCase
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  1.3%   1.9% java.net.URI$Parser.parseHierarchical
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+              java.net.URI.create
+
+  1.1%   1.6% io.netty.handler.codec.http2.DefaultHttp2Headers.authority
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Authority
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.9%   1.3% java.net.URI$Parser.parseAuthority
+              java.net.URI$Parser.parseHierarchical
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+
+  0.9%   1.3% java.net.URI$Parser.parseHostname
+              java.net.URI$Parser.parseServer
+              java.net.URI$Parser.parseAuthority
+              java.net.URI$Parser.parseHierarchical
+
+  0.7%   1.1% io.netty.handler.codec.http2.DefaultHttp2Headers.path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  0.7%   1.1% io.netty.util.AsciiString.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Authority
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.5%   0.8% io.netty.handler.codec.DefaultHeaders.get
+              io.netty.handler.codec.DefaultHeaders.contains
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.4%   0.5% io.netty.handler.codec.http2.DefaultHttp2Headers.method
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  0.4%   0.5% java.lang.StringBuilder.append
+              io.netty.handler.codec.http2.HttpConversionUtil.appendQuery
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.4%   0.5% java.net.URI.decode
+              java.net.URI.getAuthority
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.4%   0.5% java.lang.StringBuilder.append
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.4%   0.5% io.netty.handler.codec.DefaultHeaders.iterator
+              io.netty.handler.codec.http.DefaultHttpHeaders.iteratorCharSequence
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.2%   0.3% io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% java.net.URI$Parser.parse
+              java.net.URI.<init>
+              java.net.URI.create
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.2%   0.3% io.netty.handler.codec.http2.HttpConversionUtil.isValidScheme
+              io.netty.handler.codec.http2.HttpConversionUtil.hasSchemeAndAuthority
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.2%   0.3% java.net.URI$Parser.scan
+              java.net.URI$Parser.parseHostname
+              java.net.URI$Parser.parseServer
+              java.net.URI$Parser.parseAuthority
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+# Parameters: (requestTargetType = ABSOLUTE_NO_AUTHORITY)
+
+# Run progress: 60.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 429.831 ns/op
+Iteration   1: 242.149 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion":
+  242.149 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  7.7%  11.5% java.net.URI$Parser.scan
+              java.net.URI$Parser.checkChars
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+
+  4.3%   6.4% java.net.URI$Parser.parseHierarchical
+              java.net.URI$Parser.parse
+              java.net.URI.<init>
+              java.net.URI.create
+
+  3.4%   5.1% java.lang.StringBuilder.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  2.3%   3.5% io.netty.handler.codec.http2.HttpConversionUtil.isValidScheme
+              io.netty.handler.codec.http2.HttpConversionUtil.parsePath
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  2.3%   3.5% java.lang.StringBuilder.toString
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  2.1%   3.2% io.netty.handler.codec.http2.DefaultHttp2Headers.scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  1.8%   2.7% io.netty.handler.codec.DefaultHeaders.get
+              io.netty.handler.codec.DefaultHeaders.contains
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  1.8%   2.7% io.netty.handler.codec.http2.DefaultHttp2Headers.method
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  1.2%   1.9% io.netty.handler.codec.DefaultHeaders.iterator
+              io.netty.handler.codec.http.DefaultHttpHeaders.iteratorCharSequence
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  1.2%   1.9% io.netty.handler.codec.http2.DefaultHttp2Headers.path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  1.1%   1.6% io.netty.util.AsciiStringUtil.containsUpperCase
+              io.netty.util.AsciiStringUtil.toLowerCase
+              io.netty.util.AsciiString.toLowerCase
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  1.1%   1.6% java.lang.StringBuilder.append
+              io.netty.handler.codec.http2.HttpConversionUtil.appendQuery
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.9%   1.3% io.netty.handler.codec.http2.HttpConversionUtil.isValidScheme
+              io.netty.handler.codec.http2.HttpConversionUtil.hasSchemeAndAuthority
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.9%   1.3% io.netty.util.AsciiString.<init>
+              io.netty.util.AsciiString.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.4%   0.5% io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_AverageTime
+
+  0.4%   0.5% java.lang.StringBuilder.append
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.2%   0.3% io.netty.handler.codec.DefaultHeaders.<init>
+              io.netty.handler.codec.DefaultHeaders.<init>
+              io.netty.handler.codec.http2.CharSequenceMap.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toLowercaseMap
+
+  0.2%   0.3% io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007acad802e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+# Parameters: (requestTargetType = SCHEME_ONLY_ABSOLUTE_PATH)
+
+# Run progress: 80.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 309.280 ns/op
+Iteration   1: 162.275 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion":
+  162.275 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 10.9%  16.4% java.lang.StringBuilder.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  7.9%  11.8% io.netty.util.AsciiString.<init>
+              io.netty.util.AsciiString.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  5.6%   8.3% io.netty.handler.codec.http2.DefaultHttp2Headers.scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.setHttp2Scheme
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  2.2%   3.2% io.netty.util.AsciiStringUtil.containsUpperCase
+              io.netty.util.AsciiStringUtil.toLowerCase
+              io.netty.util.AsciiString.toLowerCase
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  1.8%   2.7% io.netty.handler.codec.http2.DefaultHttp2Headers.method
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  1.4%   2.2% io.netty.handler.codec.http2.DefaultHttp2Headers.path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+              io.netty.handler.codec.http2.jmh_generated.Http2RequestTargetConversionBenchmark_newConversion_jmhTest.newConversion_avgt_jmhStub
+
+  1.1%   1.6% io.netty.handler.codec.http2.HttpConversionUtil.isValidScheme
+              io.netty.handler.codec.http2.HttpConversionUtil.schemeEnd
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.9%   1.3% java.lang.StringBuilder.append
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.Http2RequestTargetConversionBenchmark.newConversion
+
+  0.7%   1.1% io.netty.handler.codec.DefaultHeaders.get
+              io.netty.handler.codec.DefaultHeaders.contains
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+  0.7%   1.1% java.lang.AbstractStringBuilder.append
+              java.lang.StringBuilder.append
+              io.netty.handler.codec.http2.HttpConversionUtil.appendQuery
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+
+  0.2%   0.3% java.lang.AbstractStringBuilder.<init>
+              java.lang.StringBuilder.<init>
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Path
+              io.netty.handler.codec.http2.HttpConversionUtil.toHttp2Headers
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:17
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                         (requestTargetType)  Mode  Cnt    Score   Error  Units
+Http2RequestTargetConversionBenchmark.newConversion                            ORIGIN  avgt        88.348          ns/op
+Http2RequestTargetConversionBenchmark.newConversion:·stack                     ORIGIN  avgt           NaN            ---
+Http2RequestTargetConversionBenchmark.newConversion                          ABSOLUTE  avgt       686.355          ns/op
+Http2RequestTargetConversionBenchmark.newConversion:·stack                   ABSOLUTE  avgt           NaN            ---
+Http2RequestTargetConversionBenchmark.newConversion                  ABSOLUTE_NO_PATH  avgt       485.069          ns/op
+Http2RequestTargetConversionBenchmark.newConversion:·stack           ABSOLUTE_NO_PATH  avgt           NaN            ---
+Http2RequestTargetConversionBenchmark.newConversion             ABSOLUTE_NO_AUTHORITY  avgt       242.149          ns/op
+Http2RequestTargetConversionBenchmark.newConversion:·stack      ABSOLUTE_NO_AUTHORITY  avgt           NaN            ---
+Http2RequestTargetConversionBenchmark.newConversion         SCHEME_ONLY_ABSOLUTE_PATH  avgt       162.275          ns/op
+Http2RequestTargetConversionBenchmark.newConversion:·stack  SCHEME_ONLY_ABSOLUTE_PATH  avgt           NaN            ---

@@ -1,0 +1,648 @@
+# OOPT benchmark com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 9 threads (1 group; 1x "drain", 8x "record" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group
+# Parameters: (bufferType = Ticket)
+
+# Run progress: 0.00% complete, ETA 00:00:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 144049627.718 ops/s
+Iteration   1: 92064408.173 ops/s
+                 drain:         1617760.461 ops/s
+                 record:        90446647.712 ops/s
+                 recordFailed:  4459513.284 ops/s
+                 recordFull:    82911789.287 ops/s
+                 recordSuccess: 3096790.051 ops/s
+                 stack:         <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group":
+  92064408.173 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:drain":
+  1617760.461 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:record":
+  90446647.712 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFailed":
+  4459513.284 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFull":
+  82911789.287 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordSuccess":
+  3096790.051 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 90.0%         RUNNABLE
+  9.2%         TIMED_WAITING
+  0.7%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 71.9%  79.9% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.record_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000754f74033000.invoke
+
+  9.1%  10.1% <stack is empty, everything is filtered?>
+  8.8%   9.8% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000754f74033000.invoke
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.ReadBufferBenchmark.drain
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  9.1%  98.4% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  0.1%   1.6% java.lang.Thread.sleep0
+              java.lang.Thread.sleep
+              java.util.concurrent.TimeUnit.sleep
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+
+
+....[Thread state: WAITING].........................................................................
+  0.7% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 9 threads (1 group; 1x "drain", 8x "record" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group
+# Parameters: (bufferType = FastFlow)
+
+# Run progress: 14.29% complete, ETA 00:00:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 77054244.316 ops/s
+Iteration   1: 71809045.897 ops/s
+                 drain:         604236.926 ops/s
+                 record:        71204808.971 ops/s
+                 recordFailed:  4193464.688 ops/s
+                 recordFull:    63207824.590 ops/s
+                 recordSuccess: 3818922.155 ops/s
+                 stack:         <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group":
+  71809045.897 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:drain":
+  604236.926 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:record":
+  71204808.971 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFailed":
+  4193464.688 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFull":
+  63207824.590 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordSuccess":
+  3818922.155 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 90.5%         RUNNABLE
+  9.1%         TIMED_WAITING
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 72.3%  80.0% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.record_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000071f294033c00.invoke
+
+  9.1%  10.0% <stack is empty, everything is filtered?>
+  7.9%   8.7% com.github.benmanes.caffeine.cache.buffer.FastFlowBuffer.drainTo
+              com.github.benmanes.caffeine.cache.buffer.ReadBuffer.drain
+              com.github.benmanes.caffeine.cache.ReadBufferBenchmark.drain
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+
+  1.0%   1.1% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000071f294033c00.invoke
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.ReadBufferBenchmark.drain
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  9.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 9 threads (1 group; 1x "drain", 8x "record" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group
+# Parameters: (bufferType = MpscArray)
+
+# Run progress: 28.57% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 22979540.216 ops/s
+Iteration   1: 24979171.637 ops/s
+                 drain:         3742438.249 ops/s
+                 record:        21236733.388 ops/s
+                 recordFailed:  4967363.712 ops/s
+                 recordFull:    10571291.525 ops/s
+                 recordSuccess: 5706040.130 ops/s
+                 stack:         <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group":
+  24979171.637 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:drain":
+  3742438.249 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:record":
+  21236733.388 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFailed":
+  4967363.712 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFull":
+  10571291.525 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordSuccess":
+  5706040.130 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 90.5%         RUNNABLE
+  9.1%         TIMED_WAITING
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 69.9%  77.2% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.record_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000070609c034000.invoke
+
+  9.1%  10.0% <stack is empty, everything is filtered?>
+  8.9%   9.9% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000070609c034000.invoke
+
+  2.4%   2.7% org.jctools.queues.atomic.MpscAtomicArrayQueueProducerLimitField.soProducerLimit
+              org.jctools.queues.atomic.MpscAtomicArrayQueue.failFastOffer
+              com.github.benmanes.caffeine.cache.buffer.MpscArrayBuffer.offer
+              com.github.benmanes.caffeine.cache.ReadBufferBenchmark.record
+
+  0.1%   0.1% com.github.benmanes.caffeine.cache.ReadBufferBenchmark.drain
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.0%   0.1% java.util.concurrent.atomic.AtomicInteger.get
+              java.util.concurrent.ThreadPoolExecutor.runWorker
+              java.util.concurrent.ThreadPoolExecutor$Worker.run
+              java.lang.Thread.runWith
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  9.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 9 threads (1 group; 1x "drain", 8x "record" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group
+# Parameters: (bufferType = ManyToOne)
+
+# Run progress: 42.86% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 338289890.839 ops/s
+Iteration   1: 308255678.341 ops/s
+                 drain:         709791.280 ops/s
+                 record:        307545887.062 ops/s
+                 recordFailed:  3947709.771 ops/s
+                 recordFull:    298510671.171 ops/s
+                 recordSuccess: 5091236.395 ops/s
+                 stack:         <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group":
+  308255678.341 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:drain":
+  709791.280 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:record":
+  307545887.062 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFailed":
+  3947709.771 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFull":
+  298510671.171 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordSuccess":
+  5091236.395 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 90.5%         RUNNABLE
+  9.1%         TIMED_WAITING
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 72.3%  80.0% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.record_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007747c0032000.invoke
+
+  9.1%  10.0% <stack is empty, everything is filtered?>
+  7.7%   8.5% com.github.benmanes.caffeine.cache.buffer.ManyToOneBuffer.drainTo
+              com.github.benmanes.caffeine.cache.buffer.ReadBuffer.drain
+              com.github.benmanes.caffeine.cache.ReadBufferBenchmark.drain
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+
+  1.3%   1.5% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007747c0032000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  9.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 9 threads (1 group; 1x "drain", 8x "record" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group
+# Parameters: (bufferType = ManyToOne_spaced)
+
+# Run progress: 57.14% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 166917997.790 ops/s
+Iteration   1: 158634361.221 ops/s
+                 drain:         914835.007 ops/s
+                 record:        157719526.214 ops/s
+                 recordFailed:  4502159.491 ops/s
+                 recordFull:    147228050.048 ops/s
+                 recordSuccess: 6020493.521 ops/s
+                 stack:         <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group":
+  158634361.221 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:drain":
+  914835.007 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:record":
+  157719526.214 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFailed":
+  4502159.491 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFull":
+  147228050.048 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordSuccess":
+  6020493.521 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 90.5%         RUNNABLE
+  9.1%         TIMED_WAITING
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 72.3%  79.9% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.record_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073090c032c00.invoke
+
+  9.1%  10.0% <stack is empty, everything is filtered?>
+  7.6%   8.4% com.github.benmanes.caffeine.cache.buffer.ManyToOneSpacedBuffer.drainTo
+              com.github.benmanes.caffeine.cache.buffer.ReadBuffer.drain
+              com.github.benmanes.caffeine.cache.ReadBufferBenchmark.drain
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+
+  1.5%   1.6% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073090c032c00.invoke
+
+  0.0%   0.1% java.util.concurrent.LinkedBlockingQueue.dequeue
+              java.util.concurrent.LinkedBlockingQueue.take
+              java.util.concurrent.ThreadPoolExecutor.getTask
+              java.util.concurrent.ThreadPoolExecutor.runWorker
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  9.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 9 threads (1 group; 1x "drain", 8x "record" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group
+# Parameters: (bufferType = MpmcArray)
+
+# Run progress: 71.43% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 16416046.908 ops/s
+Iteration   1: 20404404.541 ops/s
+                 drain:         8789756.891 ops/s
+                 record:        11614647.649 ops/s
+                 recordFailed:  ≈ 0 ops/s
+                 recordFull:    8800444.395 ops/s
+                 recordSuccess: 2823394.454 ops/s
+                 stack:         <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group":
+  20404404.541 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:drain":
+  8789756.891 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:record":
+  11614647.649 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFailed":
+  ≈ 0 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordFull":
+  8800444.395 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:recordSuccess":
+  2823394.454 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 90.5%         RUNNABLE
+  9.1%         TIMED_WAITING
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 70.3%  77.7% org.jctools.queues.atomic.MpmcAtomicArrayQueue.offer
+              com.github.benmanes.caffeine.cache.buffer.MpmcArrayBuffer.offer
+              com.github.benmanes.caffeine.cache.ReadBufferBenchmark.record
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.record_thrpt_jmhStub
+
+  9.1%  10.0% <stack is empty, everything is filtered?>
+  5.8%   6.4% org.jctools.queues.MessagePassingQueueUtil.drain
+              org.jctools.queues.atomic.MpmcAtomicArrayQueue.drain
+              com.github.benmanes.caffeine.cache.buffer.MpmcArrayBuffer.drainTo
+              com.github.benmanes.caffeine.cache.buffer.ReadBuffer.drain
+
+  3.2%   3.6% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.drain_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000798474032000.invoke
+
+  2.0%   2.2% com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.record_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000798474032000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  9.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 9 threads (1 group; 1x "drain", 8x "record" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ReadBufferBenchmark.group
+# Parameters: (bufferType = MpscCompound)
+
+# Run progress: 85.71% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.IllegalArgumentException: fullCapacity: 16 (expected: >= 64)
+	at org.jctools.util.RangeUtil.checkGreaterThanOrEqual(RangeUtil.java:63)
+	at org.jctools.queues.MpscCompoundQueueColdFields.<init>(MpscCompoundQueue.java:63)
+	at org.jctools.queues.MpscCompoundQueueMidPad.<init>(MpscCompoundQueue.java:92)
+	at org.jctools.queues.MpscCompoundQueueConsumerQueueIndex.<init>(MpscCompoundQueue.java:102)
+	at org.jctools.queues.MpscCompoundQueue.<init>(MpscCompoundQueue.java:132)
+	at org.jctools.queues.MpscCompoundQueue.<init>(MpscCompoundQueue.java:127)
+	at com.github.benmanes.caffeine.cache.buffer.MpscCompoundBuffer.<init>(MpscCompoundBuffer.java:30)
+	at com.github.benmanes.caffeine.cache.buffer.BufferType.create(BufferType.java:43)
+	at com.github.benmanes.caffeine.cache.ReadBufferBenchmark.setup(ReadBufferBenchmark.java:63)
+	at com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest._jmh_tryInit_f_readbufferbenchmark0_G(ReadBufferBenchmark_group_jmhTest.java:795)
+	at com.github.benmanes.caffeine.cache.jmh_generated.ReadBufferBenchmark_group_jmhTest.group_Throughput(ReadBufferBenchmark_group_jmhTest.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:527)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:504)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+
+
+
+# Run complete. Total time: 00:00:19
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                    (bufferType)   Mode  Cnt          Score   Error  Units
+ReadBufferBenchmark.group                          Ticket  thrpt        92064408.173          ops/s
+ReadBufferBenchmark.group:drain                    Ticket  thrpt         1617760.461          ops/s
+ReadBufferBenchmark.group:record                   Ticket  thrpt        90446647.712          ops/s
+ReadBufferBenchmark.group:recordFailed             Ticket  thrpt         4459513.284          ops/s
+ReadBufferBenchmark.group:recordFull               Ticket  thrpt        82911789.287          ops/s
+ReadBufferBenchmark.group:recordSuccess            Ticket  thrpt         3096790.051          ops/s
+ReadBufferBenchmark.group:stack                    Ticket  thrpt                 NaN            ---
+ReadBufferBenchmark.group                        FastFlow  thrpt        71809045.897          ops/s
+ReadBufferBenchmark.group:drain                  FastFlow  thrpt          604236.926          ops/s
+ReadBufferBenchmark.group:record                 FastFlow  thrpt        71204808.971          ops/s
+ReadBufferBenchmark.group:recordFailed           FastFlow  thrpt         4193464.688          ops/s
+ReadBufferBenchmark.group:recordFull             FastFlow  thrpt        63207824.590          ops/s
+ReadBufferBenchmark.group:recordSuccess          FastFlow  thrpt         3818922.155          ops/s
+ReadBufferBenchmark.group:stack                  FastFlow  thrpt                 NaN            ---
+ReadBufferBenchmark.group                       MpscArray  thrpt        24979171.637          ops/s
+ReadBufferBenchmark.group:drain                 MpscArray  thrpt         3742438.249          ops/s
+ReadBufferBenchmark.group:record                MpscArray  thrpt        21236733.388          ops/s
+ReadBufferBenchmark.group:recordFailed          MpscArray  thrpt         4967363.712          ops/s
+ReadBufferBenchmark.group:recordFull            MpscArray  thrpt        10571291.525          ops/s
+ReadBufferBenchmark.group:recordSuccess         MpscArray  thrpt         5706040.130          ops/s
+ReadBufferBenchmark.group:stack                 MpscArray  thrpt                 NaN            ---
+ReadBufferBenchmark.group                       ManyToOne  thrpt       308255678.341          ops/s
+ReadBufferBenchmark.group:drain                 ManyToOne  thrpt          709791.280          ops/s
+ReadBufferBenchmark.group:record                ManyToOne  thrpt       307545887.062          ops/s
+ReadBufferBenchmark.group:recordFailed          ManyToOne  thrpt         3947709.771          ops/s
+ReadBufferBenchmark.group:recordFull            ManyToOne  thrpt       298510671.171          ops/s
+ReadBufferBenchmark.group:recordSuccess         ManyToOne  thrpt         5091236.395          ops/s
+ReadBufferBenchmark.group:stack                 ManyToOne  thrpt                 NaN            ---
+ReadBufferBenchmark.group                ManyToOne_spaced  thrpt       158634361.221          ops/s
+ReadBufferBenchmark.group:drain          ManyToOne_spaced  thrpt          914835.007          ops/s
+ReadBufferBenchmark.group:record         ManyToOne_spaced  thrpt       157719526.214          ops/s
+ReadBufferBenchmark.group:recordFailed   ManyToOne_spaced  thrpt         4502159.491          ops/s
+ReadBufferBenchmark.group:recordFull     ManyToOne_spaced  thrpt       147228050.048          ops/s
+ReadBufferBenchmark.group:recordSuccess  ManyToOne_spaced  thrpt         6020493.521          ops/s
+ReadBufferBenchmark.group:stack          ManyToOne_spaced  thrpt                 NaN            ---
+ReadBufferBenchmark.group                       MpmcArray  thrpt        20404404.541          ops/s
+ReadBufferBenchmark.group:drain                 MpmcArray  thrpt         8789756.891          ops/s
+ReadBufferBenchmark.group:record                MpmcArray  thrpt        11614647.649          ops/s
+ReadBufferBenchmark.group:recordFailed          MpmcArray  thrpt                 ≈ 0          ops/s
+ReadBufferBenchmark.group:recordFull            MpmcArray  thrpt         8800444.395          ops/s
+ReadBufferBenchmark.group:recordSuccess         MpmcArray  thrpt         2823394.454          ops/s
+ReadBufferBenchmark.group:stack                 MpmcArray  thrpt                 NaN            ---

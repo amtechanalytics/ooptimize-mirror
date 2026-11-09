@@ -1,0 +1,109 @@
+{
+ "compile_ok": true,
+ "errors": [],
+ "ev": {
+  "org.eclipse.collections.impl.utility.internal.RandomAccessListIterate": "NA"
+ },
+ "file": "eclipse-collections/src/main/java/org/eclipse/collections/impl/utility/internal/RandomAccessListIterate.java",
+ "key": "eclipse-collections-111ea536f5d5",
+ "lib": "eclipse-collections",
+ "methods": [
+  "eclipse-collections:org.eclipse.collections.impl.utility.internal.RandomAccessListIterate#toArray(List<T>,T[],int,int)"
+ ],
+ "ok": true,
+ "overlay_base": "/opt/data/oopt/shared/base/eclipse-collections-111ea536f5d5/overlay_base",
+ "randoop": {
+  "org.eclipse.collections.impl.utility.internal.RandomAccessListIterate": {
+   "classes": [],
+   "compiled": false,
+   "generated_files": 0,
+   "keep": []
+  }
+ },
+ "release": 17,
+ "spot": [
+  {
+   "category": "BAD_PRACTICE",
+   "method": "appendString",
+   "priority": "3",
+   "type": "THROWS_METHOD_THROWS_RUNTIMEEXCEPTION"
+  }
+ ],
+ "test_cp": [
+  "/opt/data/oopt/shared/src/eclipse-collections/unit-tests/target/test-classes",
+  "/opt/data/oopt/shared/src/eclipse-collections/unit-tests/target/classes",
+  "/opt/data/oopt/m2/org/eclipse/collections/eclipse-collections-api/14.0.0-SNAPSHOT/eclipse-collections-api-14.0.0-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/org/eclipse/collections/eclipse-collections/14.0.0-SNAPSHOT/eclipse-collections-14.0.0-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/org/eclipse/collections/eclipse-collections-testutils/14.0.0-SNAPSHOT/eclipse-collections-testutils-14.0.0-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/junit/junit/4.13.2/junit-4.13.2.jar",
+  "/opt/data/oopt/m2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-api/6.1.3/junit-jupiter-api-6.1.3.jar",
+  "/opt/data/oopt/m2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-commons/6.1.3/junit-platform-commons-6.1.3.jar",
+  "/opt/data/oopt/m2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar",
+  "/opt/data/oopt/m2/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar",
+  "/opt/data/oopt/m2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+  "/opt/data/oopt/m2/org/slf4j/slf4j-nop/2.0.17/slf4j-nop-2.0.17.jar",
+  "/opt/data/oopt/m2/org/openjdk/jol/jol-core/0.17/jol-core-0.17.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-engine/6.1.3/junit-jupiter-engine-6.1.3.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-engine/6.1.3/junit-platform-engine-6.1.3.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-launcher/6.1.3/junit-platform-launcher-6.1.3.jar",
+  "/opt/data/oopt/m2/org/junit/vintage/junit-vintage-engine/6.1.3/junit-vintage-engine-6.1.3.jar"
+ ],
+ "tests": {
+  "classes": [
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest"
+  ],
+  "engine": "platform",
+  "error": null,
+  "failed_run1": 0,
+  "flaky": 0,
+  "keep": [
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#allSatisfyWith()|1df75bb2",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#anySatisfyWith()|713f7cbd",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#classIsNonInstantiable()|9bc6e0ad",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#collect()|b959334",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#collectIf()|7e6996d7",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#collectReflective()|7dd72a39",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#collectWithIndex()|d2a963b8",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#corresponds_throws_nonRandomAccess()|52d829dd",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#count()|f4dd3daf",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#countWith()|c887d589",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#detectWith()|e0532471",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#distinct()|74c27e1e",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#drop()|9c6cd44b",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#drop_target()|899b7f1d",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#drop_target_throws()|b0fc95cf",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#drop_throws()|6f67b0e1",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#flattenReflective()|7ed7db9f",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#forEachFromTo()|b897c9ef",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#forEachInBoth()|8e916bce",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#forEachInBothThrowsOnMisMatchedLists()|1a15d76e",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#forEachInBothWithNull()|30f1b721",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#forEachWithIndex()|2cd8f8f8",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#forEachWithIndexWithFromTo()|9a0cb9cd",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#forEachWithNegativeFroms()|729921b6",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#forEachWithNegativeTos()|8d5324c7",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#getLast()|ae5f1612",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#getLastOnEmpty()|9cb786d8",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#injectInto()|212645e9",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#injectIntoDouble()|a229c698",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#injectIntoInt()|e108d7c0",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#injectIntoLong()|e041b74d",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#injectIntoMaxString()|ca8b551a",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#injectIntoMinString()|e6d27fec",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#injectIntoString()|c6ee7a58",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#rejectWith()|1a8e83f5",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#removeIf()|e5feaa39",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#removeIfWith()|3aabed13",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#selectAndRejectWith()|bdf67afe",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#selectWith()|32daeff8",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#take()|cd90c7b3",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#take__target_throws()|74f35baa",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#take_target()|4c2a66b5",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#take_throws()|31f69879",
+   "org.eclipse.collections.impl.utility.internal.RandomAccessListIterateTest#zip()|42dd26dd"
+  ],
+  "seen": 44
+ }
+}

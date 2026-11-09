@@ -1,0 +1,3090 @@
+# OOPT benchmark io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 64, pooled = true)
+
+# Run progress: 0.00% complete, ETA 00:01:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 191.984 ns/op
+Iteration   1: 165.051 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  165.051 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 20.5%  30.7% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 11.6%  17.4% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  0.9%   1.3% io.netty.buffer.AbstractByteBufAllocator.directBuffer
+              io.netty.buffer.AbstractByteBufAllocator.directBuffer
+              io.netty.buffer.AbstractByteBufAllocator.buffer
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter$DataFrameHeader.<init>
+
+  0.2%   0.3% jdk.internal.reflect.DirectMethodHandleAccessor.isStatic
+              jdk.internal.reflect.DirectMethodHandleAccessor.invoke
+              java.lang.reflect.Method.invoke
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007dbaec02dc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 64, pooled = false)
+
+# Run progress: 2.78% complete, ETA 00:01:58
+# Fork: 1 of 1
+# Warmup Iteration   1: 443.271 ns/op
+Iteration   1: 306.243 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  306.243 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  7.1%  10.7% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  6.8%  10.2% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.3%   6.4% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  3.4%   5.1% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  3.4%   5.1% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  2.5%   3.7% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.0%   2.9% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  1.4%   2.1% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  1.4%   2.1% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.5%   0.8% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000072bf0802e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 1024, pooled = true)
+
+# Run progress: 5.56% complete, ETA 00:01:54
+# Fork: 1 of 1
+# Warmup Iteration   1: 196.537 ns/op
+Iteration   1: 183.510 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  183.510 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.0%  22.6% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+ 11.1%  16.6% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  7.1%  10.6% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076770002e000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 1024, pooled = false)
+
+# Run progress: 8.33% complete, ETA 00:01:51
+# Fork: 1 of 1
+# Warmup Iteration   1: 444.522 ns/op
+Iteration   1: 297.722 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  297.722 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  8.2%  12.2% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  7.6%  11.4% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  5.3%   8.0% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.9%   5.9% java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+              io.netty.util.internal.PlatformDependent.allocateDirect
+              io.netty.buffer.UnpooledDirectByteBuf.allocateDirectBuffer
+
+  3.9%   5.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  2.3%   3.5% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  1.2%   1.9% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.7%   1.1% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000077412c02e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 4096, pooled = true)
+
+# Run progress: 11.11% complete, ETA 00:01:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 194.216 ns/op
+Iteration   1: 164.933 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  164.933 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 14.4%  21.7% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+ 13.4%  20.1% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  5.3%   8.0% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000078bf1c02f800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 4096, pooled = false)
+
+# Run progress: 13.89% complete, ETA 00:01:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 439.852 ns/op
+Iteration   1: 306.597 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  306.597 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  8.9%  13.3% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  5.5%   8.2% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.4%   6.6% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  4.3%   6.4% java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+              io.netty.util.internal.PlatformDependent.allocateDirect
+              io.netty.buffer.UnpooledDirectByteBuf.allocateDirectBuffer
+
+  3.4%   5.1% java.nio.Bits.tryReserveMemory
+              java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  3.0%   4.5% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.5%   3.7% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  0.7%   1.1% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.2%   0.3% io.netty.buffer.AbstractByteBuf.slice
+              io.netty.buffer.AbstractByteBuf.readSlice
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ac77802e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 16384, pooled = true)
+
+# Run progress: 16.67% complete, ETA 00:01:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 193.932 ns/op
+Iteration   1: 164.788 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  164.788 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.5%         RUNNABLE
+ 33.3%         TIMED_WAITING
+  0.2%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.1% <stack is empty, everything is filtered?>
+ 15.8%  23.7% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+ 11.2%  16.8% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  6.2%   9.3% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 16384, pooled = false)
+
+# Run progress: 19.44% complete, ETA 00:01:37
+# Fork: 1 of 1
+# Warmup Iteration   1: 439.654 ns/op
+Iteration   1: 300.762 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  300.762 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 10.3%  15.4% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  6.6%   9.8% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  6.4%   9.6% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.9%   5.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  2.7%   4.0% java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+              io.netty.util.internal.PlatformDependent.allocateDirect
+              io.netty.buffer.UnpooledDirectByteBuf.allocateDirectBuffer
+
+  1.4%   2.1% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  1.2%   1.9% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.7%   1.1% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076090002d800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 1048576, pooled = true)
+
+# Run progress: 22.22% complete, ETA 00:01:34
+# Fork: 1 of 1
+# Warmup Iteration   1: 192.486 ns/op
+Iteration   1: 164.910 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  164.910 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.2%  22.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+ 12.2%  18.4% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  5.9%   8.8% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 1048576, pooled = false)
+
+# Run progress: 25.00% complete, ETA 00:01:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 435.767 ns/op
+Iteration   1: 323.730 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  323.730 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  6.2%   9.3% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  5.7%   8.5% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  4.1%   6.1% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  4.1%   6.1% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  3.9%   5.9% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.5%   3.7% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  2.3%   3.5% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.0%   2.9% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.1%   1.6% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.9%   1.3% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 4194304, pooled = true)
+
+# Run progress: 27.78% complete, ETA 00:01:27
+# Fork: 1 of 1
+# Warmup Iteration   1: 194.771 ns/op
+Iteration   1: 165.133 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  165.133 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.2%  22.8% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+ 10.3%  15.4% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  6.6%   9.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.9%   1.3% java.util.concurrent.locks.StampedLock.releaseWrite
+              java.util.concurrent.locks.StampedLock.unlockWrite
+              io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+
+  0.3%   0.5% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000077f95802e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 0, payloadSize = 4194304, pooled = false)
+
+# Run progress: 30.56% complete, ETA 00:01:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 440.488 ns/op
+Iteration   1: 303.438 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  303.438 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  7.7%  11.5% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  5.9%   8.8% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  3.7%   5.6% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  3.6%   5.3% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  2.9%   4.3% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.5%   3.7% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.5%   3.7% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  1.8%   2.7% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  0.9%   1.3% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.5%   0.8% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000712b1002ec00.invoke
+
+  0.5%   0.8% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% io.netty.buffer.AbstractByteBuf.slice
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter$DataFrameHeader.slice
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+
+  0.2%   0.3% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+              io.netty.util.internal.PlatformDependent.allocateDirect
+              io.netty.buffer.UnpooledDirectByteBuf.allocateDirectBuffer
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 64, pooled = true)
+
+# Run progress: 33.33% complete, ETA 00:01:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 255.004 ns/op
+Iteration   1: 170.732 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  170.732 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 11.1%  16.6% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  9.4%  14.2% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  6.8%  10.2% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  5.9%   8.8% io.netty.util.concurrent.MpscIntQueue$MpscAtomicIntegerArrayQueue.offer
+              io.netty.buffer.AdaptivePoolingAllocator$SizeClassedChunk.releaseSegment
+              io.netty.buffer.AdaptivePoolingAllocator$AdaptiveByteBuf.deallocate
+              io.netty.buffer.AbstractReferenceCountedByteBuf.handleRelease
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000075a56c02e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 64, pooled = false)
+
+# Run progress: 36.11% complete, ETA 00:01:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 488.516 ns/op
+Iteration   1: 315.914 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  315.914 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  5.9%   8.8% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  5.5%   8.2% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  5.3%   8.0% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.3%   6.4% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  3.2%   4.8% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.7%   4.0% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.3%   3.5% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  2.0%   2.9% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.4%   2.1% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.4%   0.5% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 1024, pooled = true)
+
+# Run progress: 38.89% complete, ETA 00:01:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 237.599 ns/op
+Iteration   1: 174.329 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  174.329 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.2%  22.7% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  9.6%  14.4% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  6.4%   9.6% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  1.4%   2.1% java.util.concurrent.locks.StampedLock.releaseWrite
+              java.util.concurrent.locks.StampedLock.unlockWrite
+              io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+
+  0.4%   0.5% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076da8c02e000.invoke
+
+  0.2%   0.3% io.netty.buffer.AbstractByteBufAllocator.directBuffer
+              io.netty.buffer.AbstractByteBufAllocator.directBuffer
+              io.netty.buffer.AbstractByteBufAllocator.buffer
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter$DataFrameHeader.<init>
+
+  0.2%   0.3% io.netty.buffer.AbstractByteBuf.slice
+              io.netty.buffer.ReadOnlyByteBuf.slice
+              io.netty.buffer.UnreleasableByteBuf.slice
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 1024, pooled = false)
+
+# Run progress: 41.67% complete, ETA 00:01:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 475.307 ns/op
+Iteration   1: 302.202 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  302.202 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  6.2%   9.4% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  6.2%   9.4% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  5.7%   8.6% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  3.0%   4.5% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.7%   4.0% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.7%   4.0% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.0%   2.9% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  2.0%   2.9% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.2%   1.9% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  1.1%   1.6% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007d3a3802e400.invoke
+
+  0.2%   0.3% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 4096, pooled = true)
+
+# Run progress: 44.44% complete, ETA 00:01:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 256.478 ns/op
+Iteration   1: 171.473 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  171.473 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 18.6%  27.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  8.5%  12.8% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  6.2%   9.3% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 4096, pooled = false)
+
+# Run progress: 47.22% complete, ETA 00:01:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 477.579 ns/op
+Iteration   1: 304.490 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  304.490 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  6.4%   9.6% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  6.1%   9.1% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  5.9%   8.8% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  5.3%   8.0% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  4.6%   7.0% java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+              io.netty.util.internal.PlatformDependent.allocateDirect
+              io.netty.buffer.UnpooledDirectByteBuf.allocateDirectBuffer
+
+  2.5%   3.7% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  1.4%   2.1% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.9%   1.3% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000072b77402e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 16384, pooled = true)
+
+# Run progress: 50.00% complete, ETA 00:01:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 286.766 ns/op
+Iteration   1: 172.900 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  172.900 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.7%  26.6% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  9.9%  14.9% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  5.7%   8.5% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 16384, pooled = false)
+
+# Run progress: 52.78% complete, ETA 00:00:57
+# Fork: 1 of 1
+# Warmup Iteration   1: 463.111 ns/op
+Iteration   1: 330.557 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  330.557 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  7.1%  10.7% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  5.7%   8.6% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.7%   5.6% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  3.6%   5.3% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  3.2%   4.8% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  3.2%   4.8% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.9%   4.3% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.0%   2.9% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  1.1%   1.6% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.5%   0.8% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 1048576, pooled = true)
+
+# Run progress: 55.56% complete, ETA 00:00:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 246.161 ns/op
+Iteration   1: 167.986 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  167.986 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.9%  26.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+ 10.5%  15.7% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  4.8%   7.2% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% io.netty.buffer.AbstractByteBuf.slice
+              io.netty.buffer.ReadOnlyByteBuf.slice
+              io.netty.buffer.UnreleasableByteBuf.slice
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 1048576, pooled = false)
+
+# Run progress: 58.33% complete, ETA 00:00:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 470.904 ns/op
+Iteration   1: 356.658 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  356.658 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  6.6%   9.9% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  6.1%   9.1% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  6.1%   9.1% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  5.3%   8.0% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  2.1%   3.2% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.1%   3.2% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.6%   2.4% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.4%   2.1% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.7%   1.1% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  0.5%   0.8% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000078a12802e400.invoke
+
+  0.2%   0.3% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 4194304, pooled = true)
+
+# Run progress: 61.11% complete, ETA 00:00:47
+# Fork: 1 of 1
+# Warmup Iteration   1: 252.263 ns/op
+Iteration   1: 168.732 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  168.732 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.3%  23.0% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  9.2%  13.8% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  6.3%   9.5% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  2.3%   3.4% java.util.concurrent.locks.StampedLock.releaseWrite
+              java.util.concurrent.locks.StampedLock.unlockWrite
+              io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007cb1bc02e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 100, payloadSize = 4194304, pooled = false)
+
+# Run progress: 63.89% complete, ETA 00:00:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 487.923 ns/op
+Iteration   1: 303.026 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  303.026 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  6.7%  10.1% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  6.5%   9.8% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  6.3%   9.5% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.1%   6.1% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.5%   3.7% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.9%   2.9% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.2%   1.9% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.1%   1.6% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  0.9%   1.3% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.9%   1.3% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  0.7%   1.1% jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 64, pooled = true)
+
+# Run progress: 66.67% complete, ETA 00:00:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 249.877 ns/op
+Iteration   1: 167.620 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  167.620 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 14.1%  21.1% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  8.4%  12.6% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  5.9%   8.8% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.8%   7.2% io.netty.util.concurrent.MpscIntQueue$MpscAtomicIntegerArrayQueue.offer
+              io.netty.buffer.AdaptivePoolingAllocator$SizeClassedChunk.releaseSegment
+              io.netty.buffer.AdaptivePoolingAllocator$AdaptiveByteBuf.deallocate
+              io.netty.buffer.AbstractReferenceCountedByteBuf.handleRelease
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007a61e002e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 64, pooled = false)
+
+# Run progress: 69.44% complete, ETA 00:00:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 477.317 ns/op
+Iteration   1: 305.432 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  305.432 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  7.1%  10.7% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  7.1%  10.7% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  5.2%   7.8% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.0%   4.5% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  3.0%   4.5% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.3%   3.5% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  2.0%   2.9% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  1.4%   2.1% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.1%   1.6% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.9%   1.3% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 1024, pooled = true)
+
+# Run progress: 72.22% complete, ETA 00:00:33
+# Fork: 1 of 1
+# Warmup Iteration   1: 254.088 ns/op
+Iteration   1: 169.739 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  169.739 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 18.3%  27.4% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  9.4%  14.1% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  5.3%   8.0% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.4%   0.5% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000746db402f000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 1024, pooled = false)
+
+# Run progress: 75.00% complete, ETA 00:00:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 478.125 ns/op
+Iteration   1: 304.624 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  304.624 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  7.7%  11.5% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  7.5%  11.2% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  7.1%  10.7% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  4.1%   6.1% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  3.6%   5.3% java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+              io.netty.util.internal.PlatformDependent.allocateDirect
+              io.netty.buffer.UnpooledDirectByteBuf.allocateDirectBuffer
+
+  2.3%   3.5% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  0.5%   0.8% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.4%   0.5% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000070e85402d800.invoke
+
+  0.2%   0.3% io.netty.buffer.AbstractByteBuf.slice
+              io.netty.buffer.AbstractUnpooledSlicedByteBuf.slice
+              io.netty.buffer.AbstractByteBuf.slice
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter$DataFrameHeader.slice
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 4096, pooled = true)
+
+# Run progress: 77.78% complete, ETA 00:00:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 258.381 ns/op
+Iteration   1: 169.905 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  169.905 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 20.6%  30.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  8.7%  13.0% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  3.9%   5.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ab51802ec00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 4096, pooled = false)
+
+# Run progress: 80.56% complete, ETA 00:00:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 489.163 ns/op
+Iteration   1: 354.312 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  354.312 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  6.7%  10.1% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  6.4%   9.6% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  4.1%   6.1% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.9%   5.9% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  3.7%   5.6% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.5%   3.7% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.3%   3.5% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.8%   2.7% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  0.5%   0.8% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.5%   0.8% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.5%   0.8% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 16384, pooled = true)
+
+# Run progress: 83.33% complete, ETA 00:00:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 258.298 ns/op
+Iteration   1: 187.030 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  187.030 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 18.4%  27.5% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  9.4%  14.2% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  5.2%   7.8% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.4%   0.5% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c646002e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 16384, pooled = false)
+
+# Run progress: 86.11% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 491.436 ns/op
+Iteration   1: 313.036 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  313.036 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  6.1%   9.2% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  6.0%   8.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  4.6%   6.8% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  4.2%   6.3% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  2.8%   4.2% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  2.6%   3.9% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.1%   3.2% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.1%   3.2% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.9%   1.3% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.5%   0.8% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.5%   0.8% jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% java.lang.ClassLoader.defineClass1
+              java.lang.ClassLoader.defineClass
+              java.security.SecureClassLoader.defineClass
+              jdk.internal.loader.BuiltinClassLoader.defineClass
+
+  0.2%   0.3% java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+              io.netty.util.internal.PlatformDependent.allocateDirect
+              io.netty.buffer.UnpooledDirectByteBuf.allocateDirectBuffer
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 1048576, pooled = true)
+
+# Run progress: 88.89% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 265.061 ns/op
+Iteration   1: 172.150 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  172.150 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 16.5%  24.7% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+ 11.2%  16.8% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  5.5%   8.2% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007df49402dc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 1048576, pooled = false)
+
+# Run progress: 91.67% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 487.762 ns/op
+Iteration   1: 308.684 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  308.684 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  7.4%  11.2% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  5.5%   8.2% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  4.3%   6.4% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.3%   6.4% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  3.7%   5.6% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  2.8%   4.3% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.8%   2.7% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.6%   2.4% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.5%   0.8% jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.5%   0.8% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.5%   0.8% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.2%   0.3% io.netty.channel.AbstractChannel$AbstractUnsafe.close
+              io.netty.channel.embedded.EmbeddedChannel$EmbeddedUnsafe$1.close
+              io.netty.channel.DefaultChannelPipeline$HeadContext.close
+              io.netty.channel.AbstractChannelHandlerContext.close
+
+  0.2%   0.3% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 4194304, pooled = true)
+
+# Run progress: 94.44% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 254.142 ns/op
+Iteration   1: 168.926 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  168.926 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 16.2%  24.3% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  9.1%  13.6% io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+              io.netty.buffer.AdaptivePoolingAllocator.allocate
+
+  6.1%   9.1% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  1.8%   2.7% java.util.concurrent.locks.StampedLock.releaseWrite
+              java.util.concurrent.locks.StampedLock.unlockWrite
+              io.netty.buffer.AdaptivePoolingAllocator$Magazine.tryAllocate
+              io.netty.buffer.AdaptivePoolingAllocator$MagazineGroup.allocate
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007fdbd002e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+# Parameters: (padding = 255, payloadSize = 4194304, pooled = false)
+
+# Run progress: 97.22% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 492.882 ns/op
+Iteration   1: 354.318 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter":
+  354.318 ns/op
+
+Secondary result "io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  6.8%  10.2% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  6.6%   9.9% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark$OldDefaultHttp2FrameWriter.writeData
+              io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+
+  4.1%   6.1% io.netty.handler.codec.http2.Http2FrameWriterDataBenchmark.oldWriter
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.1%   6.1% java.nio.MappedByteBuffer.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.9%   4.3% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  2.5%   3.7% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  2.1%   3.2% java.nio.Bits.reserveMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  1.8%   2.7% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  1.1%   1.6% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.7%   1.1% io.netty.util.internal.PlatformDependent.incrementMemoryCounter
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9$CleanableDirectBufferImpl.<init>
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.4%   0.5% java.nio.DirectByteBuffer$Deallocator.<init>
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_avgt_jmhStub
+              io.netty.handler.codec.http2.jmh_generated.Http2FrameWriterDataBenchmark_oldWriter_jmhTest.oldWriter_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000071365402e000.invoke
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:02:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                       (padding)  (payloadSize)  (pooled)  Mode  Cnt    Score   Error  Units
+Http2FrameWriterDataBenchmark.oldWriter                 0             64      true  avgt       165.051          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0             64      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0             64     false  avgt       306.243          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0             64     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0           1024      true  avgt       183.510          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0           1024      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0           1024     false  avgt       297.722          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0           1024     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0           4096      true  avgt       164.933          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0           4096      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0           4096     false  avgt       306.597          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0           4096     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0          16384      true  avgt       164.788          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0          16384      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0          16384     false  avgt       300.762          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0          16384     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0        1048576      true  avgt       164.910          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0        1048576      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0        1048576     false  avgt       323.730          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0        1048576     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0        4194304      true  avgt       165.133          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0        4194304      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter                 0        4194304     false  avgt       303.438          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack          0        4194304     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100             64      true  avgt       170.732          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100             64      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100             64     false  avgt       315.914          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100             64     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100           1024      true  avgt       174.329          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100           1024      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100           1024     false  avgt       302.202          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100           1024     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100           4096      true  avgt       171.473          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100           4096      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100           4096     false  avgt       304.490          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100           4096     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100          16384      true  avgt       172.900          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100          16384      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100          16384     false  avgt       330.557          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100          16384     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100        1048576      true  avgt       167.986          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100        1048576      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100        1048576     false  avgt       356.658          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100        1048576     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100        4194304      true  avgt       168.732          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100        4194304      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               100        4194304     false  avgt       303.026          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        100        4194304     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255             64      true  avgt       167.620          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255             64      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255             64     false  avgt       305.432          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255             64     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255           1024      true  avgt       169.739          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255           1024      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255           1024     false  avgt       304.624          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255           1024     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255           4096      true  avgt       169.905          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255           4096      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255           4096     false  avgt       354.312          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255           4096     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255          16384      true  avgt       187.030          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255          16384      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255          16384     false  avgt       313.036          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255          16384     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255        1048576      true  avgt       172.150          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255        1048576      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255        1048576     false  avgt       308.684          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255        1048576     false  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255        4194304      true  avgt       168.926          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255        4194304      true  avgt           NaN            ---
+Http2FrameWriterDataBenchmark.oldWriter               255        4194304     false  avgt       354.318          ns/op
+Http2FrameWriterDataBenchmark.oldWriter:·stack        255        4194304     false  avgt           NaN            ---

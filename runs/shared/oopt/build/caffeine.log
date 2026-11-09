@@ -1,0 +1,47 @@
+
+$ ./gradlew --no-daemon --no-configuration-cache --no-build-cache -q -Porg.gradle.java.installations.auto-download=false -Porg.gradle.java.installations.auto-detect=false -Porg.gradle.java.installations.paths=/opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9 -PjavaVersion=21 -Plint=false :caffeine:testClasses :caffeine:jmhJar
+[exit 1 in 2s]
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Cannot find a Java installation on your machine (Linux 7.0.0-1014-aws amd64) matching: {languageVersion=26, vendor=any vendor, implementation=vendor-specific, nativeImageCapable=false}. Toolchain auto-provisioning is not enabled.
+
+* Try:
+> Learn more about toolchain auto-detection and auto-provisioning at https://docs.gradle.org/9.8.2/userguide/toolchains.html#sec:auto_detection.
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+
+$ ./gradlew --no-daemon --no-configuration-cache --no-build-cache -q -Porg.gradle.java.installations.auto-download=true -Porg.gradle.java.installations.auto-detect=false -Porg.gradle.java.installations.paths=/opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9 -PjavaVersion=21 -Plint=false :caffeine:testClasses :caffeine:jmhJar
+[exit 0 in 157s]
+
+
+
+$ ./gradlew --no-daemon --no-configuration-cache --no-build-cache -q -Porg.gradle.java.installations.auto-download=true -Porg.gradle.java.installations.auto-detect=false -Porg.gradle.java.installations.paths=/opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9 -I /opt/data/oopt/shared/src/caffeine/oopt.init.gradle :caffeine:ooptClasspath
+[exit 0 in 10s]
+
+
+
+$ ./gradlew --no-daemon --no-configuration-cache --no-build-cache -q -Porg.gradle.java.installations.auto-download=true -Porg.gradle.java.installations.auto-detect=false -Porg.gradle.java.installations.paths=/opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9 -PjavaVersion=21 -Plint=false :caffeine:testClasses :caffeine:jmhJar
+[exit 0 in 157s]
+
+
+
+$ ./gradlew --no-daemon --no-configuration-cache --no-build-cache -q -Porg.gradle.java.installations.auto-download=true -Porg.gradle.java.installations.auto-detect=false -Porg.gradle.java.installations.paths=/opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9 -I /opt/data/oopt/shared/src/caffeine/oopt.init.gradle :caffeine:ooptClasspath
+[exit 0 in 11s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q dependency:get -Dartifact=org.junit.vintage:junit-vintage-engine:5.14.3
+[exit 0 in 2s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q dependency:get -Dartifact=org.junit.support:testng-engine:1.1.0
+[exit 0 in 2s]
+
+

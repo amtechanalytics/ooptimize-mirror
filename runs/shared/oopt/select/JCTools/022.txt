@@ -1,0 +1,240 @@
+# OOPT benchmark org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "oneReferenceArgCaller", 1x "oneReferenceArgProcessor" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg
+# Parameters: (limit = 1)
+
+# Run progress: 0.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 160006381.414 ops/s
+Iteration   1: 178908682.632 ops/s
+                 callsFailed:              2.499 ops/s
+                 oneReferenceArgCaller:    89190592.628 ops/s
+                 oneReferenceArgProcessor: 89718090.004 ops/s
+                 processFailed:            537298.290 ops/s
+                 processed:                89180791.714 ops/s
+                 stack:                    <delayed till summary>
+
+
+
+Result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg":
+  178908682.632 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:callsFailed":
+  2.499 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:oneReferenceArgCaller":
+  89190592.628 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:oneReferenceArgProcessor":
+  89718090.004 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:processFailed":
+  537298.290 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:processed":
+  89180791.714 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.7%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.3%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.5% <stack is empty, everything is filtered?>
+ 24.1%  32.2% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArgCaller_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArg_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ba77402ec00.invoke
+
+ 22.6%  30.2% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchImpl.oneReferenceArg
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+
+  1.3%   1.8% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArgProcessor
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArgProcessor_thrpt_jmhStub
+
+  0.5%   0.7% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArgProcessor_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArg_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ba77402ec00.invoke
+
+  0.5%   0.7% org.jctools.channels.spsc.SpscOffHeapFixedSizeRingBuffer.writeAcquire
+              org.jctools.channels.proxy.ProxyChannelFactory.writeAcquireWithWaitStrategy
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.oneReferenceArg
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArgCaller
+
+  0.3%   0.4% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArgProcessor
+
+  0.1%   0.2% org.jctools.channels.OffHeapFixedMessageSizeRingBuffer.<init>
+              org.jctools.channels.spsc.SpscOffHeapFixedSizeRingBuffer.<init>
+              org.jctools.channels.spsc.SpscOffHeapFixedSizeRingBuffer.<init>
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.<init>
+
+  0.1%   0.2% org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArgCaller
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArgCaller_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArg_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.1%   0.2% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArg_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ba77402ec00.invoke
+              java.lang.invoke.LambdaForm$MH/0x00007ba77402f000.invokeExact_MT
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "oneReferenceArgCaller", 1x "oneReferenceArgProcessor" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg
+# Parameters: (limit = 128000)
+
+# Run progress: 50.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 110671860.417 ops/s
+Iteration   1: 119392497.493 ops/s
+                 callsFailed:              ≈ 0 ops/s
+                 oneReferenceArgCaller:    119107052.885 ops/s
+                 oneReferenceArgProcessor: 285444.608 ops/s
+                 processFailed:            269003.628 ops/s
+                 processed:                119097370.638 ops/s
+                 stack:                    <delayed till summary>
+
+
+
+Result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg":
+  119392497.493 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:callsFailed":
+  ≈ 0 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:oneReferenceArgCaller":
+  119107052.885 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:oneReferenceArgProcessor":
+  285444.608 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:processFailed":
+  269003.628 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:processed":
+  119097370.638 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArg:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 24.7%  33.0% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArgCaller_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArg_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c928802e800.invoke
+
+ 24.5%  32.6% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchImpl.oneReferenceArg
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+
+  0.4%   0.5% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchIFace$JCTools$ProxyChannel$SpscOffHeapFixedSizeRingBuffer.process
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.doProcess
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArgProcessor
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  0.1%   0.2% org.jctools.channels.spsc.SpscProxyChannelBenchmark.oneReferenceArgCaller
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArgCaller_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArg_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.1%   0.2% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_oneReferenceArg_jmhTest.oneReferenceArg_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c928802e800.invoke
+              java.lang.invoke.LambdaForm$MH/0x00007c928802f000.invokeExact_MT
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:06
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                           (limit)   Mode  Cnt          Score   Error  Units
+SpscProxyChannelBenchmark.oneReferenceArg                                 1  thrpt       178908682.632          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:callsFailed                     1  thrpt               2.499          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:oneReferenceArgCaller           1  thrpt        89190592.628          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:oneReferenceArgProcessor        1  thrpt        89718090.004          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:processFailed                   1  thrpt          537298.290          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:processed                       1  thrpt        89180791.714          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:stack                           1  thrpt                 NaN            ---
+SpscProxyChannelBenchmark.oneReferenceArg                            128000  thrpt       119392497.493          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:callsFailed                128000  thrpt                 ≈ 0          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:oneReferenceArgCaller      128000  thrpt       119107052.885          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:oneReferenceArgProcessor   128000  thrpt          285444.608          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:processFailed              128000  thrpt          269003.628          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:processed                  128000  thrpt       119097370.638          ops/s
+SpscProxyChannelBenchmark.oneReferenceArg:stack                      128000  thrpt                 NaN            ---

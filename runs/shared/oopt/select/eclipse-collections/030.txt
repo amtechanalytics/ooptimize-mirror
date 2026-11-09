@@ -1,0 +1,76 @@
+# OOPT benchmark org.eclipse.collections.impl.jmh.list.ListIterationTest.serial_immutable_ec
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.list.ListIterationTest.serial_immutable_ec
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 35.341 ops/s
+Iteration   1: 49.181 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.list.ListIterationTest.serial_immutable_ec":
+  49.181 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.list.ListIterationTest.serial_immutable_ec:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.6%  26.4% org.eclipse.collections.impl.list.immutable.ImmutableArrayList.each
+              org.eclipse.collections.impl.AbstractRichIterable.forEach
+              org.eclipse.collections.impl.utility.Iterate.forEach
+              org.eclipse.collections.impl.lazy.SelectIterable.each
+
+ 15.5%  23.3% java.lang.Integer.getChars
+              java.lang.Integer.toString
+              java.lang.Integer.toString
+              java.lang.String.valueOf
+
+  0.2%   0.3% java.lang.invoke.Invokers$Holder.linkToTargetMethod
+              org.eclipse.collections.impl.jmh.list.ListIterationTest.serial_immutable_ec
+              org.eclipse.collections.impl.jmh.list.jmh_generated.ListIterationTest_serial_immutable_ec_jmhTest.serial_immutable_ec_thrpt_jmhStub
+              org.eclipse.collections.impl.jmh.list.jmh_generated.ListIterationTest_serial_immutable_ec_jmhTest.serial_immutable_ec_Throughput
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                     Mode  Cnt   Score   Error  Units
+ListIterationTest.serial_immutable_ec        thrpt       49.181          ops/s
+ListIterationTest.serial_immutable_ec:stack  thrpt          NaN            ---

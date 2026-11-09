@@ -1,0 +1,245 @@
+# OOPT benchmark org.eclipse.collections.impl.jmh.GroupBySetTest.groupBy_2_keys_parallel_lazy_scala
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.GroupBySetTest.groupBy_2_keys_parallel_lazy_scala
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 4.643 ops/s
+Iteration   1: 14.356 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.GroupBySetTest.groupBy_2_keys_parallel_lazy_scala":
+  14.356 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.GroupBySetTest.groupBy_2_keys_parallel_lazy_scala:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 85.9%         WAITING
+  7.5%         RUNNABLE
+  6.6%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 84.5%  98.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  1.4%   1.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinTask.awaitDone
+              java.util.concurrent.ForkJoinTask.join
+
+
+....[Thread state: RUNNABLE]........................................................................
+  1.6%  20.7% scala.runtime.BoxesRunTime.equals
+              scala.collection.parallel.mutable.ParHashSetCombiner$AddingFlatHashTable.insertEntry
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.insertAll
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.fillBlock
+
+  1.5%  19.9% <stack is empty, everything is filtered?>
+  1.4%  18.2% scala.collection.mutable.Growable.$plus$eq
+              scala.collection.mutable.Growable.$plus$eq$
+              scala.collection.mutable.AbstractBuffer.$plus$eq
+              scala.collection.parallel.mutable.ParHashSetCombiner.addOne
+
+  1.1%  14.3% scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.insertAll
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.fillBlock
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.leaf
+              scala.collection.parallel.Task.$anonfun$tryLeaf$1
+
+  0.5%   7.0% scala.collection.mutable.Growable.$plus$eq
+              scala.collection.mutable.Growable.$plus$eq$
+              scala.collection.mutable.AbstractBuffer.$plus$eq
+              scala.collection.parallel.immutable.HashMapCombiner.addOne
+
+  0.4%   5.3% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.3%   4.2% scala.collection.parallel.mutable.ParHashSetCombiner$AddingFlatHashTable.<init>
+              scala.collection.parallel.mutable.ParHashSetCombiner.parPopulate
+              scala.collection.parallel.mutable.ParHashSetCombiner.result
+              scala.collection.parallel.mutable.ParHashSetCombiner.result
+
+  0.2%   2.3% java.util.concurrent.ForkJoinPool.helpJoin
+              java.util.concurrent.ForkJoinTask.awaitDone
+              java.util.concurrent.ForkJoinTask.join
+              scala.collection.parallel.ForkJoinTasks$FJTWrappedTask.sync
+
+  0.1%   1.6% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool.scan
+
+  0.1%   0.8% scala.collection.mutable.UnrolledBuffer$Unrolled.append
+              scala.collection.mutable.UnrolledBuffer.addOne
+              scala.collection.mutable.UnrolledBuffer.addOne
+              scala.collection.mutable.Growable.$plus$eq
+
+  0.0%   0.6% scala.collection.parallel.mutable.ParFlatHashTable$ParFlatHashTableIterator.scan
+              scala.collection.parallel.mutable.ParFlatHashTable$ParFlatHashTableIterator.next
+              scala.collection.parallel.ParIterableLike$GroupBy.leaf
+              scala.collection.parallel.Task.$anonfun$tryLeaf$1
+
+  0.0%   0.5% scala.collection.mutable.Growable.$plus$eq
+              scala.collection.mutable.Growable.$plus$eq$
+              scala.collection.parallel.BucketCombiner.$plus$eq
+              scala.collection.parallel.ParIterableLike$GroupBy.leaf
+
+  0.0%   0.5% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.5% scala.Predef$ArrowAssoc$.$minus$greater$extension
+              scala.collection.parallel.ParIterableLike$GroupBy.leaf
+              scala.collection.parallel.Task.$anonfun$tryLeaf$1
+              scala.collection.parallel.Task$$Lambda/0x0000733cec153168.apply$mcV$sp
+
+  0.0%   0.4% java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.4% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinTask.awaitDone
+              java.util.concurrent.ForkJoinTask.join
+
+  0.0%   0.4% scala.collection.mutable.FlatHashTable.sizeMapInit
+              scala.collection.mutable.FlatHashTable.sizeMapInit$
+              scala.collection.parallel.mutable.ParHashSetCombiner$AddingFlatHashTable.sizeMapInit
+              scala.collection.parallel.mutable.ParHashSetCombiner$AddingFlatHashTable.<init>
+
+  0.0%   0.2% scala.collection.parallel.AdaptiveWorkStealingTasks$AWSTWrappedTask.compute
+              scala.collection.parallel.AdaptiveWorkStealingTasks$AWSTWrappedTask.compute$
+              scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$AWSFJTWrappedTask.compute
+              java.util.concurrent.RecursiveAction.exec
+
+  0.0%   0.2% scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.insertAll
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.merge
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.merge
+              scala.collection.parallel.Task.tryMerge
+
+  0.0%   0.2% scala.collection.mutable.HashSet$HashSetIterator.hasNext
+              scala.collection.mutable.Growable.addAll
+              scala.collection.mutable.Growable.addAll$
+              scala.collection.parallel.BucketCombiner.addAll
+
+  0.0%   0.2% scala.collection.parallel.Combiner.combinerTaskSupport$
+              scala.collection.parallel.BucketCombiner.combinerTaskSupport
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.shouldSplitFurther
+              scala.collection.parallel.AdaptiveWorkStealingTasks$AWSTWrappedTask.compute
+
+  0.0%   0.1% scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.split
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.split
+              scala.collection.parallel.AdaptiveWorkStealingForkJoinTasks$AWSFJTWrappedTask.split
+              scala.collection.parallel.AdaptiveWorkStealingTasks$AWSTWrappedTask.spawnSubtasks
+
+  0.0%   0.1% java.lang.Class.isAssignableFrom
+              scala.Array$.copy
+              scala.collection.mutable.UnrolledBuffer$Unrolled.tryMergeWithNext
+              scala.collection.mutable.UnrolledBuffer$Unrolled.bind
+
+  0.0%   0.1% scala.runtime.BoxesRunTime.boxToInteger
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.merge
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.merge
+              scala.collection.parallel.Task.tryMerge
+
+  0.0%   0.1% scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.leaf
+              scala.collection.parallel.Task.$anonfun$tryLeaf$1
+              scala.collection.parallel.Task$$Lambda/0x0000733cec153168.apply$mcV$sp
+              scala.runtime.java8.JFunction0$mcV$sp.apply
+
+  0.0%   0.1% scala.collection.immutable.OldHashMap$OldHashMap1.get0
+              scala.collection.parallel.immutable.HashMapCombiner$CreateGroupedTrie.createGroupedTrie
+              scala.collection.parallel.immutable.HashMapCombiner$CreateGroupedTrie.leaf
+              scala.collection.parallel.Task.$anonfun$tryLeaf$1
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinTask.signalWaiters
+              java.util.concurrent.ForkJoinTask.setDone
+
+  0.0%   0.1% scala.collection.mutable.UnrolledBuffer.newUnrolled
+              scala.collection.mutable.UnrolledBuffer.clear
+              scala.collection.mutable.UnrolledBuffer.concat
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.merge
+
+  0.0%   0.1% scala.collection.parallel.BucketCombiner.combine
+              scala.collection.parallel.ParIterableLike$GroupBy.merge
+              scala.collection.parallel.ParIterableLike$GroupBy.merge
+              scala.collection.parallel.Task.tryMerge
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.0%   0.1% scala.collection.mutable.UnrolledBuffer.newUnrolled
+              scala.collection.mutable.UnrolledBuffer.<init>
+              scala.collection.parallel.mutable.ParHashSetCombiner$FillBlocks.leaf
+              scala.collection.parallel.Task.$anonfun$tryLeaf$1
+
+  0.0%   0.1% scala.collection.parallel.Task.$anonfun$tryLeaf$1
+              scala.collection.parallel.Task$$Lambda/0x0000733cec153168.apply$mcV$sp
+              scala.runtime.java8.JFunction0$mcV$sp.apply
+              scala.util.control.Breaks$$anon$1.catchBreak
+
+  0.0%   0.1% scala.collection.mutable.FlatHashTable.$init$
+              scala.collection.parallel.mutable.ParHashSetCombiner$AddingFlatHashTable.<init>
+              scala.collection.parallel.mutable.ParHashSetCombiner.parPopulate
+              scala.collection.parallel.mutable.ParHashSetCombiner.result
+
+  0.0%   0.1% scala.collection.parallel.mutable.ParHashSetCombiner$.numblocks
+              scala.collection.parallel.mutable.ParHashSetCombiner.result
+              scala.collection.parallel.mutable.ParHashSetCombiner.result
+              scala.collection.parallel.immutable.HashMapCombiner$CreateGroupedTrie.evaluateCombiners
+
+  0.0%   0.1% java.util.concurrent.ForkJoinTask.awaitDone
+              java.util.concurrent.ForkJoinTask.join
+              scala.collection.parallel.ForkJoinTasks$FJTWrappedTask.sync
+              scala.collection.parallel.ForkJoinTasks$FJTWrappedTask.sync$
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  5.1%  77.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  1.5%  22.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                 Mode  Cnt   Score   Error  Units
+GroupBySetTest.groupBy_2_keys_parallel_lazy_scala        thrpt       14.356          ops/s
+GroupBySetTest.groupBy_2_keys_parallel_lazy_scala:stack  thrpt          NaN            ---

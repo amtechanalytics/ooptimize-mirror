@@ -1,0 +1,512 @@
+# OOPT benchmark io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+# Parameters: (exampleHeader = THREE)
+
+# Run progress: 0.00% complete, ETA 00:00:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 92.763 ns/op
+Iteration   1: 63.335 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast":
+  63.335 ns/op
+
+Secondary result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 14.6%  21.9% io.netty.handler.codec.DefaultHeaders.addImpl
+              io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.http.DefaultHttpHeaders.add
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+ 10.0%  15.0% io.netty.handler.codec.http.HttpUtil.validateAsciiStringToken
+              io.netty.handler.codec.http.HttpUtil.validateToken
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateToken
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$1.validateName
+
+  6.1%   9.1% io.netty.handler.codec.http.HttpHeaderValidationUtil.verifyValidHeaderValueAsciiString
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateValidHeaderValue
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+
+  2.3%   3.5% java.util.Arrays.fill
+              io.netty.handler.codec.DefaultHeaders.clear
+              io.netty.handler.codec.http.DefaultHttpHeaders.clear
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+  0.4%   0.5% io.netty.microbench.headers.jmh_generated.HeadersBenchmark_httpAddAllFast_jmhTest.httpAddAllFast_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.HeadersBenchmark_httpAddAllFast_jmhTest.httpAddAllFast_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007b1e9802e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+# Parameters: (exampleHeader = FIVE)
+
+# Run progress: 14.29% complete, ETA 00:00:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 167.276 ns/op
+Iteration   1: 120.800 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast":
+  120.800 ns/op
+
+Secondary result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.9%  20.8% io.netty.handler.codec.http.HttpHeaderValidationUtil.verifyValidHeaderValueAsciiString
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateValidHeaderValue
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+
+ 11.4%  17.1% io.netty.handler.codec.DefaultHeaders.addImpl
+              io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.http.DefaultHttpHeaders.add
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+  5.6%   8.4% io.netty.handler.codec.http.HttpUtil.validateAsciiStringToken
+              io.netty.handler.codec.http.HttpUtil.validateToken
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateToken
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$1.validateName
+
+  1.6%   2.4% java.util.Arrays.fill
+              io.netty.handler.codec.DefaultHeaders.clear
+              io.netty.handler.codec.http.DefaultHttpHeaders.clear
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+  0.5%   0.8% io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.http.DefaultHttpHeaders.add
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+              io.netty.microbench.headers.jmh_generated.HeadersBenchmark_httpAddAllFast_jmhTest.httpAddAllFast_avgt_jmhStub
+
+  0.2%   0.3% io.netty.handler.codec.DefaultHeaders.newHeaderEntry
+              io.netty.handler.codec.DefaultHeaders.add0
+              io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.DefaultHeaders.addImpl
+
+  0.2%   0.3% io.netty.microbench.headers.jmh_generated.HeadersBenchmark_httpAddAllFast_jmhTest.httpAddAllFast_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.HeadersBenchmark_httpAddAllFast_jmhTest.httpAddAllFast_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e8ccc02dc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+# Parameters: (exampleHeader = SIX)
+
+# Run progress: 28.57% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 187.131 ns/op
+Iteration   1: 129.418 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast":
+  129.418 ns/op
+
+Secondary result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 16.0%  23.9% io.netty.handler.codec.DefaultHeaders.addImpl
+              io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.http.DefaultHttpHeaders.add
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+  8.9%  13.3% io.netty.handler.codec.http.HttpHeaderValidationUtil.verifyValidHeaderValueAsciiString
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateValidHeaderValue
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+
+  6.7%  10.1% io.netty.handler.codec.http.HttpUtil.validateAsciiStringToken
+              io.netty.handler.codec.http.HttpUtil.validateToken
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateToken
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$1.validateName
+
+  1.6%   2.4% java.util.Arrays.fill
+              io.netty.handler.codec.DefaultHeaders.clear
+              io.netty.handler.codec.http.DefaultHttpHeaders.clear
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+  0.2%   0.3% io.netty.microbench.headers.jmh_generated.HeadersBenchmark_httpAddAllFast_jmhTest.httpAddAllFast_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.HeadersBenchmark_httpAddAllFast_jmhTest.httpAddAllFast_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000726a9002e000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+# Parameters: (exampleHeader = EIGHT)
+
+# Run progress: 42.86% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 278.496 ns/op
+Iteration   1: 207.494 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast":
+  207.494 ns/op
+
+Secondary result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 16.6%  24.9% io.netty.handler.codec.DefaultHeaders.addImpl
+              io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.http.DefaultHttpHeaders.add
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+ 10.0%  15.0% io.netty.handler.codec.http.HttpUtil.validateAsciiStringToken
+              io.netty.handler.codec.http.HttpUtil.validateToken
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateToken
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$1.validateName
+
+  5.5%   8.3% io.netty.handler.codec.http.HttpHeaderValidationUtil.verifyValidHeaderValueAsciiString
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateValidHeaderValue
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+
+  1.2%   1.9% java.util.Arrays.fill
+              io.netty.handler.codec.DefaultHeaders.clear
+              io.netty.handler.codec.http.DefaultHttpHeaders.clear
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+# Parameters: (exampleHeader = ELEVEN)
+
+# Run progress: 57.14% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 383.522 ns/op
+Iteration   1: 287.260 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast":
+  287.260 ns/op
+
+Secondary result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.9%  23.8% io.netty.handler.codec.DefaultHeaders.addImpl
+              io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.http.DefaultHttpHeaders.add
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+  9.9%  14.8% io.netty.handler.codec.http.HttpUtil.validateAsciiStringToken
+              io.netty.handler.codec.http.HttpUtil.validateToken
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateToken
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$1.validateName
+
+  7.1%  10.6% io.netty.handler.codec.http.HttpHeaderValidationUtil.verifyValidHeaderValueAsciiString
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateValidHeaderValue
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+
+  0.2%   0.3% jdk.internal.reflect.Reflection.getCallerClass
+              java.lang.reflect.Method.invoke
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+
+  0.2%   0.3% java.util.Arrays.fill
+              io.netty.handler.codec.DefaultHeaders.clear
+              io.netty.handler.codec.http.DefaultHttpHeaders.clear
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+  0.2%   0.3% io.netty.microbench.headers.jmh_generated.HeadersBenchmark_httpAddAllFast_jmhTest.httpAddAllFast_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.HeadersBenchmark_httpAddAllFast_jmhTest.httpAddAllFast_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000727f7802e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+# Parameters: (exampleHeader = TWENTYTWO)
+
+# Run progress: 71.43% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 785.452 ns/op
+Iteration   1: 684.253 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast":
+  684.253 ns/op
+
+Secondary result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.8%  20.7% io.netty.handler.codec.DefaultHeaders.addImpl
+              io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.http.DefaultHttpHeaders.add
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+ 10.1%  15.2% io.netty.handler.codec.http.HttpUtil.validateAsciiStringToken
+              io.netty.handler.codec.http.HttpUtil.validateToken
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateToken
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$1.validateName
+
+  9.1%  13.6% io.netty.handler.codec.http.HttpHeaderValidationUtil.verifyValidHeaderValueAsciiString
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateValidHeaderValue
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+
+  0.4%   0.5% java.util.Arrays.fill
+              io.netty.handler.codec.DefaultHeaders.clear
+              io.netty.handler.codec.http.DefaultHttpHeaders.clear
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+# Parameters: (exampleHeader = THIRTY)
+
+# Run progress: 85.71% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 1369.385 ns/op
+Iteration   1: 939.467 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast":
+  939.467 ns/op
+
+Secondary result "io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.8%  20.7% io.netty.handler.codec.DefaultHeaders.addImpl
+              io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.http.DefaultHttpHeaders.add
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+ 10.0%  15.1% io.netty.handler.codec.http.HttpHeaderValidationUtil.verifyValidHeaderValueAsciiString
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateValidHeaderValue
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$2.validate
+
+  9.0%  13.4% io.netty.handler.codec.http.HttpUtil.validateAsciiStringToken
+              io.netty.handler.codec.http.HttpUtil.validateToken
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateToken
+              io.netty.handler.codec.http.DefaultHttpHeadersFactory$1.validateName
+
+  0.4%   0.5% io.netty.handler.codec.DefaultHeaders.newHeaderEntry
+              io.netty.handler.codec.DefaultHeaders.add0
+              io.netty.handler.codec.DefaultHeaders.add
+              io.netty.handler.codec.DefaultHeaders.addImpl
+
+  0.2%   0.3% java.util.Arrays.fill
+              io.netty.handler.codec.DefaultHeaders.clear
+              io.netty.handler.codec.http.DefaultHttpHeaders.clear
+              io.netty.microbench.headers.HeadersBenchmark.httpAddAllFast
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:23
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                               (exampleHeader)  Mode  Cnt    Score   Error  Units
+HeadersBenchmark.httpAddAllFast                   THREE  avgt        63.335          ns/op
+HeadersBenchmark.httpAddAllFast:·stack            THREE  avgt           NaN            ---
+HeadersBenchmark.httpAddAllFast                    FIVE  avgt       120.800          ns/op
+HeadersBenchmark.httpAddAllFast:·stack             FIVE  avgt           NaN            ---
+HeadersBenchmark.httpAddAllFast                     SIX  avgt       129.418          ns/op
+HeadersBenchmark.httpAddAllFast:·stack              SIX  avgt           NaN            ---
+HeadersBenchmark.httpAddAllFast                   EIGHT  avgt       207.494          ns/op
+HeadersBenchmark.httpAddAllFast:·stack            EIGHT  avgt           NaN            ---
+HeadersBenchmark.httpAddAllFast                  ELEVEN  avgt       287.260          ns/op
+HeadersBenchmark.httpAddAllFast:·stack           ELEVEN  avgt           NaN            ---
+HeadersBenchmark.httpAddAllFast               TWENTYTWO  avgt       684.253          ns/op
+HeadersBenchmark.httpAddAllFast:·stack        TWENTYTWO  avgt           NaN            ---
+HeadersBenchmark.httpAddAllFast                  THIRTY  avgt       939.467          ns/op
+HeadersBenchmark.httpAddAllFast:·stack           THIRTY  avgt           NaN            ---

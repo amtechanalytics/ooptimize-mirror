@@ -1,0 +1,490 @@
+# OOPT benchmark org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "drain", 1x "fill" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal
+# Parameters: (qCapacity = 132000, qType = SpscArrayQueue)
+
+# Run progress: 0.00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 6.676 ops/us
+Iteration   1: 4.944 ops/us
+                 drain:        4.944 ops/us
+                 fill:         0.001 ops/us
+                 get:          ≈ 10⁻⁶ ops/us
+                 offersFailed: ≈ 0 ops/us
+                 offersMade:   238.106 ops/us
+                 pollsFailed:  3.677 ops/us
+                 pollsMade:    238.138 ops/us
+                 stack:        <delayed till summary>
+
+
+
+Result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal":
+  4.944 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:drain":
+  4.944 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:fill":
+  0.001 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:get":
+  ≈ 10⁻⁶ ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:offersFailed":
+  ≈ 0 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:offersMade":
+  238.106 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:pollsFailed":
+  3.677 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:pollsMade":
+  238.138 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.9%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.1%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.4% <stack is empty, everything is filtered?>
+ 24.9%  33.2% org.jctools.queues.SpscArrayQueue.fill
+              org.jctools.queues.SpscArrayQueue.fill
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.fill
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.fill_thrpt_jmhStub
+
+ 13.8%  18.4% org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.drain_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000077a25c02e400.invoke
+
+ 10.8%  14.5% org.jctools.queues.SpscArrayQueue.drain
+              org.jctools.queues.SpscArrayQueue.drain
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.drain
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.drain_thrpt_jmhStub
+
+  0.1%   0.2% org.jctools.queues.SpscArrayQueue.drain
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.drain
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.drain_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+
+  0.1%   0.2% org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.drain
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.drain_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.putReferenceVolatile
+              jdk.internal.misc.Unsafe.putReferenceOpaque
+              java.util.concurrent.locks.LockSupport.setCurrentBlocker
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "drain", 1x "fill" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal
+# Parameters: (qCapacity = 132000, qType = MpscArrayQueue)
+
+# Run progress: 25.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 3.614 ops/us
+Iteration   1: 2.436 ops/us
+                 drain:        1.820 ops/us
+                 fill:         0.616 ops/us
+                 get:          ≈ 10⁻⁶ ops/us
+                 offersFailed: 0.582 ops/us
+                 offersMade:   523.146 ops/us
+                 pollsFailed:  1.799 ops/us
+                 pollsMade:    522.885 ops/us
+                 stack:        <delayed till summary>
+
+
+
+Result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal":
+  2.436 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:drain":
+  1.820 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:fill":
+  0.616 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:get":
+  ≈ 10⁻⁶ ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:offersFailed":
+  0.582 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:offersMade":
+  523.146 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:pollsFailed":
+  1.799 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:pollsMade":
+  522.885 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.queues.MpscArrayQueue.fill
+              org.jctools.queues.MessagePassingQueueUtil.fillInBatchesToLimit
+              org.jctools.queues.MessagePassingQueueUtil.fillBounded
+              org.jctools.queues.MpscArrayQueue.fill
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 12.6%  16.8% org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.drain_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000079939802e000.invoke
+
+ 12.4%  16.6% org.jctools.queues.MpscArrayQueue.drain
+              org.jctools.queues.MpscArrayQueue.drain
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.drain
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.drain_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "drain", 1x "fill" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal
+# Parameters: (qCapacity = 132000, qType = SpmcArrayQueue)
+
+# Run progress: 50.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 26.400 ops/us
+Iteration   1: 30.167 ops/us
+                 drain:        0.102 ops/us
+                 fill:         30.066 ops/us
+                 get:          ≈ 10⁻⁶ ops/us
+                 offersFailed: 30.991 ops/us
+                 offersMade:   26.516 ops/us
+                 pollsFailed:  0.182 ops/us
+                 pollsMade:    21.247 ops/us
+                 stack:        <delayed till summary>
+
+
+
+Result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal":
+  30.167 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:drain":
+  0.102 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:fill":
+  30.066 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:get":
+  ≈ 10⁻⁶ ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:offersFailed":
+  30.991 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:offersMade":
+  26.516 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:pollsFailed":
+  0.182 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:pollsMade":
+  21.247 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.9%         RUNNABLE
+ 25.1%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.4% <stack is empty, everything is filtered?>
+ 24.8%  33.1% org.jctools.queues.MessagePassingQueueUtil.drain
+              org.jctools.queues.SpmcArrayQueue.drain
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.drain
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.drain_thrpt_jmhStub
+
+ 16.9%  22.6% org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.fill_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c603002f000.invoke
+
+  3.3%   4.5% org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c603002f000.invoke
+              java.lang.invoke.LambdaForm$MH/0x00007c603002ec00.invokeExact_MT
+
+  2.7%   3.6% org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.fill
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.fill_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  1.0%   1.3% org.jctools.queues.SpmcArrayQueue.fill
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.fill
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.3%   0.4% org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.fill
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c603002f000.invoke
+
+  0.3%   0.4% org.jctools.queues.SpmcArrayQueue.fill
+              org.jctools.queues.SpmcArrayQueue.fill
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.fill
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.fill_thrpt_jmhStub
+
+  0.1%   0.1% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+
+  0.1%   0.1% org.openjdk.jmh.results.ThroughputResult.<init>
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c603002f000.invoke
+
+  0.1%   0.1% org.jctools.queues.SpmcArrayQueue.fill
+              org.jctools.queues.SpmcArrayQueue.fill
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.fill
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+
+  0.1%   0.1% org.jctools.queues.SpmcArrayQueue.fill
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.fill
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.fill_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+
+  0.1%   0.1% jdk.internal.reflect.Reflection.getCallerClass
+              java.lang.reflect.Method.invoke
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0%  99.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  0.1%   0.4% java.lang.Thread.sleep0
+              java.lang.Thread.sleep
+              java.util.concurrent.TimeUnit.sleep
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "drain", 1x "fill" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal
+# Parameters: (qCapacity = 132000, qType = MpmcArrayQueue)
+
+# Run progress: 75.00% complete, ETA 00:00:08
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.065 ops/us
+Iteration   1: 1.802 ops/us
+                 drain:        ≈ 10⁻⁷ ops/us
+                 fill:         1.802 ops/us
+                 get:          ≈ 10⁻⁶ ops/us
+                 offersFailed: 2.947 ops/us
+                 offersMade:   233.785 ops/us
+                 pollsFailed:  ≈ 0 ops/us
+                 pollsMade:    40.078 ops/us
+                 stack:        <delayed till summary>
+
+
+
+Result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal":
+  1.802 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:drain":
+  ≈ 10⁻⁷ ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:fill":
+  1.802 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:get":
+  ≈ 10⁻⁶ ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:offersFailed":
+  2.947 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:offersMade":
+  233.785 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:pollsFailed":
+  ≈ 0 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:pollsMade":
+  40.078 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.normal:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 25.0%  33.3% org.jctools.queues.MessagePassingQueueUtil.drain
+              org.jctools.queues.MpmcArrayQueue.drain
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.drain
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.drain_thrpt_jmhStub
+
+ 19.3%  25.8% org.jctools.queues.MpmcArrayQueue.fill
+              org.jctools.queues.MessagePassingQueueUtil.fillInBatchesToLimit
+              org.jctools.queues.MessagePassingQueueUtil.fillBounded
+              org.jctools.queues.MpmcArrayQueue.fill
+
+  5.6%   7.4% org.jctools.queues.MpmcArrayQueue.fillOneByOne
+              org.jctools.queues.MpmcArrayQueue.fill
+              org.jctools.queues.MessagePassingQueueUtil.fillInBatchesToLimit
+              org.jctools.queues.MessagePassingQueueUtil.fillBounded
+
+  0.0%   0.1% org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.fill
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ef1e802ec00.invoke
+
+  0.0%   0.0% org.jctools.queues.MpmcArrayQueue.poll
+              org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.emptyQ
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.0%   0.0% org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ef1e802ec00.invoke
+              java.lang.invoke.LambdaForm$MH/0x00007ef1e802f000.invokeExact_MT
+
+  0.0%   0.0% org.jctools.jmh.throughput.MpqDrainFillThroughputBackoffNone.fill
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.fill_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqDrainFillThroughputBackoffNone_normal_jmhTest.normal_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:39
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                              (qCapacity)         (qType)   Mode  Cnt    Score   Error   Units
+MpqDrainFillThroughputBackoffNone.normal                    132000  SpscArrayQueue  thrpt         4.944          ops/us
+MpqDrainFillThroughputBackoffNone.normal:drain              132000  SpscArrayQueue  thrpt         4.944          ops/us
+MpqDrainFillThroughputBackoffNone.normal:fill               132000  SpscArrayQueue  thrpt         0.001          ops/us
+MpqDrainFillThroughputBackoffNone.normal:get                132000  SpscArrayQueue  thrpt        ≈ 10⁻⁶          ops/us
+MpqDrainFillThroughputBackoffNone.normal:offersFailed       132000  SpscArrayQueue  thrpt           ≈ 0          ops/us
+MpqDrainFillThroughputBackoffNone.normal:offersMade         132000  SpscArrayQueue  thrpt       238.106          ops/us
+MpqDrainFillThroughputBackoffNone.normal:pollsFailed        132000  SpscArrayQueue  thrpt         3.677          ops/us
+MpqDrainFillThroughputBackoffNone.normal:pollsMade          132000  SpscArrayQueue  thrpt       238.138          ops/us
+MpqDrainFillThroughputBackoffNone.normal:stack              132000  SpscArrayQueue  thrpt           NaN             ---
+MpqDrainFillThroughputBackoffNone.normal                    132000  MpscArrayQueue  thrpt         2.436          ops/us
+MpqDrainFillThroughputBackoffNone.normal:drain              132000  MpscArrayQueue  thrpt         1.820          ops/us
+MpqDrainFillThroughputBackoffNone.normal:fill               132000  MpscArrayQueue  thrpt         0.616          ops/us
+MpqDrainFillThroughputBackoffNone.normal:get                132000  MpscArrayQueue  thrpt        ≈ 10⁻⁶          ops/us
+MpqDrainFillThroughputBackoffNone.normal:offersFailed       132000  MpscArrayQueue  thrpt         0.582          ops/us
+MpqDrainFillThroughputBackoffNone.normal:offersMade         132000  MpscArrayQueue  thrpt       523.146          ops/us
+MpqDrainFillThroughputBackoffNone.normal:pollsFailed        132000  MpscArrayQueue  thrpt         1.799          ops/us
+MpqDrainFillThroughputBackoffNone.normal:pollsMade          132000  MpscArrayQueue  thrpt       522.885          ops/us
+MpqDrainFillThroughputBackoffNone.normal:stack              132000  MpscArrayQueue  thrpt           NaN             ---
+MpqDrainFillThroughputBackoffNone.normal                    132000  SpmcArrayQueue  thrpt        30.167          ops/us
+MpqDrainFillThroughputBackoffNone.normal:drain              132000  SpmcArrayQueue  thrpt         0.102          ops/us
+MpqDrainFillThroughputBackoffNone.normal:fill               132000  SpmcArrayQueue  thrpt        30.066          ops/us
+MpqDrainFillThroughputBackoffNone.normal:get                132000  SpmcArrayQueue  thrpt        ≈ 10⁻⁶          ops/us
+MpqDrainFillThroughputBackoffNone.normal:offersFailed       132000  SpmcArrayQueue  thrpt        30.991          ops/us
+MpqDrainFillThroughputBackoffNone.normal:offersMade         132000  SpmcArrayQueue  thrpt        26.516          ops/us
+MpqDrainFillThroughputBackoffNone.normal:pollsFailed        132000  SpmcArrayQueue  thrpt         0.182          ops/us
+MpqDrainFillThroughputBackoffNone.normal:pollsMade          132000  SpmcArrayQueue  thrpt        21.247          ops/us
+MpqDrainFillThroughputBackoffNone.normal:stack              132000  SpmcArrayQueue  thrpt           NaN             ---
+MpqDrainFillThroughputBackoffNone.normal                    132000  MpmcArrayQueue  thrpt         1.802          ops/us
+MpqDrainFillThroughputBackoffNone.normal:drain              132000  MpmcArrayQueue  thrpt        ≈ 10⁻⁷          ops/us
+MpqDrainFillThroughputBackoffNone.normal:fill               132000  MpmcArrayQueue  thrpt         1.802          ops/us
+MpqDrainFillThroughputBackoffNone.normal:get                132000  MpmcArrayQueue  thrpt        ≈ 10⁻⁶          ops/us
+MpqDrainFillThroughputBackoffNone.normal:offersFailed       132000  MpmcArrayQueue  thrpt         2.947          ops/us
+MpqDrainFillThroughputBackoffNone.normal:offersMade         132000  MpmcArrayQueue  thrpt       233.785          ops/us
+MpqDrainFillThroughputBackoffNone.normal:pollsFailed        132000  MpmcArrayQueue  thrpt           ≈ 0          ops/us
+MpqDrainFillThroughputBackoffNone.normal:pollsMade          132000  MpmcArrayQueue  thrpt        40.078          ops/us
+MpqDrainFillThroughputBackoffNone.normal:stack              132000  MpmcArrayQueue  thrpt           NaN             ---

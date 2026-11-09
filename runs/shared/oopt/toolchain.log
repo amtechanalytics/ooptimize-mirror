@@ -1,0 +1,20 @@
+
+$ /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/javac --release 17 -proc:none -nowarn -encoding UTF-8 -d /opt/data/oopt/helpers /opt/rh/ooptimize/paper/java/MethodLocator.java /opt/rh/ooptimize/paper/java/OoptTestRunner.java /opt/rh/ooptimize/paper/java/OoptEV.java
+[exit 0 in 1s]
+
+
+
+$ /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/javac --release 17 -proc:none -nowarn -encoding UTF-8 -d /opt/data/oopt/helpers /opt/rh/ooptimize/paper/java/MethodLocator.java /opt/rh/ooptimize/paper/java/OoptTestRunner.java /opt/rh/ooptimize/paper/java/OoptEV.java
+[exit 0 in 1s]
+
+
+
+$ /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/javac --release 17 -proc:none -nowarn -encoding UTF-8 -d /opt/data/oopt/helpers /opt/rh/ooptimize/paper/java/MethodLocator.java /opt/rh/ooptimize/paper/java/OoptTestRunner.java /opt/rh/ooptimize/paper/java/OoptEV.java
+[exit 0 in 1s]
+
+
+
+$ /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/javac --release 17 -proc:none -nowarn -encoding UTF-8 -d /opt/data/oopt/helpers /opt/rh/ooptimize/paper/java/MethodLocator.java /opt/rh/ooptimize/paper/java/OoptTestRunner.java /opt/rh/ooptimize/paper/java/OoptEV.java
+[exit 0 in 1s]
+
+

@@ -1,0 +1,641 @@
+# OOPT benchmark io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = HEAP, cipher = TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, sslProvider = JDK)
+
+# Run progress: 0.00% complete, ETA 00:00:36
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = HEAP, cipher = TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, sslProvider = OPENSSL)
+
+# Run progress: 8.33% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = HEAP, cipher = TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, sslProvider = OPENSSL_REFCNT)
+
+# Run progress: 16.67% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = HEAP, cipher = TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, sslProvider = JDK)
+
+# Run progress: 25.00% complete, ETA 00:00:02
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = HEAP, cipher = TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, sslProvider = OPENSSL)
+
+# Run progress: 33.33% complete, ETA 00:00:02
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = HEAP, cipher = TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, sslProvider = OPENSSL_REFCNT)
+
+# Run progress: 41.67% complete, ETA 00:00:02
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = DIRECT, cipher = TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, sslProvider = JDK)
+
+# Run progress: 50.00% complete, ETA 00:00:01
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = DIRECT, cipher = TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, sslProvider = OPENSSL)
+
+# Run progress: 58.33% complete, ETA 00:00:01
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = DIRECT, cipher = TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, sslProvider = OPENSSL_REFCNT)
+
+# Run progress: 66.67% complete, ETA 00:00:01
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = DIRECT, cipher = TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, sslProvider = JDK)
+
+# Run progress: 75.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = DIRECT, cipher = TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, sslProvider = OPENSSL)
+
+# Run progress: 83.33% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.handler.ssl.SslEngineHandshakeBenchmark.handshake
+# Parameters: (bufferType = DIRECT, cipher = TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, sslProvider = OPENSSL_REFCNT)
+
+# Run progress: 91.67% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.ExceptionInInitializerError
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest._jmh_tryInit_f_sslenginehandshakebenchmark0_G(SslEngineHandshakeBenchmark_handshake_jmhTest.java:511)
+	at io.netty.microbench.handler.ssl.jmh_generated.SslEngineHandshakeBenchmark_handshake_jmhTest.handshake_AverageTime(SslEngineHandshakeBenchmark_handshake_jmhTest.java:178)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:82)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:60)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<init>(AbstractSslEngineBenchmark.java:40)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider$1.<init>(AbstractSslEngineBenchmark.java:41)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.<clinit>(AbstractSslEngineBenchmark.java:41)
+	... 12 more
+Caused by: java.lang.IllegalArgumentException: File does not contain valid certificates: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:410)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:355)
+	at io.netty.handler.ssl.SslContextBuilder.forServer(SslContextBuilder.java:79)
+	at io.netty.microbench.handler.ssl.AbstractSslEngineBenchmark$SslEngineProvider.newServerContext(AbstractSslEngineBenchmark.java:78)
+	... 16 more
+Caused by: java.security.cert.CertificateException: could not find certificate file: file:/opt/data/oopt/shared/src/netty/microbench/target/microbenchmarks.jar!/io/netty/microbench/handler/ssl/test.crt
+	at io.netty.handler.ssl.PemReader.readCertificates(PemReader.java:56)
+	at io.netty.handler.ssl.SslContext.toX509Certificates(SslContext.java:1349)
+	at io.netty.handler.ssl.SslContextBuilder.keyManager(SslContextBuilder.java:408)
+	... 19 more
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark  Mode  Cnt  Score   Error  Units

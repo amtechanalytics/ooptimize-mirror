@@ -1,0 +1,165 @@
+# OOPT benchmark org.eclipse.collections.impl.jmh.IntListJMHTest.filterJDKBoxedParallelStream
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.IntListJMHTest.filterJDKBoxedParallelStream
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 260.403 ops/s
+Iteration   1: 436.468 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.IntListJMHTest.filterJDKBoxedParallelStream":
+  436.468 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.IntListJMHTest.filterJDKBoxedParallelStream:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 86.6%         WAITING
+ 11.8%         RUNNABLE
+  1.7%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 85.4%  98.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  1.1%   1.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinTask.awaitDone
+              java.util.concurrent.ForkJoinTask.invoke
+
+
+....[Thread state: RUNNABLE]........................................................................
+  5.5%  46.5% java.util.ArrayList.grow
+              java.util.ArrayList.add
+              java.util.ArrayList.add
+              java.util.stream.Collectors$$Lambda/0x00007f8c24061078.accept
+
+  1.5%  12.9% java.util.concurrent.CountedCompleter.tryComplete
+              java.util.stream.AbstractTask.compute
+              java.util.concurrent.CountedCompleter.exec
+              java.util.concurrent.ForkJoinTask.doExec
+
+  1.5%  12.9% <stack is empty, everything is filtered?>
+  1.0%   8.5% java.util.Arrays.copyOf
+              java.util.ArrayList.grow
+              java.util.ArrayList.addAll
+              java.util.stream.Collectors.lambda$toList$4
+
+  0.4%   3.8% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.4%   3.7% java.util.Arrays.copyOf
+              java.util.ArrayList.toArray
+              java.util.ArrayList.addAll
+              java.util.stream.Collectors.lambda$toList$4
+
+  0.3%   2.2% java.util.Arrays.copyOf
+              java.util.ArrayList.grow
+              java.util.ArrayList.grow
+              java.util.ArrayList.add
+
+  0.2%   2.1% java.util.stream.ReduceOps$ReduceTask.doLeaf
+              java.util.stream.ReduceOps$ReduceTask.doLeaf
+              java.util.stream.AbstractTask.compute
+              java.util.concurrent.CountedCompleter.exec
+
+  0.2%   1.6% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool$WorkQueue.push
+
+  0.2%   1.5% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.9% java.util.stream.AbstractPipeline.wrapSink
+              java.util.stream.AbstractPipeline.wrapAndCopyInto
+              java.util.stream.ReduceOps$ReduceTask.doLeaf
+              java.util.stream.ReduceOps$ReduceTask.doLeaf
+
+  0.1%   0.7% java.util.stream.ReduceOps$3.makeSink
+              java.util.stream.ReduceOps$3.makeSink
+              java.util.stream.ReduceOps$ReduceTask.doLeaf
+              java.util.stream.ReduceOps$ReduceTask.doLeaf
+
+  0.1%   0.7% java.util.stream.AbstractTask.compute
+              java.util.concurrent.CountedCompleter.exec
+              java.util.concurrent.ForkJoinTask.doExec
+              java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec
+
+  0.1%   0.7% java.util.ArrayList$ArrayListSpliterator.trySplit
+              java.util.ArrayList$ArrayListSpliterator.trySplit
+              java.util.stream.AbstractTask.compute
+              java.util.concurrent.CountedCompleter.exec
+
+  0.1%   0.7% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool.scan
+
+  0.1%   0.5% java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.0%   0.2% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.0%   0.1% java.util.stream.AbstractPipeline.<init>
+              java.util.stream.ReferencePipeline.<init>
+              java.util.stream.ReferencePipeline$StatelessOp.<init>
+              java.util.stream.ReferencePipeline$2.<init>
+
+  0.0%   0.1% java.util.concurrent.ForkJoinPool.helpComplete
+              java.util.concurrent.ForkJoinTask.awaitDone
+              java.util.concurrent.ForkJoinTask.invoke
+              java.util.stream.ReduceOps$ReduceOp.evaluateParallel
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  1.5%  91.2% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  0.1%   8.8% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                           Mode  Cnt    Score   Error  Units
+IntListJMHTest.filterJDKBoxedParallelStream        thrpt       436.468          ops/s
+IntListJMHTest.filterJDKBoxedParallelStream:stack  thrpt           NaN            ---

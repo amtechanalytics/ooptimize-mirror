@@ -1,0 +1,12 @@
+{
+  "current": "finish",
+  "done": [
+    "datacheck",
+    "pilot",
+    "canary",
+    "full",
+    "analysis"
+  ],
+  "run_id": "ooptimize-20261107T033817Z",
+  "started": "2026-11-07T03:40:17Z"
+}

@@ -1,0 +1,147 @@
+# OOPT benchmark org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline
+# Parameters: (limit = 1)
+
+# Run progress: 0.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 397774549.303 ops/s
+Iteration   1: 399058730.396 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline":
+  399058730.396 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 25.7%  38.6% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchImpl.noArgs
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_Throughput
+
+  3.9%   5.8% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007b7cfc02e800.invoke
+
+  3.5%   5.3% org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline
+# Parameters: (limit = 128000)
+
+# Run progress: 50.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 399041357.245 ops/s
+Iteration   1: 399939486.895 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline":
+  399939486.895 ops/s
+
+Secondary result "org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 24.5%  36.8% org.jctools.channels.spsc.SpscProxyChannelBenchmark$BenchImpl.noArgs
+              org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_Throughput
+
+  4.6%   6.9% org.jctools.channels.spsc.SpscProxyChannelBenchmark.noArgsBaseline
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.1%   6.1% org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.spsc.jmh_generated.SpscProxyChannelBenchmark_noArgsBaseline_jmhTest.noArgsBaseline_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007fcc7802e400.invoke
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:06
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                       (limit)   Mode  Cnt          Score   Error  Units
+SpscProxyChannelBenchmark.noArgsBaseline              1  thrpt       399058730.396          ops/s
+SpscProxyChannelBenchmark.noArgsBaseline:stack        1  thrpt                 NaN            ---
+SpscProxyChannelBenchmark.noArgsBaseline         128000  thrpt       399939486.895          ops/s
+SpscProxyChannelBenchmark.noArgsBaseline:stack   128000  thrpt                 NaN            ---

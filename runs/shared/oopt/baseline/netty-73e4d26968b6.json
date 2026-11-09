@@ -1,0 +1,87 @@
+{
+ "compile_ok": true,
+ "errors": [],
+ "ev": {
+  "io.netty.buffer.AbstractReferenceCountedByteBuf": "NA"
+ },
+ "file": "buffer/src/main/java/io/netty/buffer/AbstractReferenceCountedByteBuf.java",
+ "key": "netty-73e4d26968b6",
+ "lib": "netty",
+ "methods": [
+  "netty:io.netty.buffer.AbstractReferenceCountedByteBuf#isAccessible()"
+ ],
+ "ok": true,
+ "overlay_base": "/opt/data/oopt/shared/base/netty-73e4d26968b6/overlay_base",
+ "randoop": {
+  "io.netty.buffer.AbstractReferenceCountedByteBuf": {
+   "classes": [
+    "io.netty.buffer.OoptRAbstractReferenceCountedByteBuf",
+    "io.netty.buffer.OoptRAbstractReferenceCountedByteBuf0"
+   ],
+   "compiled": true,
+   "dir": "/opt/data/oopt/shared/base/netty-73e4d26968b6/randoop/io_netty_buffer_AbstractReferenceCountedByteBuf/classes",
+   "flaky": 0,
+   "generated_files": 2,
+   "keep": [
+    "io.netty.buffer.OoptRAbstractReferenceCountedByteBuf0#test1"
+   ],
+   "seen": 1
+  }
+ },
+ "release": 8,
+ "spot": [],
+ "test_cp": [
+  "/opt/data/oopt/shared/src/netty/buffer/target/test-classes",
+  "/opt/data/oopt/shared/src/netty/buffer/target/classes",
+  "/opt/data/oopt/m2/io/netty/netty-common/4.2.21.Final-SNAPSHOT/netty-common-4.2.21.Final-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/io/netty/netty-jfr-stub/4.2.21.Final-SNAPSHOT/netty-jfr-stub-4.2.21.Final-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/io/netty/netty-varhandle-stub/4.2.21.Final-SNAPSHOT/netty-varhandle-stub-4.2.21.Final-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/org/graalvm/nativeimage/svm/19.3.6/svm-19.3.6.jar",
+  "/opt/data/oopt/m2/org/graalvm/nativeimage/svm-hosted-native-linux-amd64/19.3.6/svm-hosted-native-linux-amd64-19.3.6.tar.gz",
+  "/opt/data/oopt/m2/org/graalvm/nativeimage/svm-hosted-native-darwin-amd64/19.3.6/svm-hosted-native-darwin-amd64-19.3.6.tar.gz",
+  "/opt/data/oopt/m2/org/graalvm/nativeimage/svm-hosted-native-windows-amd64/19.3.6/svm-hosted-native-windows-amd64-19.3.6.tar.gz",
+  "/opt/data/oopt/m2/org/graalvm/sdk/graal-sdk/19.3.6/graal-sdk-19.3.6.jar",
+  "/opt/data/oopt/m2/org/graalvm/nativeimage/objectfile/19.3.6/objectfile-19.3.6.jar",
+  "/opt/data/oopt/m2/org/graalvm/nativeimage/pointsto/19.3.6/pointsto-19.3.6.jar",
+  "/opt/data/oopt/m2/org/graalvm/truffle/truffle-nfi/19.3.6/truffle-nfi-19.3.6.jar",
+  "/opt/data/oopt/m2/org/graalvm/truffle/truffle-api/19.3.6/truffle-api-19.3.6.jar",
+  "/opt/data/oopt/m2/org/graalvm/truffle/truffle-nfi-native-linux-amd64/19.3.6/truffle-nfi-native-linux-amd64-19.3.6.tar.gz",
+  "/opt/data/oopt/m2/org/graalvm/truffle/truffle-nfi-native-linux-aarch64/19.3.6/truffle-nfi-native-linux-aarch64-19.3.6.tar.gz",
+  "/opt/data/oopt/m2/org/graalvm/truffle/truffle-nfi-native-darwin-amd64/19.3.6/truffle-nfi-native-darwin-amd64-19.3.6.tar.gz",
+  "/opt/data/oopt/m2/org/graalvm/compiler/compiler/19.3.6/compiler-19.3.6.jar",
+  "/opt/data/oopt/m2/org/mockito/mockito-core/4.11.0/mockito-core-4.11.0.jar",
+  "/opt/data/oopt/m2/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar",
+  "/opt/data/oopt/m2/net/bytebuddy/byte-buddy-agent/1.12.19/byte-buddy-agent-1.12.19.jar",
+  "/opt/data/oopt/m2/org/objenesis/objenesis/3.3/objenesis-3.3.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-api/5.14.3/junit-jupiter-api-5.14.3.jar",
+  "/opt/data/oopt/m2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-commons/1.14.3/junit-platform-commons-1.14.3.jar",
+  "/opt/data/oopt/m2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-engine/5.14.3/junit-jupiter-engine-5.14.3.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-engine/1.14.3/junit-platform-engine-1.14.3.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-params/5.14.3/junit-jupiter-params-5.14.3.jar",
+  "/opt/data/oopt/m2/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar",
+  "/opt/data/oopt/m2/ch/qos/logback/logback-classic/1.3.16/logback-classic-1.3.16.jar",
+  "/opt/data/oopt/m2/ch/qos/logback/logback-core/1.3.16/logback-core-1.3.16.jar",
+  "/opt/data/oopt/m2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+  "/opt/data/oopt/m2/io/netty/netty-testsuite-common/4.2.21.Final-SNAPSHOT/netty-testsuite-common-4.2.21.Final-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-launcher/1.14.3/junit-platform-launcher-1.14.3.jar"
+ ],
+ "tests": {
+  "classes": [
+   "io.netty.buffer.AbstractReferenceCountedByteBufTest"
+  ],
+  "engine": "platform",
+  "error": null,
+  "failed_run1": 0,
+  "flaky": 1,
+  "keep": [
+   "io.netty.buffer.AbstractReferenceCountedByteBufTest#testReleaseErrorMessage()|220e2d4c",
+   "io.netty.buffer.AbstractReferenceCountedByteBufTest#testReleaseOverflow()|e2acec9",
+   "io.netty.buffer.AbstractReferenceCountedByteBufTest#testRetainOverflow()|595bae1f",
+   "io.netty.buffer.AbstractReferenceCountedByteBufTest#testRetainOverflow2()|d21e97c7",
+   "io.netty.buffer.AbstractReferenceCountedByteBufTest#testRetainResurrect2()|eed328d0"
+  ],
+  "seen": 6
+ }
+}

@@ -1,0 +1,167 @@
+# OOPT benchmark org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet
+# Parameters: (size = 1000)
+
+# Run progress: 0.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 400928.206 ops/s
+Iteration   1: 385952.552 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet":
+  385952.552 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% org.eclipse.collections.impl.jmh.map.jmh_generated.OrderedHashMapJMHTest_orderedMapAdapterGet_jmhTest.orderedMapAdapterGet_thrpt_jmhStub
+              org.eclipse.collections.impl.jmh.map.jmh_generated.OrderedHashMapJMHTest_orderedMapAdapterGet_jmhTest.orderedMapAdapterGet_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000079cb7402f000.invoke
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet
+# Parameters: (size = 10000)
+
+# Run progress: 33.33% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 38994.107 ops/s
+Iteration   1: 38853.441 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet":
+  38853.441 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% org.eclipse.collections.impl.jmh.map.jmh_generated.OrderedHashMapJMHTest_orderedMapAdapterGet_jmhTest.orderedMapAdapterGet_thrpt_jmhStub
+              org.eclipse.collections.impl.jmh.map.jmh_generated.OrderedHashMapJMHTest_orderedMapAdapterGet_jmhTest.orderedMapAdapterGet_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e84b402f000.invoke
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet
+# Parameters: (size = 100000)
+
+# Run progress: 66.67% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 1240.469 ops/s
+Iteration   1: 1289.629 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet":
+  1289.629 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.map.OrderedHashMapJMHTest.orderedMapAdapterGet:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% org.eclipse.collections.impl.jmh.map.jmh_generated.OrderedHashMapJMHTest_orderedMapAdapterGet_jmhTest.orderedMapAdapterGet_thrpt_jmhStub
+              org.eclipse.collections.impl.jmh.map.jmh_generated.OrderedHashMapJMHTest_orderedMapAdapterGet_jmhTest.orderedMapAdapterGet_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e9cb4030400.invoke
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:09
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                         (size)   Mode  Cnt       Score   Error  Units
+OrderedHashMapJMHTest.orderedMapAdapterGet          1000  thrpt       385952.552          ops/s
+OrderedHashMapJMHTest.orderedMapAdapterGet:stack    1000  thrpt              NaN            ---
+OrderedHashMapJMHTest.orderedMapAdapterGet         10000  thrpt        38853.441          ops/s
+OrderedHashMapJMHTest.orderedMapAdapterGet:stack   10000  thrpt              NaN            ---
+OrderedHashMapJMHTest.orderedMapAdapterGet        100000  thrpt         1289.629          ops/s
+OrderedHashMapJMHTest.orderedMapAdapterGet:stack  100000  thrpt              NaN            ---

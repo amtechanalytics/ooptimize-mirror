@@ -1,0 +1,166 @@
+# OOPT benchmark org.eclipse.collections.impl.jmh.AnagramSetTest.serial_eager_scala
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.AnagramSetTest.serial_eager_scala
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.635 ops/s
+Iteration   1: 1.767 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.AnagramSetTest.serial_eager_scala":
+  1.767 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.AnagramSetTest.serial_eager_scala:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  8.0%  12.0% java.util.DualPivotQuicksort.insertionSort
+              java.util.DualPivotQuicksort.sort
+              java.util.DualPivotQuicksort.sort
+              java.util.Arrays.sort
+
+  7.4%  11.1% org.eclipse.collections.impl.jmh.AnagramSetScalaTest$Alphagram.equals
+              scala.runtime.BoxesRunTime.equals2
+              scala.runtime.BoxesRunTime.equals
+              scala.collection.mutable.HashMap$Node.findNode
+
+  4.7%   7.1% scala.collection.immutable.HashSetBuilder.update
+              scala.collection.immutable.HashSetBuilder.addOne
+              scala.collection.immutable.HashSetBuilder.addOne
+              scala.collection.IterableOps.groupBy
+
+  3.3%   5.0% scala.collection.immutable.BitmapIndexedMapNode.updated
+              scala.collection.immutable.BitmapIndexedMapNode.updated
+              scala.collection.immutable.BitmapIndexedMapNode.updated
+              scala.collection.immutable.BitmapIndexedMapNode.updated
+
+  3.1%   4.7% scala.collection.IterableOnceOps.addString
+              scala.collection.IterableOnceOps.addString$
+              scala.collection.AbstractIterable.addString
+              scala.collection.IterableOnceOps.mkString
+
+  2.0%   3.1% scala.collection.IterableOps.groupBy
+              scala.collection.IterableOps.groupBy$
+              scala.collection.AbstractIterable.groupBy
+              org.eclipse.collections.impl.jmh.AnagramSetScalaTest$.serial_eager_scala
+
+  0.8%   1.2% scala.collection.mutable.HashMap$Node.findNode
+              scala.collection.mutable.HashMap.getOrElseUpdate
+              scala.collection.IterableOps.groupBy
+              scala.collection.IterableOps.groupBy$
+
+  0.8%   1.2% scala.collection.mutable.HashMap.growTable
+              scala.collection.mutable.HashMap.getOrElseUpdate
+              scala.collection.IterableOps.groupBy
+              scala.collection.IterableOps.groupBy$
+
+  0.6%   0.9% java.lang.String.length
+              java.lang.AbstractStringBuilder.append
+              java.lang.StringBuilder.append
+              java.lang.StringBuilder.append
+
+  0.5%   0.7% java.lang.AbstractStringBuilder.append
+              java.lang.StringBuilder.append
+              java.lang.StringBuilder.append
+              scala.collection.IterableOnceOps.addString
+
+  0.3%   0.5% java.util.TimSort.binarySort
+              java.util.TimSort.sort
+              java.util.Arrays.sort
+              scala.collection.SeqOps.sorted
+
+  0.3%   0.5% scala.collection.Iterator$$anon$6.hasNext
+              scala.collection.immutable.List.prependedAll
+              scala.collection.immutable.List$.from
+              scala.collection.immutable.List$.from
+
+  0.2%   0.2% scala.collection.immutable.List.prependedAll
+              scala.collection.immutable.List$.from
+              scala.collection.immutable.List$.from
+              scala.collection.IterableFactory$Delegate.from
+
+  0.2%   0.2% scala.collection.mutable.HashMap.put0
+              scala.collection.mutable.HashMap.getOrElseUpdate
+              scala.collection.IterableOps.groupBy
+              scala.collection.IterableOps.groupBy$
+
+  0.2%   0.2% scala.collection.immutable.ChampBaseIterator.searchNextValueNode
+              scala.collection.immutable.ChampBaseIterator.hasNext
+              scala.collection.Iterator$$anon$6.hasNext
+              scala.collection.immutable.List.prependedAll
+
+  0.2%   0.2% scala.collection.immutable.BitmapIndexedMapNode.mergeTwoKeyValPairs
+              scala.collection.immutable.BitmapIndexedMapNode.updated
+              scala.collection.immutable.BitmapIndexedMapNode.updated
+              scala.collection.immutable.BitmapIndexedMapNode.updated
+
+  0.2%   0.2% scala.collection.immutable.BitmapIndexedMapNode.copyAndSetNode
+              scala.collection.immutable.BitmapIndexedMapNode.updated
+              scala.collection.immutable.BitmapIndexedMapNode.updated
+              scala.collection.immutable.BitmapIndexedMapNode.updated
+
+  0.2%   0.2% scala.collection.immutable.ChampBaseIterator.searchNextValueNode
+              scala.collection.immutable.ChampBaseIterator.hasNext
+              scala.collection.IterableOps.groupBy
+              scala.collection.IterableOps.groupBy$
+
+  0.2%   0.2% java.util.DualPivotQuicksort.sort
+              java.util.Arrays.sort
+              org.eclipse.collections.impl.jmh.AnagramSetScalaTest$Alphagram$.apply
+              org.eclipse.collections.impl.jmh.AnagramSetScalaTest$.$anonfun$serial_eager_scala$1
+
+  0.2%   0.2% java.lang.AbstractStringBuilder.inflateIfNeededFor
+              java.lang.AbstractStringBuilder.putStringAt
+              java.lang.AbstractStringBuilder.append
+              java.lang.StringBuilder.append
+
+  0.2%   0.2% java.util.TimSort.sort
+              java.util.Arrays.sort
+              scala.collection.SeqOps.sorted
+              scala.collection.SeqOps.sorted$
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:04
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                 Mode  Cnt  Score   Error  Units
+AnagramSetTest.serial_eager_scala        thrpt       1.767          ops/s
+AnagramSetTest.serial_eager_scala:stack  thrpt         NaN            ---

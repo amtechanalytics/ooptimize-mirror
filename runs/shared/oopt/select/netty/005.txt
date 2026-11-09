@@ -1,0 +1,822 @@
+# OOPT benchmark io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = HEAP, input = RANDOM_256B)
+
+# Run progress: 0.00% complete, ETA 00:00:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 1977.373 ops/ms
+Iteration   1: 2048.609 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  2048.609 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 32.4%  48.6% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+  0.9%   1.4% io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000703dbc02e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = HEAP, input = RANDOM_2KB)
+
+# Run progress: 6.67% complete, ETA 00:00:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 249.684 ops/ms
+Iteration   1: 253.540 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  253.540 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = HEAP, input = PREDICTABLE)
+
+# Run progress: 13.33% complete, ETA 00:00:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 237.019 ops/ms
+Iteration   1: 235.840 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  235.840 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+  0.2%   0.3% io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ca2a402d800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = HEAP, input = UNPREDICTABLE)
+
+# Run progress: 20.00% complete, ETA 00:00:39
+# Fork: 1 of 1
+# Warmup Iteration   1: 219.846 ops/ms
+Iteration   1: 252.671 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  252.671 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+  0.4%   0.5% io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007d356802dc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = HEAP, input = WORST_CASE)
+
+# Run progress: 26.67% complete, ETA 00:00:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 204.989 ops/ms
+Iteration   1: 211.112 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  211.112 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = COMPOSITE, input = RANDOM_256B)
+
+# Run progress: 33.33% complete, ETA 00:00:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 2142.667 ops/ms
+Iteration   1: 2156.240 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  2156.240 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 27.3%  41.0% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.CompositeByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+
+  5.9%   8.8% io.netty.buffer.CompositeByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+  0.2%   0.3% io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000077a6c802f800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = COMPOSITE, input = RANDOM_2KB)
+
+# Run progress: 40.00% complete, ETA 00:00:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 252.284 ops/ms
+Iteration   1: 255.006 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  255.006 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.CompositeByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+
+  0.2%   0.3% io.netty.buffer.CompositeByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = COMPOSITE, input = PREDICTABLE)
+
+# Run progress: 46.67% complete, ETA 00:00:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 246.018 ops/ms
+Iteration   1: 248.279 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  248.279 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.CompositeByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+
+  0.4%   0.5% io.netty.buffer.CompositeByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = COMPOSITE, input = UNPREDICTABLE)
+
+# Run progress: 53.33% complete, ETA 00:00:22
+# Fork: 1 of 1
+# Warmup Iteration   1: 244.835 ops/ms
+Iteration   1: 233.173 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  233.173 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.CompositeByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = COMPOSITE, input = WORST_CASE)
+
+# Run progress: 60.00% complete, ETA 00:00:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 200.932 ops/ms
+Iteration   1: 212.112 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  212.112 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 32.8%  49.2% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.CompositeByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+
+  0.5%   0.8% io.netty.buffer.CompositeByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = DIRECT, input = RANDOM_256B)
+
+# Run progress: 66.67% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 2169.206 ops/ms
+Iteration   1: 2198.909 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  2198.909 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+  0.2%   0.3% io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000074fa6c02d800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = DIRECT, input = RANDOM_2KB)
+
+# Run progress: 73.33% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 252.936 ops/ms
+Iteration   1: 255.262 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  255.262 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+  0.2%   0.3% java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.canReacquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.util.concurrent.LinkedBlockingQueue.take
+              java.util.concurrent.ThreadPoolExecutor.getTask
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = DIRECT, input = PREDICTABLE)
+
+# Run progress: 80.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 248.184 ops/ms
+Iteration   1: 238.549 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  238.549 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = DIRECT, input = UNPREDICTABLE)
+
+# Run progress: 86.67% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 205.943 ops/ms
+Iteration   1: 233.639 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  233.639 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.search.SearchBenchmark.ahoCorasic
+# Parameters: (bufferType = DIRECT, input = WORST_CASE)
+
+# Run progress: 93.33% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 208.633 ops/ms
+Iteration   1: 220.373 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.search.SearchBenchmark.ahoCorasic":
+  220.373 ops/ms
+
+Secondary result "io.netty.microbench.search.SearchBenchmark.ahoCorasic:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% io.netty.buffer.AbstractByteBuf.forEachByteAsc0
+              io.netty.buffer.AbstractByteBuf.forEachByte
+              io.netty.microbench.search.SearchBenchmark.ahoCorasic
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+
+  0.2%   0.3% io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_thrpt_jmhStub
+              io.netty.microbench.search.jmh_generated.SearchBenchmark_ahoCorasic_jmhTest.ahoCorasic_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076525802dc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:49
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                          (bufferType)        (input)   Mode  Cnt     Score   Error   Units
+SearchBenchmark.ahoCorasic                 HEAP    RANDOM_256B  thrpt       2048.609          ops/ms
+SearchBenchmark.ahoCorasic:·stack          HEAP    RANDOM_256B  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic                 HEAP     RANDOM_2KB  thrpt        253.540          ops/ms
+SearchBenchmark.ahoCorasic:·stack          HEAP     RANDOM_2KB  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic                 HEAP    PREDICTABLE  thrpt        235.840          ops/ms
+SearchBenchmark.ahoCorasic:·stack          HEAP    PREDICTABLE  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic                 HEAP  UNPREDICTABLE  thrpt        252.671          ops/ms
+SearchBenchmark.ahoCorasic:·stack          HEAP  UNPREDICTABLE  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic                 HEAP     WORST_CASE  thrpt        211.112          ops/ms
+SearchBenchmark.ahoCorasic:·stack          HEAP     WORST_CASE  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic            COMPOSITE    RANDOM_256B  thrpt       2156.240          ops/ms
+SearchBenchmark.ahoCorasic:·stack     COMPOSITE    RANDOM_256B  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic            COMPOSITE     RANDOM_2KB  thrpt        255.006          ops/ms
+SearchBenchmark.ahoCorasic:·stack     COMPOSITE     RANDOM_2KB  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic            COMPOSITE    PREDICTABLE  thrpt        248.279          ops/ms
+SearchBenchmark.ahoCorasic:·stack     COMPOSITE    PREDICTABLE  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic            COMPOSITE  UNPREDICTABLE  thrpt        233.173          ops/ms
+SearchBenchmark.ahoCorasic:·stack     COMPOSITE  UNPREDICTABLE  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic            COMPOSITE     WORST_CASE  thrpt        212.112          ops/ms
+SearchBenchmark.ahoCorasic:·stack     COMPOSITE     WORST_CASE  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic               DIRECT    RANDOM_256B  thrpt       2198.909          ops/ms
+SearchBenchmark.ahoCorasic:·stack        DIRECT    RANDOM_256B  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic               DIRECT     RANDOM_2KB  thrpt        255.262          ops/ms
+SearchBenchmark.ahoCorasic:·stack        DIRECT     RANDOM_2KB  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic               DIRECT    PREDICTABLE  thrpt        238.549          ops/ms
+SearchBenchmark.ahoCorasic:·stack        DIRECT    PREDICTABLE  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic               DIRECT  UNPREDICTABLE  thrpt        233.639          ops/ms
+SearchBenchmark.ahoCorasic:·stack        DIRECT  UNPREDICTABLE  thrpt            NaN             ---
+SearchBenchmark.ahoCorasic               DIRECT     WORST_CASE  thrpt        220.373          ops/ms
+SearchBenchmark.ahoCorasic:·stack        DIRECT     WORST_CASE  thrpt            NaN             ---

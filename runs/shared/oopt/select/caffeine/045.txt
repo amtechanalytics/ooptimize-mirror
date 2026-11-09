@@ -1,0 +1,454 @@
+# OOPT benchmark com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+# Parameters: (mapType = Caffeine w/o tolerance)
+
+# Run progress: 0.00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 6226647.409 ops/s
+Iteration   1: 6637590.318 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge":
+  6637590.318 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 62.3%         WAITING
+ 34.0%         RUNNABLE
+  3.4%         TIMED_WAITING
+  0.3%         BLOCKED
+
+....[Thread state: WAITING].........................................................................
+ 62.1%  99.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 18.8%  55.3% com.github.benmanes.caffeine.cache.BoundedLocalCache$$Lambda/0x0000769000091ea0.apply
+              java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+
+  4.2%  12.4% com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_Throughput
+
+  3.4%   9.9% <stack is empty, everything is filtered?>
+  3.1%   9.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.drainWriteBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  3.0%   8.9% com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue.offer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+
+  0.4%   1.0% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.3%   0.8% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.2%   0.6% com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+
+  0.1%   0.4% com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000769000080000.invoke
+
+  0.1%   0.3% java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+
+  0.1%   0.3% java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool$WorkQueue.push
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.scheduleAfterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+
+  0.0%   0.1% java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.ReentrantLock$Sync.lock
+              java.util.concurrent.locks.ReentrantLock.lock
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+
+  0.0%   0.1% com.github.benmanes.caffeine.cache.BoundedLocalCache.expireEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  3.4%  99.5% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  0.0%   0.5% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+....[Thread state: BLOCKED].........................................................................
+  0.3% 100.0% java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+# Parameters: (mapType = Caffeine w/ tolerance)
+
+# Run progress: 25.00% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 10216037.855 ops/s
+Iteration   1: 11020733.751 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge":
+  11020733.751 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 50.2%         WAITING
+ 39.8%         RUNNABLE
+  9.1%         TIMED_WAITING
+  0.9%         BLOCKED
+
+....[Thread state: WAITING].........................................................................
+ 50.0%  99.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.2%   0.4% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 34.2%  85.9% com.github.benmanes.caffeine.cache.BoundedLocalCache$$Lambda/0x000076edec0915d8.apply
+              java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+
+  4.5%  11.4% <stack is empty, everything is filtered?>
+  0.5%   1.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+
+  0.2%   0.6% java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+
+  0.2%   0.4% com.github.benmanes.caffeine.cache.BoundedLocalCache.afterRead
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+
+  0.1%   0.3% com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076edec033400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  4.5%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  4.5%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+....[Thread state: BLOCKED].........................................................................
+  0.9% 100.0% java.util.concurrent.ConcurrentHashMap.compute
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.remap
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+# Parameters: (mapType = ConcurrentHashMap)
+
+# Run progress: 50.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 52523748.889 ops/s
+Iteration   1: 54792366.638 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge":
+  54792366.638 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 62.5%         RUNNABLE
+ 27.1%         BLOCKED
+ 10.0%         TIMED_WAITING
+  0.4%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 40.9%  65.4% com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 11.0%  17.5% java.util.concurrent.ConcurrentHashMap.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_Throughput
+
+ 10.0%  16.0% <stack is empty, everything is filtered?>
+  0.6%   0.9% com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007a8818033400.invoke
+
+  0.1%   0.1% java.util.concurrent.locks.AbstractQueuedSynchronizer$Node.<init>
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.<init>
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.newConditionNode
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+
+
+....[Thread state: BLOCKED].........................................................................
+ 27.1% 100.0% java.util.concurrent.ConcurrentHashMap.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_Throughput
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 10.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.4% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 8 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+# Parameters: (mapType = Guava)
+
+# Run progress: 75.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 3443015.986 ops/s
+Iteration   1: 3291214.308 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge":
+  3291214.308 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 69.7%         WAITING
+ 20.3%         RUNNABLE
+ 10.0%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 69.3%  99.4% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+  0.4%   0.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 10.0%  49.3% <stack is empty, everything is filtered?>
+  3.8%  18.7% com.google.common.cache.LocalCache.connectWriteOrder
+              com.google.common.cache.LocalCache$WriteQueue.offer
+              com.google.common.cache.LocalCache$WriteQueue.offer
+              java.util.AbstractQueue.add
+
+  3.5%  17.3% com.google.common.cache.LocalCache.connectWriteOrder
+              com.google.common.cache.LocalCache$WriteQueue.remove
+              com.google.common.cache.LocalCache$Segment.compute
+              com.google.common.cache.LocalCache.compute
+
+  1.2%   5.9% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+
+  1.1%   5.3% com.google.common.cache.LocalCache$Segment.compute
+              com.google.common.cache.LocalCache.compute
+              com.google.common.cache.LocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+
+  0.3%   1.3% com.google.common.cache.LocalCache.compute
+              com.google.common.cache.LocalCache.merge
+              com.github.benmanes.caffeine.cache.ExpireWriteToleranceBenchmark.merge
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+
+  0.2%   0.8% java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.ReentrantLock$Sync.lock
+              java.util.concurrent.locks.ReentrantLock.lock
+
+  0.2%   0.8% com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.ExpireWriteToleranceBenchmark_merge_jmhTest.merge_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007169fc034000.invoke
+
+  0.1%   0.3% com.google.common.util.concurrent.SettableFuture.create
+              com.google.common.cache.LocalCache$LoadingValueReference.<init>
+              com.google.common.cache.LocalCache$ComputingValueReference.<init>
+              com.google.common.cache.LocalCache$Segment.compute
+
+  0.1%   0.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 10.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:13
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                               (mapType)   Mode  Cnt         Score   Error  Units
+ExpireWriteToleranceBenchmark.merge        Caffeine w/o tolerance  thrpt        6637590.318          ops/s
+ExpireWriteToleranceBenchmark.merge:stack  Caffeine w/o tolerance  thrpt                NaN            ---
+ExpireWriteToleranceBenchmark.merge         Caffeine w/ tolerance  thrpt       11020733.751          ops/s
+ExpireWriteToleranceBenchmark.merge:stack   Caffeine w/ tolerance  thrpt                NaN            ---
+ExpireWriteToleranceBenchmark.merge             ConcurrentHashMap  thrpt       54792366.638          ops/s
+ExpireWriteToleranceBenchmark.merge:stack       ConcurrentHashMap  thrpt                NaN            ---
+ExpireWriteToleranceBenchmark.merge                         Guava  thrpt        3291214.308          ops/s
+ExpireWriteToleranceBenchmark.merge:stack                   Guava  thrpt                NaN            ---

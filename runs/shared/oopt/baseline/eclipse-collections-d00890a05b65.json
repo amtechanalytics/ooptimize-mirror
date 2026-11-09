@@ -1,0 +1,63 @@
+{
+ "compile_ok": true,
+ "errors": [],
+ "ev": {
+  "org.eclipse.collections.impl.lazy.parallel.list.SelectListBatch": "NA"
+ },
+ "file": "eclipse-collections/src/main/java/org/eclipse/collections/impl/lazy/parallel/list/SelectListBatch.java",
+ "key": "eclipse-collections-d00890a05b65",
+ "lib": "eclipse-collections",
+ "methods": [
+  "eclipse-collections:org.eclipse.collections.impl.lazy.parallel.list.SelectListBatch#forEach(Procedure<?superT>)"
+ ],
+ "ok": true,
+ "overlay_base": "/opt/data/oopt/shared/base/eclipse-collections-d00890a05b65/overlay_base",
+ "randoop": {
+  "org.eclipse.collections.impl.lazy.parallel.list.SelectListBatch": {
+   "classes": [
+    "org.eclipse.collections.impl.lazy.parallel.list.OoptRSelectListBatch",
+    "org.eclipse.collections.impl.lazy.parallel.list.OoptRSelectListBatch0"
+   ],
+   "compiled": true,
+   "dir": "/opt/data/oopt/shared/base/eclipse-collections-d00890a05b65/randoop/org_eclipse_collections_impl_lazy_parallel_list_SelectListBatch/classes",
+   "flaky": 0,
+   "generated_files": 2,
+   "keep": [
+    "org.eclipse.collections.impl.lazy.parallel.list.OoptRSelectListBatch0#test1"
+   ],
+   "seen": 1
+  }
+ },
+ "release": 17,
+ "spot": [],
+ "test_cp": [
+  "/opt/data/oopt/shared/src/eclipse-collections/unit-tests/target/test-classes",
+  "/opt/data/oopt/shared/src/eclipse-collections/unit-tests/target/classes",
+  "/opt/data/oopt/m2/org/eclipse/collections/eclipse-collections-api/14.0.0-SNAPSHOT/eclipse-collections-api-14.0.0-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/org/eclipse/collections/eclipse-collections/14.0.0-SNAPSHOT/eclipse-collections-14.0.0-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/org/eclipse/collections/eclipse-collections-testutils/14.0.0-SNAPSHOT/eclipse-collections-testutils-14.0.0-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/junit/junit/4.13.2/junit-4.13.2.jar",
+  "/opt/data/oopt/m2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-api/6.1.3/junit-jupiter-api-6.1.3.jar",
+  "/opt/data/oopt/m2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-commons/6.1.3/junit-platform-commons-6.1.3.jar",
+  "/opt/data/oopt/m2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar",
+  "/opt/data/oopt/m2/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar",
+  "/opt/data/oopt/m2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+  "/opt/data/oopt/m2/org/slf4j/slf4j-nop/2.0.17/slf4j-nop-2.0.17.jar",
+  "/opt/data/oopt/m2/org/openjdk/jol/jol-core/0.17/jol-core-0.17.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-engine/6.1.3/junit-jupiter-engine-6.1.3.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-engine/6.1.3/junit-platform-engine-6.1.3.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-launcher/6.1.3/junit-platform-launcher-6.1.3.jar",
+  "/opt/data/oopt/m2/org/junit/vintage/junit-vintage-engine/6.1.3/junit-vintage-engine-6.1.3.jar"
+ ],
+ "tests": {
+  "classes": [],
+  "engine": "auto",
+  "error": null,
+  "failed_run1": 0,
+  "flaky": 0,
+  "keep": [],
+  "seen": 0
+ }
+}

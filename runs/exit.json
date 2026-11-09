@@ -1,0 +1,8 @@
+{
+  "code": 21,
+  "meaning": "stopped: canary gate failed",
+  "message": "canary/baseline: only 8/197 methods have a kept project test (< 40%)",
+  "pid": 9566,
+  "traceback": "Traceback (most recent call last):\n  File \"/opt/rh/ooptimize/rh/runner.py\", line 109, in rung_canary\n    res = _stages(ctx, \"canary\")\n          ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/rh/ooptimize/rh/runner.py\", line 54, in _stages\n    results.append(gates.evaluate(ctx, st, m))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/rh/ooptimize/rh/gates.py\", line 46, in evaluate\n    raise GateFailed(f\"{ctx.mode}/{stage.name}: \" + \"; \".join(fails))\nrh.exitcodes.GateFailed: canary/baseline: only 8/197 methods have a kept project test (< 40%)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/rh/ooptimize/rh/runner.py\", line 238, in main\n    RUNGS[rung](ctx)\n  File \"/opt/rh/ooptimize/rh/runner.py\", line 114, in rung_canary\n    raise CanaryFailed(str(e)) from e\nrh.exitcodes.CanaryFailed: canary/baseline: only 8/197 methods have a kept project test (< 40%)\n",
+  "ts": "2026-11-07T06:06:29Z"
+}

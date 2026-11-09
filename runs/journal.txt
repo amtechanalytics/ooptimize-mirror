@@ -1,0 +1,189 @@
+2026-11-07T03:40:17Z | START     | runner pid 9440 run ooptimize-20261107T033817Z resume-from datacheck
+2026-11-07T03:40:17Z | RUNG      | datacheck start
+2026-11-07T03:40:17Z | MONITOR   | monitor pid 9487 started
+2026-11-07T03:41:23Z | DATA      | lib_eclipse_collections: OK rows=918 sha=6b5f8e542d52 
+2026-11-07T03:41:23Z | DATA      | lib_roaringbitmap: OK rows=115 sha=5f1d0764ffae 
+2026-11-07T03:41:23Z | DATA      | lib_netty: OK rows=1022 sha=e0d7510483bb 
+2026-11-07T03:41:23Z | DATA      | lib_jctools: OK rows=172 sha=6d497fc79fcf 
+2026-11-07T03:41:23Z | DATA      | lib_caffeine: OK rows=51 sha=10646b00c14a 
+2026-11-07T03:41:23Z | DATA      | temurin_jdk21: OK rows=1 sha=d7f5d5cf865a 
+2026-11-07T03:41:23Z | DATA      | maven: OK rows=1 sha=4b7195b6a4f5 
+2026-11-07T03:41:23Z | DATA      | randoop: OK rows=1 sha=bc134dca4a0d 
+2026-11-07T03:41:23Z | DATA      | spotbugs: OK rows=1 sha=cce3244900cc 
+2026-11-07T03:41:23Z | DATA      | equalsverifier: OK rows=1 sha=83a84f4add3c 
+2026-11-07T03:41:23Z | RUNG      | datacheck PASS
+2026-11-07T03:41:25Z | RUNG      | pilot start
+2026-11-07T03:41:26Z | TOOLS     | java='openjdk version "21.0.13" 2026-10-20 LTS' mvn='Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)' helpers=ok
+2026-11-07T03:41:26Z | GATE      | pilot/toolchain: PASS
+2026-11-07T03:42:23Z | BUILD     | JCTools: OK benchmarks=66 
+2026-11-07T03:42:23Z | GATE      | pilot/build: PASS
+2026-11-07T03:44:13Z | SELECT    | JCTools: 3 chosen of 7 resolvable hot methods; {'hot_frames': 51, 'files': 6, 'overloaded': 0, 'abstract': 0, 'length': 0, 'offset': 0, 'unresolved': 44}
+2026-11-07T03:44:13Z | GATE      | pilot/select: PASS
+2026-11-07T03:44:31Z | BASELINE  | pilot: 2/2 files ok, 3 methods, 1 with project tests, 2 Randoop suites
+2026-11-07T03:44:31Z | GATE      | pilot/baseline: PASS
+2026-11-07T03:44:33Z | STAGE     | pilot/generate: 18 cells, 0 done, 18 pending
+2026-11-07T03:44:54Z | GATE      | pilot/generate: PASS
+2026-11-07T03:44:56Z | SCORE     | pilot: 24 cells, 0 done, 24 pending
+2026-11-07T03:45:24Z | GATE      | pilot/score: PASS
+2026-11-07T03:45:26Z | ALLOC     | pilot: 21 measurements, 21 pending in 1 lanes
+2026-11-07T03:45:28Z | GATE      | pilot/alloc: FAIL allocation measured for 0.0% of eligible cells < 50%
+2026-11-07T03:49:20Z | EXIT      | 20 stopped: pilot report has failures pilot stages: pilot/alloc: allocation measured for 0.0% of eligible cells < 50%; pilot tests failed (see pilot_pytest.txt)
+2026-11-07T03:49:54Z | EXECUTOR  | invoked for rung pilot: stopped: pilot report has failures
+2026-11-07T03:53:33Z | FIX       | alloc: mkdir for JMH -rff dir; EV helper no longer suppresses SURROGATE_KEY with SURROGATE_OR_BUSINESS_KEY; D02 test skips size for git pins
+2026-11-07T03:53:39Z | FIX       | executor fixed and committed f13bcc4a in 3.8 min (subscription; notional $0.34): I fixed all three pilot failures and committed the fix as `f13bcc4`. `bash tools/selfcheck.sh` printed `SELFCHECK PASS`. I haven't re-run the pilot itself, so the alloc gate and the three pilot tests are untested against the live run until the watchdog restarts it.
+
+- **Allocation (`pilot/alloc`, 0% measured):** `jmh_gc` in `paper/javatools.py` passed JMH a result-file path in a directory that didn't exist. JMH aborted with "Can not touch the result file", so every job came back `failed`. I confirmed this by running JMH by hand with a missing directory. The function now creates the directory f
+2026-11-07T03:53:39Z | RESTART   | after executor repair; resumed from pilot
+2026-11-07T03:53:39Z | START     | runner pid 27725 run ooptimize-20261107T033817Z resume-from pilot
+2026-11-07T03:53:39Z | RUNG      | pilot start
+2026-11-07T03:53:40Z | TOOLS     | java='openjdk version "21.0.13" 2026-10-20 LTS' mvn='Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)' helpers=ok
+2026-11-07T03:53:40Z | GATE      | pilot/toolchain: PASS
+2026-11-07T03:53:42Z | GATE      | pilot/build: PASS
+2026-11-07T03:53:44Z | GATE      | pilot/select: PASS
+2026-11-07T03:53:46Z | BASELINE  | pilot: 2/2 files ok, 3 methods, 1 with project tests, 2 Randoop suites
+2026-11-07T03:53:46Z | GATE      | pilot/baseline: PASS
+2026-11-07T03:53:48Z | STAGE     | pilot/generate: 18 cells, 18 done, 0 pending
+2026-11-07T03:53:48Z | GATE      | pilot/generate: PASS
+2026-11-07T03:53:50Z | SCORE     | pilot: 24 cells, 24 done, 0 pending
+2026-11-07T03:53:50Z | GATE      | pilot/score: PASS
+2026-11-07T03:53:52Z | ALLOC     | pilot: 21 measurements, 0 pending in 0 lanes
+2026-11-07T03:53:52Z | GATE      | pilot/alloc: FAIL allocation measured for 0.0% of eligible cells < 50%
+2026-11-07T03:57:40Z | EXIT      | 20 stopped: pilot report has failures pilot stages: pilot/alloc: allocation measured for 0.0% of eligible cells < 50%; pilot tests failed (see pilot_pytest.txt)
+2026-11-07T03:57:55Z | EXECUTOR  | invoked for rung pilot: stopped: pilot report has failures
+2026-11-07T04:02:33Z | FIX       | alloc: failed rows from the earlier mkdir bug were treated as done on resume, so nothing re-ran; failed jobs are now retried. Also thread-unique tmp name in write_json (heartbeat rename race crashed dry run)
+2026-11-07T04:02:38Z | FIX       | executor fixed and committed 3aed78a1 in 4.7 min (subscription; notional $0.17): I committed a fix as `3aed78a`, and `bash tools/selfcheck.sh` printed `SELFCHECK PASS`. I haven't re-run the pilot or a real JMH measurement. The alloc gate is untested against the live run until the watchdog restarts it.
+
+- **Why the gate failed again:** the earlier fix (`f13bcc4`) made the JMH result directory, but the 21 `failed` rows from the first attempt were still in `runs/pilot/alloc.jsonl`. `run_alloc` counted every existing row as done, so on resume it had 0 jobs pending and the gate re-read the old failures. I can't edit `runs/`, so the fix is in `paper/s_alloc.py`: rows with status
+2026-11-07T04:02:38Z | RESTART   | after executor repair; resumed from pilot
+2026-11-07T04:02:38Z | START     | runner pid 35986 run ooptimize-20261107T033817Z resume-from pilot
+2026-11-07T04:02:38Z | RUNG      | pilot start
+2026-11-07T04:02:39Z | TOOLS     | java='openjdk version "21.0.13" 2026-10-20 LTS' mvn='Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)' helpers=ok
+2026-11-07T04:02:39Z | GATE      | pilot/toolchain: PASS
+2026-11-07T04:02:42Z | GATE      | pilot/build: PASS
+2026-11-07T04:02:44Z | GATE      | pilot/select: PASS
+2026-11-07T04:02:46Z | BASELINE  | pilot: 2/2 files ok, 3 methods, 1 with project tests, 2 Randoop suites
+2026-11-07T04:02:46Z | GATE      | pilot/baseline: PASS
+2026-11-07T04:02:48Z | STAGE     | pilot/generate: 18 cells, 18 done, 0 pending
+2026-11-07T04:02:48Z | GATE      | pilot/generate: PASS
+2026-11-07T04:02:50Z | SCORE     | pilot: 24 cells, 24 done, 0 pending
+2026-11-07T04:02:50Z | GATE      | pilot/score: PASS
+2026-11-07T04:02:52Z | ALLOC     | pilot: 21 measurements, 21 pending in 1 lanes
+2026-11-07T04:14:42Z | GATE      | pilot/alloc: PASS
+2026-11-07T04:18:29Z | RUNG      | pilot PASS
+2026-11-07T04:18:31Z | RUNG      | canary start
+2026-11-07T04:18:32Z | TOOLS     | java='openjdk version "21.0.13" 2026-10-20 LTS' mvn='Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)' helpers=ok
+2026-11-07T04:18:32Z | GATE      | canary/toolchain: PASS
+2026-11-07T04:19:12Z | BUILD     | JCTools: OK benchmarks=66 
+2026-11-07T04:19:34Z | BUILD     | RoaringBitmap: OK benchmarks=420 
+2026-11-07T04:20:42Z | BUILD     | netty: OK benchmarks=322 
+2026-11-07T04:21:07Z | BUILD     | eclipse-collections: OK benchmarks=542 
+2026-11-07T04:21:08Z | GATE      | canary/build: PASS
+2026-11-07T04:21:15Z | SELECT    | JCTools: 0 chosen of 0 resolvable hot methods; {'hot_frames': 0, 'files': 0, 'overloaded': 0, 'abstract': 0, 'length': 0, 'offset': 0, 'unresolved': 0}
+2026-11-07T04:21:16Z | SELECT    | eclipse-collections: 0 chosen of 0 resolvable hot methods; {'hot_frames': 0, 'files': 0, 'overloaded': 0, 'abstract': 0, 'length': 0, 'offset': 0, 'unresolved': 0}
+2026-11-07T04:21:19Z | SELECT    | netty: 0 chosen of 0 resolvable hot methods; {'hot_frames': 2, 'files': 0, 'overloaded': 0, 'abstract': 0, 'length': 0, 'offset': 0, 'unresolved': 2}
+2026-11-07T04:34:21Z | SELECT    | RoaringBitmap: 60 chosen of 89 resolvable hot methods; {'hot_frames': 179, 'files': 28, 'overloaded': 35, 'abstract': 0, 'length': 0, 'offset': 0, 'unresolved': 55}
+2026-11-07T04:34:21Z | GATE      | canary/select: FAIL only 1 libraries with >= 40 methods: {'eclipse-collections': 0, 'RoaringBitmap': 60, 'netty': 0, 'JCTools': 0, 'caffeine': 0}; 60 candidate methods < floor 150
+2026-11-07T04:34:21Z | EXIT      | 21 stopped: canary gate failed canary/select: only 1 libraries with >= 40 methods: {'eclipse-collections': 0, 'RoaringBitmap': 60, 'netty': 0, 'JCTools': 0, 'caffeine': 0}; 60 candidate methods < floor 150
+2026-11-07T04:34:34Z | SHUTDOWN  | dead
+2026-11-07T05:22:42Z | RESTORE   | restored runs/ results/ logs/ from s3://anon-research-runs-anon/ooptimize/ooptimize-20261107T033817Z
+2026-11-07T05:22:43Z | START     | runner pid 9566 run ooptimize-20261107T033817Z resume-from canary
+2026-11-07T05:22:43Z | DATA      | resume: data/ missing on this instance; downloading and verifying the pins again
+2026-11-07T05:22:43Z | MONITOR   | monitor pid 9613 started
+2026-11-07T05:27:35Z | DATA      | lib_eclipse_collections: OK rows=918 sha=6b5f8e542d52 
+2026-11-07T05:27:35Z | DATA      | lib_roaringbitmap: OK rows=115 sha=5f1d0764ffae 
+2026-11-07T05:27:35Z | DATA      | lib_netty: OK rows=1022 sha=e0d7510483bb 
+2026-11-07T05:27:35Z | DATA      | lib_jctools: OK rows=172 sha=6d497fc79fcf 
+2026-11-07T05:27:35Z | DATA      | lib_caffeine: OK rows=51 sha=10646b00c14a 
+2026-11-07T05:27:35Z | DATA      | temurin_jdk21: OK rows=1 sha=d7f5d5cf865a 
+2026-11-07T05:27:35Z | DATA      | maven: OK rows=1 sha=4b7195b6a4f5 
+2026-11-07T05:27:35Z | DATA      | randoop: OK rows=1 sha=bc134dca4a0d 
+2026-11-07T05:27:35Z | DATA      | spotbugs: OK rows=1 sha=cce3244900cc 
+2026-11-07T05:27:35Z | DATA      | equalsverifier: OK rows=1 sha=83a84f4add3c 
+2026-11-07T05:27:35Z | RUNG      | canary start
+2026-11-07T05:27:36Z | TOOLS     | java='openjdk version "21.0.13" 2026-10-20 LTS' mvn='Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)' helpers=ok
+2026-11-07T05:27:36Z | GATE      | canary/toolchain: PASS
+2026-11-07T05:28:33Z | BUILD     | JCTools: OK benchmarks=66 
+2026-11-07T05:28:46Z | BUILD     | RoaringBitmap: OK benchmarks=420 
+2026-11-07T05:29:54Z | BUILD     | netty: OK benchmarks=322 
+2026-11-07T05:30:17Z | BUILD     | eclipse-collections: OK benchmarks=542 
+2026-11-07T05:30:26Z | BUILD     | caffeine: OK benchmarks=46 
+2026-11-07T05:30:26Z | GATE      | canary/build: PASS
+2026-11-07T05:37:47Z | SELECT    | eclipse-collections: 60 chosen of 67 resolvable hot methods; {'hot_frames': 125, 'files': 33, 'overloaded': 11, 'abstract': 0, 'length': 0, 'offset': 6, 'unresolved': 41, 'benchmarks_without_profile': 0}
+2026-11-07T05:41:38Z | SELECT    | JCTools: 17 chosen of 17 resolvable hot methods; {'hot_frames': 296, 'files': 10, 'overloaded': 10, 'abstract': 0, 'length': 1, 'offset': 0, 'unresolved': 268, 'benchmarks_without_profile': 0}
+2026-11-07T05:50:16Z | SELECT    | netty: 60 chosen of 150 resolvable hot methods; {'hot_frames': 358, 'files': 58, 'overloaded': 42, 'abstract': 0, 'length': 2, 'offset': 0, 'unresolved': 164, 'benchmarks_without_profile': 8}
+2026-11-07T05:50:16Z | GATE      | canary/select: PASS
+2026-11-07T06:06:28Z | BASELINE  | canary: 87/87 files ok, 197 methods, 8 with project tests, 79 Randoop suites
+2026-11-07T06:06:28Z | GATE      | canary/baseline: FAIL only 8/197 methods have a kept project test (< 40%)
+2026-11-07T06:06:29Z | EXIT      | 21 stopped: canary gate failed canary/baseline: only 8/197 methods have a kept project test (< 40%)
+2026-11-07T06:06:41Z | SHUTDOWN  | dead
+2026-11-07T15:03:58Z | RESTORE   | restored runs/ results/ logs/ from s3://anon-research-runs-anon/ooptimize/ooptimize-20261107T033817Z
+2026-11-07T15:03:58Z | START     | runner pid 9561 run ooptimize-20261107T033817Z resume-from canary
+2026-11-07T15:03:58Z | DATA      | resume: data/ missing on this instance; downloading and verifying the pins again
+2026-11-07T15:03:58Z | MONITOR   | monitor pid 9609 started
+2026-11-07T15:04:11Z | DATA      | lib_eclipse_collections: OK rows=918 sha=6b5f8e542d52 
+2026-11-07T15:04:11Z | DATA      | lib_roaringbitmap: OK rows=115 sha=5f1d0764ffae 
+2026-11-07T15:04:11Z | DATA      | lib_netty: OK rows=1022 sha=e0d7510483bb 
+2026-11-07T15:04:11Z | DATA      | lib_jctools: OK rows=172 sha=6d497fc79fcf 
+2026-11-07T15:04:11Z | DATA      | lib_caffeine: OK rows=51 sha=10646b00c14a 
+2026-11-07T15:04:11Z | DATA      | temurin_jdk21: OK rows=1 sha=d7f5d5cf865a 
+2026-11-07T15:04:11Z | DATA      | maven: OK rows=1 sha=4b7195b6a4f5 
+2026-11-07T15:04:11Z | DATA      | randoop: OK rows=1 sha=bc134dca4a0d 
+2026-11-07T15:04:11Z | DATA      | spotbugs: OK rows=1 sha=cce3244900cc 
+2026-11-07T15:04:11Z | DATA      | equalsverifier: OK rows=1 sha=83a84f4add3c 
+2026-11-07T15:04:11Z | RUNG      | canary start
+2026-11-07T15:04:12Z | TOOLS     | java='openjdk version "21.0.13" 2026-10-20 LTS' mvn='Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)' helpers=ok
+2026-11-07T15:04:12Z | GATE      | canary/toolchain: PASS
+2026-11-07T15:05:12Z | BUILD     | JCTools: OK benchmarks=66 
+2026-11-07T15:05:25Z | BUILD     | RoaringBitmap: OK benchmarks=420 
+2026-11-07T15:06:38Z | BUILD     | netty: OK benchmarks=322 
+2026-11-07T15:07:07Z | BUILD     | eclipse-collections: OK benchmarks=542 
+2026-11-07T15:07:08Z | BUILD     | caffeine: OK benchmarks=46 
+2026-11-07T15:07:08Z | GATE      | canary/build: PASS
+2026-11-07T15:16:23Z | SELECT    | caffeine: 37 chosen of 37 resolvable hot methods; {'hot_frames': 179, 'files': 11, 'overloaded': 8, 'abstract': 0, 'length': 1, 'offset': 0, 'unresolved': 133, 'benchmarks_without_profile': 4}
+2026-11-07T15:16:23Z | GATE      | canary/select: PASS
+2026-11-07T15:48:48Z | BASELINE  | canary: 96/96 files ok, 234 methods, 172 with project tests, 88 Randoop suites
+2026-11-07T15:48:48Z | GATE      | canary/baseline: PASS
+2026-11-07T15:48:51Z | SIZING    | N=204 of pool 204 (cap 250, floor 150); full API $22.05 of available $183.48; compute $63.56; spent $0.20
+2026-11-07T15:48:51Z | STAGE     | canary/generate: 54 cells, 0 done, 54 pending
+2026-11-07T15:48:51Z | BATCH     | generate claude-sonnet-5-5: submitted msgbatch_01WLFX38vNHhWMG5fkFh5rvz with 18 requests
+2026-11-07T15:48:53Z | BATCH     | generate gpt-6.1-sol: submitted batch_6aef48649e4c819098f05ae80698f532 with 18 requests
+2026-11-07T15:52:55Z | BATCH     | generate gpt-6.1-sol: batch_6aef48649e4c819098f05ae80698f532 ended, 18 results ingested
+2026-11-07T15:54:56Z | BATCH     | generate claude-sonnet-5-5: msgbatch_01WLFX38vNHhWMG5fkFh5rvz ended, 18 results ingested
+2026-11-07T15:54:56Z | GATE      | canary/generate: PASS
+2026-11-07T15:54:58Z | SCORE     | canary: 152 cells, 0 done, 152 pending
+2026-11-07T16:12:33Z | GATE      | canary/score: PASS
+2026-11-07T16:12:35Z | ALLOC     | canary: 99 measurements, 99 pending in 5 lanes
+2026-11-07T16:15:37Z | GATE      | canary/alloc: PASS
+2026-11-07T16:15:39Z | PROJECT   | canary: 54 cells, $0.2954; full plan 3672 cells; projected total $84.14 of $300.0 = API $20.58 + compute $63.56 ($8.35 so far + $55.21 remaining)
+2026-11-07T16:15:40Z | RUNG      | canary PASS
+2026-11-07T16:15:42Z | RUNG      | full start
+2026-11-07T16:15:43Z | TOOLS     | java='openjdk version "21.0.13" 2026-10-20 LTS' mvn='Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)' helpers=ok
+2026-11-07T16:15:43Z | GATE      | full/toolchain: PASS
+2026-11-07T16:17:41Z | BUILD     | eclipse-collections: OK benchmarks=542 
+2026-11-07T16:17:41Z | GATE      | full/build: PASS
+2026-11-07T16:17:43Z | GATE      | full/select: PASS
+2026-11-07T16:17:45Z | BASELINE  | full: 96/96 files ok, 234 methods, 172 with project tests, 88 Randoop suites
+2026-11-07T16:17:45Z | GATE      | full/baseline: PASS
+2026-11-07T16:17:47Z | STAGE     | full/generate: 3672 cells, 0 done, 3672 pending
+2026-11-07T16:17:48Z | BATCH     | generate claude-sonnet-5-5: submitted msgbatch_013GxyozN5ZymD6UFa26bwYy with 500 requests
+2026-11-07T16:17:49Z | BATCH     | generate claude-sonnet-5-5: submitted msgbatch_01Q6sdAZGpXFWmSBynCbuKfd with 500 requests
+2026-11-07T16:17:49Z | BATCH     | generate claude-sonnet-5-5: submitted msgbatch_01AvLxQbzYPPMMnYHtytUAwo with 224 requests
+2026-11-07T16:17:52Z | BATCH     | generate gpt-6.1-sol: submitted batch_6aef4f2f679881909a115d7a79a32c3f with 500 requests
+2026-11-07T16:17:53Z | BATCH     | generate gpt-6.1-sol: submitted batch_6aef4f31c01c8190b8d8b1824c77a976 with 500 requests
+2026-11-07T16:17:54Z | BATCH     | generate gpt-6.1-sol: submitted batch_6aef4f32c0788190b412a99d8be81fbe with 224 requests
+2026-11-07T16:21:04Z | BATCH     | generate gpt-6.1-sol: batch_6aef4f31c01c8190b8d8b1824c77a976 ended, 500 results ingested
+2026-11-07T16:22:08Z | BATCH     | generate gpt-6.1-sol: batch_6aef4f32c0788190b412a99d8be81fbe ended, 224 results ingested
+2026-11-07T16:24:16Z | BATCH     | generate claude-sonnet-5-5: msgbatch_01Q6sdAZGpXFWmSBynCbuKfd ended, 500 results ingested
+2026-11-07T16:24:20Z | BATCH     | generate claude-sonnet-5-5: msgbatch_01AvLxQbzYPPMMnYHtytUAwo ended, 224 results ingested
+2026-11-07T16:24:27Z | BATCH     | generate gpt-6.1-sol: batch_6aef4f2f679881909a115d7a79a32c3f ended, 500 results ingested
+2026-11-07T16:25:33Z | BATCH     | generate claude-sonnet-5-5: msgbatch_013GxyozN5ZymD6UFa26bwYy ended, 500 results ingested
+2026-11-07T16:59:10Z | GATE      | full/generate: PASS
+2026-11-07T16:59:12Z | SCORE     | full: 4028 cells, 0 done, 4028 pending
+2026-11-07T18:27:29Z | GATE      | full/score: PASS
+2026-11-07T18:27:31Z | ALLOC     | full: 3723 measurements, 3723 pending in 5 lanes
+2026-11-07T20:11:43Z | ERROR     | backup failed: Command '['aws', 's3', 'sync', '/opt/rh/ooptimize/runs', 's3://anon-research-runs-anon/ooptimize/ooptimize-20261107T033817Z/runs', '--only-show-errors', '--exclude', '*.lock', '--exclude', '*.tmp*', '--region', 'us-east-1']' returned non-zero exit status 1.
+2026-11-07T20:35:34Z | GATE      | full/alloc: PASS
+2026-11-07T20:35:36Z | RUNG      | full PASS
+2026-11-07T20:35:38Z | RUNG      | analysis start
+2026-11-07T20:35:41Z | RUNG      | analysis PASS
+2026-11-07T20:35:43Z | RUNG      | finish start

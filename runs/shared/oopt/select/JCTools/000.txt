@@ -1,0 +1,247 @@
+# OOPT benchmark org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop
+# Parameters: (qType = SpscArrayQueue)
+
+# Run progress: 0.00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 3.330 ns/op
+Iteration   1: 3.328 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop":
+  3.328 ns/op
+
+Secondary result "org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 24.2%  36.2% org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  9.0%  13.5% org.jctools.queues.ConcurrentCircularArrayQueue.clear
+              org.jctools.queues.SpscArrayQueue.clear
+              org.jctools.jmh.baseline.SingleThreadedOffer.clear
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_avgt_jmhStub
+
+  0.2%   0.3% java.lang.System.nanoTime
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop
+# Parameters: (qType = MpscArrayQueue)
+
+# Run progress: 25.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 9.280 ns/op
+Iteration   1: 9.242 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop":
+  9.242 ns/op
+
+Secondary result "org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 30.6%  45.9% org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  2.8%   4.1% org.jctools.queues.ConcurrentCircularArrayQueue.clear
+              org.jctools.queues.MpscArrayQueue.clear
+              org.jctools.jmh.baseline.SingleThreadedOffer.clear
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_avgt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop
+# Parameters: (qType = SpmcArrayQueue)
+
+# Run progress: 50.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 3.372 ns/op
+Iteration   1: 3.325 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop":
+  3.325 ns/op
+
+Secondary result "org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 23.2%  34.8% org.jctools.queues.ConcurrentCircularArrayQueue.clear
+              org.jctools.queues.SpmcArrayQueue.clear
+              org.jctools.jmh.baseline.SingleThreadedOffer.clear
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_avgt_jmhStub
+
+  9.9%  14.9% org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+              java.util.concurrent.FutureTask.run
+              java.util.concurrent.Executors$RunnableAdapter.call
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop
+# Parameters: (qType = MpmcArrayQueue)
+
+# Run progress: 75.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 12.366 ns/op
+Iteration   1: 14.470 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop":
+  14.470 ns/op
+
+Secondary result "org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 19.3%  29.0% org.jctools.jmh.baseline.SingleThreadedOffer.offerLoop
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 14.0%  21.0% org.jctools.queues.ConcurrentCircularArrayQueue.clear
+              org.jctools.queues.ConcurrentSequencedCircularArrayQueue.clear
+              org.jctools.jmh.baseline.SingleThreadedOffer.clear
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedOffer_offerLoop_jmhTest.offerLoop_avgt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:12
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                   (qType)  Mode  Cnt   Score   Error  Units
+SingleThreadedOffer.offerLoop        SpscArrayQueue  avgt        3.328          ns/op
+SingleThreadedOffer.offerLoop:stack  SpscArrayQueue  avgt          NaN            ---
+SingleThreadedOffer.offerLoop        MpscArrayQueue  avgt        9.242          ns/op
+SingleThreadedOffer.offerLoop:stack  MpscArrayQueue  avgt          NaN            ---
+SingleThreadedOffer.offerLoop        SpmcArrayQueue  avgt        3.325          ns/op
+SingleThreadedOffer.offerLoop:stack  SpmcArrayQueue  avgt          NaN            ---
+SingleThreadedOffer.offerLoop        MpmcArrayQueue  avgt       14.470          ns/op
+SingleThreadedOffer.offerLoop:stack  MpmcArrayQueue  avgt          NaN            ---

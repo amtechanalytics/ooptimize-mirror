@@ -1,0 +1,258 @@
+# OOPT benchmark io.netty.microbench.channel.epoll.EpollSocketChannelBenchmark.executeMulti
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 3 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.channel.epoll.EpollSocketChannelBenchmark.executeMulti
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: <failure>
+
+java.lang.UnsatisfiedLinkError: failed to load the required native library
+	at io.netty.channel.epoll.Epoll.ensureAvailability(Epoll.java:90)
+	at io.netty.channel.epoll.EpollIoHandler.newFactory(EpollIoHandler.java:107)
+	at io.netty.channel.epoll.EpollIoHandler.newFactory(EpollIoHandler.java:99)
+	at io.netty.microbench.channel.epoll.EpollSocketChannelBenchmark.setup(EpollSocketChannelBenchmark.java:54)
+	at io.netty.microbench.channel.epoll.jmh_generated.EpollSocketChannelBenchmark_executeMulti_jmhTest._jmh_tryInit_f_epollsocketchannelbenchmark0_0(EpollSocketChannelBenchmark_executeMulti_jmhTest.java:338)
+	at io.netty.microbench.channel.epoll.jmh_generated.EpollSocketChannelBenchmark_executeMulti_jmhTest.executeMulti_Throughput(EpollSocketChannelBenchmark_executeMulti_jmhTest.java:71)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.UnsatisfiedLinkError: could not load a native library: netty_transport_native_epoll_x86_64
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:244)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:334)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:96)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:42)
+	... 15 more
+	Suppressed: java.lang.UnsatisfiedLinkError: could not load a native library: netty_transport_native_epoll
+		at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:244)
+		at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:337)
+		... 17 more
+	Caused by: java.io.FileNotFoundException: META-INF/native/libnetty_transport_native_epoll.so
+		at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:189)
+		... 18 more
+		Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+			at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+			at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+			at java.base/java.lang.System.loadLibrary(System.java:2064)
+			at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:395)
+			at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:166)
+			... 18 more
+			Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+				at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+				at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+				at java.base/java.lang.System.loadLibrary(System.java:2064)
+				at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+				at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+				at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+				at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:421)
+				at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+				at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:413)
+				at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:387)
+				... 19 more
+Caused by: java.io.FileNotFoundException: META-INF/native/libnetty_transport_native_epoll_x86_64.so
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:189)
+	... 18 more
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+		at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+		at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+		at java.base/java.lang.System.loadLibrary(System.java:2064)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:395)
+		at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:166)
+		... 18 more
+		Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+			at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+			at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+			at java.base/java.lang.System.loadLibrary(System.java:2064)
+			at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+			at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+			at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+			at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:421)
+			at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:413)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:387)
+			... 19 more
+
+java.lang.UnsatisfiedLinkError: failed to load the required native library
+	at io.netty.channel.epoll.Epoll.ensureAvailability(Epoll.java:90)
+	at io.netty.channel.epoll.EpollIoHandler.newFactory(EpollIoHandler.java:107)
+	at io.netty.channel.epoll.EpollIoHandler.newFactory(EpollIoHandler.java:99)
+	at io.netty.microbench.channel.epoll.EpollSocketChannelBenchmark.setup(EpollSocketChannelBenchmark.java:54)
+	at io.netty.microbench.channel.epoll.jmh_generated.EpollSocketChannelBenchmark_executeMulti_jmhTest._jmh_tryInit_f_epollsocketchannelbenchmark0_0(EpollSocketChannelBenchmark_executeMulti_jmhTest.java:338)
+	at io.netty.microbench.channel.epoll.jmh_generated.EpollSocketChannelBenchmark_executeMulti_jmhTest.executeMulti_Throughput(EpollSocketChannelBenchmark_executeMulti_jmhTest.java:71)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.UnsatisfiedLinkError: could not load a native library: netty_transport_native_epoll_x86_64
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:244)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:334)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:96)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:42)
+	... 15 more
+	Suppressed: java.lang.UnsatisfiedLinkError: could not load a native library: netty_transport_native_epoll
+		at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:244)
+		at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:337)
+		... 17 more
+	Caused by: java.io.FileNotFoundException: META-INF/native/libnetty_transport_native_epoll.so
+		at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:189)
+		... 18 more
+		Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+			at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+			at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+			at java.base/java.lang.System.loadLibrary(System.java:2064)
+			at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:395)
+			at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:166)
+			... 18 more
+			Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+				at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+				at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+				at java.base/java.lang.System.loadLibrary(System.java:2064)
+				at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+				at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+				at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+				at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:421)
+				at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+				at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:413)
+				at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:387)
+				... 19 more
+Caused by: java.io.FileNotFoundException: META-INF/native/libnetty_transport_native_epoll_x86_64.so
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:189)
+	... 18 more
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+		at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+		at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+		at java.base/java.lang.System.loadLibrary(System.java:2064)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:395)
+		at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:166)
+		... 18 more
+		Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+			at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+			at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+			at java.base/java.lang.System.loadLibrary(System.java:2064)
+			at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+			at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+			at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+			at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:421)
+			at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:413)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:387)
+			... 19 more
+
+java.lang.UnsatisfiedLinkError: failed to load the required native library
+	at io.netty.channel.epoll.Epoll.ensureAvailability(Epoll.java:90)
+	at io.netty.channel.epoll.EpollIoHandler.newFactory(EpollIoHandler.java:107)
+	at io.netty.channel.epoll.EpollIoHandler.newFactory(EpollIoHandler.java:99)
+	at io.netty.microbench.channel.epoll.EpollSocketChannelBenchmark.setup(EpollSocketChannelBenchmark.java:54)
+	at io.netty.microbench.channel.epoll.jmh_generated.EpollSocketChannelBenchmark_executeMulti_jmhTest._jmh_tryInit_f_epollsocketchannelbenchmark0_0(EpollSocketChannelBenchmark_executeMulti_jmhTest.java:338)
+	at io.netty.microbench.channel.epoll.jmh_generated.EpollSocketChannelBenchmark_executeMulti_jmhTest.executeMulti_Throughput(EpollSocketChannelBenchmark_executeMulti_jmhTest.java:71)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.UnsatisfiedLinkError: could not load a native library: netty_transport_native_epoll_x86_64
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:244)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:334)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:96)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:42)
+	... 15 more
+	Suppressed: java.lang.UnsatisfiedLinkError: could not load a native library: netty_transport_native_epoll
+		at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:244)
+		at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:337)
+		... 17 more
+	Caused by: java.io.FileNotFoundException: META-INF/native/libnetty_transport_native_epoll.so
+		at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:189)
+		... 18 more
+		Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+			at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+			at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+			at java.base/java.lang.System.loadLibrary(System.java:2064)
+			at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:395)
+			at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:166)
+			... 18 more
+			Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+				at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+				at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+				at java.base/java.lang.System.loadLibrary(System.java:2064)
+				at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+				at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+				at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+				at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:421)
+				at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+				at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:413)
+				at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:387)
+				... 19 more
+Caused by: java.io.FileNotFoundException: META-INF/native/libnetty_transport_native_epoll_x86_64.so
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:189)
+	... 18 more
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+		at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+		at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+		at java.base/java.lang.System.loadLibrary(System.java:2064)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:395)
+		at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:166)
+		... 18 more
+		Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+			at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2458)
+			at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:916)
+			at java.base/java.lang.System.loadLibrary(System.java:2064)
+			at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+			at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+			at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+			at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:421)
+			at java.base/java.security.AccessController.doPrivileged(AccessController.java:319)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:413)
+			at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:387)
+			... 19 more
+
+
+
+
+# Run complete. Total time: 00:00:00
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark  Mode  Cnt  Score   Error  Units

@@ -1,0 +1,25 @@
+{"subject": "[ooptimize] TEST | pilot mail check", "ts": "2026-11-07T03:49:19Z"}
+{"subject": "[ooptimize] PILOT | FAIL: pilot stages: pilot/alloc: allocation measured for 0.0% of e", "ts": "2026-11-07T03:49:20Z"}
+{"subject": "[ooptimize] TEST | pilot mail check", "ts": "2026-11-07T03:57:40Z"}
+{"subject": "[ooptimize] PILOT | FAIL: pilot stages: pilot/alloc: allocation measured for 0.0% of e", "ts": "2026-11-07T03:57:40Z"}
+{"subject": "[ooptimize] STATUS-30MIN | pilot/alloc - \u00b7 $0.20/$300 \u00b7 ETA n/a", "ts": "2026-11-07T04:08:33Z"}
+{"subject": "[ooptimize] TEST | pilot mail check", "ts": "2026-11-07T04:18:29Z"}
+{"subject": "[ooptimize] PILOT | PASS", "ts": "2026-11-07T04:18:29Z"}
+{"subject": "[ooptimize] CANARY | FAIL", "ts": "2026-11-07T04:34:21Z"}
+{"subject": "[ooptimize] DEAD | canary: stopped: canary gate failed", "ts": "2026-11-07T04:34:34Z"}
+{"subject": "[ooptimize] STATUS-30MIN | canary/baseline - \u00b7 $0.20/$300 \u00b7 ETA n/a", "ts": "2026-11-07T05:51:10Z"}
+{"subject": "[ooptimize] CANARY | FAIL", "ts": "2026-11-07T06:06:29Z"}
+{"subject": "[ooptimize] DEAD | canary: stopped: canary gate failed", "ts": "2026-11-07T06:06:41Z"}
+{"subject": "[ooptimize] STATUS-30MIN | canary/baseline - \u00b7 $0.20/$300 \u00b7 ETA n/a", "ts": "2026-11-07T15:32:45Z"}
+{"subject": "[ooptimize] STATUS-30MIN | canary/score - \u00b7 $0.49/$300 \u00b7 ETA n/a", "ts": "2026-11-07T16:02:52Z"}
+{"subject": "[ooptimize] CANARY | PASS \u00b7 projected $84.14/$300.0", "ts": "2026-11-07T16:15:40Z"}
+{"subject": "[ooptimize] STATUS-30MIN | full/generate 80% \u00b7 $17.22/$300 \u00b7 ETA 0h07m", "ts": "2026-11-07T16:32:53Z"}
+{"subject": "[ooptimize] STATUS-30MIN | full/score 100% \u00b7 $18.18/$300 \u00b7 ETA 0h00m", "ts": "2026-11-07T17:02:54Z"}
+{"subject": "[ooptimize] STATUS-30MIN | full/score 100% \u00b7 $18.18/$300 \u00b7 ETA n/a", "ts": "2026-11-07T17:33:01Z"}
+{"subject": "[ooptimize] STATUS-30MIN | full/score 100% \u00b7 $18.18/$300 \u00b7 ETA n/a", "ts": "2026-11-07T18:03:03Z"}
+{"subject": "[ooptimize] STATUS-30MIN | full/alloc 100% \u00b7 $18.18/$300 \u00b7 ETA n/a", "ts": "2026-11-07T18:33:09Z"}
+{"subject": "[ooptimize] STATUS-30MIN | full/alloc 100% \u00b7 $18.18/$300 \u00b7 ETA n/a", "ts": "2026-11-07T19:03:16Z"}
+{"subject": "[ooptimize] STATUS-30MIN | full/alloc 100% \u00b7 $18.18/$300 \u00b7 ETA n/a", "ts": "2026-11-07T19:33:27Z"}
+{"subject": "[ooptimize] STATUS-30MIN | full/alloc 100% \u00b7 $18.18/$300 \u00b7 ETA n/a", "ts": "2026-11-07T20:03:31Z"}
+{"subject": "[ooptimize] BACKUP-FAIL | S3 sync failing", "ts": "2026-11-07T20:11:44Z"}
+{"subject": "[ooptimize] STATUS-30MIN | full/alloc 100% \u00b7 $18.18/$300 \u00b7 ETA n/a", "ts": "2026-11-07T20:33:54Z"}

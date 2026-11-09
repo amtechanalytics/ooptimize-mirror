@@ -1,0 +1,9 @@
+model,outcome,n,mean_delta_bytes_per_op,boot_lo,boot_hi,n_reduced
+all,clean,3386,13284.39,-94494.29,117993.07,1717
+all,silent_break,33,-68383.08,-205652.01,3090.39,16
+claude-sonnet-5-5,clean,1159,-31633.76,-203485.22,139438.80,574
+claude-sonnet-5-5,silent_break,6,10052.15,1108.00,26862.90,0
+gpt-6.1-sol,clean,1183,-88172.05,-308728.60,119987.33,608
+gpt-6.1-sol,silent_break,3,-0.00,-0.00,0.00,2
+openai/gpt-oss-120b,clean,1044,178114.96,-1012.09,356596.85,535
+openai/gpt-oss-120b,silent_break,24,-96539.77,-284375.38,-474.50,14

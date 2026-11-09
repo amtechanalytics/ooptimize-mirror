@@ -1,0 +1,287 @@
+{
+ "compile_ok": true,
+ "errors": [],
+ "ev": {
+  "io.netty.channel.AbstractChannel": "FAIL",
+  "io.netty.channel.AbstractChannel$AbstractUnsafe": "NA"
+ },
+ "file": "transport/src/main/java/io/netty/channel/AbstractChannel.java",
+ "key": "netty-0e13b3fb442c",
+ "lib": "netty",
+ "methods": [
+  "netty:io.netty.channel.AbstractChannel$AbstractUnsafe#flush()",
+  "netty:io.netty.channel.AbstractChannel$AbstractUnsafe#flush0()"
+ ],
+ "ok": true,
+ "overlay_base": "/opt/data/oopt/shared/base/netty-0e13b3fb442c/overlay_base",
+ "randoop": {
+  "io.netty.channel.AbstractChannel": {
+   "classes": [
+    "io.netty.channel.OoptRAbstractChannel",
+    "io.netty.channel.OoptRAbstractChannel0"
+   ],
+   "compiled": true,
+   "dir": "/opt/data/oopt/shared/base/netty-0e13b3fb442c/randoop/io_netty_channel_AbstractChannel/classes",
+   "flaky": 0,
+   "generated_files": 2,
+   "keep": [
+    "io.netty.channel.OoptRAbstractChannel0#test1",
+    "io.netty.channel.OoptRAbstractChannel0#test2",
+    "io.netty.channel.OoptRAbstractChannel0#test3"
+   ],
+   "seen": 3
+  },
+  "io.netty.channel.AbstractChannel$AbstractUnsafe": {
+   "classes": [
+    "io.netty.channel.OoptRAbstractChannelAbstractUnsafe",
+    "io.netty.channel.OoptRAbstractChannelAbstractUnsafe0"
+   ],
+   "compiled": true,
+   "dir": "/opt/data/oopt/shared/base/netty-0e13b3fb442c/randoop/io_netty_channel_AbstractChannel_AbstractUnsafe/classes",
+   "flaky": 0,
+   "generated_files": 2,
+   "keep": [
+    "io.netty.channel.OoptRAbstractChannelAbstractUnsafe0#test1"
+   ],
+   "seen": 1
+  }
+ },
+ "release": 8,
+ "spot": [
+  {
+   "category": "MT_CORRECTNESS",
+   "method": "access$802",
+   "priority": "2",
+   "type": "AT_STALE_THREAD_WRITE_OF_PRIMITIVE"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "closeFuture",
+   "priority": "2",
+   "type": "EI_EXPOSE_REP"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "parent",
+   "priority": "2",
+   "type": "EI_EXPOSE_REP"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "pipeline",
+   "priority": "2",
+   "type": "EI_EXPOSE_REP"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "unsafe",
+   "priority": "2",
+   "type": "EI_EXPOSE_REP"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "<init>",
+   "priority": "3",
+   "type": "MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "<init>",
+   "priority": "3",
+   "type": "MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "<init>",
+   "priority": "3",
+   "type": "MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "<init>",
+   "priority": "3",
+   "type": "MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "<init>",
+   "priority": "3",
+   "type": "MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR"
+  },
+  {
+   "category": "BAD_PRACTICE",
+   "method": "doBeginRead",
+   "priority": "3",
+   "type": "THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"
+  },
+  {
+   "category": "BAD_PRACTICE",
+   "method": "doBind",
+   "priority": "3",
+   "type": "THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"
+  },
+  {
+   "category": "BAD_PRACTICE",
+   "method": "doClose",
+   "priority": "3",
+   "type": "THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"
+  },
+  {
+   "category": "BAD_PRACTICE",
+   "method": "doDeregister",
+   "priority": "3",
+   "type": "THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"
+  },
+  {
+   "category": "BAD_PRACTICE",
+   "method": "doDisconnect",
+   "priority": "3",
+   "type": "THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"
+  },
+  {
+   "category": "BAD_PRACTICE",
+   "method": "doRegister",
+   "priority": "3",
+   "type": "THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"
+  },
+  {
+   "category": "BAD_PRACTICE",
+   "method": "doWrite",
+   "priority": "3",
+   "type": "THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"
+  },
+  {
+   "category": "BAD_PRACTICE",
+   "method": "filterOutboundMessage",
+   "priority": "3",
+   "type": "THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION"
+  },
+  {
+   "category": "MT_CORRECTNESS",
+   "method": "flush0",
+   "priority": "2",
+   "type": "AT_STALE_THREAD_WRITE_OF_PRIMITIVE"
+  },
+  {
+   "category": "MALICIOUS_CODE",
+   "method": "outboundBuffer",
+   "priority": "2",
+   "type": "EI_EXPOSE_REP"
+  }
+ ],
+ "test_cp": [
+  "/opt/data/oopt/shared/src/netty/transport/target/test-classes",
+  "/opt/data/oopt/shared/src/netty/transport/target/classes",
+  "/opt/data/oopt/m2/io/netty/netty-varhandle-stub/4.2.21.Final-SNAPSHOT/netty-varhandle-stub-4.2.21.Final-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/io/netty/netty-common/4.2.21.Final-SNAPSHOT/netty-common-4.2.21.Final-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/io/netty/netty-buffer/4.2.21.Final-SNAPSHOT/netty-buffer-4.2.21.Final-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/io/netty/netty-resolver/4.2.21.Final-SNAPSHOT/netty-resolver-4.2.21.Final-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/org/mockito/mockito-core/4.11.0/mockito-core-4.11.0.jar",
+  "/opt/data/oopt/m2/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar",
+  "/opt/data/oopt/m2/net/bytebuddy/byte-buddy-agent/1.12.19/byte-buddy-agent-1.12.19.jar",
+  "/opt/data/oopt/m2/org/objenesis/objenesis/3.3/objenesis-3.3.jar",
+  "/opt/data/oopt/m2/org/reflections/reflections/0.10.2/reflections-0.10.2.jar",
+  "/opt/data/oopt/m2/org/javassist/javassist/3.28.0-GA/javassist-3.28.0-GA.jar",
+  "/opt/data/oopt/m2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar",
+  "/opt/data/oopt/m2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+  "/opt/data/oopt/m2/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar",
+  "/opt/data/oopt/m2/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-api/5.14.3/junit-jupiter-api-5.14.3.jar",
+  "/opt/data/oopt/m2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-commons/1.14.3/junit-platform-commons-1.14.3.jar",
+  "/opt/data/oopt/m2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-engine/5.14.3/junit-jupiter-engine-5.14.3.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-engine/1.14.3/junit-platform-engine-1.14.3.jar",
+  "/opt/data/oopt/m2/org/junit/jupiter/junit-jupiter-params/5.14.3/junit-jupiter-params-5.14.3.jar",
+  "/opt/data/oopt/m2/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar",
+  "/opt/data/oopt/m2/ch/qos/logback/logback-classic/1.3.16/logback-classic-1.3.16.jar",
+  "/opt/data/oopt/m2/ch/qos/logback/logback-core/1.3.16/logback-core-1.3.16.jar",
+  "/opt/data/oopt/m2/io/netty/netty-testsuite-common/4.2.21.Final-SNAPSHOT/netty-testsuite-common-4.2.21.Final-SNAPSHOT.jar",
+  "/opt/data/oopt/m2/org/junit/platform/junit-platform-launcher/1.14.3/junit-platform-launcher-1.14.3.jar"
+ ],
+ "tests": {
+  "classes": [
+   "io.netty.channel.AbstractChannelTest",
+   "io.netty.channel.pool.AbstractChannelPoolMapTest",
+   "io.netty.channel.ChannelOutboundBufferTest",
+   "io.netty.channel.DefaultChannelPipelineTailTest",
+   "io.netty.channel.local.LocalChannelTest"
+  ],
+  "engine": "platform",
+  "error": null,
+  "failed_run1": 0,
+  "flaky": 0,
+  "keep": [
+   "io.netty.channel.AbstractChannelTest#ensureClosedChannelOnWriteReleaseMsg()|ce5ca6ad",
+   "io.netty.channel.AbstractChannelTest#ensureDefaultChannelId()|d5920953",
+   "io.netty.channel.AbstractChannelTest#ensureInitialRegistrationFiresActive()|81c351ea",
+   "io.netty.channel.AbstractChannelTest#ensureSubsequentRegistrationDoesNotFireActive()|4efcc160",
+   "io.netty.channel.AbstractChannelTest#flushOnUnconnectedClosedChannelFailsWithClosedChannel()|9c65a5e4",
+   "io.netty.channel.AbstractChannelTest#flushOnUnconnectedOpenChannelFailsWithNotYetConnected()|88733fa5",
+   "io.netty.channel.AbstractChannelTest#processIdWithProcessHandleJava9()|27456a5a",
+   "io.netty.channel.AbstractChannelTest#testClosedChannelExceptionCarryIOException()|b0d78e96",
+   "io.netty.channel.ChannelOutboundBufferTest#testCloseFromWritabilityChangedCausedByCancelledWrite()|5b66e4dc",
+   "io.netty.channel.ChannelOutboundBufferTest#testEmptyNioBuffers()|78f643e2",
+   "io.netty.channel.ChannelOutboundBufferTest#testMixedWritability()|5d812661",
+   "io.netty.channel.ChannelOutboundBufferTest#testMultipleCancelledWritesWithEarlierFlush()|63d3270f",
+   "io.netty.channel.ChannelOutboundBufferTest#testNioBuffersCancelledRemoveBytes()|6be92a35",
+   "io.netty.channel.ChannelOutboundBufferTest#testNioBuffersExpand()|784d0b91",
+   "io.netty.channel.ChannelOutboundBufferTest#testNioBuffersExpand2()|9158e895",
+   "io.netty.channel.ChannelOutboundBufferTest#testNioBuffersMaxCount()|19696ec0",
+   "io.netty.channel.ChannelOutboundBufferTest#testNioBuffersSingleBacked()|b113943d",
+   "io.netty.channel.ChannelOutboundBufferTest#testUserDefinedWritability()|f8e10e64",
+   "io.netty.channel.ChannelOutboundBufferTest#testUserDefinedWritability2()|23454022",
+   "io.netty.channel.ChannelOutboundBufferTest#testWritability()|3d36e96a",
+   "io.netty.channel.ChannelOutboundBufferTest#testWriteAndFlushFromReleaseOfCancelledWrite()|d9c4f594",
+   "io.netty.channel.ChannelOutboundBufferTest#testWriteAndFlushFromWritabilityChangedCausedByCancelledWrite()|2b0c5de8",
+   "io.netty.channel.ChannelOutboundBufferTest#testWriteTaskRejected()|51adf5ac",
+   "io.netty.channel.DefaultChannelPipelineTailTest#testOnUnhandledInboundChannelActive()|a3b0af65",
+   "io.netty.channel.DefaultChannelPipelineTailTest#testOnUnhandledInboundChannelInactive()|d1a12c20",
+   "io.netty.channel.DefaultChannelPipelineTailTest#testOnUnhandledInboundException()|4aab603f",
+   "io.netty.channel.DefaultChannelPipelineTailTest#testOnUnhandledInboundMessage()|4a99aa07",
+   "io.netty.channel.DefaultChannelPipelineTailTest#testOnUnhandledInboundReadComplete()|eec8f7b",
+   "io.netty.channel.DefaultChannelPipelineTailTest#testOnUnhandledInboundUserEventTriggered()|e2269bc2",
+   "io.netty.channel.DefaultChannelPipelineTailTest#testOnUnhandledInboundWritabilityChanged()|1ea2a95a",
+   "io.netty.channel.local.LocalChannelTest#localChannelRaceCondition()|231d5dc",
+   "io.netty.channel.local.LocalChannelTest#testAutoReadDisabledDifferentGroup()|345f8d91",
+   "io.netty.channel.local.LocalChannelTest#testAutoReadDisabledSharedGroup()|c86cd867",
+   "io.netty.channel.local.LocalChannelTest#testClientCloseAfterServerClosedWithQueuedConnection()|d611da3",
+   "io.netty.channel.local.LocalChannelTest#testClientCloseWhileConnectionIsQueued()|7e8d1099",
+   "io.netty.channel.local.LocalChannelTest#testCloseAfterWriteInSameEventLoopPreservesOrder()|d4a2b8b9",
+   "io.netty.channel.local.LocalChannelTest#testCloseInWritePromiseCompletePreservesOrder()|48059f47",
+   "io.netty.channel.local.LocalChannelTest#testConnectFailsWhenAcceptedChannelCannotBeRegistered()|c15027e1",
+   "io.netty.channel.local.LocalChannelTest#testConnectFailsWhenServerClosedWithQueuedConnection()|66faad",
+   "io.netty.channel.local.LocalChannelTest#testConnectFailsWhenServerClosesBeforeConnectionArrives()|930d6744",
+   "io.netty.channel.local.LocalChannelTest#testConnectFutureBeforeChannelActive()|26b5505b",
+   "io.netty.channel.local.LocalChannelTest#testConnectedAlready()|a42fa29",
+   "io.netty.channel.local.LocalChannelTest#testConnectionRefused()|c486b18e",
+   "io.netty.channel.local.LocalChannelTest#testLocalAddressReuse()|e033ff15",
+   "io.netty.channel.local.LocalChannelTest#testMaxMessagesPerReadRespectedWithAutoReadDifferentGroup()|5a401e2d",
+   "io.netty.channel.local.LocalChannelTest#testMaxMessagesPerReadRespectedWithAutoReadSharedGroup()|637b6d4b",
+   "io.netty.channel.local.LocalChannelTest#testMaxMessagesPerReadRespectedWithoutAutoReadDifferentGroup()|86ea9a7",
+   "io.netty.channel.local.LocalChannelTest#testMaxMessagesPerReadRespectedWithoutAutoReadSharedGroup()|87032411",
+   "io.netty.channel.local.LocalChannelTest#testNotLeakBuffersWhenCloseByRemotePeer()|151479e0",
+   "io.netty.channel.local.LocalChannelTest#testPeerWriteAndCloseWhileWriteInProgressDeliversData()|563eaeca",
+   "io.netty.channel.local.LocalChannelTest#testPeerWriteInWritePromiseCompleteDifferentEventLoopPreservesOrder()|fd606d1d",
+   "io.netty.channel.local.LocalChannelTest#testPeerWriteInWritePromiseCompleteSameEventLoopPreservesOrder()|10fdf1d0",
+   "io.netty.channel.local.LocalChannelTest#testPeerWritesAndClosesDeliversAllBufferedDataWithAutoReadOff()|2669697c",
+   "io.netty.channel.local.LocalChannelTest#testPeerWritesMoreThanOneReadAndClosesDeliversAllData()|35af8405",
+   "io.netty.channel.local.LocalChannelTest#testPeerWritesMoreThanOneReadAndClosesDeliversAllDataSameEventLoop()|9bd2741b",
+   "io.netty.channel.local.LocalChannelTest#testReRegister()|583e0ce2",
+   "io.netty.channel.local.LocalChannelTest#testReadCompleteCalledOnHandle()|cbdf9f65",
+   "io.netty.channel.local.LocalChannelTest#testServerCloseChannelSameEventLoop()|6c2af36",
+   "io.netty.channel.local.LocalChannelTest#testServerMaxMessagesPerReadRespectedWithAutoReadDifferentGroup()|91803190",
+   "io.netty.channel.local.LocalChannelTest#testServerMaxMessagesPerReadRespectedWithAutoReadSharedGroup()|a6a3ccc8",
+   "io.netty.channel.local.LocalChannelTest#testServerMaxMessagesPerReadRespectedWithQueuedConnections()|2635f3fb",
+   "io.netty.channel.local.LocalChannelTest#testServerMaxMessagesPerReadRespectedWithoutAutoReadDifferentGroup()|91feb764",
+   "io.netty.channel.local.LocalChannelTest#testServerMaxMessagesPerReadRespectedWithoutAutoReadSharedGroup()|be433774",
+   "io.netty.channel.local.LocalChannelTest#testWriteFailsFastOnClosedChannel()|ad38eb1a",
+   "io.netty.channel.local.LocalChannelTest#testWriteInWritePromiseCompletePreservesOrder()|42475f80",
+   "io.netty.channel.local.LocalChannelTest#testWriteWhilePeerIsClosedReleaseObjectAndFailPromise()|71d1a4de",
+   "io.netty.channel.pool.AbstractChannelPoolMapTest#testCloseClosesPoolsImmediately()|7fdcf732",
+   "io.netty.channel.pool.AbstractChannelPoolMapTest#testMap()|e51676f0",
+   "io.netty.channel.pool.AbstractChannelPoolMapTest#testRemoveClosesChannelPool()|165f02ac"
+  ],
+  "seen": 69
+ }
+}

@@ -1,0 +1,144 @@
+# OOPT benchmark org.jctools.channels.mpsc.MpscProxyChannelBenchmark.tenMixedArgsBaseline
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.mpsc.MpscProxyChannelBenchmark.tenMixedArgsBaseline
+# Parameters: (limit = 1)
+
+# Run progress: 0.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 362988024.381 ops/s
+Iteration   1: 401995786.737 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.tenMixedArgsBaseline":
+  401995786.737 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.tenMixedArgsBaseline:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 23.4%  35.1% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchImpl.tenMixedArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.tenMixedArgsBaseline
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_tenMixedArgsBaseline_jmhTest.tenMixedArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_tenMixedArgsBaseline_jmhTest.tenMixedArgsBaseline_Throughput
+
+  9.8%  14.6% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_tenMixedArgsBaseline_jmhTest.tenMixedArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_tenMixedArgsBaseline_jmhTest.tenMixedArgsBaseline_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007f6a6c02ec00.invoke
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.channels.mpsc.MpscProxyChannelBenchmark.tenMixedArgsBaseline
+# Parameters: (limit = 10000)
+
+# Run progress: 50.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 362351207.322 ops/s
+Iteration   1: 402283037.291 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.tenMixedArgsBaseline":
+  402283037.291 ops/s
+
+Secondary result "org.jctools.channels.mpsc.MpscProxyChannelBenchmark.tenMixedArgsBaseline:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.5%         RUNNABLE
+ 33.3%         TIMED_WAITING
+  0.2%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.1% <stack is empty, everything is filtered?>
+ 22.2%  33.4% org.jctools.channels.mpsc.MpscProxyChannelBenchmark$BenchImpl.tenMixedArgs
+              org.jctools.channels.mpsc.MpscProxyChannelBenchmark.tenMixedArgsBaseline
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_tenMixedArgsBaseline_jmhTest.tenMixedArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_tenMixedArgsBaseline_jmhTest.tenMixedArgsBaseline_Throughput
+
+ 10.8%  16.2% org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_tenMixedArgsBaseline_jmhTest.tenMixedArgsBaseline_thrpt_jmhStub
+              org.jctools.channels.mpsc.jmh_generated.MpscProxyChannelBenchmark_tenMixedArgsBaseline_jmhTest.tenMixedArgsBaseline_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007a310c02e000.invoke
+
+  0.2%   0.3% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# Run complete. Total time: 00:00:06
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                             (limit)   Mode  Cnt          Score   Error  Units
+MpscProxyChannelBenchmark.tenMixedArgsBaseline              1  thrpt       401995786.737          ops/s
+MpscProxyChannelBenchmark.tenMixedArgsBaseline:stack        1  thrpt                 NaN            ---
+MpscProxyChannelBenchmark.tenMixedArgsBaseline          10000  thrpt       402283037.291          ops/s
+MpscProxyChannelBenchmark.tenMixedArgsBaseline:stack    10000  thrpt                 NaN            ---

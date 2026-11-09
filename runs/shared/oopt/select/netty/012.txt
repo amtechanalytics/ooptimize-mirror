@@ -1,0 +1,522 @@
+# OOPT benchmark io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+# Parameters: (direct = true, length = 8)
+
+# Run progress: 0.00% complete, ETA 00:00:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 25037630.258 ops/s
+Iteration   1: 41888215.430 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped":
+  41888215.430 ops/s
+
+Secondary result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007255e002e800.invoke
+
+  0.2%   0.3% java.util.Arrays.copyOfRange
+              java.lang.String.<init>
+              java.lang.String.<init>
+              java.lang.StringBuilder.toString
+
+  0.2%   0.3% java.lang.String.<init>
+              java.lang.StringBuilder.toString
+              io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+# Parameters: (direct = true, length = 16)
+
+# Run progress: 12.50% complete, ETA 00:00:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 24227667.830 ops/s
+Iteration   1: 29660658.425 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped":
+  29660658.425 ops/s
+
+Secondary result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007ee1c802ec00.invoke
+
+  0.2%   0.3% java.lang.String.getBytes
+              io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+
+  0.2%   0.3% io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+# Parameters: (direct = true, length = 64)
+
+# Run progress: 25.00% complete, ETA 00:00:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 6730909.139 ops/s
+Iteration   1: 8474950.483 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped":
+  8474950.483 ops/s
+
+Secondary result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 22.5%  33.7% java.lang.String.encodeUTF8_UTF16
+              java.lang.String.encodeUTF8
+              java.lang.String.encode
+              java.lang.String.getBytes
+
+  5.5%   8.3% io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.9%   5.9% java.lang.String.encodeUTF8
+              java.lang.String.encode
+              java.lang.String.getBytes
+              io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+
+  1.4%   2.1% io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000726b9802ec00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+# Parameters: (direct = true, length = 128)
+
+# Run progress: 37.50% complete, ETA 00:00:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 2657024.475 ops/s
+Iteration   1: 4161917.172 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped":
+  4161917.172 ops/s
+
+Secondary result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 22.5%  33.8% java.lang.String.encodeUTF8_UTF16
+              java.lang.String.encodeUTF8
+              java.lang.String.encode
+              java.lang.String.getBytes
+
+  5.6%   8.4% io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.1%   4.6% java.lang.String.encodeUTF8
+              java.lang.String.encode
+              java.lang.String.getBytes
+              io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+
+  2.0%   3.0% io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000074210c02ec00.invoke
+
+  0.2%   0.3% java.lang.String.<init>
+              java.lang.StringBuilder.toString
+              io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+# Parameters: (direct = false, length = 8)
+
+# Run progress: 50.00% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 27473874.313 ops/s
+Iteration   1: 38349683.471 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped":
+  38349683.471 ops/s
+
+Secondary result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007f612c02ec00.invoke
+
+  0.4%   0.5% io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+# Parameters: (direct = false, length = 16)
+
+# Run progress: 62.50% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 24471268.685 ops/s
+Iteration   1: 31190463.970 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped":
+  31190463.970 ops/s
+
+Secondary result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c1d2802dc00.invoke
+
+  0.4%   0.5% io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+# Parameters: (direct = false, length = 64)
+
+# Run progress: 75.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 6251124.548 ops/s
+Iteration   1: 9050190.779 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped":
+  9050190.779 ops/s
+
+Secondary result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 19.3%  28.9% java.lang.String.encodeUTF8_UTF16
+              java.lang.String.encodeUTF8
+              java.lang.String.encode
+              java.lang.String.getBytes
+
+  6.4%   9.6% java.lang.String.<init>
+              java.lang.StringBuilder.toString
+              io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+
+  5.3%   8.0% java.lang.String.encodeUTF8
+              java.lang.String.encode
+              java.lang.String.getBytes
+              io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+
+  2.1%   3.2% io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007114a802dc00.invoke
+
+  0.2%   0.3% java.util.Arrays.copyOf
+              java.lang.String.encodeUTF8_UTF16
+              java.lang.String.encodeUTF8
+              java.lang.String.encode
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+# Parameters: (direct = false, length = 128)
+
+# Run progress: 87.50% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 3540204.819 ops/s
+Iteration   1: 4262902.287 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped":
+  4262902.287 ops/s
+
+Secondary result "io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 21.9%  32.8% java.lang.String.encodeUTF8_UTF16
+              java.lang.String.encodeUTF8
+              java.lang.String.encode
+              java.lang.String.getBytes
+
+  5.8%   8.7% io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.2%   4.8% java.lang.String.encodeUTF8
+              java.lang.String.encode
+              java.lang.String.getBytes
+              io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+
+  2.3%   3.4% io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007703cc02e800.invoke
+
+  0.2%   0.3% java.lang.String.<init>
+              java.lang.StringBuilder.toString
+              io.netty.microbench.buffer.ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped
+              io.netty.microbench.buffer.jmh_generated.ByteBufUtilBenchmark_writeUtf8ViaArrayWrapped_jmhTest.writeUtf8ViaArrayWrapped_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:27
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                             (direct)  (length)   Mode  Cnt         Score   Error  Units
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped             true         8  thrpt       41888215.430          ops/s
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack      true         8  thrpt                NaN            ---
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped             true        16  thrpt       29660658.425          ops/s
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack      true        16  thrpt                NaN            ---
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped             true        64  thrpt        8474950.483          ops/s
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack      true        64  thrpt                NaN            ---
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped             true       128  thrpt        4161917.172          ops/s
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack      true       128  thrpt                NaN            ---
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped            false         8  thrpt       38349683.471          ops/s
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack     false         8  thrpt                NaN            ---
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped            false        16  thrpt       31190463.970          ops/s
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack     false        16  thrpt                NaN            ---
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped            false        64  thrpt        9050190.779          ops/s
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack     false        64  thrpt                NaN            ---
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped            false       128  thrpt        4262902.287          ops/s
+ByteBufUtilBenchmark.writeUtf8ViaArrayWrapped:·stack     false       128  thrpt                NaN            ---

@@ -1,0 +1,422 @@
+# OOPT benchmark org.jctools.jmh.counters.CountersBenchmark.rw
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "get", 1x "inc" in each group), will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.counters.CountersBenchmark.rw
+# Parameters: (counterType = AtomicLong, stripes = 0)
+
+# Run progress: 0.00% complete, ETA 00:00:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 17.531 ns/op
+Iteration   1: 13.220 ns/op
+                 get:   2.617 ns/op
+                 inc:   23.823 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.counters.CountersBenchmark.rw":
+  13.220 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:get":
+  2.617 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:inc":
+  23.823 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.9%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.1%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.4% <stack is empty, everything is filtered?>
+ 24.9%  33.2% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.inc_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000736dc002e800.invoke
+
+ 24.9%  33.2% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.get_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000736dc002e800.invoke
+
+  0.1%   0.2% java.util.concurrent.ConcurrentHashMap.replaceNode
+              java.util.concurrent.ConcurrentHashMap.remove
+              org.openjdk.jmh.runner.BenchmarkHandler.getWorkerData
+              org.openjdk.jmh.runner.BenchmarkHandler.access$300
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "get", 1x "inc" in each group), will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.counters.CountersBenchmark.rw
+# Parameters: (counterType = LongAdder, stripes = 0)
+
+# Run progress: 20.00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 51.061 ns/op
+Iteration   1: 50.881 ns/op
+                 get:   1.697 ns/op
+                 inc:   100.066 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.counters.CountersBenchmark.rw":
+  50.881 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:get":
+  1.697 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:inc":
+  100.066 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.7%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.3%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.5% <stack is empty, everything is filtered?>
+ 24.9%  33.3% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.get_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000071e9fc02f400.invoke
+
+ 24.9%  33.3% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.inc_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000071e9fc02f400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.1%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "get", 1x "inc" in each group), will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.counters.CountersBenchmark.rw
+# Parameters: (counterType = FixedSizeStripedV6, stripes = 0)
+
+# Run progress: 40.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 55.334 ns/op
+Iteration   1: 54.815 ns/op
+                 get:   31.961 ns/op
+                 inc:   77.669 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.counters.CountersBenchmark.rw":
+  54.815 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:get":
+  31.961 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:inc":
+  77.669 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.7%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.3%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.5% <stack is empty, everything is filtered?>
+ 24.9%  33.3% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.inc_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000072071402d800.invoke
+
+ 24.1%  32.2% org.jctools.counters.FixedSizeStripedLongCounter.get
+              org.jctools.jmh.counters.CountersFactory$FixedSizeStripedCounter.get
+              org.jctools.jmh.counters.CountersBenchmark.get
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.get_avgt_jmhStub
+
+  0.8%   1.1% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.get_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000072071402d800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.1%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "get", 1x "inc" in each group), will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.counters.CountersBenchmark.rw
+# Parameters: (counterType = FixedSizeStripedV8, stripes = 0)
+
+# Run progress: 60.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 50.934 ns/op
+Iteration   1: 50.706 ns/op
+                 get:   69.785 ns/op
+                 inc:   31.627 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.counters.CountersBenchmark.rw":
+  50.706 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:get":
+  69.785 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:inc":
+  31.627 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.9%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.1%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.4% <stack is empty, everything is filtered?>
+ 24.9%  33.2% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.inc_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007996fc031400.invoke
+
+ 24.6%  32.9% org.jctools.counters.FixedSizeStripedLongCounter.get
+              org.jctools.jmh.counters.CountersFactory$FixedSizeStripedCounter.get
+              org.jctools.jmh.counters.CountersBenchmark.get
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.get_avgt_jmhStub
+
+  0.3%   0.4% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.get_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007996fc031400.invoke
+
+  0.1%   0.2% org.openjdk.jmh.runner.BenchmarkHandler$$Lambda/0x00007996fc028488.run
+              java.util.concurrent.CyclicBarrier.dowait
+              java.util.concurrent.CyclicBarrier.await
+              org.openjdk.jmh.runner.BenchmarkHandler.getWorkerData
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "get", 1x "inc" in each group), will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.counters.CountersBenchmark.rw
+# Parameters: (counterType = CAT, stripes = 0)
+
+# Run progress: 80.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 62.299 ns/op
+Iteration   1: 80.388 ns/op
+                 get:   9.228 ns/op
+                 inc:   151.548 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.counters.CountersBenchmark.rw":
+  80.388 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:get":
+  9.228 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:inc":
+  151.548 ns/op
+
+Secondary result "org.jctools.jmh.counters.CountersBenchmark.rw:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.7%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.3%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.5% <stack is empty, everything is filtered?>
+ 24.7%  33.1% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.inc_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000079273402dc00.invoke
+
+ 22.2%  29.7% org.jctools.maps.ConcurrentAutoTable$CAT.sum
+              org.jctools.maps.ConcurrentAutoTable.get
+              org.jctools.jmh.counters.CountersFactory$ConcurrentAutoTableCounter.get
+              org.jctools.jmh.counters.CountersBenchmark.get
+
+  2.7%   3.6% org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.get_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000079273402dc00.invoke
+
+  0.1%   0.2% org.jctools.jmh.counters.CountersBenchmark.inc
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.inc_avgt_jmhStub
+              org.jctools.jmh.counters.jmh_generated.CountersBenchmark_rw_jmhTest.rw_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# Run complete. Total time: 00:00:15
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                        (counterType)  (stripes)  Mode  Cnt    Score   Error  Units
+CountersBenchmark.rw                AtomicLong          0  avgt        13.220          ns/op
+CountersBenchmark.rw:get            AtomicLong          0  avgt         2.617          ns/op
+CountersBenchmark.rw:inc            AtomicLong          0  avgt        23.823          ns/op
+CountersBenchmark.rw:stack          AtomicLong          0  avgt           NaN            ---
+CountersBenchmark.rw                 LongAdder          0  avgt        50.881          ns/op
+CountersBenchmark.rw:get             LongAdder          0  avgt         1.697          ns/op
+CountersBenchmark.rw:inc             LongAdder          0  avgt       100.066          ns/op
+CountersBenchmark.rw:stack           LongAdder          0  avgt           NaN            ---
+CountersBenchmark.rw        FixedSizeStripedV6          0  avgt        54.815          ns/op
+CountersBenchmark.rw:get    FixedSizeStripedV6          0  avgt        31.961          ns/op
+CountersBenchmark.rw:inc    FixedSizeStripedV6          0  avgt        77.669          ns/op
+CountersBenchmark.rw:stack  FixedSizeStripedV6          0  avgt           NaN            ---
+CountersBenchmark.rw        FixedSizeStripedV8          0  avgt        50.706          ns/op
+CountersBenchmark.rw:get    FixedSizeStripedV8          0  avgt        69.785          ns/op
+CountersBenchmark.rw:inc    FixedSizeStripedV8          0  avgt        31.627          ns/op
+CountersBenchmark.rw:stack  FixedSizeStripedV8          0  avgt           NaN            ---
+CountersBenchmark.rw                       CAT          0  avgt        80.388          ns/op
+CountersBenchmark.rw:get                   CAT          0  avgt         9.228          ns/op
+CountersBenchmark.rw:inc                   CAT          0  avgt       151.548          ns/op
+CountersBenchmark.rw:stack                 CAT          0  avgt           NaN            ---

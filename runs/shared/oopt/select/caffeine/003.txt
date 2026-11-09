@@ -1,0 +1,432 @@
+# OOPT benchmark com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+# Parameters: (sketchType = Flat, tableSize = 32768)
+
+# Run progress: 0.00% complete, ETA 00:00:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 221680.443 ops/s
+Iteration   1: 223963.976 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset":
+  223963.976 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% com.github.benmanes.caffeine.cache.sketch.CountMinSketch.reset
+              com.github.benmanes.caffeine.cache.SketchType$1$1.reset
+              com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+
+  0.2%   0.3% com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007817d0032800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+# Parameters: (sketchType = Flat, tableSize = 524288)
+
+# Run progress: 12.50% complete, ETA 00:00:22
+# Fork: 1 of 1
+# Warmup Iteration   1: 7495.364 ops/s
+Iteration   1: 7610.071 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset":
+  7610.071 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% com.github.benmanes.caffeine.cache.sketch.CountMinSketch.reset
+              com.github.benmanes.caffeine.cache.SketchType$1$1.reset
+              com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+
+  0.2%   0.3% com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000791cfc032800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+# Parameters: (sketchType = Flat, tableSize = 8388608)
+
+# Run progress: 25.00% complete, ETA 00:00:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 398.795 ops/s
+Iteration   1: 405.626 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset":
+  405.626 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% com.github.benmanes.caffeine.cache.sketch.CountMinSketch.reset
+              com.github.benmanes.caffeine.cache.SketchType$1$1.reset
+              com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+
+  0.2%   0.3% com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000733b2c032c00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+# Parameters: (sketchType = Flat, tableSize = 134217728)
+
+# Run progress: 37.50% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 8.943 ops/s
+Iteration   1: 9.070 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset":
+  9.070 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% com.github.benmanes.caffeine.cache.sketch.CountMinSketch.reset
+              com.github.benmanes.caffeine.cache.SketchType$1$1.reset
+              com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+# Parameters: (sketchType = Block, tableSize = 32768)
+
+# Run progress: 50.00% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 221857.880 ops/s
+Iteration   1: 224823.027 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset":
+  224823.027 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% com.github.benmanes.caffeine.cache.FrequencySketch.reset
+              com.github.benmanes.caffeine.cache.SketchType$2$1.reset
+              com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+# Parameters: (sketchType = Block, tableSize = 524288)
+
+# Run progress: 62.50% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 7151.004 ops/s
+Iteration   1: 7257.130 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset":
+  7257.130 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% com.github.benmanes.caffeine.cache.FrequencySketch.reset
+              com.github.benmanes.caffeine.cache.SketchType$2$1.reset
+              com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+# Parameters: (sketchType = Block, tableSize = 8388608)
+
+# Run progress: 75.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 399.904 ops/s
+Iteration   1: 406.815 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset":
+  406.815 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% com.github.benmanes.caffeine.cache.FrequencySketch.reset
+              com.github.benmanes.caffeine.cache.SketchType$2$1.reset
+              com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+# Parameters: (sketchType = Block, tableSize = 134217728)
+
+# Run progress: 87.50% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 8.293 ops/s
+Iteration   1: 8.427 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset":
+  8.427 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% com.github.benmanes.caffeine.cache.FrequencySketch.reset
+              com.github.benmanes.caffeine.cache.SketchType$2$1.reset
+              com.github.benmanes.caffeine.cache.FrequencySketchBenchmark.reset
+              com.github.benmanes.caffeine.cache.jmh_generated.FrequencySketchBenchmark_reset_jmhTest.reset_thrpt_jmhStub
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:27
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                             (sketchType)  (tableSize)   Mode  Cnt       Score   Error  Units
+FrequencySketchBenchmark.reset                Flat        32768  thrpt       223963.976          ops/s
+FrequencySketchBenchmark.reset:stack          Flat        32768  thrpt              NaN            ---
+FrequencySketchBenchmark.reset                Flat       524288  thrpt         7610.071          ops/s
+FrequencySketchBenchmark.reset:stack          Flat       524288  thrpt              NaN            ---
+FrequencySketchBenchmark.reset                Flat      8388608  thrpt          405.626          ops/s
+FrequencySketchBenchmark.reset:stack          Flat      8388608  thrpt              NaN            ---
+FrequencySketchBenchmark.reset                Flat    134217728  thrpt            9.070          ops/s
+FrequencySketchBenchmark.reset:stack          Flat    134217728  thrpt              NaN            ---
+FrequencySketchBenchmark.reset               Block        32768  thrpt       224823.027          ops/s
+FrequencySketchBenchmark.reset:stack         Block        32768  thrpt              NaN            ---
+FrequencySketchBenchmark.reset               Block       524288  thrpt         7257.130          ops/s
+FrequencySketchBenchmark.reset:stack         Block       524288  thrpt              NaN            ---
+FrequencySketchBenchmark.reset               Block      8388608  thrpt          406.815          ops/s
+FrequencySketchBenchmark.reset:stack         Block      8388608  thrpt              NaN            ---
+FrequencySketchBenchmark.reset               Block    134217728  thrpt            8.427          ops/s
+FrequencySketchBenchmark.reset:stack         Block    134217728  thrpt              NaN            ---

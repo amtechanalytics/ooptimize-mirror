@@ -1,0 +1,1809 @@
+# OOPT benchmark org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = None, warmup = true, work = 0)
+
+# Run progress: 0.00% complete, ETA 00:01:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 9.044 ns/op
+Iteration   1: 9.410 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  9.410 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 31.0%  46.4% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  2.4%   3.6% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007bff8002e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = None, warmup = true, work = 10)
+
+# Run progress: 3.33% complete, ETA 00:01:33
+# Fork: 1 of 1
+# Warmup Iteration   1: 15.494 ns/op
+Iteration   1: 15.143 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  15.143 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 19.0%  28.5% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+ 13.4%  20.2% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.9%   1.3% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000071dbd402e000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = None, warmup = true, work = 100)
+
+# Run progress: 6.67% complete, ETA 00:01:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 147.595 ns/op
+Iteration   1: 146.717 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  146.717 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 31.4%  47.0% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  2.0%   3.0% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = ArrayBlockingQueue, warmup = true, work = 0)
+
+# Run progress: 10.00% complete, ETA 00:01:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 35.001 ns/op
+Iteration   1: 35.917 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  35.917 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007dac0c030000.invoke
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = ArrayBlockingQueue, warmup = true, work = 10)
+
+# Run progress: 13.33% complete, ETA 00:01:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 39.841 ns/op
+Iteration   1: 40.346 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  40.346 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 19.3%  29.0% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+ 13.1%  19.7% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007fb0ac02d800.invoke
+
+  0.9%   1.3% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = ArrayBlockingQueue, warmup = true, work = 100)
+
+# Run progress: 16.67% complete, ETA 00:01:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 170.720 ns/op
+Iteration   1: 169.224 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  169.224 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 28.7%  43.1% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  3.4%   5.0% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007a296002e800.invoke
+
+  1.2%   1.9% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = ConcurrentLinkedQueue, warmup = true, work = 0)
+
+# Run progress: 20.00% complete, ETA 00:01:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 31.888 ns/op
+Iteration   1: 35.824 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  35.824 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 27.8%  41.8% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.8%   5.8% java.util.concurrent.ConcurrentLinkedQueue.offer
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  1.3%   1.9% java.util.concurrent.ConcurrentLinkedQueue.poll
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  0.4%   0.5% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000078caec02e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = ConcurrentLinkedQueue, warmup = true, work = 10)
+
+# Run progress: 23.33% complete, ETA 00:01:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 48.994 ns/op
+Iteration   1: 38.158 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  38.158 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.5%         RUNNABLE
+ 33.3%         TIMED_WAITING
+  0.2%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.1% <stack is empty, everything is filtered?>
+ 22.5%  33.8% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.5%   6.7% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  3.9%   5.9% java.util.concurrent.ConcurrentLinkedQueue.offer
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  2.1%   3.2% java.util.concurrent.ConcurrentLinkedQueue.poll
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  0.2%   0.3% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e499402ec00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = ConcurrentLinkedQueue, warmup = true, work = 100)
+
+# Run progress: 26.67% complete, ETA 00:01:11
+# Fork: 1 of 1
+# Warmup Iteration   1: 166.444 ns/op
+Iteration   1: 161.485 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  161.485 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 25.7%  38.6% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  6.9%  10.4% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.5%   0.8% java.util.concurrent.ConcurrentLinkedQueue.offer
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  0.2%   0.3% java.util.concurrent.ConcurrentLinkedQueue.poll
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = MpmcUnboundedXaddArrayQueue, warmup = true, work = 0)
+
+# Run progress: 30.00% complete, ETA 00:01:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 22.827 ns/op
+Iteration   1: 22.861 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  22.861 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.5%         RUNNABLE
+ 33.3%         TIMED_WAITING
+  0.2%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.1% <stack is empty, everything is filtered?>
+ 18.3%  27.5% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073661002e400.invoke
+
+ 14.9%  22.4% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = MpmcUnboundedXaddArrayQueue, warmup = true, work = 10)
+
+# Run progress: 33.33% complete, ETA 00:01:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 27.822 ns/op
+Iteration   1: 29.062 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  29.062 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.0%  22.5% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 11.1%  16.6% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e32fc02e800.invoke
+
+  7.3%  11.0% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = MpmcUnboundedXaddArrayQueue, warmup = true, work = 100)
+
+# Run progress: 36.67% complete, ETA 00:01:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 161.464 ns/op
+Iteration   1: 169.087 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  169.087 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 27.1%  40.6% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  4.5%   6.7% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  1.8%   2.7% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007cf57c02fc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = MpmcArrayQueue, warmup = true, work = 0)
+
+# Run progress: 40.00% complete, ETA 00:00:58
+# Fork: 1 of 1
+# Warmup Iteration   1: 23.114 ns/op
+Iteration   1: 20.376 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  20.376 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.5%         RUNNABLE
+ 33.3%         TIMED_WAITING
+  0.2%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.1% <stack is empty, everything is filtered?>
+ 32.6%  49.1% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.5%   0.8% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000072d3cc02f800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = MpmcArrayQueue, warmup = true, work = 10)
+
+# Run progress: 43.33% complete, ETA 00:00:55
+# Fork: 1 of 1
+# Warmup Iteration   1: 24.902 ns/op
+Iteration   1: 28.241 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  28.241 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.5%         RUNNABLE
+ 33.3%         TIMED_WAITING
+  0.2%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.1% <stack is empty, everything is filtered?>
+ 22.6%  34.0% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 10.4%  15.6% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  0.2%   0.3% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073277802e800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 1, qCapacity = 132000, qType = MpmcArrayQueue, warmup = true, work = 100)
+
+# Run progress: 46.67% complete, ETA 00:00:51
+# Fork: 1 of 1
+# Warmup Iteration   1: 156.478 ns/op
+Iteration   1: 155.927 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  155.927 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 29.3%  43.9% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  4.1%   6.1% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = None, warmup = true, work = 0)
+
+# Run progress: 50.00% complete, ETA 00:00:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 57.560 ns/op
+Iteration   1: 57.312 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  57.312 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.0%  49.5% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.4%   0.5% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007abe3402dc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = None, warmup = true, work = 10)
+
+# Run progress: 53.33% complete, ETA 00:00:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 53.198 ns/op
+Iteration   1: 52.488 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  52.488 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 21.5%  32.2% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 11.2%  16.8% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  0.7%   1.1% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007b6ca402e000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = None, warmup = true, work = 100)
+
+# Run progress: 56.67% complete, ETA 00:00:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 202.558 ns/op
+Iteration   1: 201.377 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  201.377 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 25.7%  38.6% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  7.6%  11.4% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = ArrayBlockingQueue, warmup = true, work = 0)
+
+# Run progress: 60.00% complete, ETA 00:00:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 334.988 ns/op
+Iteration   1: 333.627 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  333.627 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007163b402f000.invoke
+
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = ArrayBlockingQueue, warmup = true, work = 10)
+
+# Run progress: 63.33% complete, ETA 00:00:35
+# Fork: 1 of 1
+# Warmup Iteration   1: 337.504 ns/op
+Iteration   1: 335.874 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  335.874 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.6%  26.3% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000070e72c02ec00.invoke
+
+ 15.8%  23.7% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = ArrayBlockingQueue, warmup = true, work = 100)
+
+# Run progress: 66.67% complete, ETA 00:00:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 462.948 ns/op
+Iteration   1: 461.150 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  461.150 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 20.2%  30.3% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+ 12.9%  19.4% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000077c3b802e800.invoke
+
+  0.2%   0.3% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = ConcurrentLinkedQueue, warmup = true, work = 0)
+
+# Run progress: 70.00% complete, ETA 00:00:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 347.290 ns/op
+Iteration   1: 343.119 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  343.119 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 28.6%  42.9% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  2.8%   4.2% java.util.concurrent.ConcurrentLinkedQueue.offer
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  1.9%   2.9% java.util.concurrent.ConcurrentLinkedQueue.poll
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = ConcurrentLinkedQueue, warmup = true, work = 10)
+
+# Run progress: 73.33% complete, ETA 00:00:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 343.364 ns/op
+Iteration   1: 342.321 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  342.321 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 26.7%  40.1% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  3.9%   5.9% java.util.concurrent.ConcurrentLinkedQueue.offer
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  2.1%   3.2% java.util.concurrent.ConcurrentLinkedQueue.poll
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  0.5%   0.8% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = ConcurrentLinkedQueue, warmup = true, work = 100)
+
+# Run progress: 76.67% complete, ETA 00:00:22
+# Fork: 1 of 1
+# Warmup Iteration   1: 473.590 ns/op
+Iteration   1: 505.473 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  505.473 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 18.4%  27.7% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 10.1%  15.2% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  3.5%   5.3% java.util.concurrent.ConcurrentLinkedQueue.offer
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  1.1%   1.6% java.util.concurrent.ConcurrentLinkedQueue.poll
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  0.2%   0.3% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000070c38402fc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = MpmcUnboundedXaddArrayQueue, warmup = true, work = 0)
+
+# Run progress: 80.00% complete, ETA 00:00:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 216.338 ns/op
+Iteration   1: 215.008 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  215.008 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 19.1%  28.7% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 14.2%  21.3% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e979402dc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = MpmcUnboundedXaddArrayQueue, warmup = true, work = 10)
+
+# Run progress: 83.33% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 219.143 ns/op
+Iteration   1: 217.090 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  217.090 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.9%  26.9% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 14.5%  21.8% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007806c802e800.invoke
+
+  0.7%   1.1% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+  0.2%   0.3% org.jctools.queues.MpUnboundedXaddChunk.soElement
+              org.jctools.queues.MpmcUnboundedXaddArrayQueue.switchToNextConsumerChunkAndPoll
+              org.jctools.queues.MpmcUnboundedXaddArrayQueue.poll
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = MpmcUnboundedXaddArrayQueue, warmup = true, work = 100)
+
+# Run progress: 86.67% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 357.039 ns/op
+Iteration   1: 354.170 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  354.170 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.5%  20.2% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 10.1%  15.2% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007bc69402dc00.invoke
+
+  9.8%  14.6% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = MpmcArrayQueue, warmup = true, work = 0)
+
+# Run progress: 90.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 232.023 ns/op
+Iteration   1: 231.124 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  231.124 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007c9fa002f800.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = MpmcArrayQueue, warmup = true, work = 10)
+
+# Run progress: 93.33% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 236.577 ns/op
+Iteration   1: 235.461 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  235.461 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 33.2%  49.7% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+# Parameters: (burstSize = 10, qCapacity = 132000, qType = MpmcArrayQueue, warmup = true, work = 100)
+
+# Run progress: 96.67% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 359.901 ns/op
+Iteration   1: 356.405 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease":
+  356.405 ns/op
+
+Secondary result "org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 21.3%  31.9% org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 12.1%  18.1% org.openjdk.jmh.infra.Blackhole.consumeCPU
+              org.jctools.jmh.latency.QueueAsPoolBurstCost.acquireAndRelease
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_avgt_jmhStub
+              org.jctools.jmh.latency.jmh_generated.QueueAsPoolBurstCost_acquireAndRelease_jmhTest.acquireAndRelease_AverageTime
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:01:36
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                     (burstSize)  (qCapacity)                      (qType)  (warmup)  (work)  Mode  Cnt    Score   Error  Units
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000                         None      true       0  avgt         9.410          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000                         None      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000                         None      true      10  avgt        15.143          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000                         None      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000                         None      true     100  avgt       146.717          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000                         None      true     100  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000           ArrayBlockingQueue      true       0  avgt        35.917          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000           ArrayBlockingQueue      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000           ArrayBlockingQueue      true      10  avgt        40.346          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000           ArrayBlockingQueue      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000           ArrayBlockingQueue      true     100  avgt       169.224          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000           ArrayBlockingQueue      true     100  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000        ConcurrentLinkedQueue      true       0  avgt        35.824          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000        ConcurrentLinkedQueue      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000        ConcurrentLinkedQueue      true      10  avgt        38.158          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000        ConcurrentLinkedQueue      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000        ConcurrentLinkedQueue      true     100  avgt       161.485          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000        ConcurrentLinkedQueue      true     100  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000  MpmcUnboundedXaddArrayQueue      true       0  avgt        22.861          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000  MpmcUnboundedXaddArrayQueue      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000  MpmcUnboundedXaddArrayQueue      true      10  avgt        29.062          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000  MpmcUnboundedXaddArrayQueue      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000  MpmcUnboundedXaddArrayQueue      true     100  avgt       169.087          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000  MpmcUnboundedXaddArrayQueue      true     100  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000               MpmcArrayQueue      true       0  avgt        20.376          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000               MpmcArrayQueue      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000               MpmcArrayQueue      true      10  avgt        28.241          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000               MpmcArrayQueue      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                  1       132000               MpmcArrayQueue      true     100  avgt       155.927          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack            1       132000               MpmcArrayQueue      true     100  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000                         None      true       0  avgt        57.312          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000                         None      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000                         None      true      10  avgt        52.488          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000                         None      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000                         None      true     100  avgt       201.377          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000                         None      true     100  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000           ArrayBlockingQueue      true       0  avgt       333.627          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000           ArrayBlockingQueue      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000           ArrayBlockingQueue      true      10  avgt       335.874          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000           ArrayBlockingQueue      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000           ArrayBlockingQueue      true     100  avgt       461.150          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000           ArrayBlockingQueue      true     100  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000        ConcurrentLinkedQueue      true       0  avgt       343.119          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000        ConcurrentLinkedQueue      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000        ConcurrentLinkedQueue      true      10  avgt       342.321          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000        ConcurrentLinkedQueue      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000        ConcurrentLinkedQueue      true     100  avgt       505.473          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000        ConcurrentLinkedQueue      true     100  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000  MpmcUnboundedXaddArrayQueue      true       0  avgt       215.008          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000  MpmcUnboundedXaddArrayQueue      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000  MpmcUnboundedXaddArrayQueue      true      10  avgt       217.090          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000  MpmcUnboundedXaddArrayQueue      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000  MpmcUnboundedXaddArrayQueue      true     100  avgt       354.170          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000  MpmcUnboundedXaddArrayQueue      true     100  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000               MpmcArrayQueue      true       0  avgt       231.124          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000               MpmcArrayQueue      true       0  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000               MpmcArrayQueue      true      10  avgt       235.461          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000               MpmcArrayQueue      true      10  avgt           NaN            ---
+QueueAsPoolBurstCost.acquireAndRelease                 10       132000               MpmcArrayQueue      true     100  avgt       356.405          ns/op
+QueueAsPoolBurstCost.acquireAndRelease:stack           10       132000               MpmcArrayQueue      true     100  avgt           NaN            ---

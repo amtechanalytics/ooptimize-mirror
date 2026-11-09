@@ -1,0 +1,843 @@
+{
+ "compile_ok": true,
+ "errors": [],
+ "ev": {
+  "org.jctools.queues.ConcurrentCircularArrayQueue": "NA"
+ },
+ "file": "jctools-core/src/main/java/org/jctools/queues/ConcurrentCircularArrayQueue.java",
+ "key": "JCTools-b8f5c5de3eb4",
+ "lib": "JCTools",
+ "methods": [
+  "JCTools:org.jctools.queues.ConcurrentCircularArrayQueue#clear()"
+ ],
+ "ok": true,
+ "overlay_base": "/opt/data/oopt/shared/base/JCTools-b8f5c5de3eb4/overlay_base",
+ "randoop": {
+  "org.jctools.queues.ConcurrentCircularArrayQueue": {
+   "classes": [
+    "org.jctools.queues.OoptRConcurrentCircularArrayQueue",
+    "org.jctools.queues.OoptRConcurrentCircularArrayQueue0"
+   ],
+   "compiled": true,
+   "dir": "/opt/data/oopt/shared/base/JCTools-b8f5c5de3eb4/randoop/org_jctools_queues_ConcurrentCircularArrayQueue/classes",
+   "flaky": 0,
+   "generated_files": 2,
+   "keep": [
+    "org.jctools.queues.OoptRConcurrentCircularArrayQueue0#test1",
+    "org.jctools.queues.OoptRConcurrentCircularArrayQueue0#test2"
+   ],
+   "seen": 2
+  }
+ },
+ "release": 8,
+ "spot": [
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  },
+  {
+   "category": "PERFORMANCE",
+   "method": null,
+   "priority": "2",
+   "type": "UUF_UNUSED_FIELD"
+  }
+ ],
+ "test_cp": [
+  "/opt/data/oopt/shared/src/JCTools/jctools-core/target/test-classes",
+  "/opt/data/oopt/shared/src/JCTools/jctools-core/target/classes",
+  "/opt/data/oopt/m2/org/osgi/osgi.annotation/8.1.0/osgi.annotation-8.1.0.jar",
+  "/opt/data/oopt/m2/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar",
+  "/opt/data/oopt/m2/junit/junit/4.13.2/junit-4.13.2.jar",
+  "/opt/data/oopt/m2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar",
+  "/opt/data/oopt/m2/com/google/guava/guava-testlib/33.5.0-jre/guava-testlib-33.5.0-jre.jar",
+  "/opt/data/oopt/m2/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar",
+  "/opt/data/oopt/m2/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar",
+  "/opt/data/oopt/m2/com/google/j2objc/j2objc-annotations/3.1/j2objc-annotations-3.1.jar",
+  "/opt/data/oopt/m2/com/google/guava/guava/33.5.0-jre/guava-33.5.0-jre.jar",
+  "/opt/data/oopt/m2/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar",
+  "/opt/data/oopt/m2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+  "/opt/data/oopt/m2/org/jetbrains/kotlinx/lincheck-jvm/2.39/lincheck-jvm-2.39.jar",
+  "/opt/data/oopt/m2/org/jetbrains/kotlin/kotlin-stdlib/1.9.25/kotlin-stdlib-1.9.25.jar",
+  "/opt/data/oopt/m2/org/jetbrains/annotations/13.0/annotations-13.0.jar",
+  "/opt/data/oopt/m2/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.25/kotlin-stdlib-common-1.9.25.jar",
+  "/opt/data/oopt/m2/org/jetbrains/kotlin/kotlin-reflect/1.9.25/kotlin-reflect-1.9.25.jar",
+  "/opt/data/oopt/m2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.7.3/kotlinx-coroutines-core-jvm-1.7.3.jar",
+  "/opt/data/oopt/m2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.20/kotlin-stdlib-jdk8-1.8.20.jar",
+  "/opt/data/oopt/m2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.20/kotlin-stdlib-jdk7-1.8.20.jar",
+  "/opt/data/oopt/m2/org/ow2/asm/asm-commons/9.6/asm-commons-9.6.jar",
+  "/opt/data/oopt/m2/org/ow2/asm/asm/9.6/asm-9.6.jar",
+  "/opt/data/oopt/m2/org/ow2/asm/asm-tree/9.6/asm-tree-9.6.jar",
+  "/opt/data/oopt/m2/org/ow2/asm/asm-util/9.6/asm-util-9.6.jar",
+  "/opt/data/oopt/m2/org/ow2/asm/asm-analysis/9.6/asm-analysis-9.6.jar",
+  "/opt/data/oopt/m2/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar",
+  "/opt/data/oopt/m2/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar",
+  "/opt/data/oopt/m2/org/jetbrains/kotlinx/atomicfu-jvm/0.20.2/atomicfu-jvm-0.20.2.jar"
+ ],
+ "tests": {
+  "classes": [],
+  "engine": "auto",
+  "error": null,
+  "failed_run1": 0,
+  "flaky": 0,
+  "keep": [],
+  "seen": 0
+ }
+}

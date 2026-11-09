@@ -1,0 +1,975 @@
+# OOPT benchmark org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 1, qType = SpscArrayQueue)
+
+# Run progress: 0.00% complete, ETA 00:00:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 317.008 ns/op
+Iteration   1: 317.547 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  317.547 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 24.6%  32.8% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.4%   0.5% org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007f4b1802e000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 1, qType = MpscArrayQueue)
+
+# Run progress: 6.25% complete, ETA 00:00:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 311.444 ns/op
+Iteration   1: 311.828 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  311.828 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 24.7%  33.0% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.3%   0.4% org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073e9ac02ec00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 1, qType = SpmcArrayQueue)
+
+# Run progress: 12.50% complete, ETA 00:00:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 537.081 ns/op
+Iteration   1: 538.836 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  538.836 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 20.3%  27.1% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.7%   6.2% org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000078f95c02f000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 1, qType = MpmcArrayQueue)
+
+# Run progress: 18.75% complete, ETA 00:00:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 473.615 ns/op
+Iteration   1: 474.981 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  474.981 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 10, qType = SpscArrayQueue)
+
+# Run progress: 25.00% complete, ETA 00:00:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 390.673 ns/op
+Iteration   1: 389.582 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  389.582 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 24.5%  32.6% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.5%   0.7% org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000728d3802e000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 10, qType = MpscArrayQueue)
+
+# Run progress: 31.25% complete, ETA 00:00:35
+# Fork: 1 of 1
+# Warmup Iteration   1: 784.466 ns/op
+Iteration   1: 784.022 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  784.022 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 10, qType = SpmcArrayQueue)
+
+# Run progress: 37.50% complete, ETA 00:00:31
+# Fork: 1 of 1
+# Warmup Iteration   1: 674.731 ns/op
+Iteration   1: 669.093 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  669.093 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 23.0%  30.7% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  2.0%   2.7% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Stop.handle
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 10, qType = MpmcArrayQueue)
+
+# Run progress: 43.75% complete, ETA 00:00:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 1353.662 ns/op
+Iteration   1: 1352.420 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  1352.420 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 100, qType = SpscArrayQueue)
+
+# Run progress: 50.00% complete, ETA 00:00:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 1374.919 ns/op
+Iteration   1: 1451.867 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  1451.867 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 24.6%  32.8% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 22.3%  29.8% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  2.7%   3.5% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Stop.handle
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  0.4%   0.5% org.jctools.queues.SpscArrayQueue.offer
+              org.jctools.queues.SpscArrayQueue.relaxedOffer
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 100, qType = MpscArrayQueue)
+
+# Run progress: 56.25% complete, ETA 00:00:22
+# Fork: 1 of 1
+# Warmup Iteration   1: 4349.583 ns/op
+Iteration   1: 4554.545 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  4554.545 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 24.9%  33.2% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 24.1%  32.1% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  0.9%   1.2% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Stop.handle
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.releaseShared
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 100, qType = SpmcArrayQueue)
+
+# Run progress: 62.50% complete, ETA 00:00:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 1862.360 ns/op
+Iteration   1: 1861.111 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  1861.111 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.4% <stack is empty, everything is filtered?>
+ 24.8%  33.0% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 23.0%  30.7% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  1.9%   2.5% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Stop.handle
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  0.1%   0.2% java.lang.Object.wait0
+              java.lang.Object.wait
+              java.lang.Thread.join
+              java.lang.Thread.join
+
+  0.1%   0.2% org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007aeb2402e000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 100, qType = MpmcArrayQueue)
+
+# Run progress: 68.75% complete, ETA 00:00:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 5442.083 ns/op
+Iteration   1: 5370.387 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  5370.387 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 24.7%  33.0% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 24.6%  32.8% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  0.4%   0.5% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Stop.handle
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  0.1%   0.2% org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073437002e400.invoke
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.releaseShared
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 1000, qType = SpscArrayQueue)
+
+# Run progress: 75.00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 5677.417 ns/op
+Iteration   1: 8727.512 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  8727.512 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 24.5%  32.6% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 22.7%  30.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  2.3%   3.0% org.jctools.queues.SpscArrayQueue.offer
+              org.jctools.queues.SpscArrayQueue.relaxedOffer
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+
+  0.5%   0.7% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Stop.handle
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 1000, qType = MpscArrayQueue)
+
+# Run progress: 81.25% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 37555.314 ns/op
+Iteration   1: 37446.608 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  37446.608 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 24.9%  33.2% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.1%   0.2% org.jctools.queues.MpscArrayQueue.offer
+              org.jctools.queues.MpscArrayQueue.relaxedOffer
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 1000, qType = SpmcArrayQueue)
+
+# Run progress: 87.50% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 10701.699 ns/op
+Iteration   1: 10706.846 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  10706.846 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 24.5%  32.6% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  0.5%   0.7% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Stop.handle
+              org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+# Parameters: (burstSize = 1000, qType = MpmcArrayQueue)
+
+# Run progress: 93.75% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 29475.689 ns/op
+Iteration   1: 29588.827 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost":
+  29588.827 ns/op
+
+Secondary result "org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 75.0%         RUNNABLE
+ 25.0%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost$Consumer.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+ 25.0%  33.3% org.jctools.jmh.latency.spsc.MpqRelaxedBurstCost.burstCost
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_avgt_jmhStub
+              org.jctools.jmh.latency.spsc.jmh_generated.MpqRelaxedBurstCost_burstCost_jmhTest.burstCost_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 25.0%  33.3% <stack is empty, everything is filtered?>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:51
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                            (burstSize)         (qType)  Mode  Cnt      Score   Error  Units
+MpqRelaxedBurstCost.burstCost                  1  SpscArrayQueue  avgt         317.547          ns/op
+MpqRelaxedBurstCost.burstCost:stack            1  SpscArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                  1  MpscArrayQueue  avgt         311.828          ns/op
+MpqRelaxedBurstCost.burstCost:stack            1  MpscArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                  1  SpmcArrayQueue  avgt         538.836          ns/op
+MpqRelaxedBurstCost.burstCost:stack            1  SpmcArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                  1  MpmcArrayQueue  avgt         474.981          ns/op
+MpqRelaxedBurstCost.burstCost:stack            1  MpmcArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                 10  SpscArrayQueue  avgt         389.582          ns/op
+MpqRelaxedBurstCost.burstCost:stack           10  SpscArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                 10  MpscArrayQueue  avgt         784.022          ns/op
+MpqRelaxedBurstCost.burstCost:stack           10  MpscArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                 10  SpmcArrayQueue  avgt         669.093          ns/op
+MpqRelaxedBurstCost.burstCost:stack           10  SpmcArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                 10  MpmcArrayQueue  avgt        1352.420          ns/op
+MpqRelaxedBurstCost.burstCost:stack           10  MpmcArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                100  SpscArrayQueue  avgt        1451.867          ns/op
+MpqRelaxedBurstCost.burstCost:stack          100  SpscArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                100  MpscArrayQueue  avgt        4554.545          ns/op
+MpqRelaxedBurstCost.burstCost:stack          100  MpscArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                100  SpmcArrayQueue  avgt        1861.111          ns/op
+MpqRelaxedBurstCost.burstCost:stack          100  SpmcArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost                100  MpmcArrayQueue  avgt        5370.387          ns/op
+MpqRelaxedBurstCost.burstCost:stack          100  MpmcArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost               1000  SpscArrayQueue  avgt        8727.512          ns/op
+MpqRelaxedBurstCost.burstCost:stack         1000  SpscArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost               1000  MpscArrayQueue  avgt       37446.608          ns/op
+MpqRelaxedBurstCost.burstCost:stack         1000  MpscArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost               1000  SpmcArrayQueue  avgt       10706.846          ns/op
+MpqRelaxedBurstCost.burstCost:stack         1000  SpmcArrayQueue  avgt             NaN            ---
+MpqRelaxedBurstCost.burstCost               1000  MpmcArrayQueue  avgt       29588.827          ns/op
+MpqRelaxedBurstCost.burstCost:stack         1000  MpmcArrayQueue  avgt             NaN            ---

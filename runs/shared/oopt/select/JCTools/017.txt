@@ -1,0 +1,247 @@
+# OOPT benchmark org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop
+# Parameters: (qType = SpscArrayQueue)
+
+# Run progress: 0.00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 2.737 ns/op
+Iteration   1: 2.722 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop":
+  2.722 ns/op
+
+Secondary result "org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 22.5%  33.8% org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  9.2%  13.8% org.jctools.queues.SpscArrayQueue.offer
+              org.jctools.jmh.baseline.SingleThreadedPoll.fill
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+
+  1.6%   2.4% org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076c95402ec00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop
+# Parameters: (qType = MpscArrayQueue)
+
+# Run progress: 25.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 2.825 ns/op
+Iteration   1: 2.751 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop":
+  2.751 ns/op
+
+Secondary result "org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 27.6%  41.4% org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076b69402e000.invoke
+
+  5.7%   8.6% org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop
+# Parameters: (qType = SpmcArrayQueue)
+
+# Run progress: 50.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 9.270 ns/op
+Iteration   1: 9.244 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop":
+  9.244 ns/op
+
+Secondary result "org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 28.9%  43.4% org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.3%   6.4% org.jctools.jmh.baseline.SingleThreadedPoll.fill
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007a67c002e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop
+# Parameters: (qType = MpmcArrayQueue)
+
+# Run progress: 75.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 12.296 ns/op
+Iteration   1: 12.247 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop":
+  12.247 ns/op
+
+Secondary result "org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.7%  26.6% org.jctools.jmh.baseline.SingleThreadedPoll.pollLoop
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+ 15.6%  23.4% org.jctools.jmh.baseline.SingleThreadedPoll.fill
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.SingleThreadedPoll_pollLoop_jmhTest.pollLoop_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:12
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                 (qType)  Mode  Cnt   Score   Error  Units
+SingleThreadedPoll.pollLoop        SpscArrayQueue  avgt        2.722          ns/op
+SingleThreadedPoll.pollLoop:stack  SpscArrayQueue  avgt          NaN            ---
+SingleThreadedPoll.pollLoop        MpscArrayQueue  avgt        2.751          ns/op
+SingleThreadedPoll.pollLoop:stack  MpscArrayQueue  avgt          NaN            ---
+SingleThreadedPoll.pollLoop        SpmcArrayQueue  avgt        9.244          ns/op
+SingleThreadedPoll.pollLoop:stack  SpmcArrayQueue  avgt          NaN            ---
+SingleThreadedPoll.pollLoop        MpmcArrayQueue  avgt       12.247          ns/op
+SingleThreadedPoll.pollLoop:stack  MpmcArrayQueue  avgt          NaN            ---

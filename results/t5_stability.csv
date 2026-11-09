@@ -1,0 +1,10 @@
+model,rung,methods_with_two_samples,flips,flip_rate,wilson_lo,wilson_hi
+claude-sonnet-5-5,R1,194,1,0.0052,0.0009,0.0286
+claude-sonnet-5-5,R2,203,2,0.0099,0.0027,0.0352
+claude-sonnet-5-5,R3,203,3,0.0148,0.0050,0.0425
+gpt-6.1-sol,R1,204,2,0.0098,0.0027,0.0350
+gpt-6.1-sol,R2,204,1,0.0049,0.0009,0.0272
+gpt-6.1-sol,R3,204,2,0.0098,0.0027,0.0350
+openai/gpt-oss-120b,R1,195,4,0.0205,0.0080,0.0515
+openai/gpt-oss-120b,R2,189,9,0.0476,0.0253,0.0880
+openai/gpt-oss-120b,R3,193,5,0.0259,0.0111,0.0592

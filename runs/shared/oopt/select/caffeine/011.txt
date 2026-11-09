@@ -1,0 +1,663 @@
+# OOPT benchmark com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+# Parameters: (batchSize = 10, cacheType = Bounded)
+
+# Run progress: 0.00% complete, ETA 00:00:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 988118.562 ops/s
+Iteration   1: 967264.674 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent":
+  967264.674 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 71.5%         WAITING
+ 21.0%         RUNNABLE
+  7.4%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 71.5% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+....[Thread state: RUNNABLE]........................................................................
+  7.1%  33.9% <stack is empty, everything is filtered?>
+  3.5%  16.5% com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$new$0
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$$Lambda/0x00007cb31408a478.accept
+              com.github.benmanes.caffeine.cache.BoundedBuffer$RingBuffer.drainTo
+              com.github.benmanes.caffeine.cache.StripedBuffer.drainTo
+
+  2.9%  13.6% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  2.4%  11.4% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  1.9%   9.3% com.github.benmanes.caffeine.cache.BoundedLocalCache.afterRead
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  1.3%   6.2% java.util.LinkedHashMap.newNode
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+
+  0.6%   2.7% java.util.HashMap.hash
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  0.3%   1.6% com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+              java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec
+              java.util.concurrent.ForkJoinTask.doExec
+
+  0.3%   1.3% com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_Throughput
+
+  0.2%   1.1% java.util.concurrent.ForkJoinPool.hasTasks
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.2%   1.1% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.4% java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  0.1%   0.4% com.github.benmanes.caffeine.cache.BoundedLocalCache.expireEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  0.0%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+  0.0%   0.2% com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.0%   0.2% java.util.concurrent.ConcurrentHashMap.put
+              org.openjdk.jmh.runner.BenchmarkHandler.getWorkerData
+              org.openjdk.jmh.runner.BenchmarkHandler.access$300
+              org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  7.1%  96.4% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  0.3%   3.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+# Parameters: (batchSize = 10, cacheType = Unbounded)
+
+# Run progress: 16.67% complete, ETA 00:00:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 1552302.194 ops/s
+Iteration   1: 1638204.209 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent":
+  1638204.209 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.3%  19.9% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.UnboundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+ 10.6%  16.0% java.util.LinkedHashMap.newNode
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+
+  5.7%   8.5% java.util.HashMap.hash
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  2.3%   3.5% com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_Throughput
+
+  1.4%   2.1% java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+# Parameters: (batchSize = 100, cacheType = Bounded)
+
+# Run progress: 33.33% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 98792.835 ops/s
+Iteration   1: 98529.540 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent":
+  98529.540 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 50.1%         WAITING
+ 36.3%         RUNNABLE
+ 13.6%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 50.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 12.5%  34.4% <stack is empty, everything is filtered?>
+  5.5%  15.2% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  4.8%  13.2% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  4.3%  11.7% com.github.benmanes.caffeine.cache.BoundedLocalCache.onAccess
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$new$0
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$$Lambda/0x00007937a008a478.accept
+              com.github.benmanes.caffeine.cache.BoundedBuffer$RingBuffer.drainTo
+
+  3.3%   9.0% com.github.benmanes.caffeine.cache.BoundedLocalCache.afterRead
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  2.6%   7.1% java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+  0.9%   2.4% java.util.HashMap.hash
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  0.6%   1.6% com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$new$0
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$$Lambda/0x00007937a008a478.accept
+              com.github.benmanes.caffeine.cache.BoundedBuffer$RingBuffer.drainTo
+              com.github.benmanes.caffeine.cache.StripedBuffer.drainTo
+
+  0.4%   1.1% java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  0.4%   1.1% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool$WorkQueue.push
+
+  0.3%   0.7% com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+              java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec
+              java.util.concurrent.ForkJoinTask.doExec
+
+  0.3%   0.7% java.util.concurrent.ForkJoinPool.hasTasks
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.2%   0.5% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.2% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_Throughput
+
+  0.1%   0.2% java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.AbstractLinkedDeque.moveToBack
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.reorder
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.onAccess
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$new$0
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.Caffeine.calculateHashMapCapacity
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+  0.1%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 12.5%  91.7% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  1.1%   8.3% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+# Parameters: (batchSize = 100, cacheType = Unbounded)
+
+# Run progress: 50.00% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 188770.427 ops/s
+Iteration   1: 201506.234 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent":
+  201506.234 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.2%  22.8% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.UnboundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+ 10.2%  15.3% java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+  4.8%   7.1% java.util.HashMap.hash
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  1.8%   2.6% java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  0.9%   1.3% com.github.benmanes.caffeine.cache.UnboundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+  0.4%   0.5% com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_Throughput
+
+  0.2%   0.3% com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+# Parameters: (batchSize = 1000, cacheType = Bounded)
+
+# Run progress: 66.67% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 9748.366 ops/s
+Iteration   1: 9515.466 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent":
+  9515.466 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 67.1%         WAITING
+ 21.3%         RUNNABLE
+ 11.5%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 67.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+....[Thread state: RUNNABLE]........................................................................
+  8.3%  39.0% <stack is empty, everything is filtered?>
+  3.8%  17.7% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  2.9%  13.6% com.github.benmanes.caffeine.cache.BoundedLocalCache.onAccess
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.lambda$new$0
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$$Lambda/0x000071d08008a478.accept
+              com.github.benmanes.caffeine.cache.BoundedBuffer$RingBuffer.drainTo
+
+  1.9%   8.8% java.util.LinkedHashMap.newNode
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+
+  1.4%   6.7% com.github.benmanes.caffeine.cache.BoundedLocalCache.afterRead
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  1.2%   5.8% java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.4%   2.1% java.util.HashMap.hash
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  0.3%   1.5% java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  0.2%   1.0% java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+  0.2%   0.8% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.ForkJoinPool.signalWork
+              java.util.concurrent.ForkJoinPool$WorkQueue.push
+
+  0.1%   0.6% java.util.concurrent.ForkJoinPool.hasTasks
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.6% com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+              java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec
+              java.util.concurrent.ForkJoinTask.doExec
+
+  0.1%   0.4% java.util.concurrent.ForkJoinPool.scan
+              java.util.concurrent.ForkJoinPool.runWorker
+              java.util.concurrent.ForkJoinWorkerThread.run
+
+  0.1%   0.4% com.github.benmanes.caffeine.cache.BoundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+  0.0%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.expireEntries
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+
+  0.0%   0.2% com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp
+              com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run
+              java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec
+
+  0.0%   0.2% java.lang.invoke.VarHandleInts$FieldInstanceReadWrite.setRelease
+              java.lang.invoke.VarHandleGuards.guard_LI_V
+              com.github.benmanes.caffeine.cache.BLCHeader$DrainStatusRef.setDrainStatusRelease
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+
+  0.0%   0.2% com.github.benmanes.caffeine.cache.BoundedBuffer$RingBuffer.drainTo
+              com.github.benmanes.caffeine.cache.StripedBuffer.drainTo
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.drainReadBuffer
+              com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  8.3%  72.2% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  3.2%  27.8% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkUntil
+              java.util.concurrent.ForkJoinPool.awaitWork
+              java.util.concurrent.ForkJoinPool.runWorker
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+# Parameters: (batchSize = 1000, cacheType = Unbounded)
+
+# Run progress: 83.33% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 19090.124 ops/s
+Iteration   1: 21788.289 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent":
+  21788.289 ops/s
+
+Secondary result "com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.8%  20.6% java.util.concurrent.ConcurrentHashMap.get
+              com.github.benmanes.caffeine.cache.UnboundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+ 11.8%  17.7% java.util.LinkedHashMap.newNode
+              java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+
+  4.6%   6.9% java.util.HashMap.hash
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  1.1%   1.6% java.util.HashMap.putVal
+              java.util.HashMap.put
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+
+  1.1%   1.6% com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_Throughput
+
+  0.9%   1.3% com.github.benmanes.caffeine.cache.UnboundedLocalCache.getAllPresent
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+  0.2%   0.3% com.github.benmanes.caffeine.cache.Caffeine.calculateHashMapCapacity
+              com.github.benmanes.caffeine.cache.LocalManualCache.getAllPresent
+              com.github.benmanes.caffeine.cache.GetAllBenchmark.getAllPresent
+              com.github.benmanes.caffeine.cache.jmh_generated.GetAllBenchmark_getAllPresent_jmhTest.getAllPresent_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:20
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                            (batchSize)  (cacheType)   Mode  Cnt        Score   Error  Units
+GetAllBenchmark.getAllPresent                 10      Bounded  thrpt        967264.674          ops/s
+GetAllBenchmark.getAllPresent:stack           10      Bounded  thrpt               NaN            ---
+GetAllBenchmark.getAllPresent                 10    Unbounded  thrpt       1638204.209          ops/s
+GetAllBenchmark.getAllPresent:stack           10    Unbounded  thrpt               NaN            ---
+GetAllBenchmark.getAllPresent                100      Bounded  thrpt         98529.540          ops/s
+GetAllBenchmark.getAllPresent:stack          100      Bounded  thrpt               NaN            ---
+GetAllBenchmark.getAllPresent                100    Unbounded  thrpt        201506.234          ops/s
+GetAllBenchmark.getAllPresent:stack          100    Unbounded  thrpt               NaN            ---
+GetAllBenchmark.getAllPresent               1000      Bounded  thrpt          9515.466          ops/s
+GetAllBenchmark.getAllPresent:stack         1000      Bounded  thrpt               NaN            ---
+GetAllBenchmark.getAllPresent               1000    Unbounded  thrpt         21788.289          ops/s
+GetAllBenchmark.getAllPresent:stack         1000    Unbounded  thrpt               NaN            ---

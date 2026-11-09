@@ -1,0 +1,257 @@
+# OOPT benchmark io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 3.079 ops/ms
+Iteration   1: 4.628 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel":
+  4.628 ops/ms
+
+Secondary result "io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  9.4%  14.1% io.netty.buffer.ByteBufUtil.firstIndexOf
+              io.netty.buffer.AbstractByteBuf.indexOf
+              io.netty.buffer.AbstractByteBuf.bytesBefore
+              io.netty.handler.codec.http.multipart.HttpPostBodyUtil.findDelimiter
+
+  2.3%   3.5% jdk.internal.misc.Unsafe.setMemory0
+              jdk.internal.misc.Unsafe.setMemory
+              jdk.internal.misc.Unsafe.setMemory
+              java.nio.DirectByteBuffer.<init>
+
+  2.1%   3.2% jdk.internal.misc.Unsafe.allocateMemory0
+              jdk.internal.misc.Unsafe.allocateMemory
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+
+  1.8%   2.7% io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDelimiter
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+
+  1.2%   1.9% io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.getFileUpload
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+
+  1.2%   1.9% jdk.internal.misc.Unsafe.freeMemory0
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+
+  1.1%   1.6% io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.splitMultipartHeader
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDelimiter
+
+  1.1%   1.6% io.netty.buffer.ByteBufUtil.unrolledFirstIndexOf
+              io.netty.buffer.ByteBufUtil.firstIndexOf
+              io.netty.buffer.AbstractByteBuf.indexOf
+              io.netty.buffer.AbstractByteBuf.bytesBefore
+
+  1.1%   1.6% io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.splitMultipartHeaderValues
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.splitMultipartHeader
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+
+  0.9%   1.3% java.lang.String.split
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDelimiter
+
+  0.7%   1.1% io.netty.handler.codec.http.DefaultHttpRequest.<init>
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.testHighNumberChunks
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel
+              io.netty.handler.codec.http.multipart.jmh_generated.HttpPostMultipartRequestDecoderBenchmark_multipartRequestDecoderHighDisabledLevel_jmhTest.multipartRequestDecoderHighDisabledLevel_thrpt_jmhStub
+
+  0.7%   1.1% io.netty.handler.codec.http.multipart.FileUploadUtil.validateFileNameForMultiPart
+              io.netty.handler.codec.http.multipart.MemoryFileUpload.setFilename
+              io.netty.handler.codec.http.multipart.MemoryFileUpload.<init>
+              io.netty.handler.codec.http.multipart.MixedFileUpload.<init>
+
+  0.7%   1.1% java.lang.StringLatin1.trim
+              java.lang.String.trim
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.splitMultipartHeader
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+
+  0.7%   1.1% io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.cleanString
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.getFileUpload
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+
+  0.7%   1.1% io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.getContentDispositionAttribute
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDelimiter
+
+  0.7%   1.1% java.util.TreeMap.getEntryUsingComparator
+              java.util.TreeMap.getEntry
+              java.util.TreeMap.get
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.getFileUpload
+
+  0.5%   0.8% java.lang.String.<init>
+              io.netty.buffer.ByteBufUtil.decodeString
+              io.netty.buffer.AbstractByteBuf.toString
+              io.netty.buffer.AbstractByteBuf.toString
+
+  0.5%   0.8% jdk.internal.misc.Unsafe.checkPointer
+              jdk.internal.misc.Unsafe.freeMemoryChecks
+              jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+
+  0.5%   0.8% java.util.ArrayList.clear
+              io.netty.util.internal.InternalThreadLocalMap.arrayList
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.splitMultipartHeaderValues
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.splitMultipartHeader
+
+  0.5%   0.8% io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.loadDataMultipartOptimized
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.getFileUpload
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+
+  0.4%   0.5% io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.cleanString
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.getContentDispositionAttribute
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+
+  0.4%   0.5% jdk.internal.misc.Unsafe.freeMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+              jdk.internal.misc.Unsafe.invokeCleaner
+
+  0.4%   0.5% io.netty.handler.codec.http.multipart.DefaultHttpDataFactory.cleanAllHttpData
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.testHighNumberChunks
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel
+              io.netty.handler.codec.http.multipart.jmh_generated.HttpPostMultipartRequestDecoderBenchmark_multipartRequestDecoderHighDisabledLevel_jmhTest.multipartRequestDecoderHighDisabledLevel_thrpt_jmhStub
+
+  0.4%   0.5% java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+              io.netty.util.internal.PlatformDependent.allocateDirect
+              io.netty.buffer.UnpooledDirectByteBuf.allocateDirectBuffer
+
+  0.4%   0.5% io.netty.handler.codec.http.HttpHeaderValidationUtil.verifyValidHeaderValueCharSequence
+              io.netty.handler.codec.http.HttpHeaderValidationUtil.validateValidHeaderValue
+              io.netty.handler.codec.http.multipart.FileUploadUtil.checkContentTypeForMultiPart
+              io.netty.handler.codec.http.multipart.FileUploadUtil.validateContentTypeForMultiPart
+
+  0.4%   0.5% io.netty.buffer.AbstractByteBuf.writeBytes
+              io.netty.buffer.AbstractByteBuf.writeBytes
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.offer
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.offer
+
+  0.4%   0.5% io.netty.buffer.AbstractByteBuf.writeBytes
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.readLineOptimized
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+
+  0.2%   0.3% java.lang.AbstractStringBuilder.setLength
+              java.lang.StringBuilder.setLength
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.testHighNumberChunks
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel
+
+  0.2%   0.3% io.netty.handler.codec.http.multipart.CaseIgnoringComparator.compare
+              io.netty.handler.codec.http.multipart.CaseIgnoringComparator.compare
+              java.util.TreeMap.compare
+              java.util.TreeMap.addEntryToEmptyMap
+
+  0.2%   0.3% java.lang.StringBuilder.append
+              io.netty.handler.codec.http.multipart.HttpPostRequestDecoder.getMultipartDataBoundary
+              io.netty.handler.codec.http.multipart.HttpPostRequestDecoder.isMultipart
+              io.netty.handler.codec.http.multipart.HttpPostRequestDecoder.<init>
+
+  0.2%   0.3% io.netty.buffer.UnpooledByteBufAllocator$InstrumentedUnpooledUnsafeDirectByteBuf.allocateDirectBuffer
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledDirectByteBuf.<init>
+              io.netty.buffer.UnpooledUnsafeDirectByteBuf.<init>
+
+  0.2%   0.3% io.netty.handler.codec.http.multipart.HttpPostRequestDecoder.offer
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.testHighNumberChunks
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel
+              io.netty.handler.codec.http.multipart.jmh_generated.HttpPostMultipartRequestDecoderBenchmark_multipartRequestDecoderHighDisabledLevel_jmhTest.multipartRequestDecoderHighDisabledLevel_thrpt_jmhStub
+
+  0.2%   0.3% io.netty.util.AsciiString.contentEqualsIgnoreCase
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDisposition
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.findMultipartDelimiter
+
+  0.2%   0.3% io.netty.handler.codec.http.multipart.AbstractHttpData.cleanName
+              io.netty.handler.codec.http.multipart.AbstractHttpData.<init>
+              io.netty.handler.codec.http.multipart.AbstractMemoryHttpData.<init>
+              io.netty.handler.codec.http.multipart.MemoryAttribute.<init>
+
+  0.2%   0.3% io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.getFileUpload
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.parseBodyMultipart
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.parseBody
+
+  0.2%   0.3% io.netty.handler.codec.http.multipart.HttpPostBodyUtil.findDelimiter
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.loadDataMultipartOptimized
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.getFileUpload
+              io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.decodeMultipart
+
+  0.2%   0.3% java.util.TreeMap.fixAfterInsertion
+              java.util.TreeMap.addEntry
+              java.util.TreeMap.put
+              java.util.TreeMap.put
+
+  0.2%   0.3% jdk.internal.ref.Cleaner.create
+              java.nio.DirectByteBuffer.<init>
+              java.nio.ByteBuffer.allocateDirect
+              io.netty.util.internal.CleanerJava9.allocate
+
+  0.2%   0.3% java.nio.Bits.unreserveMemory
+              java.nio.DirectByteBuffer$Deallocator.run
+              jdk.internal.ref.Cleaner.clean
+              jdk.internal.misc.Unsafe.invokeCleaner
+
+  0.2%   0.3% <other>
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                                                  Mode  Cnt  Score   Error   Units
+HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel         thrpt       4.628          ops/ms
+HttpPostMultipartRequestDecoderBenchmark.multipartRequestDecoderHighDisabledLevel:·stack  thrpt         NaN             ---

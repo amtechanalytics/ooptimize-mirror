@@ -1,0 +1,78 @@
+# OOPT benchmark org.roaringbitmap.RangeOperationBenchmark.ior
+# JMH version: 1.23
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.roaringbitmap.RangeOperationBenchmark.ior
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 19387844.269 ops/s
+Iteration   1: 19491800.699 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "org.roaringbitmap.RangeOperationBenchmark.ior":
+  19491800.699 ops/s
+
+Secondary result "org.roaringbitmap.RangeOperationBenchmark.ior:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 16.2%  24.3% org.roaringbitmap.Util.cardinalityInBitmapRange
+              org.roaringbitmap.BitmapContainer.cardinalityInRange
+              org.roaringbitmap.BitmapContainer.ior
+              org.roaringbitmap.RangeOperationBenchmark.ior
+
+  8.5%  12.7% org.roaringbitmap.Util.setBitmapRange
+              org.roaringbitmap.BitmapContainer.ior
+              org.roaringbitmap.RangeOperationBenchmark.ior
+              org.roaringbitmap.generated.RangeOperationBenchmark_ior_jmhTest.ior_thrpt_jmhStub
+
+  5.5%   8.2% org.roaringbitmap.BitmapContainer.ior
+              org.roaringbitmap.RangeOperationBenchmark.ior
+              org.roaringbitmap.generated.RangeOperationBenchmark_ior_jmhTest.ior_thrpt_jmhStub
+              org.roaringbitmap.generated.RangeOperationBenchmark_ior_jmhTest.ior_Throughput
+
+  3.0%   4.5% org.roaringbitmap.generated.RangeOperationBenchmark_ior_jmhTest.ior_thrpt_jmhStub
+              org.roaringbitmap.generated.RangeOperationBenchmark_ior_jmhTest.ior_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000071b5b802dc00.invoke
+
+  0.2%   0.3% java.util.concurrent.ConcurrentHashMap.putVal
+              java.util.concurrent.ConcurrentHashMap.putIfAbsent
+              org.openjdk.jmh.util.Deduplicator.dedup
+              org.openjdk.jmh.results.Result.<init>
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                            Mode  Cnt         Score   Error  Units
+RangeOperationBenchmark.ior         thrpt       19491800.699          ops/s
+RangeOperationBenchmark.ior:·stack  thrpt                NaN            ---

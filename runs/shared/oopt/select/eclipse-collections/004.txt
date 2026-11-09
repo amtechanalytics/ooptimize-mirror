@@ -1,0 +1,174 @@
+# OOPT benchmark org.eclipse.collections.impl.jmh.MaxByIntTest.maxByQuantity_parallel_lazy_ec
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.eclipse.collections.impl.jmh.MaxByIntTest.maxByQuantity_parallel_lazy_ec
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 201.307 ops/s
+Iteration   1: 288.546 ops/s
+                 stack: <delayed till summary>
+
+
+
+Result "org.eclipse.collections.impl.jmh.MaxByIntTest.maxByQuantity_parallel_lazy_ec":
+  288.546 ops/s
+
+Secondary result "org.eclipse.collections.impl.jmh.MaxByIntTest.maxByQuantity_parallel_lazy_ec:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 80.6%         WAITING
+ 17.9%         RUNNABLE
+  1.5%         TIMED_WAITING
+
+....[Thread state: WAITING].........................................................................
+ 75.7%  94.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  3.1%   3.9% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireInterruptibly
+
+  1.4%   1.8% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.FutureTask.awaitDone
+              java.util.concurrent.FutureTask.get
+
+  0.3%   0.4% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.reacquire
+
+  0.0%   0.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+
+
+....[Thread state: RUNNABLE]........................................................................
+ 15.9%  88.8% org.eclipse.collections.impl.lazy.parallel.list.ListIterableBatch.forEach
+              org.eclipse.collections.impl.lazy.parallel.AbstractBatch.maxBy
+              org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable.lambda$maxBy$1ce440d7$1
+              org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable$$Lambda/0x00007044a809ca68.valueOf
+
+  1.5%   8.3% <stack is empty, everything is filtered?>
+  0.2%   1.0% java.util.concurrent.ThreadPoolExecutor.runWorker
+              java.util.concurrent.ThreadPoolExecutor$Worker.run
+              java.lang.Thread.runWith
+              java.lang.Thread.run
+
+  0.1%   0.6% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.signalNext
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+
+  0.1%   0.3% jdk.internal.misc.Unsafe.unpark
+              java.util.concurrent.locks.LockSupport.unpark
+              java.util.concurrent.FutureTask.finishCompletion
+              java.util.concurrent.FutureTask.set
+
+  0.0%   0.1% org.eclipse.collections.impl.block.procedure.MaxByProcedure.value
+              org.eclipse.collections.impl.lazy.parallel.list.ListIterableBatch.forEach
+              org.eclipse.collections.impl.lazy.parallel.AbstractBatch.maxBy
+              org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable.lambda$maxBy$1ce440d7$1
+
+  0.0%   0.1% java.util.concurrent.AbstractExecutorService.submit
+              org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable.lambda$collectReduceOrdered$4684febf$1
+              org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable$$Lambda/0x00007044a809b000.valueOf
+              org.eclipse.collections.impl.block.factory.Functions$BindProcedure2.value
+
+  0.0%   0.1% java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.isReleasable
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+              java.util.concurrent.ForkJoinPool.managedBlock
+
+  0.0%   0.1% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.FutureTask.awaitDone
+              java.util.concurrent.FutureTask.get
+
+  0.0%   0.1% java.util.concurrent.locks.AbstractQueuedSynchronizer.release
+              java.util.concurrent.ThreadPoolExecutor$Worker.unlock
+              java.util.concurrent.ThreadPoolExecutor.runWorker
+              java.util.concurrent.ThreadPoolExecutor$Worker.run
+
+  0.0%   0.1% java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireInterruptibly
+              java.util.concurrent.locks.ReentrantLock$Sync.lockInterruptibly
+              java.util.concurrent.locks.ReentrantLock.lockInterruptibly
+
+  0.0%   0.1% java.util.concurrent.locks.AbstractQueuedSynchronizer.enqueue
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.doSignal
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.signal
+              java.util.concurrent.LinkedBlockingQueue.take
+
+  0.0%   0.1% org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable.collectReduceOrdered
+              org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable.collectReduce
+              org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable.maxBy
+              org.eclipse.collections.impl.jmh.MaxByIntTest.maxByQuantity_parallel_lazy_ec
+
+  0.0%   0.0% java.util.concurrent.ThreadPoolExecutor.runStateAtLeast
+              java.util.concurrent.ThreadPoolExecutor.getTask
+              java.util.concurrent.ThreadPoolExecutor.runWorker
+              java.util.concurrent.ThreadPoolExecutor$Worker.run
+
+  0.0%   0.0% java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+              java.util.concurrent.ForkJoinPool.managedBlock
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+
+  0.0%   0.0% org.eclipse.collections.impl.list.mutable.AbstractMutableList.asParallel
+              org.eclipse.collections.impl.jmh.MaxByIntTest.maxByQuantity_parallel_lazy_ec
+              org.eclipse.collections.impl.jmh.jmh_generated.MaxByIntTest_maxByQuantity_parallel_lazy_ec_jmhTest.maxByQuantity_parallel_lazy_ec_thrpt_jmhStub
+              org.eclipse.collections.impl.jmh.jmh_generated.MaxByIntTest_maxByQuantity_parallel_lazy_ec_jmhTest.maxByQuantity_parallel_lazy_ec_Throughput
+
+  0.0%   0.0% java.util.concurrent.FutureTask.awaitDone
+              java.util.concurrent.FutureTask.get
+              org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable.collectReduceOrdered
+              org.eclipse.collections.impl.lazy.parallel.AbstractParallelIterable.collectReduce
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+  1.5%  99.4% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+  0.0%   0.6% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos
+              java.util.concurrent.ThreadPoolExecutor.awaitTermination
+
+
+
+
+# Run complete. Total time: 00:00:10
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                           Mode  Cnt    Score   Error  Units
+MaxByIntTest.maxByQuantity_parallel_lazy_ec        thrpt       288.546          ops/s
+MaxByIntTest.maxByQuantity_parallel_lazy_ec:stack  thrpt           NaN            ---

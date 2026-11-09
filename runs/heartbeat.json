@@ -1,0 +1,48 @@
+{
+  "batch": null,
+  "batch_poll": "2026-11-07T16:25:27Z",
+  "done": 3723,
+  "lanes": {
+    "alloc-JCTools": {
+      "done": 312,
+      "last": "2026-11-07T20:27:33Z",
+      "last_ts": 1794083253.2031946
+    },
+    "alloc-RoaringBitmap": {
+      "done": 906,
+      "last": "2026-11-07T20:35:34Z",
+      "last_ts": 1794083734.6754007
+    },
+    "alloc-caffeine": {
+      "done": 672,
+      "last": "2026-11-07T19:53:58Z",
+      "last_ts": 1794081238.5575566
+    },
+    "alloc-eclipse-collections": {
+      "done": 927,
+      "last": "2026-11-07T20:09:06Z",
+      "last_ts": 1794082146.9178216
+    },
+    "alloc-netty": {
+      "done": 906,
+      "last": "2026-11-07T19:59:57Z",
+      "last_ts": 1794081597.7595124
+    }
+  },
+  "last_progress": "2026-11-07T20:35:34Z",
+  "last_progress_ts": 1794083734.6753948,
+  "parse_rates": {
+    "claude-sonnet-5-5": 0.98,
+    "gpt-6.1-sol": 1.0,
+    "openai/gpt-oss-120b": 0.94
+  },
+  "pid": 9561,
+  "rung": "finish",
+  "spend": 18.1775,
+  "stage": "analysis",
+  "started": "2026-11-07T15:03:58Z",
+  "status": "running",
+  "total": 3723,
+  "updated": "2026-11-07T20:35:43Z",
+  "updated_ts": 1794083743.9936235
+}

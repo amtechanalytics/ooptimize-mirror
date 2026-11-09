@@ -1,0 +1,486 @@
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C install '-P!linux' -pl common,buffer,codec-base,codec,codec-http,handler,transport -am
+[exit 0 in 56s]
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C package '-Pbenchmark-jar,!linux' -pl microbench -am
+[exit 0 in 47s]
+
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/buffer/target/oopt-test-cp.txt -pl buffer
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/codec/target/oopt-test-cp.txt -pl codec
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/codec-base/target/oopt-test-cp.txt -pl codec-base
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/codec-http/target/oopt-test-cp.txt -pl codec-http
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/common/target/oopt-test-cp.txt -pl common
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/handler/target/oopt-test-cp.txt -pl handler
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/transport/target/oopt-test-cp.txt -pl transport
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q dependency:get -Dartifact=org.junit.platform:junit-platform-launcher:1.14.3 -Dtransitive=false
+[exit 0 in 4s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C install '-P!linux' -pl common,buffer,codec-base,codec,codec-http,handler,transport -am
+[exit 0 in 59s]
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C package '-Pbenchmark-jar,!linux' -pl microbench -am
+[exit 0 in 51s]
+
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/buffer/target/oopt-test-cp.txt -pl buffer
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/codec/target/oopt-test-cp.txt -pl codec
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/codec-base/target/oopt-test-cp.txt -pl codec-base
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/codec-http/target/oopt-test-cp.txt -pl codec-http
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/common/target/oopt-test-cp.txt -pl common
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/handler/target/oopt-test-cp.txt -pl handler
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/transport/target/oopt-test-cp.txt -pl transport
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q dependency:get -Dartifact=org.junit.platform:junit-platform-launcher:1.14.3 -Dtransitive=false
+[exit 0 in 5s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C install '-P!linux' -pl common,buffer,codec-base,codec,codec-http,handler,transport -am
+[exit 0 in 67s]
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 3 files to /opt/data/oopt/shared/src/netty/common/target/generated-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+Copying 1 file to /opt/data/oopt/shared/src/netty/common/target/generated-test-sources/collections/java
+
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -T 1C package '-Pbenchmark-jar,!linux' -pl microbench -am
+[exit 0 in 51s]
+
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+     [exec] Result: 128
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/buffer/target/oopt-test-cp.txt -pl buffer
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/codec/target/oopt-test-cp.txt -pl codec
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/codec-base/target/oopt-test-cp.txt -pl codec-base
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/codec-http/target/oopt-test-cp.txt -pl codec-http
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/common/target/oopt-test-cp.txt -pl common
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/handler/target/oopt-test-cp.txt -pl handler
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q -DskipTests -Dcheckstyle.skip -Denforcer.skip -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Djacoco.skip=true -Drevapi.skip=true -Djapicmp.skip=true -Danimal.sniffer.skip=true -Dspotbugs.skip=true -Dpmd.skip=true -Dforbiddenapis.skip=true -Dgpg.skip=true -Dmaven.test.skip.exec=true -o dependency:build-classpath -Dmdep.includeScope=test -Dmdep.outputFile=/opt/data/oopt/shared/src/netty/transport/target/oopt-test-cp.txt -pl transport
+[exit 0 in 3s]
+
+
+
+$ /opt/rh/ooptimize/data/maven/apache-maven-3.9.11/bin/mvn -B -q dependency:get -Dartifact=org.junit.platform:junit-platform-launcher:1.14.3
+[exit 0 in 5s]
+
+

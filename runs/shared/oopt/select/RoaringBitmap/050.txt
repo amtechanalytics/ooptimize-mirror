@@ -1,0 +1,233 @@
+# OOPT benchmark org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+# JMH version: 1.23
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+
+# Run progress: 0.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.217 ops/ms
+Iteration   1: 0.255 ops/ms
+                 ·stack: <delayed till summary>
+
+
+
+Result "org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a":
+  0.255 ops/ms
+
+Secondary result "org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 19.9%  29.9% org.roaringbitmap.longlong.Roaring64NavigableMap$3.hasNext
+              org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_thrpt_jmhStub
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_Throughput
+
+ 10.6%  15.9% java.util.TreeMap.predecessor
+              java.util.TreeMap$NavigableSubMap$SubMapIterator.prevEntry
+              java.util.TreeMap$NavigableSubMap$DescendingSubMapEntryIterator.next
+              java.util.TreeMap$NavigableSubMap$DescendingSubMapEntryIterator.next
+
+  2.6%   4.0% org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_thrpt_jmhStub
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_thrpt_jmhStub
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007e4c4402f000.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.23
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+
+# Run progress: 33.33% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 4.346 ms/op
+Iteration   1: 3.959 ms/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a":
+  3.959 ms/op
+
+Secondary result "org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 24.2%  36.3% org.roaringbitmap.longlong.Roaring64NavigableMap$3.hasNext
+              org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_avgt_jmhStub
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_AverageTime
+
+  7.2%  10.8% java.util.TreeMap.predecessor
+              java.util.TreeMap$NavigableSubMap$SubMapIterator.prevEntry
+              java.util.TreeMap$NavigableSubMap$DescendingSubMapEntryIterator.next
+              java.util.TreeMap$NavigableSubMap$DescendingSubMapEntryIterator.next
+
+  1.9%   2.9% org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_avgt_jmhStub
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.23
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+
+# Run progress: 66.67% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 4.187 ±(99.9%) 0.422 ms/op
+Iteration   1: 3.824 ±(99.9%) 0.132 ms/op
+                 testReverseStandard_a·p0.00:   2.970 ms/op
+                 testReverseStandard_a·p0.50:   3.195 ms/op
+                 testReverseStandard_a·p0.90:   4.945 ms/op
+                 testReverseStandard_a·p0.95:   5.020 ms/op
+                 testReverseStandard_a·p0.99:   5.206 ms/op
+                 testReverseStandard_a·p0.999:  8.733 ms/op
+                 testReverseStandard_a·p0.9999: 8.733 ms/op
+                 testReverseStandard_a·p1.00:   8.733 ms/op
+                 ·stack:                        <delayed till summary>
+
+
+
+Result "org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a":
+  N = 523
+  mean =      3.824 ±(99.9%) 0.132 ms/op
+
+  Histogram, ms/op:
+    [2.000, 2.500) = 0 
+    [2.500, 3.000) = 43 
+    [3.000, 3.500) = 264 
+    [3.500, 4.000) = 2 
+    [4.000, 4.500) = 3 
+    [4.500, 5.000) = 183 
+    [5.000, 5.500) = 27 
+    [5.500, 6.000) = 0 
+    [6.000, 6.500) = 0 
+    [6.500, 7.000) = 0 
+    [7.000, 7.500) = 0 
+    [7.500, 8.000) = 0 
+    [8.000, 8.500) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =      2.970 ms/op
+     p(50.0000) =      3.195 ms/op
+     p(90.0000) =      4.945 ms/op
+     p(95.0000) =      5.020 ms/op
+     p(99.0000) =      5.206 ms/op
+     p(99.9000) =      8.733 ms/op
+     p(99.9900) =      8.733 ms/op
+     p(99.9990) =      8.733 ms/op
+     p(99.9999) =      8.733 ms/op
+    p(100.0000) =      8.733 ms/op
+
+Secondary result "org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 23.2%  34.7% org.roaringbitmap.longlong.Roaring64NavigableMap$3.hasNext
+              org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_sample_jmhStub
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_SampleTime
+
+  8.1%  12.1% java.util.TreeMap.predecessor
+              java.util.TreeMap$NavigableSubMap$SubMapIterator.prevEntry
+              java.util.TreeMap$NavigableSubMap$DescendingSubMapEntryIterator.next
+              java.util.TreeMap$NavigableSubMap$DescendingSubMapEntryIterator.next
+
+  2.1%   3.2% org.roaringbitmap.iteration.IteratorsBenchmark64.testReverseStandard_a
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_sample_jmhStub
+              org.roaringbitmap.iteration.generated.IteratorsBenchmark64_testReverseStandard_a_jmhTest.testReverseStandard_a_SampleTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:19
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                                   Mode  Cnt  Score   Error   Units
+IteratorsBenchmark64.testReverseStandard_a                                 thrpt       0.255          ops/ms
+IteratorsBenchmark64.testReverseStandard_a:·stack                          thrpt         NaN             ---
+IteratorsBenchmark64.testReverseStandard_a                                  avgt       3.959           ms/op
+IteratorsBenchmark64.testReverseStandard_a:·stack                           avgt         NaN             ---
+IteratorsBenchmark64.testReverseStandard_a                                sample  523  3.824 ± 0.132   ms/op
+IteratorsBenchmark64.testReverseStandard_a:testReverseStandard_a·p0.00    sample       2.970           ms/op
+IteratorsBenchmark64.testReverseStandard_a:testReverseStandard_a·p0.50    sample       3.195           ms/op
+IteratorsBenchmark64.testReverseStandard_a:testReverseStandard_a·p0.90    sample       4.945           ms/op
+IteratorsBenchmark64.testReverseStandard_a:testReverseStandard_a·p0.95    sample       5.020           ms/op
+IteratorsBenchmark64.testReverseStandard_a:testReverseStandard_a·p0.99    sample       5.206           ms/op
+IteratorsBenchmark64.testReverseStandard_a:testReverseStandard_a·p0.999   sample       8.733           ms/op
+IteratorsBenchmark64.testReverseStandard_a:testReverseStandard_a·p0.9999  sample       8.733           ms/op
+IteratorsBenchmark64.testReverseStandard_a:testReverseStandard_a·p1.00    sample       8.733           ms/op
+IteratorsBenchmark64.testReverseStandard_a:·stack                         sample         NaN             ---

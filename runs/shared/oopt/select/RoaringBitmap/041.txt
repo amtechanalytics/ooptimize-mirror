@@ -1,0 +1,331 @@
+# OOPT benchmark org.roaringbitmap.CheckedAddBenchmark.optimized
+# JMH version: 1.23
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.roaringbitmap.CheckedAddBenchmark.optimized
+# Parameters: (containerType = RUN, inputData = HALF_DUPLICATED)
+
+# Run progress: 0.00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 78.855 ms/op
+Iteration   1: 77.674 ms/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "org.roaringbitmap.CheckedAddBenchmark.optimized":
+  77.674 ms/op
+
+Secondary result "org.roaringbitmap.CheckedAddBenchmark.optimized:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.4%  20.2% org.roaringbitmap.Util.hybridUnsignedBinarySearch
+              org.roaringbitmap.Util.unsignedBinarySearch
+              org.roaringbitmap.RoaringArray.binarySearch
+              org.roaringbitmap.RoaringArray.getIndex
+
+  8.4%  12.6% org.roaringbitmap.CheckedAddBenchmark.optimized
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_avgt_jmhStub
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  5.6%   8.3% org.roaringbitmap.Util.hybridUnsignedBinarySearch
+              org.roaringbitmap.Util.unsignedBinarySearch
+              org.roaringbitmap.ArrayContainer.add
+              org.roaringbitmap.RoaringBitmap.addN
+
+  2.7%   4.0% org.roaringbitmap.RoaringArray.insertNewKeyValueAt
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+              org.roaringbitmap.RoaringBitmap.bitmapOf
+
+  2.5%   3.8% org.roaringbitmap.CheckedAddBenchmark$InputDataType.getValues
+              org.roaringbitmap.CheckedAddBenchmark.setUp
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_avgt_jmhStub
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_AverageTime
+
+  0.5%   0.8% org.roaringbitmap.RoaringArray.extendArray
+              org.roaringbitmap.RoaringArray.insertNewKeyValueAt
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+
+  0.2%   0.3% org.roaringbitmap.BitmapContainer.numberOfRunsLowerBound
+              org.roaringbitmap.BitmapContainer.runOptimize
+              org.roaringbitmap.RoaringBitmap.runOptimize
+              org.roaringbitmap.CheckedAddBenchmark$ContainerType$1.createBitmap
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.23
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.roaringbitmap.CheckedAddBenchmark.optimized
+# Parameters: (containerType = RUN, inputData = UNIQUE)
+
+# Run progress: 25.00% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 138.295 ms/op
+Iteration   1: 134.543 ms/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "org.roaringbitmap.CheckedAddBenchmark.optimized":
+  134.543 ms/op
+
+Secondary result "org.roaringbitmap.CheckedAddBenchmark.optimized:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 21.6%  32.4% org.roaringbitmap.CheckedAddBenchmark.optimized
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_avgt_jmhStub
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  5.3%   7.9% org.roaringbitmap.Util.hybridUnsignedBinarySearch
+              org.roaringbitmap.Util.unsignedBinarySearch
+              org.roaringbitmap.RoaringArray.binarySearch
+              org.roaringbitmap.RoaringArray.getIndex
+
+  4.4%   6.6% org.roaringbitmap.RoaringArray.insertNewKeyValueAt
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+              org.roaringbitmap.RoaringBitmap.bitmapOf
+
+  1.4%   2.1% org.roaringbitmap.CheckedAddBenchmark$InputDataType.getValues
+              org.roaringbitmap.CheckedAddBenchmark.setUp
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_avgt_jmhStub
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_AverageTime
+
+  0.4%   0.5% org.roaringbitmap.RoaringArray.extendArray
+              org.roaringbitmap.RoaringArray.insertNewKeyValueAt
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+
+  0.2%   0.3% org.roaringbitmap.BitmapContainer.loadData
+              org.roaringbitmap.ArrayContainer.toBitmapContainer
+              org.roaringbitmap.ArrayContainer.add
+              org.roaringbitmap.RoaringBitmap.addN
+
+  0.2%   0.3% org.roaringbitmap.ArrayContainer.increaseCapacity
+              org.roaringbitmap.ArrayContainer.add
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.23
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.roaringbitmap.CheckedAddBenchmark.optimized
+# Parameters: (containerType = BITMAP, inputData = HALF_DUPLICATED)
+
+# Run progress: 50.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 94.244 ms/op
+Iteration   1: 93.875 ms/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "org.roaringbitmap.CheckedAddBenchmark.optimized":
+  93.875 ms/op
+
+Secondary result "org.roaringbitmap.CheckedAddBenchmark.optimized:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.8%  20.7% org.roaringbitmap.Util.hybridUnsignedBinarySearch
+              org.roaringbitmap.Util.unsignedBinarySearch
+              org.roaringbitmap.RoaringArray.binarySearch
+              org.roaringbitmap.RoaringArray.getIndex
+
+  9.2%  13.8% org.roaringbitmap.CheckedAddBenchmark.optimized
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_avgt_jmhStub
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  4.6%   6.9% org.roaringbitmap.Util.hybridUnsignedBinarySearch
+              org.roaringbitmap.Util.unsignedBinarySearch
+              org.roaringbitmap.ArrayContainer.add
+              org.roaringbitmap.RoaringBitmap.addN
+
+  2.5%   3.7% org.roaringbitmap.RoaringArray.insertNewKeyValueAt
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+              org.roaringbitmap.RoaringBitmap.bitmapOf
+
+  2.3%   3.5% org.roaringbitmap.CheckedAddBenchmark$InputDataType.getValues
+              org.roaringbitmap.CheckedAddBenchmark.setUp
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_avgt_jmhStub
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_AverageTime
+
+  0.5%   0.8% org.roaringbitmap.RoaringArray.extendArray
+              org.roaringbitmap.RoaringArray.insertNewKeyValueAt
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+
+  0.4%   0.5% org.roaringbitmap.ArrayContainer.increaseCapacity
+              org.roaringbitmap.ArrayContainer.add
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.23
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: <none>
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.roaringbitmap.CheckedAddBenchmark.optimized
+# Parameters: (containerType = BITMAP, inputData = UNIQUE)
+
+# Run progress: 75.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 141.371 ms/op
+Iteration   1: 139.534 ms/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "org.roaringbitmap.CheckedAddBenchmark.optimized":
+  139.534 ms/op
+
+Secondary result "org.roaringbitmap.CheckedAddBenchmark.optimized:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 21.3%  32.0% org.roaringbitmap.CheckedAddBenchmark.optimized
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_avgt_jmhStub
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  5.7%   8.5% org.roaringbitmap.Util.hybridUnsignedBinarySearch
+              org.roaringbitmap.Util.unsignedBinarySearch
+              org.roaringbitmap.RoaringArray.binarySearch
+              org.roaringbitmap.RoaringArray.getIndex
+
+  2.6%   3.9% org.roaringbitmap.RoaringArray.insertNewKeyValueAt
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+              org.roaringbitmap.RoaringBitmap.bitmapOf
+
+  2.1%   3.1% org.roaringbitmap.CheckedAddBenchmark$InputDataType.getValues
+              org.roaringbitmap.CheckedAddBenchmark.setUp
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_avgt_jmhStub
+              org.roaringbitmap.generated.CheckedAddBenchmark_optimized_jmhTest.optimized_AverageTime
+
+  0.7%   1.0% org.roaringbitmap.RoaringArray.extendArray
+              org.roaringbitmap.RoaringArray.insertNewKeyValueAt
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+
+  0.5%   0.8% org.roaringbitmap.ArrayContainer.increaseCapacity
+              org.roaringbitmap.ArrayContainer.add
+              org.roaringbitmap.RoaringBitmap.addN
+              org.roaringbitmap.RoaringBitmap.add
+
+  0.3%   0.5% org.roaringbitmap.BitmapContainer.loadData
+              org.roaringbitmap.ArrayContainer.toBitmapContainer
+              org.roaringbitmap.ArrayContainer.add
+              org.roaringbitmap.RoaringBitmap.addN
+
+  0.2%   0.3% java.util.Arrays.copyOf
+              org.roaringbitmap.ArrayContainer.increaseCapacity
+              org.roaringbitmap.ArrayContainer.increaseCapacity
+              org.roaringbitmap.ArrayContainer.add
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:13
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                             (containerType)      (inputData)  Mode  Cnt    Score   Error  Units
+CheckedAddBenchmark.optimized                     RUN  HALF_DUPLICATED  avgt        77.674          ms/op
+CheckedAddBenchmark.optimized:·stack              RUN  HALF_DUPLICATED  avgt           NaN            ---
+CheckedAddBenchmark.optimized                     RUN           UNIQUE  avgt       134.543          ms/op
+CheckedAddBenchmark.optimized:·stack              RUN           UNIQUE  avgt           NaN            ---
+CheckedAddBenchmark.optimized                  BITMAP  HALF_DUPLICATED  avgt        93.875          ms/op
+CheckedAddBenchmark.optimized:·stack           BITMAP  HALF_DUPLICATED  avgt           NaN            ---
+CheckedAddBenchmark.optimized                  BITMAP           UNIQUE  avgt       139.534          ms/op
+CheckedAddBenchmark.optimized:·stack           BITMAP           UNIQUE  avgt           NaN            ---

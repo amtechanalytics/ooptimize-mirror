@@ -1,0 +1,1485 @@
+# OOPT benchmark io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = AGRONA, size = 10)
+
+# Run progress: 0.00% complete, ETA 00:01:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 4114849.635 ops/s
+Iteration   1: 5997136.789 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  5997136.789 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  9.0%  13.6% org.agrona.collections.Int2ObjectHashMap.<init>
+              org.agrona.collections.Int2ObjectHashMap.<init>
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  8.5%  12.8% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+  6.6%   9.8% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  3.9%   5.9% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  1.8%   2.7% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  1.6%   2.4% org.agrona.collections.Int2ObjectHashMap.compactChain
+              org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  1.2%   1.9% org.agrona.collections.Int2ObjectHashMap$AbstractIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  0.7%   1.1% org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = AGRONA, size = 100)
+
+# Run progress: 5.00% complete, ETA 00:01:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 354627.299 ops/s
+Iteration   1: 502256.045 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  502256.045 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.6%  26.5% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+  9.3%  13.9% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  3.7%   5.6% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  2.1%   3.2% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  0.5%   0.8% org.agrona.collections.Int2ObjectHashMap.<init>
+              org.agrona.collections.Int2ObjectHashMap.<init>
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = AGRONA, size = 1000)
+
+# Run progress: 10.00% complete, ETA 00:01:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 35166.268 ops/s
+Iteration   1: 53026.423 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  53026.423 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 12.6%  18.9% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+ 11.2%  16.8% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  5.1%   7.7% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  4.1%   6.1% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  0.2%   0.3% io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% org.agrona.collections.Int2ObjectHashMap.<init>
+              org.agrona.collections.Int2ObjectHashMap.<init>
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = AGRONA, size = 10000)
+
+# Run progress: 15.00% complete, ETA 00:00:56
+# Fork: 1 of 1
+# Warmup Iteration   1: 361.759 ops/s
+Iteration   1: 374.588 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  374.588 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 31.2%  46.8% org.agrona.collections.Int2ObjectHashMap.compactChain
+              org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  1.2%   1.9% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+  0.4%   0.5% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  0.2%   0.3% org.agrona.collections.Int2ObjectHashMap$AbstractIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  0.2%   0.3% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  0.2%   0.3% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = AGRONA, size = 100000)
+
+# Run progress: 20.00% complete, ETA 00:00:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 332.504 ops/s
+Iteration   1: 398.561 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  398.561 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.0%  25.5% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+  8.8%  13.2% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  3.9%   5.9% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  2.2%   3.2% org.agrona.collections.Int2ObjectHashMap.compactChain
+              org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  1.3%   1.9% org.agrona.collections.Int2ObjectHashMap$AbstractIterator.findNext
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.next
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.next
+              org.agrona.collections.Int2ObjectHashMap.putAll
+
+  0.2%   0.3% org.agrona.collections.Int2ObjectHashMap.<init>
+              org.agrona.collections.Int2ObjectHashMap.<init>
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = NETTY, size = 10)
+
+# Run progress: 25.00% complete, ETA 00:00:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 3987666.799 ops/s
+Iteration   1: 5244212.708 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  5244212.708 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.6%  26.3% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+ 11.2%  16.8% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  3.7%   5.6% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  0.9%   1.3% io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = NETTY, size = 100)
+
+# Run progress: 30.00% complete, ETA 00:00:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 464957.520 ops/s
+Iteration   1: 658063.021 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  658063.021 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 15.3%  22.9% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+ 14.0%  21.1% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+  3.7%   5.5% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  0.4%   0.5% io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = NETTY, size = 1000)
+
+# Run progress: 35.00% complete, ETA 00:00:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 56945.175 ops/s
+Iteration   1: 75697.334 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  75697.334 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.4%  26.1% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+ 10.6%  16.0% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  5.3%   8.0% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = NETTY, size = 10000)
+
+# Run progress: 40.00% complete, ETA 00:00:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 4216.605 ops/s
+Iteration   1: 5572.797 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  5572.797 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 22.0%  33.0% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+  8.5%  12.8% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  2.8%   4.3% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = HTTP2, mapType = NETTY, size = 100000)
+
+# Run progress: 45.00% complete, ETA 00:00:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 478.564 ops/s
+Iteration   1: 598.507 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  598.507 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 21.2%  31.8% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+  8.7%  13.1% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  3.4%   5.1% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = AGRONA, size = 10)
+
+# Run progress: 50.00% complete, ETA 00:00:33
+# Fork: 1 of 1
+# Warmup Iteration   1: 3622831.187 ops/s
+Iteration   1: 5004542.193 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  5004542.193 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  6.4%   9.6% org.agrona.collections.Int2ObjectHashMap.<init>
+              org.agrona.collections.Int2ObjectHashMap.<init>
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  5.9%   8.8% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  5.3%   8.0% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+  4.3%   6.4% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  3.2%   4.8% org.agrona.collections.Int2ObjectHashMap.compactChain
+              org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  2.9%   4.3% org.agrona.collections.Int2ObjectHashMap$AbstractIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  2.7%   4.0% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  2.7%   4.0% org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = AGRONA, size = 100)
+
+# Run progress: 55.00% complete, ETA 00:00:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 298845.304 ops/s
+Iteration   1: 428677.494 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  428677.494 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.5%         RUNNABLE
+ 33.3%         TIMED_WAITING
+  0.2%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.1% <stack is empty, everything is filtered?>
+ 12.1%  18.1% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+  6.4%   9.6% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  5.7%   8.5% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  2.7%   4.0% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  2.0%   2.9% org.agrona.collections.Int2ObjectHashMap.compactChain
+              org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  1.8%   2.7% org.agrona.collections.Int2ObjectHashMap$AbstractIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  1.2%   1.9% org.agrona.collections.Int2ObjectHashMap$AbstractIterator.findNext
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.next
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.next
+              org.agrona.collections.Int2ObjectHashMap.putAll
+
+  1.1%   1.6% org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  0.4%   0.5% org.agrona.collections.Int2ObjectHashMap.<init>
+              org.agrona.collections.Int2ObjectHashMap.<init>
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.2% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = AGRONA, size = 1000)
+
+# Run progress: 60.00% complete, ETA 00:00:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 30933.862 ops/s
+Iteration   1: 47568.146 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  47568.146 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 11.9%  17.8% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+  8.0%  12.0% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  5.3%   8.0% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  3.7%   5.6% org.agrona.collections.Int2ObjectHashMap.compactChain
+              org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  2.8%   4.3% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  1.1%   1.6% org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  0.5%   0.8% org.agrona.collections.Int2ObjectHashMap$AbstractIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = AGRONA, size = 10000)
+
+# Run progress: 65.00% complete, ETA 00:00:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 1695.648 ops/s
+Iteration   1: 1751.379 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  1751.379 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+  9.0%  13.6% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+  8.3%  12.5% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  8.3%  12.5% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  3.4%   5.1% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  2.8%   4.3% org.agrona.collections.Int2ObjectHashMap.compactChain
+              org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  1.4%   2.1% org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = AGRONA, size = 100000)
+
+# Run progress: 70.00% complete, ETA 00:00:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 137.831 ops/s
+Iteration   1: 149.889 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  149.889 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 12.9%  19.4% org.agrona.collections.Int2ObjectHashMap.rehash
+              org.agrona.collections.Int2ObjectHashMap.increaseCapacity
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+
+  6.2%   9.3% org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.put
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+  5.7%   8.5% org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  2.3%   3.5% org.agrona.collections.Int2ObjectHashMap$AbstractIterator.findNext
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.next
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.next
+              org.agrona.collections.Int2ObjectHashMap.putAll
+
+  2.3%   3.5% org.agrona.collections.Int2ObjectHashMap.compactChain
+              org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  1.8%   2.7% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  1.2%   1.9% org.agrona.collections.Int2ObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  0.9%   1.3% org.agrona.collections.Int2ObjectHashMap$AbstractIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap$EntryIterator.hasNext
+              org.agrona.collections.Int2ObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$AgronaEnvironment.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = NETTY, size = 10)
+
+# Run progress: 75.00% complete, ETA 00:00:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 3384125.072 ops/s
+Iteration   1: 4707332.097 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  4707332.097 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 16.1%  24.2% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+  9.8%  14.6% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  3.0%   4.5% io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  2.7%   4.0% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  1.2%   1.9% io.netty.util.collection.IntObjectHashMap.removeAt
+              io.netty.util.collection.IntObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  0.4%   0.5% io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+
+  0.2%   0.3% io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000078847002f400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = NETTY, size = 100)
+
+# Run progress: 80.00% complete, ETA 00:00:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 381745.404 ops/s
+Iteration   1: 537149.467 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  537149.467 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.0%  25.5% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+  8.5%  12.8% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  3.7%   5.6% io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+
+  2.7%   4.0% io.netty.util.collection.IntObjectHashMap.removeAt
+              io.netty.util.collection.IntObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  1.4%   2.1% io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = NETTY, size = 1000)
+
+# Run progress: 85.00% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 42057.409 ops/s
+Iteration   1: 59127.739 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  59127.739 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 13.7%  20.5% io.netty.util.collection.IntObjectHashMap.removeAt
+              io.netty.util.collection.IntObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+ 11.5%  17.3% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+  6.4%   9.6% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  1.1%   1.6% io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  0.5%   0.8% io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% io.netty.util.collection.IntObjectHashMap.indexOf
+              io.netty.util.collection.IntObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = NETTY, size = 10000)
+
+# Run progress: 90.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 1544.679 ops/s
+Iteration   1: 1727.745 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  1727.745 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 14.9%  22.3% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+  8.5%  12.8% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  5.3%   8.0% io.netty.util.collection.IntObjectHashMap.removeAt
+              io.netty.util.collection.IntObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  4.6%   6.9% io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+# Parameters: (keyDistribution = RANDOM, mapType = NETTY, size = 100000)
+
+# Run progress: 95.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 160.662 ops/s
+Iteration   1: 162.093 ops/s
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove":
+  162.093 ops/s
+
+Secondary result "io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 14.5%  21.8% io.netty.util.collection.IntObjectHashMap.rehash
+              io.netty.util.collection.IntObjectHashMap.growSize
+              io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+
+  8.7%  13.0% io.netty.util.collection.IntObjectHashMap.removeAt
+              io.netty.util.collection.IntObjectHashMap.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+  7.4%  11.2% io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+              io.netty.microbenchmark.common.jmh_generated.IntObjectHashMapBenchmark_remove_jmhTest.remove_thrpt_jmhStub
+
+  2.7%   4.0% io.netty.util.collection.IntObjectHashMap.put
+              io.netty.util.collection.IntObjectHashMap.putAll
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark$NettyEnvironment.remove
+              io.netty.microbenchmark.common.IntObjectHashMapBenchmark.remove
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:01:06
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                (keyDistribution)  (mapType)  (size)   Mode  Cnt        Score   Error  Units
+IntObjectHashMapBenchmark.remove                     HTTP2     AGRONA      10  thrpt       5997136.789          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2     AGRONA      10  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                     HTTP2     AGRONA     100  thrpt        502256.045          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2     AGRONA     100  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                     HTTP2     AGRONA    1000  thrpt         53026.423          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2     AGRONA    1000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                     HTTP2     AGRONA   10000  thrpt           374.588          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2     AGRONA   10000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                     HTTP2     AGRONA  100000  thrpt           398.561          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2     AGRONA  100000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                     HTTP2      NETTY      10  thrpt       5244212.708          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2      NETTY      10  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                     HTTP2      NETTY     100  thrpt        658063.021          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2      NETTY     100  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                     HTTP2      NETTY    1000  thrpt         75697.334          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2      NETTY    1000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                     HTTP2      NETTY   10000  thrpt          5572.797          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2      NETTY   10000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                     HTTP2      NETTY  100000  thrpt           598.507          ops/s
+IntObjectHashMapBenchmark.remove:·stack              HTTP2      NETTY  100000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM     AGRONA      10  thrpt       5004542.193          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM     AGRONA      10  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM     AGRONA     100  thrpt        428677.494          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM     AGRONA     100  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM     AGRONA    1000  thrpt         47568.146          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM     AGRONA    1000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM     AGRONA   10000  thrpt          1751.379          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM     AGRONA   10000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM     AGRONA  100000  thrpt           149.889          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM     AGRONA  100000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM      NETTY      10  thrpt       4707332.097          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM      NETTY      10  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM      NETTY     100  thrpt        537149.467          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM      NETTY     100  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM      NETTY    1000  thrpt         59127.739          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM      NETTY    1000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM      NETTY   10000  thrpt          1727.745          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM      NETTY   10000  thrpt               NaN            ---
+IntObjectHashMapBenchmark.remove                    RANDOM      NETTY  100000  thrpt           162.093          ops/s
+IntObjectHashMapBenchmark.remove:·stack             RANDOM      NETTY  100000  thrpt               NaN            ---

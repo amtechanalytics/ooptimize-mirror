@@ -1,0 +1,419 @@
+# OOPT benchmark org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "offerBothR", 1x "pollBothR" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr
+# Parameters: (qCapacity = 132000, qType = SpscArrayQueue)
+
+# Run progress: 0.00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 523.168 ops/us
+Iteration   1: 523.382 ops/us
+                 offerBothR:   261.783 ops/us
+                 offersFailed: 0.068 ops/us
+                 offersMade:   261.715 ops/us
+                 pollBothR:    261.599 ops/us
+                 pollsFailed:  0.001 ops/us
+                 pollsMade:    261.599 ops/us
+                 stack:        <delayed till summary>
+
+
+
+Result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr":
+  523.382 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offerBothR":
+  261.783 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offersFailed":
+  0.068 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offersMade":
+  261.715 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollBothR":
+  261.599 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollsFailed":
+  0.001 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollsMade":
+  261.599 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.7%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.3%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.5% <stack is empty, everything is filtered?>
+ 24.9%  33.3% org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.pollBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073f8b402e400.invoke
+
+ 12.7%  17.0% org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.offerBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000073f8b402e400.invoke
+
+ 12.2%  16.3% org.jctools.queues.SpscArrayQueue.offer
+              org.jctools.queues.SpscArrayQueue.relaxedOffer
+              org.jctools.jmh.throughput.MpqThroughputBackoffNone.offerBothR
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.offerBothR_thrpt_jmhStub
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.1%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "offerBothR", 1x "pollBothR" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr
+# Parameters: (qCapacity = 132000, qType = MpscArrayQueue)
+
+# Run progress: 25.00% complete, ETA 00:00:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 81.050 ops/us
+Iteration   1: 79.813 ops/us
+                 offerBothR:   22.922 ops/us
+                 offersFailed: ≈ 0 ops/us
+                 offersMade:   22.922 ops/us
+                 pollBothR:    56.891 ops/us
+                 pollsFailed:  33.973 ops/us
+                 pollsMade:    22.922 ops/us
+                 stack:        <delayed till summary>
+
+
+
+Result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr":
+  79.813 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offerBothR":
+  22.922 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offersFailed":
+  ≈ 0 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offersMade":
+  22.922 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollBothR":
+  56.891 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollsFailed":
+  33.973 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollsMade":
+  22.922 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.7%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.3%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.5% <stack is empty, everything is filtered?>
+ 24.9%  33.3% org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.offerBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007b79c002dc00.invoke
+
+ 24.9%  33.3% org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.pollBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007b79c002dc00.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "offerBothR", 1x "pollBothR" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr
+# Parameters: (qCapacity = 132000, qType = SpmcArrayQueue)
+
+# Run progress: 50.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 78.567 ops/us
+Iteration   1: 76.938 ops/us
+                 offerBothR:   56.513 ops/us
+                 offersFailed: 35.956 ops/us
+                 offersMade:   20.556 ops/us
+                 pollBothR:    20.426 ops/us
+                 pollsFailed:  ≈ 10⁻⁶ ops/us
+                 pollsMade:    20.426 ops/us
+                 stack:        <delayed till summary>
+
+
+
+Result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr":
+  76.938 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offerBothR":
+  56.513 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offersFailed":
+  35.956 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offersMade":
+  20.556 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollBothR":
+  20.426 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollsFailed":
+  ≈ 10⁻⁶ ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollsMade":
+  20.426 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.9%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.1%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.4% <stack is empty, everything is filtered?>
+ 24.9%  33.2% org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.offerBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000751c3c02fc00.invoke
+
+ 24.7%  33.0% org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.pollBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x0000751c3c02fc00.invoke
+
+  0.1%   0.2% org.jctools.queues.SpmcArrayQueue.relaxedPoll
+              org.jctools.jmh.throughput.MpqThroughputBackoffNone.pollBothR
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.pollBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+
+  0.1%   0.2% java.util.concurrent.CyclicBarrier.nextGeneration
+              java.util.concurrent.CyclicBarrier.dowait
+              java.util.concurrent.CyclicBarrier.await
+              org.openjdk.jmh.runner.BenchmarkHandler.getWorkerData
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "offerBothR", 1x "pollBothR" in each group), will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr
+# Parameters: (qCapacity = 132000, qType = MpmcArrayQueue)
+
+# Run progress: 75.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 107.814 ops/us
+Iteration   1: 168.537 ops/us
+                 offerBothR:   84.291 ops/us
+                 offersFailed: ≈ 0 ops/us
+                 offersMade:   84.291 ops/us
+                 pollBothR:    84.246 ops/us
+                 pollsFailed:  ≈ 10⁻³ ops/us
+                 pollsMade:    84.246 ops/us
+                 stack:        <delayed till summary>
+
+
+
+Result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr":
+  168.537 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offerBothR":
+  84.291 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offersFailed":
+  ≈ 0 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:offersMade":
+  84.291 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollBothR":
+  84.246 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollsFailed":
+  ≈ 10⁻³ ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:pollsMade":
+  84.246 ops/us
+
+Secondary result "org.jctools.jmh.throughput.MpqThroughputBackoffNone.bothr:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.7%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.3%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.5% <stack is empty, everything is filtered?>
+ 24.9%  33.3% org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.pollBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007517e802dc00.invoke
+
+ 24.7%  33.1% org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.offerBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007517e802dc00.invoke
+
+  0.1%   0.2% org.jctools.jmh.throughput.MpqThroughputBackoffNone.offerBothR
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.offerBothR_thrpt_jmhStub
+              org.jctools.jmh.throughput.jmh_generated.MpqThroughputBackoffNone_bothr_jmhTest.bothr_Throughput
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+  0.1%  50.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire
+              java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly
+
+
+
+
+# Run complete. Total time: 00:00:12
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                    (qCapacity)         (qType)   Mode  Cnt    Score   Error   Units
+MpqThroughputBackoffNone.bothr                    132000  SpscArrayQueue  thrpt       523.382          ops/us
+MpqThroughputBackoffNone.bothr:offerBothR         132000  SpscArrayQueue  thrpt       261.783          ops/us
+MpqThroughputBackoffNone.bothr:offersFailed       132000  SpscArrayQueue  thrpt         0.068          ops/us
+MpqThroughputBackoffNone.bothr:offersMade         132000  SpscArrayQueue  thrpt       261.715          ops/us
+MpqThroughputBackoffNone.bothr:pollBothR          132000  SpscArrayQueue  thrpt       261.599          ops/us
+MpqThroughputBackoffNone.bothr:pollsFailed        132000  SpscArrayQueue  thrpt         0.001          ops/us
+MpqThroughputBackoffNone.bothr:pollsMade          132000  SpscArrayQueue  thrpt       261.599          ops/us
+MpqThroughputBackoffNone.bothr:stack              132000  SpscArrayQueue  thrpt           NaN             ---
+MpqThroughputBackoffNone.bothr                    132000  MpscArrayQueue  thrpt        79.813          ops/us
+MpqThroughputBackoffNone.bothr:offerBothR         132000  MpscArrayQueue  thrpt        22.922          ops/us
+MpqThroughputBackoffNone.bothr:offersFailed       132000  MpscArrayQueue  thrpt           ≈ 0          ops/us
+MpqThroughputBackoffNone.bothr:offersMade         132000  MpscArrayQueue  thrpt        22.922          ops/us
+MpqThroughputBackoffNone.bothr:pollBothR          132000  MpscArrayQueue  thrpt        56.891          ops/us
+MpqThroughputBackoffNone.bothr:pollsFailed        132000  MpscArrayQueue  thrpt        33.973          ops/us
+MpqThroughputBackoffNone.bothr:pollsMade          132000  MpscArrayQueue  thrpt        22.922          ops/us
+MpqThroughputBackoffNone.bothr:stack              132000  MpscArrayQueue  thrpt           NaN             ---
+MpqThroughputBackoffNone.bothr                    132000  SpmcArrayQueue  thrpt        76.938          ops/us
+MpqThroughputBackoffNone.bothr:offerBothR         132000  SpmcArrayQueue  thrpt        56.513          ops/us
+MpqThroughputBackoffNone.bothr:offersFailed       132000  SpmcArrayQueue  thrpt        35.956          ops/us
+MpqThroughputBackoffNone.bothr:offersMade         132000  SpmcArrayQueue  thrpt        20.556          ops/us
+MpqThroughputBackoffNone.bothr:pollBothR          132000  SpmcArrayQueue  thrpt        20.426          ops/us
+MpqThroughputBackoffNone.bothr:pollsFailed        132000  SpmcArrayQueue  thrpt        ≈ 10⁻⁶          ops/us
+MpqThroughputBackoffNone.bothr:pollsMade          132000  SpmcArrayQueue  thrpt        20.426          ops/us
+MpqThroughputBackoffNone.bothr:stack              132000  SpmcArrayQueue  thrpt           NaN             ---
+MpqThroughputBackoffNone.bothr                    132000  MpmcArrayQueue  thrpt       168.537          ops/us
+MpqThroughputBackoffNone.bothr:offerBothR         132000  MpmcArrayQueue  thrpt        84.291          ops/us
+MpqThroughputBackoffNone.bothr:offersFailed       132000  MpmcArrayQueue  thrpt           ≈ 0          ops/us
+MpqThroughputBackoffNone.bothr:offersMade         132000  MpmcArrayQueue  thrpt        84.291          ops/us
+MpqThroughputBackoffNone.bothr:pollBothR          132000  MpmcArrayQueue  thrpt        84.246          ops/us
+MpqThroughputBackoffNone.bothr:pollsFailed        132000  MpmcArrayQueue  thrpt        ≈ 10⁻³          ops/us
+MpqThroughputBackoffNone.bothr:pollsMade          132000  MpmcArrayQueue  thrpt        84.246          ops/us
+MpqThroughputBackoffNone.bothr:stack              132000  MpmcArrayQueue  thrpt           NaN             ---

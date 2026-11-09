@@ -1,0 +1,277 @@
+# OOPT benchmark io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+# Parameters: (headerCount = 1)
+
+# Run progress: 0.00% complete, ETA 00:00:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 35.277 ns/op
+Iteration   1: 25.371 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders":
+  25.371 ns/op
+
+Secondary result "io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 23.9%  35.9% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.iterate
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+
+  8.3%  12.5% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.buildPairs
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+
+  0.5%   0.8% io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000076c9c002d800.invoke
+
+  0.2%   0.3% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% io.netty.handler.codec.http2.ReadOnlyHttp2Headers.iterator
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.iterate
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+
+  0.2%   0.3% io.netty.handler.codec.http2.ReadOnlyHttp2Headers.serverHeaders
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+# Parameters: (headerCount = 5)
+
+# Run progress: 25.00% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 66.652 ns/op
+Iteration   1: 46.097 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders":
+  46.097 ns/op
+
+Secondary result "io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.4%  26.1% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.iterate
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+
+ 15.6%  23.4% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.buildPairs
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+
+  0.2%   0.3% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.2%   0.3% io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007995cc02e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+# Parameters: (headerCount = 10)
+
+# Run progress: 50.00% complete, ETA 00:00:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 119.220 ns/op
+Iteration   1: 84.979 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders":
+  84.979 ns/op
+
+Secondary result "io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 18.4%  27.7% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.iterate
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+
+ 14.4%  21.5% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.buildPairs
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+
+  0.5%   0.8% io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x000077b47c02e400.invoke
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# JMH version: 1.36
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+# Parameters: (headerCount = 20)
+
+# Run progress: 75.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 196.306 ns/op
+Iteration   1: 130.762 ns/op
+                 ·stack: <delayed till summary>
+
+
+
+Result "io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders":
+  130.762 ns/op
+
+Secondary result "io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders:·stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 66.7%         RUNNABLE
+ 33.3%         TIMED_WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 33.3%  50.0% <stack is empty, everything is filtered?>
+ 17.9%  26.9% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.iterate
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+
+ 15.2%  22.9% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.buildPairs
+              io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+
+  0.2%   0.3% io.netty.microbench.headers.ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_avgt_jmhStub
+              io.netty.microbench.headers.jmh_generated.ReadOnlyHttp2HeadersBenchmark_readOnlyServerHeaders_jmhTest.readOnlyServerHeaders_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 33.3% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+
+
+# Run complete. Total time: 00:00:13
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                   (headerCount)  Mode  Cnt    Score   Error  Units
+ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders                     1  avgt        25.371          ns/op
+ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders:·stack              1  avgt           NaN            ---
+ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders                     5  avgt        46.097          ns/op
+ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders:·stack              5  avgt           NaN            ---
+ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders                    10  avgt        84.979          ns/op
+ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders:·stack             10  avgt           NaN            ---
+ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders                    20  avgt       130.762          ns/op
+ReadOnlyHttp2HeadersBenchmark.readOnlyServerHeaders:·stack             20  avgt           NaN            ---

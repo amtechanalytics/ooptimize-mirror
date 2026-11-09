@@ -1,0 +1,104 @@
+# OOPT benchmark org.jctools.jmh.baseline.BaselinePingPong.pingpong
+# WARNING: JMH lock is ignored by user request, make sure no other JMH instances are running
+# JMH version: 1.37
+# VM version: JDK 21.0.13, OpenJDK 64-Bit Server VM, 21.0.13+9-LTS
+# VM invoker: /opt/rh/ooptimize/data/temurin_jdk21/jdk-21.0.13+9/bin/java
+# VM options: -Djmh.ignoreLock=true
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 1 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads (1 group; 1x "ping", 1x "pong" in each group), will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.jctools.jmh.baseline.BaselinePingPong.pingpong
+
+# Run progress: 0.00% complete, ETA 00:00:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 138.304 ns/op
+Iteration   1: 138.403 ns/op
+                 ping:  138.404 ns/op
+                 pong:  138.403 ns/op
+                 stack: <delayed till summary>
+
+
+
+Result "org.jctools.jmh.baseline.BaselinePingPong.pingpong":
+  138.403 ns/op
+
+Secondary result "org.jctools.jmh.baseline.BaselinePingPong.pingpong:ping":
+  138.404 ns/op
+
+Secondary result "org.jctools.jmh.baseline.BaselinePingPong.pingpong:pong":
+  138.403 ns/op
+
+Secondary result "org.jctools.jmh.baseline.BaselinePingPong.pingpong:stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 74.9%         RUNNABLE
+ 25.0%         TIMED_WAITING
+  0.1%         WAITING
+
+....[Thread state: RUNNABLE]........................................................................
+ 25.0%  33.4% <stack is empty, everything is filtered?>
+ 22.7%  30.3% org.jctools.jmh.baseline.jmh_generated.BaselinePingPong_pingpong_jmhTest.pong_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.BaselinePingPong_pingpong_jmhTest.pingpong_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007d1cf002b800.invoke
+
+ 22.4%  30.0% org.jctools.jmh.baseline.jmh_generated.BaselinePingPong_pingpong_jmhTest.ping_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.BaselinePingPong_pingpong_jmhTest.pingpong_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+              java.lang.invoke.LambdaForm$MH/0x00007d1cf002b800.invoke
+
+  2.4%   3.2% org.jctools.jmh.baseline.BaselinePingPong.ping
+              org.jctools.jmh.baseline.jmh_generated.BaselinePingPong_pingpong_jmhTest.ping_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.BaselinePingPong_pingpong_jmhTest.pingpong_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  2.2%   2.9% org.jctools.jmh.baseline.BaselinePingPong.pong
+              org.jctools.jmh.baseline.jmh_generated.BaselinePingPong_pingpong_jmhTest.pong_avgt_jmhStub
+              org.jctools.jmh.baseline.jmh_generated.BaselinePingPong_pingpong_jmhTest.pingpong_AverageTime
+              java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial
+
+  0.1%   0.2% java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.isReleasable
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+              java.util.concurrent.ForkJoinPool.managedBlock
+
+
+....[Thread state: TIMED_WAITING]...................................................................
+ 25.0% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.parkNanos
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await
+              java.lang.ref.ReferenceQueue.await
+
+
+....[Thread state: WAITING].........................................................................
+  0.1% 100.0% jdk.internal.misc.Unsafe.park
+              java.util.concurrent.locks.LockSupport.park
+              java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block
+              java.util.concurrent.ForkJoinPool.unmanagedBlock
+
+
+
+
+# Run complete. Total time: 00:00:03
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                        Mode  Cnt    Score   Error  Units
+BaselinePingPong.pingpong        avgt       138.403          ns/op
+BaselinePingPong.pingpong:ping   avgt       138.404          ns/op
+BaselinePingPong.pingpong:pong   avgt       138.403          ns/op
+BaselinePingPong.pingpong:stack  avgt           NaN            ---
