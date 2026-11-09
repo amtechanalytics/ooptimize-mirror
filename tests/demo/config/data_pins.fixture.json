@@ -1,0 +1,20 @@
+{
+  "pins": [
+    {
+      "name": "requirements",
+      "record": "fixture:tests/fixtures/requirements.csv",
+      "title": "Demo requirement sentences (40 rows, 4 classes)",
+      "url": "file://tests/fixtures/requirements.csv",
+      "file": "requirements.csv",
+      "size": 3028,
+      "sha256": "1168bfe3f2c1626154c7fa9e11de8db5806b814efbcbf2bd2ad9bd2f94d256b3",
+      "format": "csv",
+      "encoding": "utf-8",
+      "min_rows": 40,
+      "expected_rows": 40,
+      "columns": ["id", "text", "label"],
+      "unique_key": "id",
+      "licence": "demo fixture, no licence needed"
+    }
+  ]
+}

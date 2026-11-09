@@ -1,0 +1,31 @@
+# Exact model ids only. Sampling parameters (temperature, top_p) are not allowed: vendor default.
+# accessed: the date the id and its availability were checked.
+# tpm_budget: tokens/min this harness may use for the model (token bucket); set ~70% of the account limit.
+# Example for a real study (Groq, open-weights; OpenAI-compatible; sync only — batch: true is rejected):
+#  - id: openai/gpt-oss-120b
+#    provider: groq
+#    max_output_tokens: 2048
+#    context_tokens: 131072
+#    concurrency: 8
+#    tpm_budget: 175000          # ~70% of the Developer plan's 250K tokens/min
+#    rpm_budget: 700             # ~70% of 1K requests/min
+#    batch: false
+#    accessed: "2026-11-06"
+models:
+  - id: fake-small
+    provider: fake
+    max_output_tokens: 200
+    context_tokens: 32000
+    concurrency: 4
+    tpm_budget: 0
+    batch: false
+    accessed: "2026-11-06"
+  - id: fake-large
+    provider: fake
+    max_output_tokens: 200
+    context_tokens: 32000
+    concurrency: 4
+    tpm_budget: 0
+    batch: true
+    batch_size: 1000
+    accessed: "2026-11-06"

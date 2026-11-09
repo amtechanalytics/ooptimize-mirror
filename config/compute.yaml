@@ -1,0 +1,5 @@
+instance_type: c7i.16xlarge      # 64 vCPU, 128 GiB: 28 scoring workers x (test JVM 2 GiB + SpotBugs 2 GiB)
+gpu: false
+root_volume_gb: 300              # five library builds, Maven/Gradle caches, Randoop suites, overlays
+ami: ubuntu-24.04                # resolved at launch from the public SSM parameter
+spot: false

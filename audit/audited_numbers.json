@@ -1,0 +1,393 @@
+{
+ "verdicts": {
+  "out_of_contract": 15,
+  "in_contract_break": 13,
+  "regex_artifact": 5,
+  "unsure": 1
+ },
+ "by_model": {
+  "claude-sonnet-5-5": {
+   "s1": {
+    "n": 426,
+    "corrected": 3,
+    "audited": 0,
+    "unsure": 0,
+    "rate": 0.0,
+    "lo": 8.673617379884035e-19,
+    "hi": 0.008936920214770185
+   },
+   "s1_R1": {
+    "n": 136,
+    "audited": 0,
+    "corrected": 1
+   },
+   "s1_R2": {
+    "n": 144,
+    "audited": 0,
+    "corrected": 1
+   },
+   "s1_R3": {
+    "n": 146,
+    "audited": 0,
+    "corrected": 1
+   },
+   "s2": {
+    "n": 430,
+    "corrected": 3,
+    "audited": 0,
+    "unsure": 0,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.008854522186338082
+   },
+   "s2_R1": {
+    "n": 141,
+    "audited": 0,
+    "corrected": 1
+   },
+   "s2_R2": {
+    "n": 146,
+    "audited": 0,
+    "corrected": 1
+   },
+   "s2_R3": {
+    "n": 143,
+    "audited": 0,
+    "corrected": 1
+   }
+  },
+  "gpt-6.1-sol": {
+   "s1": {
+    "n": 435,
+    "corrected": 2,
+    "audited": 0,
+    "unsure": 0,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.00875363698043597
+   },
+   "s1_R1": {
+    "n": 145,
+    "audited": 0,
+    "corrected": 1
+   },
+   "s1_R2": {
+    "n": 144,
+    "audited": 0,
+    "corrected": 0
+   },
+   "s1_R3": {
+    "n": 146,
+    "audited": 0,
+    "corrected": 1
+   },
+   "s2": {
+    "n": 437,
+    "corrected": 1,
+    "audited": 0,
+    "unsure": 0,
+    "rate": 0.0,
+    "lo": 8.673617379884035e-19,
+    "hi": 0.008713923669424719
+   },
+   "s2_R1": {
+    "n": 145,
+    "audited": 0,
+    "corrected": 0
+   },
+   "s2_R2": {
+    "n": 146,
+    "audited": 0,
+    "corrected": 0
+   },
+   "s2_R3": {
+    "n": 146,
+    "audited": 0,
+    "corrected": 1
+   }
+  },
+  "openai/gpt-oss-120b": {
+   "s1": {
+    "n": 396,
+    "corrected": 15,
+    "audited": 8,
+    "unsure": 0,
+    "rate": 0.020202020202020204,
+    "lo": 0.010271446294569773,
+    "hi": 0.03935186910881205
+   },
+   "s1_R1": {
+    "n": 131,
+    "audited": 2,
+    "corrected": 4
+   },
+   "s1_R2": {
+    "n": 137,
+    "audited": 4,
+    "corrected": 7
+   },
+   "s1_R3": {
+    "n": 128,
+    "audited": 2,
+    "corrected": 4
+   },
+   "s2": {
+    "n": 391,
+    "corrected": 10,
+    "audited": 5,
+    "unsure": 1,
+    "rate": 0.01278772378516624,
+    "lo": 0.00547418592073433,
+    "hi": 0.029581552308415457
+   },
+   "s2_R1": {
+    "n": 130,
+    "audited": 1,
+    "corrected": 3
+   },
+   "s2_R2": {
+    "n": 132,
+    "audited": 2,
+    "corrected": 3
+   },
+   "s2_R3": {
+    "n": 129,
+    "audited": 2,
+    "corrected": 4
+   }
+  }
+ },
+ "by_lib": {
+  "JCTools": {
+   "n": 69,
+   "corrected": 0,
+   "audited": 0,
+   "by_model": {
+    "claude-sonnet-5-5": [
+     0,
+     23
+    ],
+    "gpt-6.1-sol": [
+     0,
+     23
+    ],
+    "openai/gpt-oss-120b": [
+     0,
+     23
+    ]
+   }
+  },
+  "RoaringBitmap": {
+   "n": 374,
+   "corrected": 11,
+   "audited": 1,
+   "by_model": {
+    "claude-sonnet-5-5": [
+     0,
+     127
+    ],
+    "gpt-6.1-sol": [
+     0,
+     131
+    ],
+    "openai/gpt-oss-120b": [
+     1,
+     116
+    ]
+   }
+  },
+  "caffeine": {
+   "n": 91,
+   "corrected": 0,
+   "audited": 0,
+   "by_model": {
+    "claude-sonnet-5-5": [
+     0,
+     31
+    ],
+    "gpt-6.1-sol": [
+     0,
+     32
+    ],
+    "openai/gpt-oss-120b": [
+     0,
+     28
+    ]
+   }
+  },
+  "eclipse-collections": {
+   "n": 345,
+   "corrected": 3,
+   "audited": 3,
+   "by_model": {
+    "claude-sonnet-5-5": [
+     0,
+     114
+    ],
+    "gpt-6.1-sol": [
+     0,
+     117
+    ],
+    "openai/gpt-oss-120b": [
+     3,
+     114
+    ]
+   }
+  },
+  "netty": {
+   "n": 378,
+   "corrected": 6,
+   "audited": 4,
+   "by_model": {
+    "claude-sonnet-5-5": [
+     0,
+     131
+    ],
+    "gpt-6.1-sol": [
+     0,
+     132
+    ],
+    "openai/gpt-oss-120b": [
+     4,
+     115
+    ]
+   }
+  }
+ },
+ "ladder": {
+  "claude-sonnet-5-5": {
+   "paired": 134,
+   "rates": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "Q": 0.0,
+   "p": 1.0,
+   "mcnemar": {
+    "R1vR2": [
+     0,
+     0,
+     1.0
+    ],
+    "R1vR3": [
+     0,
+     0,
+     1.0
+    ],
+    "R2vR3": [
+     0,
+     0,
+     1.0
+    ]
+   },
+   "holm": {
+    "R1vR2": 1.0,
+    "R1vR3": 1.0,
+    "R2vR3": 1.0
+   }
+  },
+  "gpt-6.1-sol": {
+   "paired": 143,
+   "rates": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "Q": 0.0,
+   "p": 1.0,
+   "mcnemar": {
+    "R1vR2": [
+     0,
+     0,
+     1.0
+    ],
+    "R1vR3": [
+     0,
+     0,
+     1.0
+    ],
+    "R2vR3": [
+     0,
+     0,
+     1.0
+    ]
+   },
+   "holm": {
+    "R1vR2": 1.0,
+    "R1vR3": 1.0,
+    "R2vR3": 1.0
+   }
+  },
+  "openai/gpt-oss-120b": {
+   "paired": 113,
+   "rates": [
+    0.008849557522123894,
+    0.017699115044247787,
+    0.017699115044247787
+   ],
+   "Q": 1.0,
+   "p": 0.6065306597126334,
+   "mcnemar": {
+    "R1vR2": [
+     0,
+     1,
+     1.0
+    ],
+    "R1vR3": [
+     0,
+     1,
+     1.0
+    ],
+    "R2vR3": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "holm": {
+    "R1vR2": 1.0,
+    "R1vR3": 1.0,
+    "R2vR3": 1.0
+   }
+  }
+ },
+ "stability": {
+  "claude-sonnet-5-5": {
+   "pairs": 420,
+   "flips": 0
+  },
+  "gpt-6.1-sol": {
+   "pairs": 435,
+   "flips": 0
+  },
+  "openai/gpt-oss-120b": {
+   "pairs": 364,
+   "flips": 4
+  }
+ },
+ "fisher_oss_vs_hosted_s1": 9.23994071136882e-05,
+ "methods": {
+  "eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)": 6,
+  "netty:io.netty.buffer.CompositeByteBuf#findIt(int)": 2,
+  "RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)": 1,
+  "RoaringBitmap:org.roaringbitmap.Container#lazyIOR(Container)": 1,
+  "netty:io.netty.channel.embedded.EmbeddedChannel#writeInbound(Object[])": 1,
+  "netty:io.netty.util.concurrent.DefaultPromise#checkNotifyWaiters()": 1,
+  "netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)": 1
+ },
+ "verdicts_by_model": {
+  "claude-sonnet-5-5": {
+   "out_of_contract": 6
+  },
+  "gpt-6.1-sol": {
+   "out_of_contract": 3
+  },
+  "openai/gpt-oss-120b": {
+   "out_of_contract": 6,
+   "in_contract_break": 13,
+   "regex_artifact": 5,
+   "unsure": 1
+  }
+ }
+}

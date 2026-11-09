@@ -1,0 +1,17 @@
+# Drives subsampling (pilot/canary) and the pre-run cost projection. The actual study size is fixed by the
+# sizing rule at the first canary build (paper/s_generate.py) from the pilot's measured tokens; these are the
+# planning assumptions at the cap (250 methods x 3 rungs x 2 samples = 1500 cells per model).
+pilot_per_cell: 2          # cells per (rung, model) group in the pilot
+canary_per_cell: 6         # cells per (rung, model) group in the canary
+batch_poll_seconds: 60
+stages:
+  generate:
+    models: [claude-sonnet-5-5, gpt-6.1-sol, openai/gpt-oss-120b]
+    groups_per_model: 3       # rungs R1, R2, R3
+    cells_per_model: 1500
+    avg_prefix_tokens: 1400
+    avg_item_tokens: 5500     # mean over rungs: R1 ~600, R2 ~6000, R3 ~9500
+    avg_out_tokens: 3000      # includes reasoning tokens (vendor-default reasoning)
+    max_prompt_tokens: 18000   # R3 at the context caps (24K + 12K chars) plus the method and the prefix
+    batch: true
+    cache: true

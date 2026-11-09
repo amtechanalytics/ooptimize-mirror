@@ -1,0 +1,9 @@
+# Written by new-paper.sh
+codename: ooptimize
+region: us-east-1
+bucket: anon-research-runs-anon
+topic_arn: arn:aws:sns:us-east-1:anon:research-alerts
+secret_id: research/llm-keys
+expected_hours: 22
+max_hours: 40
+secret_arn: arn:aws:secretsmanager:us-east-1:anon:secret:research/llm-keys-b9usNn

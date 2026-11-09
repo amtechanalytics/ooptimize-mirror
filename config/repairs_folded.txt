@@ -1,0 +1,4 @@
+# Repair commits made on an instance that the chat has folded into this harness (one per line: short sha, then a note).
+# new-paper.sh --update refuses a zip that would undo a repair commit not listed here.
+f13bcc4a fix: create JMH result dir before alloc runs, drop SURROGATE_KEY clash in EV helper, skip size check for git pins in D02 test (folded 2026-11-07)
+3aed78a1 fix: retry failed allocation jobs on resume; thread-unique tmp name in atomic JSON write (folded 2026-11-07)

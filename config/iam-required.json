@@ -1,0 +1,14 @@
+{
+  "runner": [
+    "ec2:RunInstances", "ec2:CreateTags", "ec2:DescribeInstances", "ec2:TerminateInstances",
+    "ec2:StopInstances", "ec2:DescribeImages", "ec2:DescribeSubnets", "ec2:DescribeSecurityGroups",
+    "iam:PassRole", "ssm:GetParameter", "ssm:SendCommand", "ssm:GetCommandInvocation",
+    "s3:PutObject", "s3:GetObject", "s3:ListBucket", "s3:DeleteObject",
+    "secretsmanager:GetSecretValue", "sns:Publish", "sns:GetTopicAttributes",
+    "servicequotas:GetServiceQuota", "sts:GetCallerIdentity"
+  ],
+  "instance": [
+    "s3:PutObject", "s3:GetObject", "s3:ListBucket", "secretsmanager:GetSecretValue",
+    "sns:Publish", "ec2:DescribeInstances"
+  ]
+}

@@ -1,0 +1,414 @@
+[
+ {
+  "cell_id": "score|gen|R1|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",
+  "model": "claude-sonnet-5-5",
+  "rung": "R1",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R1|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R1|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s2",
+  "model": "claude-sonnet-5-5",
+  "rung": "R1",
+  "sample": 2,
+  "method": "RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R1|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s2",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R1|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)|s1",
+  "model": "gpt-6.1-sol",
+  "rung": "R1",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R1|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R1",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R1",
+  "sample": 2,
+  "method": "RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R1|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s2",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R1|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R1",
+  "sample": 1,
+  "method": "eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)",
+  "lib": "eclipse-collections",
+  "gen_cell": "gen|R1|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R1|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R1",
+  "sample": 2,
+  "method": "eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)",
+  "lib": "eclipse-collections",
+  "gen_cell": "gen|R1|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s2",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R1|openai/gpt-oss-120b|netty:io.netty.buffer.CompositeByteBuf#findIt(int)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R1",
+  "sample": 1,
+  "method": "netty:io.netty.buffer.CompositeByteBuf#findIt(int)",
+  "lib": "netty",
+  "gen_cell": "gen|R1|openai/gpt-oss-120b|netty:io.netty.buffer.CompositeByteBuf#findIt(int)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R1|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R1",
+  "sample": 1,
+  "method": "netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)",
+  "lib": "netty",
+  "gen_cell": "gen|R1|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s1",
+  "rows": [
+   "R5_SYNC_REMOVED"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R1|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R1",
+  "sample": 2,
+  "method": "netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)",
+  "lib": "netty",
+  "gen_cell": "gen|R1|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s2",
+  "rows": [
+   "R5_SYNC_REMOVED"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",
+  "model": "claude-sonnet-5-5",
+  "rung": "R2",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s2",
+  "model": "claude-sonnet-5-5",
+  "rung": "R2",
+  "sample": 2,
+  "method": "RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R2|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s2",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.BitmapContainer#cardinalityInRange(int,int)|s1",
+  "rows": [
+   "R3a_VALUE",
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Container#lazyIOR(Container)|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 2,
+  "method": "RoaringBitmap:org.roaringbitmap.Container#lazyIOR(Container)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Container#lazyIOR(Container)|s2",
+  "rows": [
+   "R3a_VALUE",
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#hybridUnsignedBinarySearch(char[],int,int,char)|s1",
+  "rows": [
+   "R3a_VALUE"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 1,
+  "method": "eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)",
+  "lib": "eclipse-collections",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 2,
+  "method": "eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)",
+  "lib": "eclipse-collections",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s2",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|netty:io.netty.buffer.CompositeByteBuf#findIt(int)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 1,
+  "method": "netty:io.netty.buffer.CompositeByteBuf#findIt(int)",
+  "lib": "netty",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|netty:io.netty.buffer.CompositeByteBuf#findIt(int)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|netty:io.netty.channel.embedded.EmbeddedChannel#writeInbound(Object[])|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 1,
+  "method": "netty:io.netty.channel.embedded.EmbeddedChannel#writeInbound(Object[])",
+  "lib": "netty",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|netty:io.netty.channel.embedded.EmbeddedChannel#writeInbound(Object[])|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 2,
+  "method": "netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)",
+  "lib": "netty",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s2",
+  "rows": [
+   "R5_SYNC_REMOVED"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R2|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R2",
+  "sample": 1,
+  "method": "netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)",
+  "lib": "netty",
+  "gen_cell": "gen|R2|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s1",
+  "rows": [
+   "R5_SYNC_REMOVED"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",
+  "model": "claude-sonnet-5-5",
+  "rung": "R3",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s2",
+  "model": "claude-sonnet-5-5",
+  "rung": "R3",
+  "sample": 2,
+  "method": "RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R3|claude-sonnet-5-5|RoaringBitmap:org.roaringbitmap.art.Node#sortSmallByteArray(byte[],Node[],int,int)|s2",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s2",
+  "model": "gpt-6.1-sol",
+  "rung": "R3",
+  "sample": 2,
+  "method": "RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s2",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",
+  "model": "gpt-6.1-sol",
+  "rung": "R3",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R3|gpt-6.1-sol|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.RoaringBitmap#naivelazyor(RoaringBitmap)|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R3",
+  "sample": 2,
+  "method": "RoaringBitmap:org.roaringbitmap.RoaringBitmap#naivelazyor(RoaringBitmap)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.RoaringBitmap#naivelazyor(RoaringBitmap)|s2",
+  "rows": [
+   "R3a_VALUE",
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#advanceUntil(char[],int,int,char)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R3",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.Util#advanceUntil(char[],int,int,char)",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#advanceUntil(char[],int,int,char)|s1",
+  "rows": [
+   "R3a_VALUE",
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R3",
+  "sample": 1,
+  "method": "RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])",
+  "lib": "RoaringBitmap",
+  "gen_cell": "gen|R3|openai/gpt-oss-120b|RoaringBitmap:org.roaringbitmap.Util#unsignedOneSidedGallopingIntersect2by2(char[],int,char[],int,char[])|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R3",
+  "sample": 1,
+  "method": "eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)",
+  "lib": "eclipse-collections",
+  "gen_cell": "gen|R3|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s1",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R3",
+  "sample": 2,
+  "method": "eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)",
+  "lib": "eclipse-collections",
+  "gen_cell": "gen|R3|openai/gpt-oss-120b|eclipse-collections:org.eclipse.collections.impl.lazy.LazyIterableAdapter#each(Procedure<?superT>)|s2",
+  "rows": [
+   "R3b_EXCEPTION"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R3",
+  "sample": 2,
+  "method": "netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)",
+  "lib": "netty",
+  "gen_cell": "gen|R3|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s2",
+  "rows": [
+   "R5_SYNC_REMOVED"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#checkNotifyWaiters()|s2",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R3",
+  "sample": 2,
+  "method": "netty:io.netty.util.concurrent.DefaultPromise#checkNotifyWaiters()",
+  "lib": "netty",
+  "gen_cell": "gen|R3|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#checkNotifyWaiters()|s2",
+  "rows": [
+   "R5_SYNC_REMOVED"
+  ]
+ },
+ {
+  "cell_id": "score|gen|R3|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s1",
+  "model": "openai/gpt-oss-120b",
+  "rung": "R3",
+  "sample": 1,
+  "method": "netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)",
+  "lib": "netty",
+  "gen_cell": "gen|R3|openai/gpt-oss-120b|netty:io.netty.util.concurrent.DefaultPromise#setValue0(Object)|s1",
+  "rows": [
+   "R5_SYNC_REMOVED"
+  ]
+ }
+]

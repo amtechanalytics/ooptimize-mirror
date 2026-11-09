@@ -1,0 +1,5 @@
+instance_type: m7i.large
+gpu: false
+root_volume_gb: 40
+ami: ubuntu-24.04            # resolved at launch from the public SSM parameter
+spot: false

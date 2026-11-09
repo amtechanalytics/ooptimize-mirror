@@ -1,0 +1,193 @@
+{
+  "pins": [
+    {
+      "name": "lib_eclipse_collections",
+      "url": "https://github.com/ANON-ORG/eclipse-collections.git",
+      "record": "6b5f8e542d5296ffe173b1c4c31df3b2a3ca60da",
+      "title": "Eclipse Collections (main, commit of 2026-10-29)",
+      "file": "eclipse-collections",
+      "format": "git",
+      "licence": "EPL-1.0 / EDL-1.0",
+      "min_rows": 918,
+      "expected_rows": 918,
+      "count_glob": "**/*.java",
+      "count_roots": [
+        "eclipse-collections/src/main/java",
+        "eclipse-collections-api/src/main/java"
+      ],
+      "columns": [
+        "pom.xml",
+        "jmh-tests/pom.xml",
+        "unit-tests/pom.xml"
+      ],
+      "accessed": "2026-11-06"
+    },
+    {
+      "name": "lib_roaringbitmap",
+      "url": "https://github.com/ANON-ORG/RoaringBitmap.git",
+      "record": "5f1d0764ffaedababbe59729ba71c276c7d6177e",
+      "title": "RoaringBitmap (master, commit of 2026-11-04)",
+      "file": "RoaringBitmap",
+      "format": "git",
+      "licence": "Apache-2.0",
+      "min_rows": 115,
+      "expected_rows": 115,
+      "count_glob": "**/*.java",
+      "count_roots": [
+        "roaringbitmap/src/main/java",
+        "bsi/src/main/java"
+      ],
+      "columns": [
+        "gradlew",
+        "jmh/build.gradle.kts",
+        "roaringbitmap/build.gradle.kts",
+        "bsi/build.gradle.kts"
+      ],
+      "accessed": "2026-11-06"
+    },
+    {
+      "name": "lib_netty",
+      "url": "https://github.com/ANON-ORG/netty.git",
+      "record": "e0d7510483bb9d1b153093f9007f0e2239522016",
+      "title": "Netty (branch 4.2, commit of 2026-11-05)",
+      "file": "netty",
+      "format": "git",
+      "licence": "Apache-2.0",
+      "min_rows": 1022,
+      "expected_rows": 1022,
+      "count_glob": "**/*.java",
+      "count_roots": [
+        "common/src/main/java",
+        "buffer/src/main/java",
+        "codec-base/src/main/java",
+        "codec/src/main/java",
+        "codec-http/src/main/java",
+        "handler/src/main/java",
+        "transport/src/main/java"
+      ],
+      "columns": [
+        "pom.xml",
+        "microbench/pom.xml"
+      ],
+      "accessed": "2026-11-06"
+    },
+    {
+      "name": "lib_jctools",
+      "url": "https://github.com/ANON-ORG/JCTools.git",
+      "record": "6d497fc79fcf44dc3c301ac813f3615fabb3a444",
+      "title": "JCTools (master, commit of 2026-10-16)",
+      "file": "JCTools",
+      "format": "git",
+      "licence": "Apache-2.0",
+      "min_rows": 172,
+      "expected_rows": 172,
+      "count_glob": "**/*.java",
+      "count_roots": [
+        "jctools-core/src/main/java",
+        "jctools-experimental/src/main/java"
+      ],
+      "columns": [
+        "pom.xml",
+        "jctools-benchmarks/pom.xml"
+      ],
+      "accessed": "2026-11-06"
+    },
+    {
+      "name": "lib_caffeine",
+      "url": "https://github.com/ANON-ORG/caffeine.git",
+      "record": "10646b00c14a7837fe16a16a2a7b1f82e5fa3155",
+      "title": "Caffeine (master, commit of 2026-10-25)",
+      "file": "caffeine",
+      "format": "git",
+      "licence": "Apache-2.0",
+      "min_rows": 51,
+      "expected_rows": 51,
+      "count_glob": "**/*.java",
+      "count_roots": [
+        "caffeine/src/main/java"
+      ],
+      "columns": [
+        "gradlew",
+        "caffeine/build.gradle.kts"
+      ],
+      "accessed": "2026-11-06"
+    },
+    {
+      "name": "temurin_jdk21",
+      "url": "https://github.com/ANON-ORG/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_x64_linux_hotspot_21.0.13_9.tar.gz",
+      "record": "temurin 21.0.13+9 linux x64 jdk",
+      "title": "Eclipse Temurin JDK 21.0.13+9 (Linux x64, tar.gz)",
+      "file": "OpenJDK21U-jdk_x64_linux_hotspot_21.0.13_9.tar.gz",
+      "format": "binary",
+      "licence": "GPL-2.0 with Classpath Exception",
+      "size": 207858352,
+      "sha256": "d7f5d5cf865a2902b70ff549b97586a7d3f234e016f041ab447ea740c7d66d1c",
+      "checksum_url": "https://github.com/ANON-ORG/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_x64_linux_hotspot_21.0.13_9.tar.gz.sha256.txt",
+      "checksum_algo": "sha256",
+      "unpack": "tar.gz",
+      "min_rows": 1,
+      "columns": [],
+      "accessed": "2026-11-06"
+    },
+    {
+      "name": "maven",
+      "url": "https://archive.apache.org/dist/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz",
+      "record": "apache-maven 3.9.11 bin",
+      "title": "Apache Maven 3.9.11 binary distribution",
+      "file": "apache-maven-3.9.11-bin.tar.gz",
+      "format": "binary",
+      "licence": "Apache-2.0",
+      "checksum_url": "https://archive.apache.org/dist/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz.sha512",
+      "checksum_algo": "sha512",
+      "unpack": "tar.gz",
+      "min_rows": 1,
+      "columns": [],
+      "accessed": "2026-11-06",
+      "note": "host not reachable from the generation sandbox: verified against the host's .sha512, sha256 locked on first download"
+    },
+    {
+      "name": "randoop",
+      "url": "https://github.com/ANON-ORG/randoop/releases/download/v4.3.4/randoop-all-4.3.4.jar",
+      "record": "randoop 4.3.4",
+      "title": "Randoop 4.3.4 (all-in-one jar, bundles JUnit 4.13)",
+      "file": "randoop-all-4.3.4.jar",
+      "format": "binary",
+      "licence": "MIT",
+      "size": 7577815,
+      "sha256": "bc134dca4a0df20a4787148923a2f6f4d0ecf8d40d7bba16b906e8cf0bdf8baf",
+      "min_rows": 1,
+      "columns": [],
+      "accessed": "2026-11-06"
+    },
+    {
+      "name": "spotbugs",
+      "url": "https://github.com/ANON-ORG/spotbugs/releases/download/4.10.5/spotbugs-4.10.5.tgz",
+      "record": "spotbugs 4.10.5",
+      "title": "SpotBugs 4.10.5 distribution",
+      "file": "spotbugs-4.10.5.tgz",
+      "format": "binary",
+      "licence": "LGPL-2.1",
+      "size": 15948373,
+      "sha256": "cce3244900cc215ccd9f5a8db29ed9468fc47824faf662f4fad005343d96007e",
+      "unpack": "tar.gz",
+      "min_rows": 1,
+      "columns": [],
+      "accessed": "2026-11-06"
+    },
+    {
+      "name": "equalsverifier",
+      "url": "https://repo1.maven.org/maven2/nl/jqno/equalsverifier/equalsverifier-nodep/4.5.2/equalsverifier-nodep-4.5.2.jar",
+      "record": "nl.jqno.equalsverifier:equalsverifier-nodep:4.5.2",
+      "title": "EqualsVerifier 4.5.2 (no-dependency jar)",
+      "file": "equalsverifier-nodep-4.5.2.jar",
+      "format": "binary",
+      "licence": "Apache-2.0",
+      "checksum_url": "https://repo1.maven.org/maven2/nl/jqno/equalsverifier/equalsverifier-nodep/4.5.2/equalsverifier-nodep-4.5.2.jar.sha1",
+      "checksum_algo": "sha1",
+      "min_rows": 1,
+      "columns": [],
+      "accessed": "2026-11-06",
+      "note": "host not reachable from the generation sandbox: verified against Maven Central's .sha1, sha256 locked on first download"
+    }
+  ]
+}

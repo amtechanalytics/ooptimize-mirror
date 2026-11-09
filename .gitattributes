@@ -1,0 +1,2 @@
+# byte-exact files: never convert line endings (fixtures and pins are checked by sha256)
+* -text

@@ -1,0 +1,23 @@
+{
+  "pins": [
+    {
+      "name": "oopt_libraries",
+      "record": "fixture:tests/fixtures/oopt_libraries.csv",
+      "title": "Dry-run fixture: the five subject libraries",
+      "url": "file://tests/fixtures/oopt_libraries.csv",
+      "file": "oopt_libraries.csv",
+      "size": 106,
+      "sha256": "54e913b1406286129a852b46d1babfe494d7450f127a1a827293f377a66e945a",
+      "format": "csv",
+      "encoding": "utf-8",
+      "min_rows": 5,
+      "expected_rows": 5,
+      "columns": [
+        "lib",
+        "role"
+      ],
+      "unique_key": "lib",
+      "licence": "fixture, no licence needed"
+    }
+  ]
+}

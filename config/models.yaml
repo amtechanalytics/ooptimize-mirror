@@ -1,0 +1,30 @@
+# Exact model ids only. Sampling parameters (temperature, top_p) and reasoning effort are never sent: vendor default.
+# accessed: the date the id, its limits and its availability were checked.
+models:
+  - id: claude-sonnet-5-5
+    provider: anthropic
+    max_output_tokens: 16000      # adaptive thinking counts toward max_tokens
+    context_tokens: 1000000
+    concurrency: 2                # pilot only (sync; canary and full use the Batch API): two waves so later calls read the prompt cache
+    tpm_budget: 0
+    batch: true
+    batch_size: 500
+    accessed: "2026-11-06"
+  - id: gpt-6.1-sol
+    provider: openai
+    max_output_tokens: 16000      # reasoning tokens count toward max_completion_tokens
+    context_tokens: 1050000
+    concurrency: 2                # pilot only (sync); canary and full use the Batch API
+    tpm_budget: 0
+    batch: true
+    batch_size: 500
+    accessed: "2026-11-06"
+  - id: openai/gpt-oss-120b       # open-weights, served by Groq (sync only)
+    provider: groq
+    max_output_tokens: 12000      # vendor-default (medium) reasoning counts toward it
+    context_tokens: 131072
+    concurrency: 3                # throughput is bounded by tpm_budget (~15 calls/min), not by concurrency
+    tpm_budget: 175000            # ~70% of the Developer plan's 250K tokens/min
+    rpm_budget: 700               # ~70% of 1K requests/min
+    batch: false
+    accessed: "2026-11-06"

@@ -1,0 +1,17 @@
+.venv/
+secrets/
+.env
+*.pem
+__pycache__/
+*.pyc
+.data/
+data/
+.fake_aws/
+runs/
+results/
+logs/
+final_*.tar.gz
+*.md
+!README.md
+!certificate/generation_certificate.md
+!tests/demo/certificate/generation_certificate.md

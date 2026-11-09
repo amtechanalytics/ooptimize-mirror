@@ -1,0 +1,8 @@
+# tier: standard ($150) by default. 'high' ($300) only after approval in chat; the approval line is pasted below.
+tier: high
+ceilings: {standard: 150, high: 300}
+high_approval: "2026-11-06 anon (chat): \"can we rebuild the harness for ooptimize accordingly\" — approving approach v2 with the $300 tier, 250 methods (floor 150), c7i.16xlarge with 28 scoring workers, Claude + OpenAI + Groq, k = 2, TestNG engine and the tests-ran headline rule"
+pilot_ceiling: 5
+executor_ceiling: 20     # repair executor runs on the subscription (recorded at $0); kept as a guard
+per_provider: {}
+per_model: {}

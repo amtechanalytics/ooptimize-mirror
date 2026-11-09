@@ -1,0 +1,15 @@
+# Drives subsampling (pilot/canary) and the pre-run cost projection.
+pilot_per_cell: 2          # cells per (arm, model) group in the pilot
+canary_per_cell: 6         # cells per (arm, model) group in the canary
+batch_poll_seconds: 1
+stages:
+  label:
+    models: [fake-small, fake-large]
+    groups_per_model: 2       # arms
+    cells_per_model: 80       # rows x arms
+    avg_prefix_tokens: 450
+    avg_item_tokens: 30
+    avg_out_tokens: 25
+    max_prompt_tokens: 600
+    batch: true
+    cache: false

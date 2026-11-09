@@ -1,0 +1,27 @@
+# USD per million tokens. Verified against the vendor pricing page on as_of; one source URL per model.
+as_of: "2026-11-06"
+models:
+  claude-sonnet-5-5:
+    input_per_mtok: 2.00
+    output_per_mtok: 10.00
+    cache_write_per_mtok: 2.50
+    cache_read_per_mtok: 0.10
+    batch_discount: 0.5
+    source: "https://platform.claude.com/docs/en/about-claude/pricing"
+  gpt-6.1-sol:
+    input_per_mtok: 2.00
+    output_per_mtok: 10.00
+    cache_write_per_mtok: 2.50
+    cache_read_per_mtok: 0.10
+    batch_discount: 0.5
+    source: "https://developers.openai.com/api/docs/pricing"
+  openai/gpt-oss-120b:
+    input_per_mtok: 0.15
+    cache_read_per_mtok: 0.075
+    output_per_mtok: 0.60
+    batch_discount: 1.0
+    source: "https://console.groq.com/docs/model/openai/gpt-oss-120b"
+compute:
+  gp3_per_gb_month: 0.08     # us-east-1 gp3 storage; https://aws.amazon.com/ebs/pricing/
+  c7i.16xlarge: {per_hour: 2.856, source: "https://instances.vantage.sh/aws/ec2/c7i.16xlarge (on-demand, us-east-1, 2026-11-06)"}
+  c7i.8xlarge: {per_hour: 1.428, source: "https://instances.vantage.sh/aws/ec2/c7i.8xlarge (on-demand, us-east-1, 2026-11-06)"}

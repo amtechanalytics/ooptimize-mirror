@@ -1,0 +1,8 @@
+# tier: standard ($150) by default. 'high' ($300) only after approval in chat; paste the approval line.
+tier: standard
+ceilings: {standard: 150, high: 300}
+high_approval: ""
+pilot_ceiling: 5
+executor_ceiling: 20     # repair executor runs on the subscription (recorded at $0); kept as a guard
+per_provider: {}
+per_model: {}

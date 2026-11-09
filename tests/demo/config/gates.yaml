@@ -1,0 +1,9 @@
+parse_floor: 0.85            # rolling (last 50) and per-stage
+max_vendor_error_rate: 0.01  # cells still failing after retries; resume retries them
+liveness:
+  stall_minutes: 20           # no progress (sync calls) -> restart
+  batch_stall_minutes: 240    # while waiting on a vendor batch
+  max_restarts_per_rung: 2
+  executor_attempts: 2
+  executor_timeout_minutes: 40
+  executor_estimate_usd: 3.0
